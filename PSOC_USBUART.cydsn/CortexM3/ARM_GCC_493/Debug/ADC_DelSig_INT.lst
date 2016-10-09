@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
   29:.\Generated_Source\PSoC5/ADC_DelSig_INT.c **** /* `#END`  */
   30:.\Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
   31:.\Generated_Source\PSoC5/ADC_DelSig_INT.c **** #if(ADC_DelSig_IRQ_REMOVE == 0u)
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 2
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
   69:.\Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #if(ADC_DelSig_CFG1_RESOLUTION > 16 && \
   70:.\Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_CFG1_CONV_MODE == ADC_DelSig_MODE_SINGLE_SAMPLE)
   71:.\Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_StopConvert();
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 3
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 3
 
 
   72:.\Generated_Source\PSoC5/ADC_DelSig_INT.c ****             /* Software flag for checking conversion complete or not. Will be used when
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  109:.\Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  Custom Code
  110:.\Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  - add user ISR code between the following #START and #END tags
  111:.\Generated_Source\PSoC5/ADC_DelSig_INT.c ****         **************************************************************************/
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 4
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 4
 
 
  112:.\Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#START MAIN_ADC_ISR2`  */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
   74              		.thumb_func
   75              		.type	ADC_DelSig_ISR4, %function
   76              	ADC_DelSig_ISR4:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 5
 
 
   77              	.LFB3:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
   81              		@ frame_needed = 0, uses_anonymous_args = 0
   82              		@ link register save eliminated.
   83 0000 7047     		bx	lr
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 6
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 6
 
 
   84              		.cfi_endproc
@@ -313,37 +313,37 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
   93 0006 00000000 		.4byte	.Ldebug_abbrev0
   94 000a 04       		.byte	0x4
   95 000b 01       		.uleb128 0x1
-  96 000c 36010000 		.4byte	.LASF17
+  96 000c 30010000 		.4byte	.LASF17
   97 0010 01       		.byte	0x1
-  98 0011 ED000000 		.4byte	.LASF18
-  99 0015 A0000000 		.4byte	.LASF19
+  98 0011 E7000000 		.4byte	.LASF18
+  99 0015 1B000000 		.4byte	.LASF19
  100 0019 00000000 		.4byte	.Ldebug_ranges0+0
  101 001d 00000000 		.4byte	0
  102 0021 00000000 		.4byte	.Ldebug_line0
  103 0025 02       		.uleb128 0x2
  104 0026 01       		.byte	0x1
  105 0027 06       		.byte	0x6
- 106 0028 2A010000 		.4byte	.LASF0
+ 106 0028 24010000 		.4byte	.LASF0
  107 002c 02       		.uleb128 0x2
  108 002d 01       		.byte	0x1
  109 002e 08       		.byte	0x8
- 110 002f 84000000 		.4byte	.LASF1
+ 110 002f C4000000 		.4byte	.LASF1
  111 0033 02       		.uleb128 0x2
  112 0034 02       		.byte	0x2
  113 0035 05       		.byte	0x5
- 114 0036 CA010000 		.4byte	.LASF2
+ 114 0036 C4010000 		.4byte	.LASF2
  115 003a 02       		.uleb128 0x2
  116 003b 02       		.byte	0x2
  117 003c 07       		.byte	0x7
- 118 003d 17010000 		.4byte	.LASF3
+ 118 003d 11010000 		.4byte	.LASF3
  119 0041 02       		.uleb128 0x2
  120 0042 04       		.byte	0x4
  121 0043 05       		.byte	0x5
- 122 0044 97000000 		.4byte	.LASF4
+ 122 0044 D7000000 		.4byte	.LASF4
  123 0048 02       		.uleb128 0x2
  124 0049 04       		.byte	0x4
  125 004a 07       		.byte	0x7
- 126 004b 1B000000 		.4byte	.LASF5
+ 126 004b 5B000000 		.4byte	.LASF5
  127 004f 02       		.uleb128 0x2
  128 0050 08       		.byte	0x8
  129 0051 05       		.byte	0x5
@@ -351,14 +351,14 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  131 0056 02       		.uleb128 0x2
  132 0057 08       		.byte	0x8
  133 0058 07       		.byte	0x7
- 134 0059 2D000000 		.4byte	.LASF7
+ 134 0059 6D000000 		.4byte	.LASF7
  135 005d 03       		.uleb128 0x3
  136 005e 04       		.byte	0x4
  137 005f 05       		.byte	0x5
  138 0060 696E7400 		.ascii	"int\000"
  139 0064 02       		.uleb128 0x2
  140 0065 04       		.byte	0x4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 7
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 7
 
 
  141 0066 07       		.byte	0x7
@@ -366,21 +366,21 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  143 006b 02       		.uleb128 0x2
  144 006c 04       		.byte	0x4
  145 006d 04       		.byte	0x4
- 146 006e C4010000 		.4byte	.LASF9
+ 146 006e BE010000 		.4byte	.LASF9
  147 0072 02       		.uleb128 0x2
  148 0073 08       		.byte	0x8
  149 0074 04       		.byte	0x4
- 150 0075 E6000000 		.4byte	.LASF10
+ 150 0075 E0000000 		.4byte	.LASF10
  151 0079 02       		.uleb128 0x2
  152 007a 01       		.byte	0x1
  153 007b 08       		.byte	0x8
- 154 007c 92000000 		.4byte	.LASF11
+ 154 007c D2000000 		.4byte	.LASF11
  155 0080 02       		.uleb128 0x2
  156 0081 04       		.byte	0x4
  157 0082 07       		.byte	0x7
- 158 0083 D4010000 		.4byte	.LASF12
+ 158 0083 CE010000 		.4byte	.LASF12
  159 0087 04       		.uleb128 0x4
- 160 0088 44000000 		.4byte	.LASF13
+ 160 0088 84000000 		.4byte	.LASF13
  161 008c 01       		.byte	0x1
  162 008d 33       		.byte	0x33
  163 008e 00000000 		.4byte	.LFB0
@@ -388,7 +388,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  165 0096 01       		.uleb128 0x1
  166 0097 9C       		.byte	0x9c
  167 0098 04       		.uleb128 0x4
- 168 0099 54000000 		.4byte	.LASF14
+ 168 0099 94000000 		.4byte	.LASF14
  169 009d 01       		.byte	0x1
  170 009e 65       		.byte	0x65
  171 009f 00000000 		.4byte	.LFB1
@@ -396,7 +396,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  173 00a7 01       		.uleb128 0x1
  174 00a8 9C       		.byte	0x9c
  175 00a9 04       		.uleb128 0x4
- 176 00aa 64000000 		.4byte	.LASF15
+ 176 00aa A4000000 		.4byte	.LASF15
  177 00ae 01       		.byte	0x1
  178 00af 97       		.byte	0x97
  179 00b0 00000000 		.4byte	.LFB2
@@ -404,7 +404,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  181 00b8 01       		.uleb128 0x1
  182 00b9 9C       		.byte	0x9c
  183 00ba 04       		.uleb128 0x4
- 184 00bb 74000000 		.4byte	.LASF16
+ 184 00bb B4000000 		.4byte	.LASF16
  185 00bf 01       		.byte	0x1
  186 00c0 C9       		.byte	0xc9
  187 00c1 00000000 		.4byte	.LFB3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  195 0001 11       		.uleb128 0x11
  196 0002 01       		.byte	0x1
  197 0003 25       		.uleb128 0x25
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 8
 
 
  198 0004 0E       		.uleb128 0xe
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  252 003a 40       		.uleb128 0x40
  253 003b 18       		.uleb128 0x18
  254 003c 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 9
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 9
 
 
  255 003e 19       		.uleb128 0x19
@@ -532,111 +532,111 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 1
  295      676E6564 
  295      20696E74 
  295      00
- 296              	.LASF5:
- 297 001b 6C6F6E67 		.ascii	"long unsigned int\000"
- 297      20756E73 
- 297      69676E65 
- 297      6420696E 
- 297      7400
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 10
+ 296              	.LASF19:
+ 297 001b 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
+ 297      73657273 
+ 297      5C546F6D 
+ 297      6D695C44 
+ 297      6F63756D 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 10
 
 
- 298              	.LASF7:
- 299 002d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 299      206C6F6E 
- 299      6720756E 
- 299      7369676E 
- 299      65642069 
- 300              	.LASF13:
- 301 0044 4144435F 		.ascii	"ADC_DelSig_ISR1\000"
- 301      44656C53 
- 301      69675F49 
- 301      53523100 
- 302              	.LASF14:
- 303 0054 4144435F 		.ascii	"ADC_DelSig_ISR2\000"
- 303      44656C53 
- 303      69675F49 
- 303      53523200 
- 304              	.LASF15:
- 305 0064 4144435F 		.ascii	"ADC_DelSig_ISR3\000"
- 305      44656C53 
- 305      69675F49 
- 305      53523300 
- 306              	.LASF16:
- 307 0074 4144435F 		.ascii	"ADC_DelSig_ISR4\000"
- 307      44656C53 
- 307      69675F49 
- 307      53523400 
- 308              	.LASF1:
- 309 0084 756E7369 		.ascii	"unsigned char\000"
- 309      676E6564 
- 309      20636861 
- 309      7200
- 310              	.LASF11:
- 311 0092 63686172 		.ascii	"char\000"
- 311      00
- 312              	.LASF4:
- 313 0097 6C6F6E67 		.ascii	"long int\000"
- 313      20696E74 
- 313      00
- 314              	.LASF19:
- 315 00a0 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\PSoC Creator\\PSOC_USB"
- 315      73657273 
- 315      5C546F6D 
- 315      6D695C44 
- 315      6F63756D 
- 316 00ce 55415254 		.ascii	"UART\\PSOC_USBUART.cydsn\000"
- 316      5C50534F 
- 316      435F5553 
- 316      42554152 
- 316      542E6379 
+ 298 0048 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
+ 298      5F555342 
+ 298      55415254 
+ 298      2E637964 
+ 298      736E00
+ 299              	.LASF5:
+ 300 005b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 300      20756E73 
+ 300      69676E65 
+ 300      6420696E 
+ 300      7400
+ 301              	.LASF7:
+ 302 006d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 302      206C6F6E 
+ 302      6720756E 
+ 302      7369676E 
+ 302      65642069 
+ 303              	.LASF13:
+ 304 0084 4144435F 		.ascii	"ADC_DelSig_ISR1\000"
+ 304      44656C53 
+ 304      69675F49 
+ 304      53523100 
+ 305              	.LASF14:
+ 306 0094 4144435F 		.ascii	"ADC_DelSig_ISR2\000"
+ 306      44656C53 
+ 306      69675F49 
+ 306      53523200 
+ 307              	.LASF15:
+ 308 00a4 4144435F 		.ascii	"ADC_DelSig_ISR3\000"
+ 308      44656C53 
+ 308      69675F49 
+ 308      53523300 
+ 309              	.LASF16:
+ 310 00b4 4144435F 		.ascii	"ADC_DelSig_ISR4\000"
+ 310      44656C53 
+ 310      69675F49 
+ 310      53523400 
+ 311              	.LASF1:
+ 312 00c4 756E7369 		.ascii	"unsigned char\000"
+ 312      676E6564 
+ 312      20636861 
+ 312      7200
+ 313              	.LASF11:
+ 314 00d2 63686172 		.ascii	"char\000"
+ 314      00
+ 315              	.LASF4:
+ 316 00d7 6C6F6E67 		.ascii	"long int\000"
+ 316      20696E74 
+ 316      00
  317              	.LASF10:
- 318 00e6 646F7562 		.ascii	"double\000"
+ 318 00e0 646F7562 		.ascii	"double\000"
  318      6C6500
  319              	.LASF18:
- 320 00ed 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_DelSig_INT.c\000"
+ 320 00e7 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_DelSig_INT.c\000"
  320      6E657261 
  320      7465645F 
  320      536F7572 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccyhGlZF.s 			page 11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccqxYyFI.s 			page 11
 
 
  320      63655C50 
  321              	.LASF3:
- 322 0117 73686F72 		.ascii	"short unsigned int\000"
+ 322 0111 73686F72 		.ascii	"short unsigned int\000"
  322      7420756E 
  322      7369676E 
  322      65642069 
  322      6E7400
  323              	.LASF0:
- 324 012a 7369676E 		.ascii	"signed char\000"
+ 324 0124 7369676E 		.ascii	"signed char\000"
  324      65642063 
  324      68617200 
  325              	.LASF17:
- 326 0136 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 326 0130 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  326      4320342E 
  326      392E3320 
  326      32303135 
  326      30333033 
- 327 0169 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 327 0163 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  327      20726576 
  327      6973696F 
  327      6E203232 
  327      31323230 
- 328 019c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 328 0196 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  328      66756E63 
  328      74696F6E 
  328      2D736563 
  328      74696F6E 
  329              	.LASF9:
- 330 01c4 666C6F61 		.ascii	"float\000"
+ 330 01be 666C6F61 		.ascii	"float\000"
  330      7400
  331              	.LASF2:
- 332 01ca 73686F72 		.ascii	"short int\000"
+ 332 01c4 73686F72 		.ascii	"short int\000"
  332      7420696E 
  332      7400
  333              	.LASF12:
- 334 01d4 73697A65 		.ascii	"sizetype\000"
+ 334 01ce 73697A65 		.ascii	"sizetype\000"
  334      74797065 
  334      00
  335              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

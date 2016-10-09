@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
   55 001b 40       		.byte	64
   56 001c 02       		.byte	2
   57 001d 19       		.byte	25
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 2
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 2
 
 
   58 001e 01       		.byte	1
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  112 0054 01       		.byte	1
  113 0055 51       		.byte	81
  114 0056 01       		.byte	1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 3
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 3
 
 
  115 0057 40       		.byte	64
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  169 008d 01       		.byte	1
  170 008e DE       		.byte	-34
  171 008f 01       		.byte	1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 4
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 4
 
 
  172 0090 94       		.byte	-108
@@ -235,10 +235,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  223 00c3 00       		.byte	0
  224 00c4 00       		.byte	0
  225 00c5 00       		.byte	0
- 226 00c6 08       		.byte	8
+ 226 00c6 06       		.byte	6
  227 00c7 00       		.byte	0
  228 00c8 40       		.byte	64
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 5
 
 
  229 00c9 00       		.byte	0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  283              	cy_meta_flashprotect:
  284 0000 00000000 		.space	256
  284      00000000 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 6
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 6
 
 
  284      00000000 
@@ -315,56 +315,56 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  293 0006 00000000 		.4byte	.Ldebug_abbrev0
  294 000a 04       		.byte	0x4
  295 000b 01       		.uleb128 0x1
- 296 000c A9000000 		.4byte	.LASF18
+ 296 000c D4000000 		.4byte	.LASF18
  297 0010 01       		.byte	0x1
  298 0011 00000000 		.4byte	.LASF19
- 299 0015 5B010000 		.4byte	.LASF20
+ 299 0015 38000000 		.4byte	.LASF20
  300 0019 00000000 		.4byte	.Ldebug_line0
  301 001d 02       		.uleb128 0x2
  302 001e 01       		.byte	0x1
  303 001f 06       		.byte	0x6
- 304 0020 E4010000 		.4byte	.LASF0
+ 304 0020 DE010000 		.4byte	.LASF0
  305 0024 02       		.uleb128 0x2
  306 0025 01       		.byte	0x1
  307 0026 08       		.byte	0x8
- 308 0027 38000000 		.4byte	.LASF1
+ 308 0027 78000000 		.4byte	.LASF1
  309 002b 02       		.uleb128 0x2
  310 002c 02       		.byte	0x2
  311 002d 05       		.byte	0x5
- 312 002e CB010000 		.4byte	.LASF2
+ 312 002e C5010000 		.4byte	.LASF2
  313 0032 02       		.uleb128 0x2
  314 0033 02       		.byte	0x2
  315 0034 07       		.byte	0x7
- 316 0035 58000000 		.4byte	.LASF3
+ 316 0035 98000000 		.4byte	.LASF3
  317 0039 02       		.uleb128 0x2
  318 003a 04       		.byte	0x4
  319 003b 05       		.byte	0x5
- 320 003c DB010000 		.4byte	.LASF4
+ 320 003c D5010000 		.4byte	.LASF4
  321 0040 02       		.uleb128 0x2
  322 0041 04       		.byte	0x4
  323 0042 07       		.byte	0x7
- 324 0043 46000000 		.4byte	.LASF5
+ 324 0043 86000000 		.4byte	.LASF5
  325 0047 02       		.uleb128 0x2
  326 0048 08       		.byte	0x8
  327 0049 05       		.byte	0x5
- 328 004a B8010000 		.4byte	.LASF6
+ 328 004a B2010000 		.4byte	.LASF6
  329 004e 02       		.uleb128 0x2
  330 004f 08       		.byte	0x8
  331 0050 07       		.byte	0x7
- 332 0051 44010000 		.4byte	.LASF7
+ 332 0051 6F010000 		.4byte	.LASF7
  333 0055 03       		.uleb128 0x3
  334 0056 04       		.byte	0x4
  335 0057 05       		.byte	0x5
  336 0058 696E7400 		.ascii	"int\000"
  337 005c 02       		.uleb128 0x2
  338 005d 04       		.byte	0x4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 7
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 7
 
 
  339 005e 07       		.byte	0x7
- 340 005f 37010000 		.4byte	.LASF8
+ 340 005f 62010000 		.4byte	.LASF8
  341 0063 04       		.uleb128 0x4
- 342 0064 D5010000 		.4byte	.LASF21
+ 342 0064 CF010000 		.4byte	.LASF21
  343 0068 02       		.byte	0x2
  344 0069 9201     		.2byte	0x192
  345 006b 24000000 		.4byte	0x24
@@ -375,11 +375,11 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  350 0076 02       		.uleb128 0x2
  351 0077 08       		.byte	0x8
  352 0078 04       		.byte	0x4
- 353 0079 6B000000 		.4byte	.LASF10
+ 353 0079 AB000000 		.4byte	.LASF10
  354 007d 02       		.uleb128 0x2
  355 007e 01       		.byte	0x1
  356 007f 08       		.byte	0x8
- 357 0080 C6010000 		.4byte	.LASF11
+ 357 0080 C0010000 		.4byte	.LASF11
  358 0084 05       		.uleb128 0x5
  359 0085 63000000 		.4byte	0x63
  360 0089 94000000 		.4byte	0x94
@@ -390,9 +390,9 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  365 0094 02       		.uleb128 0x2
  366 0095 04       		.byte	0x4
  367 0096 07       		.byte	0x7
- 368 0097 AF010000 		.4byte	.LASF12
+ 368 0097 A9010000 		.4byte	.LASF12
  369 009b 07       		.uleb128 0x7
- 370 009c 82000000 		.4byte	.LASF13
+ 370 009c C2000000 		.4byte	.LASF13
  371 00a0 01       		.byte	0x1
  372 00a1 1F       		.byte	0x1f
  373 00a2 AC000000 		.4byte	0xac
@@ -409,7 +409,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  384 00bf 03       		.byte	0x3
  385 00c0 00       		.byte	0
  386 00c1 07       		.uleb128 0x7
- 387 00c2 72000000 		.4byte	.LASF14
+ 387 00c2 B2000000 		.4byte	.LASF14
  388 00c6 01       		.byte	0x1
  389 00c7 47       		.byte	0x47
  390 00c8 D2000000 		.4byte	0xd2
@@ -418,11 +418,11 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  393 00ce 00000000 		.4byte	cy_meta_custnvl
  394 00d2 08       		.uleb128 0x8
  395 00d3 B1000000 		.4byte	0xb1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 8
 
 
  396 00d7 07       		.uleb128 0x7
- 397 00d8 A1010000 		.4byte	.LASF15
+ 397 00d8 9B010000 		.4byte	.LASF15
  398 00dc 01       		.byte	0x1
  399 00dd 55       		.byte	0x55
  400 00de E8000000 		.4byte	0xe8
@@ -439,7 +439,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  411 00fb FF       		.byte	0xff
  412 00fc 00       		.byte	0
  413 00fd 07       		.uleb128 0x7
- 414 00fe 94000000 		.4byte	.LASF16
+ 414 00fe 86010000 		.4byte	.LASF16
  415 0102 01       		.byte	0x1
  416 0103 63       		.byte	0x63
  417 0104 0E010000 		.4byte	0x10e
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  450 0007 03       		.uleb128 0x3
  451 0008 0E       		.uleb128 0xe
  452 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 9
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 9
 
 
  453 000a 0E       		.uleb128 0xe
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  507 0040 2F       		.uleb128 0x2f
  508 0041 0B       		.uleb128 0xb
  509 0042 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 10
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 10
 
 
  510 0043 00       		.byte	0
@@ -597,117 +597,117 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 1
  553              	.LASF9:
  554 0032 666C6F61 		.ascii	"float\000"
  554      7400
- 555              	.LASF1:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 11
+ 555              	.LASF20:
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 11
 
 
- 556 0038 756E7369 		.ascii	"unsigned char\000"
- 556      676E6564 
- 556      20636861 
- 556      7200
- 557              	.LASF5:
- 558 0046 6C6F6E67 		.ascii	"long unsigned int\000"
- 558      20756E73 
- 558      69676E65 
- 558      6420696E 
- 558      7400
- 559              	.LASF3:
- 560 0058 73686F72 		.ascii	"short unsigned int\000"
- 560      7420756E 
- 560      7369676E 
- 560      65642069 
- 560      6E7400
- 561              	.LASF10:
- 562 006b 646F7562 		.ascii	"double\000"
- 562      6C6500
- 563              	.LASF14:
- 564 0072 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 564      6574615F 
- 564      63757374 
- 564      6E766C00 
- 565              	.LASF13:
- 566 0082 63795F6D 		.ascii	"cy_meta_configecc\000"
- 566      6574615F 
- 566      636F6E66 
- 566      69676563 
- 566      6300
- 567              	.LASF16:
- 568 0094 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 568      6574615F 
- 568      666C6173 
- 568      6870726F 
- 568      74656374 
- 569              	.LASF18:
- 570 00a9 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 570      4320342E 
- 570      392E3320 
- 570      32303135 
- 570      30333033 
- 571 00dc 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 571      20726576 
- 571      6973696F 
- 571      6E203232 
- 571      31323230 
- 572 010f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 572      66756E63 
- 572      74696F6E 
- 572      2D736563 
- 572      74696F6E 
- 573              	.LASF8:
- 574 0137 756E7369 		.ascii	"unsigned int\000"
- 574      676E6564 
- 574      20696E74 
- 574      00
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPCw0i0.s 			page 12
+ 556 0038 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
+ 556      73657273 
+ 556      5C546F6D 
+ 556      6D695C44 
+ 556      6F63756D 
+ 557 0065 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
+ 557      5F555342 
+ 557      55415254 
+ 557      2E637964 
+ 557      736E00
+ 558              	.LASF1:
+ 559 0078 756E7369 		.ascii	"unsigned char\000"
+ 559      676E6564 
+ 559      20636861 
+ 559      7200
+ 560              	.LASF5:
+ 561 0086 6C6F6E67 		.ascii	"long unsigned int\000"
+ 561      20756E73 
+ 561      69676E65 
+ 561      6420696E 
+ 561      7400
+ 562              	.LASF3:
+ 563 0098 73686F72 		.ascii	"short unsigned int\000"
+ 563      7420756E 
+ 563      7369676E 
+ 563      65642069 
+ 563      6E7400
+ 564              	.LASF10:
+ 565 00ab 646F7562 		.ascii	"double\000"
+ 565      6C6500
+ 566              	.LASF14:
+ 567 00b2 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 567      6574615F 
+ 567      63757374 
+ 567      6E766C00 
+ 568              	.LASF13:
+ 569 00c2 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 569      6574615F 
+ 569      636F6E66 
+ 569      69676563 
+ 569      6300
+ 570              	.LASF18:
+ 571 00d4 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 571      4320342E 
+ 571      392E3320 
+ 571      32303135 
+ 571      30333033 
+ 572 0107 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 572      20726576 
+ 572      6973696F 
+ 572      6E203232 
+ 572      31323230 
+ 573 013a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 573      66756E63 
+ 573      74696F6E 
+ 573      2D736563 
+ 573      74696F6E 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 12
 
 
- 575              	.LASF7:
- 576 0144 6C6F6E67 		.ascii	"long long unsigned int\000"
- 576      206C6F6E 
- 576      6720756E 
- 576      7369676E 
- 576      65642069 
- 577              	.LASF20:
- 578 015b 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\PSoC Creator\\PSOC_USB"
- 578      73657273 
- 578      5C546F6D 
- 578      6D695C44 
- 578      6F63756D 
- 579 0189 55415254 		.ascii	"UART\\PSOC_USBUART.cydsn\000"
- 579      5C50534F 
- 579      435F5553 
- 579      42554152 
- 579      542E6379 
+ 574              	.LASF8:
+ 575 0162 756E7369 		.ascii	"unsigned int\000"
+ 575      676E6564 
+ 575      20696E74 
+ 575      00
+ 576              	.LASF7:
+ 577 016f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 577      206C6F6E 
+ 577      6720756E 
+ 577      7369676E 
+ 577      65642069 
+ 578              	.LASF16:
+ 579 0186 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 579      6574615F 
+ 579      666C6173 
+ 579      6870726F 
+ 579      74656374 
  580              	.LASF15:
- 581 01a1 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 581 019b 63795F6D 		.ascii	"cy_meta_wonvl\000"
  581      6574615F 
  581      776F6E76 
  581      6C00
  582              	.LASF12:
- 583 01af 73697A65 		.ascii	"sizetype\000"
+ 583 01a9 73697A65 		.ascii	"sizetype\000"
  583      74797065 
  583      00
  584              	.LASF6:
- 585 01b8 6C6F6E67 		.ascii	"long long int\000"
+ 585 01b2 6C6F6E67 		.ascii	"long long int\000"
  585      206C6F6E 
  585      6720696E 
  585      7400
  586              	.LASF11:
- 587 01c6 63686172 		.ascii	"char\000"
+ 587 01c0 63686172 		.ascii	"char\000"
  587      00
  588              	.LASF2:
- 589 01cb 73686F72 		.ascii	"short int\000"
+ 589 01c5 73686F72 		.ascii	"short int\000"
  589      7420696E 
  589      7400
  590              	.LASF21:
- 591 01d5 75696E74 		.ascii	"uint8\000"
+ 591 01cf 75696E74 		.ascii	"uint8\000"
  591      3800
  592              	.LASF4:
- 593 01db 6C6F6E67 		.ascii	"long int\000"
+ 593 01d5 6C6F6E67 		.ascii	"long int\000"
  593      20696E74 
  593      00
  594              	.LASF0:
- 595 01e4 7369676E 		.ascii	"signed char\000"
+ 595 01de 7369676E 		.ascii	"signed char\000"
  595      65642063 
  595      68617200 
  596              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
