@@ -4,9 +4,9 @@
 
 #Version:            1.1
 
-#Build Date:         Apr 25 2016 12:55:34
+#Build Date:         Apr 29 2016 09:00:55
 
-#File Generated:     Oct 9 2016 19:43:52
+#File Generated:     Oct 21 2016 18:24:20
 
 #Purpose:            
 
@@ -14,16 +14,16 @@
 
 #***************************************************************************
 
-Executing : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\bin/sjplacer.exe --proj-name PSOC_USBUART --netlist-vh2 PSOC_USBUART_p.vh2 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p35_udb4x6.ark --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc5/psoc5lp/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc5/psoc5lp/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc5/psoc5lp/dmaconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc5/psoc5lp/dsiconn.cydata --pins-file pins_68-QFN.xml --lib-file PSOC_USBUART_p.lib --sdc-file PSOC_USBUART.sdc --io-pcf PSOC_USBUART.pci --outdir .
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\bin/sjplacer.exe --proj-name PSOC_USBUART --netlist-vh2 PSOC_USBUART_p.vh2 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\dev/arch/p35_udb4x6.ark --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\dev/psoc5/psoc5lp/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\dev/psoc5/psoc5lp/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\dev/psoc5/psoc5lp/dmaconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\dev/psoc5/psoc5lp/dsiconn.cydata --pins-file pins_68-QFN.xml --lib-file PSOC_USBUART_p.lib --sdc-file PSOC_USBUART.sdc --io-pcf PSOC_USBUART.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
-Build Date : Apr 25 2016	12:53:53
+Build Date : Apr 29 2016	08:58:44
 
 D2004: Option and Settings Summary
 =============================================================
 Netlist vh2 file          - PSOC_USBUART_p.vh2
-Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p35_udb4x6.ark
+Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\dev/arch/p35_udb4x6.ark
 Package                   - 
 Defparam file             - 
 SDC file                  - PSOC_USBUART.sdc
@@ -34,7 +34,7 @@ IO Placement file         - PSOC_USBUART.pci
 D2050: Starting reading inputs for placer
 =============================================================
 D2065: Reading netlist file : "PSOC_USBUART_p.vh2"
-D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p35_udb4x6.ark"
+D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\dev/arch/p35_udb4x6.ark"
 D2051: Reading of inputs for placer completed successfully
 
 D2053: Starting placement of the design
@@ -56,7 +56,7 @@ Design Statistics after Packing
 Device Utilization Summary after Packing
     Macrocells                  :	1/192
     UDBS                        :	1/24
-    IOs                         :	4/72
+    IOs                         :	6/72
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -81,11 +81,11 @@ Final Design Statistics
     Number of Status            	:	0
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	4
+    Number of IOs       	:	6
 
 Device Utilization Summary
     Macrocells                  :	1/192
-    IOs                         :	4/72
+    IOs                         :	6/72
 
 
 Phase 8
@@ -93,5 +93,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.6 sec.
+I2076: Total run-time: 0.7 sec.
 

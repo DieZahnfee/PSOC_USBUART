@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: cyfitter_cfg.c
 * 
-* PSoC Creator  3.3 CP3
+* PSoC Creator  4.0
 *
 * Description:
 * This file contains device initialization code.
@@ -21,6 +21,7 @@
 #include "cyfitter.h"
 #include "CyLib.h"
 #include "cyfitter_cfg.h"
+#include "cyapicallbacks.h"
 
 #define CY_NEED_CYCLOCKSTARTUPERROR 1
 
@@ -80,11 +81,13 @@ static void CYCONFIGCPYCODE(void *dest, const void *src, size_t n)
 
 
 
+
 /* Clock startup error codes                                                   */
 #define CYCLOCKSTART_NO_ERROR    0u
 #define CYCLOCKSTART_XTAL_ERROR  1u
 #define CYCLOCKSTART_32KHZ_ERROR 2u
 #define CYCLOCKSTART_PLL_ERROR   3u
+
 
 #ifdef CY_NEED_CYCLOCKSTARTUPERROR
 /*******************************************************************************
@@ -110,6 +113,14 @@ static void CyClockStartupError(uint8 errorCode)
     /* To remove the compiler warning if errorCode not used.                */
     errorCode = errorCode;
 
+    /* If we have a clock startup error (bad MHz crystal, PLL lock, etc.),  */
+    /* we will end up here to allow the customer to implement something to  */
+    /* deal with the clock condition.                                       */
+
+#ifdef CY_CFG_CLOCK_STARTUP_ERROR_CALLBACK
+	CY_CFG_Clock_Startup_ErrorCallback();
+#else
+	/*  If not using CY_CFG_CLOCK_STARTUP_ERROR_CALLBACK, place your clock startup code here. */
     /* `#START CyClockStartupError` */
 
     /* If we have a clock startup error (bad MHz crystal, PLL lock, etc.),  */
@@ -121,6 +132,7 @@ static void CyClockStartupError(uint8 errorCode)
     /* If nothing else, stop here since the clocks have not started         */
     /* correctly.                                                           */
     while(1) {}
+#endif /* CY_CFG_CLOCK_STARTUP_ERROR_CALLBACK */ 
 }
 #endif
 
@@ -140,8 +152,11 @@ CYPACKED typedef struct
 /* IOPINS0_8 Address: CYREG_PRT15_DR Size (bytes): 10 */
 #define BS_IOPINS0_8_VAL ((const uint8 CYFAR *)0x480000C8u)
 
+/* IOPINS0_1 Address: CYREG_PRT1_DM0 Size (bytes): 8 */
+#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x480000D4u)
+
 /* CYDEV_CLKDIST_ACFG0_CFG0 Address: CYREG_CLKDIST_ACFG0_CFG0 Size (bytes): 4 */
-#define BS_CYDEV_CLKDIST_ACFG0_CFG0_VAL ((const uint8 CYFAR *)0x480000D4u)
+#define BS_CYDEV_CLKDIST_ACFG0_CFG0_VAL ((const uint8 CYFAR *)0x480000DCu)
 
 
 /*******************************************************************************
@@ -272,10 +287,13 @@ static void AnalogSetDefault(void)
 	uint8 bg_xover_inl_trim = CY_GET_XTND_REG8((void CYFAR *)(CYREG_FLSHID_MFG_CFG_BG_XOVER_INL_TRIM + 1u));
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_BG_DFT0), (bg_xover_inl_trim & 0x07u));
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_BG_DFT1), ((bg_xover_inl_trim >> 4) & 0x0Fu));
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_PRT0_AG, 0x02u);
+	CY_SET_XTND_REG16((void CYFAR *)CYREG_PRT0_AMUX, 0x0208u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_BG_CR0, 0x0Cu);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_DAC0_SW3, 0x10u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_DSM0_SW0, 0x20u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_DSM0_SW4, 0x80u);
 	CY_SET_XTND_REG16((void CYFAR *)CYREG_OPAMP0_MX, 0x0404u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_OPAMP2_MX, 0x15u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_PUMP_CR0, 0x44u);
 }
 
@@ -350,7 +368,7 @@ void cyfitter_cfg(void)
 
 		static const cfg_memset_t CYCODE cfg_memset_list [] = {
 			/* address, size */
-			{(void CYFAR *)(CYREG_PRT1_DR), 96u},
+			{(void CYFAR *)(CYREG_PRT2_DR), 80u},
 			{(void CYFAR *)(CYREG_PRT12_DR), 16u},
 			{(void CYFAR *)(CYDEV_UCFG_B0_P0_U0_BASE), 4096u},
 			{(void CYFAR *)(CYDEV_UCFG_B1_P2_U0_BASE), 2048u},
@@ -386,6 +404,7 @@ void cyfitter_cfg(void)
 	/* Perform second pass device configuration. These items must be configured in specific order after the regular configuration is done. */
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT0_DM0), (const void CYFAR *)(BS_IOPINS0_0_VAL), 8u);
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT15_DR), (const void CYFAR *)(BS_IOPINS0_8_VAL), 10u);
+	CYCONFIGCPY((void CYFAR *)(CYREG_PRT1_DM0), (const void CYFAR *)(BS_IOPINS0_1_VAL), 8u);
 	/* Switch Boost to the precision bandgap reference from its internal reference */
 	CY_SET_REG8((void CYXDATA *)CYREG_BOOST_CR2, (CY_GET_REG8((void CYXDATA *)CYREG_BOOST_CR2) | 0x08u));
 

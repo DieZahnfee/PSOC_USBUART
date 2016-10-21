@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 1
 
 
    1              		.syntax unified
@@ -26,7 +26,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 1
   23              		.section	.cyconfigecc,"a",%progbits
   24              		.align	2
   25              		.type	cy_meta_configecc, %object
-  26              		.size	cy_meta_configecc, 216
+  26              		.size	cy_meta_configecc, 224
   27              	cy_meta_configecc:
   28 0000 01       		.byte	1
   29 0001 45       		.byte	69
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 1
   55 001b 40       		.byte	64
   56 001c 02       		.byte	2
   57 001d 19       		.byte	25
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 2
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 2
 
 
   58 001e 01       		.byte	1
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 1
  112 0054 01       		.byte	1
  113 0055 51       		.byte	81
  114 0056 01       		.byte	1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 3
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 3
 
 
  115 0057 40       		.byte	64
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 1
  169 008d 01       		.byte	1
  170 008e DE       		.byte	-34
  171 008f 01       		.byte	1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 4
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 4
 
 
  172 0090 94       		.byte	-108
@@ -235,10 +235,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 1
  223 00c3 00       		.byte	0
  224 00c4 00       		.byte	0
  225 00c5 00       		.byte	0
- 226 00c6 06       		.byte	6
+ 226 00c6 0F       		.byte	15
  227 00c7 00       		.byte	0
  228 00c8 40       		.byte	64
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 5
 
 
  229 00c9 00       		.byte	0
@@ -252,462 +252,473 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 1
  237 00d1 00       		.byte	0
  238 00d2 00       		.byte	0
  239 00d3 00       		.byte	0
- 240 00d4 0F       		.byte	15
- 241 00d5 00       		.byte	0
- 242 00d6 18       		.byte	24
- 243 00d7 01       		.byte	1
- 244              		.section	.cywolatch,"a",%progbits
- 245              		.align	2
- 246              		.type	cy_meta_wonvl, %object
- 247              		.size	cy_meta_wonvl, 4
- 248              	cy_meta_wonvl:
- 249 0000 BC       		.byte	-68
- 250 0001 90       		.byte	-112
- 251 0002 AC       		.byte	-84
- 252 0003 AF       		.byte	-81
- 253              		.section	.cycustnvl,"a",%progbits
- 254              		.align	2
- 255              		.type	cy_meta_custnvl, %object
- 256              		.size	cy_meta_custnvl, 4
- 257              	cy_meta_custnvl:
- 258 0000 00       		.byte	0
- 259 0001 00       		.byte	0
- 260 0002 40       		.byte	64
- 261 0003 05       		.byte	5
- 262              		.section	.cymeta,"a",%progbits
- 263              		.align	2
- 264              		.type	cy_metadata, %object
- 265              		.size	cy_metadata, 12
- 266              	cy_metadata:
- 267 0000 00       		.byte	0
- 268 0001 01       		.byte	1
- 269 0002 2E       		.byte	46
- 270 0003 16       		.byte	22
- 271 0004 10       		.byte	16
- 272 0005 69       		.byte	105
- 273 0006 00       		.byte	0
- 274 0007 01       		.byte	1
- 275 0008 00       		.byte	0
- 276 0009 00       		.byte	0
- 277 000a 00       		.byte	0
- 278 000b 00       		.byte	0
- 279              		.section	.cyflashprotect,"a",%progbits
- 280              		.align	2
- 281              		.type	cy_meta_flashprotect, %object
- 282              		.size	cy_meta_flashprotect, 256
- 283              	cy_meta_flashprotect:
- 284 0000 00000000 		.space	256
- 284      00000000 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 6
+ 240 00d4 00       		.byte	0
+ 241 00d5 0B       		.byte	11
+ 242 00d6 0B       		.byte	11
+ 243 00d7 00       		.byte	0
+ 244 00d8 00       		.byte	0
+ 245 00d9 00       		.byte	0
+ 246 00da 00       		.byte	0
+ 247 00db 00       		.byte	0
+ 248 00dc 10       		.byte	16
+ 249 00dd 00       		.byte	0
+ 250 00de 18       		.byte	24
+ 251 00df 01       		.byte	1
+ 252              		.section	.cywolatch,"a",%progbits
+ 253              		.align	2
+ 254              		.type	cy_meta_wonvl, %object
+ 255              		.size	cy_meta_wonvl, 4
+ 256              	cy_meta_wonvl:
+ 257 0000 BC       		.byte	-68
+ 258 0001 90       		.byte	-112
+ 259 0002 AC       		.byte	-84
+ 260 0003 AF       		.byte	-81
+ 261              		.section	.cycustnvl,"a",%progbits
+ 262              		.align	2
+ 263              		.type	cy_meta_custnvl, %object
+ 264              		.size	cy_meta_custnvl, 4
+ 265              	cy_meta_custnvl:
+ 266 0000 00       		.byte	0
+ 267 0001 00       		.byte	0
+ 268 0002 40       		.byte	64
+ 269 0003 05       		.byte	5
+ 270              		.section	.cymeta,"a",%progbits
+ 271              		.align	2
+ 272              		.type	cy_metadata, %object
+ 273              		.size	cy_metadata, 12
+ 274              	cy_metadata:
+ 275 0000 00       		.byte	0
+ 276 0001 01       		.byte	1
+ 277 0002 2E       		.byte	46
+ 278 0003 16       		.byte	22
+ 279 0004 10       		.byte	16
+ 280 0005 69       		.byte	105
+ 281 0006 00       		.byte	0
+ 282 0007 01       		.byte	1
+ 283 0008 00       		.byte	0
+ 284 0009 00       		.byte	0
+ 285 000a 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 6
 
 
- 284      00000000 
- 284      00000000 
- 284      00000000 
- 285              		.text
- 286              	.Letext0:
- 287              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
- 288              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
- 289              		.section	.debug_info,"",%progbits
- 290              	.Ldebug_info0:
- 291 0000 36010000 		.4byte	0x136
- 292 0004 0400     		.2byte	0x4
- 293 0006 00000000 		.4byte	.Ldebug_abbrev0
- 294 000a 04       		.byte	0x4
- 295 000b 01       		.uleb128 0x1
- 296 000c D4000000 		.4byte	.LASF18
- 297 0010 01       		.byte	0x1
- 298 0011 00000000 		.4byte	.LASF19
- 299 0015 38000000 		.4byte	.LASF20
- 300 0019 00000000 		.4byte	.Ldebug_line0
- 301 001d 02       		.uleb128 0x2
- 302 001e 01       		.byte	0x1
- 303 001f 06       		.byte	0x6
- 304 0020 DE010000 		.4byte	.LASF0
- 305 0024 02       		.uleb128 0x2
- 306 0025 01       		.byte	0x1
- 307 0026 08       		.byte	0x8
- 308 0027 78000000 		.4byte	.LASF1
- 309 002b 02       		.uleb128 0x2
- 310 002c 02       		.byte	0x2
- 311 002d 05       		.byte	0x5
- 312 002e C5010000 		.4byte	.LASF2
- 313 0032 02       		.uleb128 0x2
- 314 0033 02       		.byte	0x2
- 315 0034 07       		.byte	0x7
- 316 0035 98000000 		.4byte	.LASF3
- 317 0039 02       		.uleb128 0x2
- 318 003a 04       		.byte	0x4
- 319 003b 05       		.byte	0x5
- 320 003c D5010000 		.4byte	.LASF4
- 321 0040 02       		.uleb128 0x2
- 322 0041 04       		.byte	0x4
- 323 0042 07       		.byte	0x7
- 324 0043 86000000 		.4byte	.LASF5
- 325 0047 02       		.uleb128 0x2
- 326 0048 08       		.byte	0x8
- 327 0049 05       		.byte	0x5
- 328 004a B2010000 		.4byte	.LASF6
- 329 004e 02       		.uleb128 0x2
- 330 004f 08       		.byte	0x8
- 331 0050 07       		.byte	0x7
- 332 0051 6F010000 		.4byte	.LASF7
- 333 0055 03       		.uleb128 0x3
- 334 0056 04       		.byte	0x4
- 335 0057 05       		.byte	0x5
- 336 0058 696E7400 		.ascii	"int\000"
- 337 005c 02       		.uleb128 0x2
- 338 005d 04       		.byte	0x4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 7
+ 286 000b 00       		.byte	0
+ 287              		.section	.cyflashprotect,"a",%progbits
+ 288              		.align	2
+ 289              		.type	cy_meta_flashprotect, %object
+ 290              		.size	cy_meta_flashprotect, 256
+ 291              	cy_meta_flashprotect:
+ 292 0000 00000000 		.space	256
+ 292      00000000 
+ 292      00000000 
+ 292      00000000 
+ 292      00000000 
+ 293              		.text
+ 294              	.Letext0:
+ 295              		.file 1 "Generated_Source\\PSoC5\\cymetadata.c"
+ 296              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 297              		.section	.debug_info,"",%progbits
+ 298              	.Ldebug_info0:
+ 299 0000 36010000 		.4byte	0x136
+ 300 0004 0400     		.2byte	0x4
+ 301 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 302 000a 04       		.byte	0x4
+ 303 000b 01       		.uleb128 0x1
+ 304 000c AE000000 		.4byte	.LASF18
+ 305 0010 01       		.byte	0x1
+ 306 0011 C4010000 		.4byte	.LASF19
+ 307 0015 12000000 		.4byte	.LASF20
+ 308 0019 00000000 		.4byte	.Ldebug_line0
+ 309 001d 02       		.uleb128 0x2
+ 310 001e 01       		.byte	0x1
+ 311 001f 06       		.byte	0x6
+ 312 0020 B8010000 		.4byte	.LASF0
+ 313 0024 02       		.uleb128 0x2
+ 314 0025 01       		.byte	0x1
+ 315 0026 08       		.byte	0x8
+ 316 0027 52000000 		.4byte	.LASF1
+ 317 002b 02       		.uleb128 0x2
+ 318 002c 02       		.byte	0x2
+ 319 002d 05       		.byte	0x5
+ 320 002e 9F010000 		.4byte	.LASF2
+ 321 0032 02       		.uleb128 0x2
+ 322 0033 02       		.byte	0x2
+ 323 0034 07       		.byte	0x7
+ 324 0035 72000000 		.4byte	.LASF3
+ 325 0039 02       		.uleb128 0x2
+ 326 003a 04       		.byte	0x4
+ 327 003b 05       		.byte	0x5
+ 328 003c AF010000 		.4byte	.LASF4
+ 329 0040 02       		.uleb128 0x2
+ 330 0041 04       		.byte	0x4
+ 331 0042 07       		.byte	0x7
+ 332 0043 60000000 		.4byte	.LASF5
+ 333 0047 02       		.uleb128 0x2
+ 334 0048 08       		.byte	0x8
+ 335 0049 05       		.byte	0x5
+ 336 004a 8C010000 		.4byte	.LASF6
+ 337 004e 02       		.uleb128 0x2
+ 338 004f 08       		.byte	0x8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 7
 
 
- 339 005e 07       		.byte	0x7
- 340 005f 62010000 		.4byte	.LASF8
- 341 0063 04       		.uleb128 0x4
- 342 0064 CF010000 		.4byte	.LASF21
- 343 0068 02       		.byte	0x2
- 344 0069 9201     		.2byte	0x192
- 345 006b 24000000 		.4byte	0x24
- 346 006f 02       		.uleb128 0x2
- 347 0070 04       		.byte	0x4
- 348 0071 04       		.byte	0x4
- 349 0072 32000000 		.4byte	.LASF9
- 350 0076 02       		.uleb128 0x2
- 351 0077 08       		.byte	0x8
- 352 0078 04       		.byte	0x4
- 353 0079 AB000000 		.4byte	.LASF10
- 354 007d 02       		.uleb128 0x2
- 355 007e 01       		.byte	0x1
- 356 007f 08       		.byte	0x8
- 357 0080 C0010000 		.4byte	.LASF11
- 358 0084 05       		.uleb128 0x5
- 359 0085 63000000 		.4byte	0x63
- 360 0089 94000000 		.4byte	0x94
- 361 008d 06       		.uleb128 0x6
- 362 008e 94000000 		.4byte	0x94
- 363 0092 D7       		.byte	0xd7
- 364 0093 00       		.byte	0
- 365 0094 02       		.uleb128 0x2
- 366 0095 04       		.byte	0x4
- 367 0096 07       		.byte	0x7
- 368 0097 A9010000 		.4byte	.LASF12
- 369 009b 07       		.uleb128 0x7
- 370 009c C2000000 		.4byte	.LASF13
- 371 00a0 01       		.byte	0x1
- 372 00a1 1F       		.byte	0x1f
- 373 00a2 AC000000 		.4byte	0xac
- 374 00a6 05       		.uleb128 0x5
- 375 00a7 03       		.byte	0x3
- 376 00a8 00000000 		.4byte	cy_meta_configecc
- 377 00ac 08       		.uleb128 0x8
- 378 00ad 84000000 		.4byte	0x84
- 379 00b1 05       		.uleb128 0x5
- 380 00b2 63000000 		.4byte	0x63
- 381 00b6 C1000000 		.4byte	0xc1
- 382 00ba 06       		.uleb128 0x6
- 383 00bb 94000000 		.4byte	0x94
- 384 00bf 03       		.byte	0x3
- 385 00c0 00       		.byte	0
- 386 00c1 07       		.uleb128 0x7
- 387 00c2 B2000000 		.4byte	.LASF14
- 388 00c6 01       		.byte	0x1
- 389 00c7 47       		.byte	0x47
- 390 00c8 D2000000 		.4byte	0xd2
- 391 00cc 05       		.uleb128 0x5
- 392 00cd 03       		.byte	0x3
- 393 00ce 00000000 		.4byte	cy_meta_custnvl
- 394 00d2 08       		.uleb128 0x8
- 395 00d3 B1000000 		.4byte	0xb1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 8
+ 339 0050 07       		.byte	0x7
+ 340 0051 49010000 		.4byte	.LASF7
+ 341 0055 03       		.uleb128 0x3
+ 342 0056 04       		.byte	0x4
+ 343 0057 05       		.byte	0x5
+ 344 0058 696E7400 		.ascii	"int\000"
+ 345 005c 02       		.uleb128 0x2
+ 346 005d 04       		.byte	0x4
+ 347 005e 07       		.byte	0x7
+ 348 005f 3C010000 		.4byte	.LASF8
+ 349 0063 04       		.uleb128 0x4
+ 350 0064 A9010000 		.4byte	.LASF21
+ 351 0068 02       		.byte	0x2
+ 352 0069 9201     		.2byte	0x192
+ 353 006b 24000000 		.4byte	0x24
+ 354 006f 02       		.uleb128 0x2
+ 355 0070 04       		.byte	0x4
+ 356 0071 04       		.byte	0x4
+ 357 0072 0C000000 		.4byte	.LASF9
+ 358 0076 02       		.uleb128 0x2
+ 359 0077 08       		.byte	0x8
+ 360 0078 04       		.byte	0x4
+ 361 0079 85000000 		.4byte	.LASF10
+ 362 007d 02       		.uleb128 0x2
+ 363 007e 01       		.byte	0x1
+ 364 007f 08       		.byte	0x8
+ 365 0080 9A010000 		.4byte	.LASF11
+ 366 0084 05       		.uleb128 0x5
+ 367 0085 63000000 		.4byte	0x63
+ 368 0089 94000000 		.4byte	0x94
+ 369 008d 06       		.uleb128 0x6
+ 370 008e 94000000 		.4byte	0x94
+ 371 0092 DF       		.byte	0xdf
+ 372 0093 00       		.byte	0
+ 373 0094 02       		.uleb128 0x2
+ 374 0095 04       		.byte	0x4
+ 375 0096 07       		.byte	0x7
+ 376 0097 83010000 		.4byte	.LASF12
+ 377 009b 07       		.uleb128 0x7
+ 378 009c 9C000000 		.4byte	.LASF13
+ 379 00a0 01       		.byte	0x1
+ 380 00a1 1F       		.byte	0x1f
+ 381 00a2 AC000000 		.4byte	0xac
+ 382 00a6 05       		.uleb128 0x5
+ 383 00a7 03       		.byte	0x3
+ 384 00a8 00000000 		.4byte	cy_meta_configecc
+ 385 00ac 08       		.uleb128 0x8
+ 386 00ad 84000000 		.4byte	0x84
+ 387 00b1 05       		.uleb128 0x5
+ 388 00b2 63000000 		.4byte	0x63
+ 389 00b6 C1000000 		.4byte	0xc1
+ 390 00ba 06       		.uleb128 0x6
+ 391 00bb 94000000 		.4byte	0x94
+ 392 00bf 03       		.byte	0x3
+ 393 00c0 00       		.byte	0
+ 394 00c1 07       		.uleb128 0x7
+ 395 00c2 8C000000 		.4byte	.LASF14
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 8
 
 
- 396 00d7 07       		.uleb128 0x7
- 397 00d8 9B010000 		.4byte	.LASF15
- 398 00dc 01       		.byte	0x1
- 399 00dd 55       		.byte	0x55
- 400 00de E8000000 		.4byte	0xe8
- 401 00e2 05       		.uleb128 0x5
- 402 00e3 03       		.byte	0x3
- 403 00e4 00000000 		.4byte	cy_meta_wonvl
- 404 00e8 08       		.uleb128 0x8
- 405 00e9 B1000000 		.4byte	0xb1
- 406 00ed 05       		.uleb128 0x5
- 407 00ee 63000000 		.4byte	0x63
- 408 00f2 FD000000 		.4byte	0xfd
- 409 00f6 06       		.uleb128 0x6
- 410 00f7 94000000 		.4byte	0x94
- 411 00fb FF       		.byte	0xff
- 412 00fc 00       		.byte	0
- 413 00fd 07       		.uleb128 0x7
- 414 00fe 86010000 		.4byte	.LASF16
- 415 0102 01       		.byte	0x1
- 416 0103 63       		.byte	0x63
- 417 0104 0E010000 		.4byte	0x10e
- 418 0108 05       		.uleb128 0x5
- 419 0109 03       		.byte	0x3
- 420 010a 00000000 		.4byte	cy_meta_flashprotect
- 421 010e 08       		.uleb128 0x8
- 422 010f ED000000 		.4byte	0xed
- 423 0113 05       		.uleb128 0x5
- 424 0114 63000000 		.4byte	0x63
- 425 0118 23010000 		.4byte	0x123
- 426 011c 06       		.uleb128 0x6
- 427 011d 94000000 		.4byte	0x94
- 428 0121 0B       		.byte	0xb
- 429 0122 00       		.byte	0
- 430 0123 07       		.uleb128 0x7
- 431 0124 26000000 		.4byte	.LASF17
- 432 0128 01       		.byte	0x1
- 433 0129 90       		.byte	0x90
- 434 012a 34010000 		.4byte	0x134
- 435 012e 05       		.uleb128 0x5
- 436 012f 03       		.byte	0x3
- 437 0130 00000000 		.4byte	cy_metadata
- 438 0134 08       		.uleb128 0x8
- 439 0135 13010000 		.4byte	0x113
- 440 0139 00       		.byte	0
- 441              		.section	.debug_abbrev,"",%progbits
- 442              	.Ldebug_abbrev0:
- 443 0000 01       		.uleb128 0x1
- 444 0001 11       		.uleb128 0x11
- 445 0002 01       		.byte	0x1
- 446 0003 25       		.uleb128 0x25
- 447 0004 0E       		.uleb128 0xe
- 448 0005 13       		.uleb128 0x13
- 449 0006 0B       		.uleb128 0xb
- 450 0007 03       		.uleb128 0x3
- 451 0008 0E       		.uleb128 0xe
- 452 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 9
+ 396 00c6 01       		.byte	0x1
+ 397 00c7 48       		.byte	0x48
+ 398 00c8 D2000000 		.4byte	0xd2
+ 399 00cc 05       		.uleb128 0x5
+ 400 00cd 03       		.byte	0x3
+ 401 00ce 00000000 		.4byte	cy_meta_custnvl
+ 402 00d2 08       		.uleb128 0x8
+ 403 00d3 B1000000 		.4byte	0xb1
+ 404 00d7 07       		.uleb128 0x7
+ 405 00d8 75010000 		.4byte	.LASF15
+ 406 00dc 01       		.byte	0x1
+ 407 00dd 56       		.byte	0x56
+ 408 00de E8000000 		.4byte	0xe8
+ 409 00e2 05       		.uleb128 0x5
+ 410 00e3 03       		.byte	0x3
+ 411 00e4 00000000 		.4byte	cy_meta_wonvl
+ 412 00e8 08       		.uleb128 0x8
+ 413 00e9 B1000000 		.4byte	0xb1
+ 414 00ed 05       		.uleb128 0x5
+ 415 00ee 63000000 		.4byte	0x63
+ 416 00f2 FD000000 		.4byte	0xfd
+ 417 00f6 06       		.uleb128 0x6
+ 418 00f7 94000000 		.4byte	0x94
+ 419 00fb FF       		.byte	0xff
+ 420 00fc 00       		.byte	0
+ 421 00fd 07       		.uleb128 0x7
+ 422 00fe 60010000 		.4byte	.LASF16
+ 423 0102 01       		.byte	0x1
+ 424 0103 64       		.byte	0x64
+ 425 0104 0E010000 		.4byte	0x10e
+ 426 0108 05       		.uleb128 0x5
+ 427 0109 03       		.byte	0x3
+ 428 010a 00000000 		.4byte	cy_meta_flashprotect
+ 429 010e 08       		.uleb128 0x8
+ 430 010f ED000000 		.4byte	0xed
+ 431 0113 05       		.uleb128 0x5
+ 432 0114 63000000 		.4byte	0x63
+ 433 0118 23010000 		.4byte	0x123
+ 434 011c 06       		.uleb128 0x6
+ 435 011d 94000000 		.4byte	0x94
+ 436 0121 0B       		.byte	0xb
+ 437 0122 00       		.byte	0
+ 438 0123 07       		.uleb128 0x7
+ 439 0124 00000000 		.4byte	.LASF17
+ 440 0128 01       		.byte	0x1
+ 441 0129 91       		.byte	0x91
+ 442 012a 34010000 		.4byte	0x134
+ 443 012e 05       		.uleb128 0x5
+ 444 012f 03       		.byte	0x3
+ 445 0130 00000000 		.4byte	cy_metadata
+ 446 0134 08       		.uleb128 0x8
+ 447 0135 13010000 		.4byte	0x113
+ 448 0139 00       		.byte	0
+ 449              		.section	.debug_abbrev,"",%progbits
+ 450              	.Ldebug_abbrev0:
+ 451 0000 01       		.uleb128 0x1
+ 452 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 9
 
 
- 453 000a 0E       		.uleb128 0xe
- 454 000b 10       		.uleb128 0x10
- 455 000c 17       		.uleb128 0x17
- 456 000d 00       		.byte	0
- 457 000e 00       		.byte	0
- 458 000f 02       		.uleb128 0x2
- 459 0010 24       		.uleb128 0x24
- 460 0011 00       		.byte	0
- 461 0012 0B       		.uleb128 0xb
- 462 0013 0B       		.uleb128 0xb
- 463 0014 3E       		.uleb128 0x3e
- 464 0015 0B       		.uleb128 0xb
- 465 0016 03       		.uleb128 0x3
- 466 0017 0E       		.uleb128 0xe
- 467 0018 00       		.byte	0
- 468 0019 00       		.byte	0
- 469 001a 03       		.uleb128 0x3
- 470 001b 24       		.uleb128 0x24
- 471 001c 00       		.byte	0
- 472 001d 0B       		.uleb128 0xb
- 473 001e 0B       		.uleb128 0xb
- 474 001f 3E       		.uleb128 0x3e
- 475 0020 0B       		.uleb128 0xb
- 476 0021 03       		.uleb128 0x3
- 477 0022 08       		.uleb128 0x8
- 478 0023 00       		.byte	0
- 479 0024 00       		.byte	0
- 480 0025 04       		.uleb128 0x4
- 481 0026 16       		.uleb128 0x16
- 482 0027 00       		.byte	0
- 483 0028 03       		.uleb128 0x3
- 484 0029 0E       		.uleb128 0xe
- 485 002a 3A       		.uleb128 0x3a
- 486 002b 0B       		.uleb128 0xb
- 487 002c 3B       		.uleb128 0x3b
- 488 002d 05       		.uleb128 0x5
- 489 002e 49       		.uleb128 0x49
- 490 002f 13       		.uleb128 0x13
- 491 0030 00       		.byte	0
- 492 0031 00       		.byte	0
- 493 0032 05       		.uleb128 0x5
- 494 0033 01       		.uleb128 0x1
- 495 0034 01       		.byte	0x1
- 496 0035 49       		.uleb128 0x49
- 497 0036 13       		.uleb128 0x13
- 498 0037 01       		.uleb128 0x1
- 499 0038 13       		.uleb128 0x13
- 500 0039 00       		.byte	0
- 501 003a 00       		.byte	0
- 502 003b 06       		.uleb128 0x6
- 503 003c 21       		.uleb128 0x21
- 504 003d 00       		.byte	0
- 505 003e 49       		.uleb128 0x49
- 506 003f 13       		.uleb128 0x13
- 507 0040 2F       		.uleb128 0x2f
- 508 0041 0B       		.uleb128 0xb
- 509 0042 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 10
+ 453 0002 01       		.byte	0x1
+ 454 0003 25       		.uleb128 0x25
+ 455 0004 0E       		.uleb128 0xe
+ 456 0005 13       		.uleb128 0x13
+ 457 0006 0B       		.uleb128 0xb
+ 458 0007 03       		.uleb128 0x3
+ 459 0008 0E       		.uleb128 0xe
+ 460 0009 1B       		.uleb128 0x1b
+ 461 000a 0E       		.uleb128 0xe
+ 462 000b 10       		.uleb128 0x10
+ 463 000c 17       		.uleb128 0x17
+ 464 000d 00       		.byte	0
+ 465 000e 00       		.byte	0
+ 466 000f 02       		.uleb128 0x2
+ 467 0010 24       		.uleb128 0x24
+ 468 0011 00       		.byte	0
+ 469 0012 0B       		.uleb128 0xb
+ 470 0013 0B       		.uleb128 0xb
+ 471 0014 3E       		.uleb128 0x3e
+ 472 0015 0B       		.uleb128 0xb
+ 473 0016 03       		.uleb128 0x3
+ 474 0017 0E       		.uleb128 0xe
+ 475 0018 00       		.byte	0
+ 476 0019 00       		.byte	0
+ 477 001a 03       		.uleb128 0x3
+ 478 001b 24       		.uleb128 0x24
+ 479 001c 00       		.byte	0
+ 480 001d 0B       		.uleb128 0xb
+ 481 001e 0B       		.uleb128 0xb
+ 482 001f 3E       		.uleb128 0x3e
+ 483 0020 0B       		.uleb128 0xb
+ 484 0021 03       		.uleb128 0x3
+ 485 0022 08       		.uleb128 0x8
+ 486 0023 00       		.byte	0
+ 487 0024 00       		.byte	0
+ 488 0025 04       		.uleb128 0x4
+ 489 0026 16       		.uleb128 0x16
+ 490 0027 00       		.byte	0
+ 491 0028 03       		.uleb128 0x3
+ 492 0029 0E       		.uleb128 0xe
+ 493 002a 3A       		.uleb128 0x3a
+ 494 002b 0B       		.uleb128 0xb
+ 495 002c 3B       		.uleb128 0x3b
+ 496 002d 05       		.uleb128 0x5
+ 497 002e 49       		.uleb128 0x49
+ 498 002f 13       		.uleb128 0x13
+ 499 0030 00       		.byte	0
+ 500 0031 00       		.byte	0
+ 501 0032 05       		.uleb128 0x5
+ 502 0033 01       		.uleb128 0x1
+ 503 0034 01       		.byte	0x1
+ 504 0035 49       		.uleb128 0x49
+ 505 0036 13       		.uleb128 0x13
+ 506 0037 01       		.uleb128 0x1
+ 507 0038 13       		.uleb128 0x13
+ 508 0039 00       		.byte	0
+ 509 003a 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 10
 
 
- 510 0043 00       		.byte	0
- 511 0044 07       		.uleb128 0x7
- 512 0045 34       		.uleb128 0x34
- 513 0046 00       		.byte	0
- 514 0047 03       		.uleb128 0x3
- 515 0048 0E       		.uleb128 0xe
- 516 0049 3A       		.uleb128 0x3a
- 517 004a 0B       		.uleb128 0xb
- 518 004b 3B       		.uleb128 0x3b
- 519 004c 0B       		.uleb128 0xb
- 520 004d 49       		.uleb128 0x49
- 521 004e 13       		.uleb128 0x13
- 522 004f 3F       		.uleb128 0x3f
- 523 0050 19       		.uleb128 0x19
- 524 0051 02       		.uleb128 0x2
- 525 0052 18       		.uleb128 0x18
- 526 0053 00       		.byte	0
- 527 0054 00       		.byte	0
- 528 0055 08       		.uleb128 0x8
- 529 0056 26       		.uleb128 0x26
- 530 0057 00       		.byte	0
- 531 0058 49       		.uleb128 0x49
- 532 0059 13       		.uleb128 0x13
- 533 005a 00       		.byte	0
- 534 005b 00       		.byte	0
- 535 005c 00       		.byte	0
- 536              		.section	.debug_aranges,"",%progbits
- 537 0000 14000000 		.4byte	0x14
- 538 0004 0200     		.2byte	0x2
- 539 0006 00000000 		.4byte	.Ldebug_info0
- 540 000a 04       		.byte	0x4
- 541 000b 00       		.byte	0
- 542 000c 0000     		.2byte	0
- 543 000e 0000     		.2byte	0
- 544 0010 00000000 		.4byte	0
- 545 0014 00000000 		.4byte	0
- 546              		.section	.debug_line,"",%progbits
- 547              	.Ldebug_line0:
- 548 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
- 548      02004900 
- 548      00000201 
- 548      FB0E0D00 
- 548      01010101 
- 549              	.LASF19:
- 550 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
- 550      6E657261 
- 550      7465645F 
- 550      536F7572 
- 550      63655C50 
- 551              	.LASF17:
- 552 0026 63795F6D 		.ascii	"cy_metadata\000"
- 552      65746164 
- 552      61746100 
- 553              	.LASF9:
- 554 0032 666C6F61 		.ascii	"float\000"
- 554      7400
- 555              	.LASF20:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 11
+ 510 003b 06       		.uleb128 0x6
+ 511 003c 21       		.uleb128 0x21
+ 512 003d 00       		.byte	0
+ 513 003e 49       		.uleb128 0x49
+ 514 003f 13       		.uleb128 0x13
+ 515 0040 2F       		.uleb128 0x2f
+ 516 0041 0B       		.uleb128 0xb
+ 517 0042 00       		.byte	0
+ 518 0043 00       		.byte	0
+ 519 0044 07       		.uleb128 0x7
+ 520 0045 34       		.uleb128 0x34
+ 521 0046 00       		.byte	0
+ 522 0047 03       		.uleb128 0x3
+ 523 0048 0E       		.uleb128 0xe
+ 524 0049 3A       		.uleb128 0x3a
+ 525 004a 0B       		.uleb128 0xb
+ 526 004b 3B       		.uleb128 0x3b
+ 527 004c 0B       		.uleb128 0xb
+ 528 004d 49       		.uleb128 0x49
+ 529 004e 13       		.uleb128 0x13
+ 530 004f 3F       		.uleb128 0x3f
+ 531 0050 19       		.uleb128 0x19
+ 532 0051 02       		.uleb128 0x2
+ 533 0052 18       		.uleb128 0x18
+ 534 0053 00       		.byte	0
+ 535 0054 00       		.byte	0
+ 536 0055 08       		.uleb128 0x8
+ 537 0056 26       		.uleb128 0x26
+ 538 0057 00       		.byte	0
+ 539 0058 49       		.uleb128 0x49
+ 540 0059 13       		.uleb128 0x13
+ 541 005a 00       		.byte	0
+ 542 005b 00       		.byte	0
+ 543 005c 00       		.byte	0
+ 544              		.section	.debug_aranges,"",%progbits
+ 545 0000 14000000 		.4byte	0x14
+ 546 0004 0200     		.2byte	0x2
+ 547 0006 00000000 		.4byte	.Ldebug_info0
+ 548 000a 04       		.byte	0x4
+ 549 000b 00       		.byte	0
+ 550 000c 0000     		.2byte	0
+ 551 000e 0000     		.2byte	0
+ 552 0010 00000000 		.4byte	0
+ 553 0014 00000000 		.4byte	0
+ 554              		.section	.debug_line,"",%progbits
+ 555              	.Ldebug_line0:
+ 556 0000 4D000000 		.section	.debug_str,"MS",%progbits,1
+ 556      02004700 
+ 556      00000201 
+ 556      FB0E0D00 
+ 556      01010101 
+ 557              	.LASF17:
+ 558 0000 63795F6D 		.ascii	"cy_metadata\000"
+ 558      65746164 
+ 558      61746100 
+ 559              	.LASF9:
+ 560 000c 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 11
 
 
- 556 0038 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
- 556      73657273 
- 556      5C546F6D 
- 556      6D695C44 
- 556      6F63756D 
- 557 0065 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
- 557      5F555342 
- 557      55415254 
- 557      2E637964 
- 557      736E00
- 558              	.LASF1:
- 559 0078 756E7369 		.ascii	"unsigned char\000"
- 559      676E6564 
- 559      20636861 
- 559      7200
- 560              	.LASF5:
- 561 0086 6C6F6E67 		.ascii	"long unsigned int\000"
- 561      20756E73 
- 561      69676E65 
- 561      6420696E 
- 561      7400
- 562              	.LASF3:
- 563 0098 73686F72 		.ascii	"short unsigned int\000"
- 563      7420756E 
- 563      7369676E 
- 563      65642069 
- 563      6E7400
- 564              	.LASF10:
- 565 00ab 646F7562 		.ascii	"double\000"
- 565      6C6500
- 566              	.LASF14:
- 567 00b2 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 567      6574615F 
- 567      63757374 
- 567      6E766C00 
- 568              	.LASF13:
- 569 00c2 63795F6D 		.ascii	"cy_meta_configecc\000"
- 569      6574615F 
- 569      636F6E66 
- 569      69676563 
- 569      6300
- 570              	.LASF18:
- 571 00d4 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 571      4320342E 
- 571      392E3320 
- 571      32303135 
- 571      30333033 
- 572 0107 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 572      20726576 
- 572      6973696F 
- 572      6E203232 
- 572      31323230 
- 573 013a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 573      66756E63 
- 573      74696F6E 
- 573      2D736563 
- 573      74696F6E 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cct7kOX4.s 			page 12
+ 560      7400
+ 561              	.LASF20:
+ 562 0012 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
+ 562      73657273 
+ 562      5C546F6D 
+ 562      6D695C44 
+ 562      6F63756D 
+ 563 003f 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
+ 563      5F555342 
+ 563      55415254 
+ 563      2E637964 
+ 563      736E00
+ 564              	.LASF1:
+ 565 0052 756E7369 		.ascii	"unsigned char\000"
+ 565      676E6564 
+ 565      20636861 
+ 565      7200
+ 566              	.LASF5:
+ 567 0060 6C6F6E67 		.ascii	"long unsigned int\000"
+ 567      20756E73 
+ 567      69676E65 
+ 567      6420696E 
+ 567      7400
+ 568              	.LASF3:
+ 569 0072 73686F72 		.ascii	"short unsigned int\000"
+ 569      7420756E 
+ 569      7369676E 
+ 569      65642069 
+ 569      6E7400
+ 570              	.LASF10:
+ 571 0085 646F7562 		.ascii	"double\000"
+ 571      6C6500
+ 572              	.LASF14:
+ 573 008c 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 573      6574615F 
+ 573      63757374 
+ 573      6E766C00 
+ 574              	.LASF13:
+ 575 009c 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 575      6574615F 
+ 575      636F6E66 
+ 575      69676563 
+ 575      6300
+ 576              	.LASF18:
+ 577 00ae 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 577      4320342E 
+ 577      392E3320 
+ 577      32303135 
+ 577      30333033 
+ 578 00e1 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 578      20726576 
+ 578      6973696F 
+ 578      6E203232 
+ 578      31323230 
+ 579 0114 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 579      66756E63 
+ 579      74696F6E 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 12
 
 
- 574              	.LASF8:
- 575 0162 756E7369 		.ascii	"unsigned int\000"
- 575      676E6564 
- 575      20696E74 
- 575      00
- 576              	.LASF7:
- 577 016f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 577      206C6F6E 
- 577      6720756E 
- 577      7369676E 
- 577      65642069 
- 578              	.LASF16:
- 579 0186 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 579      6574615F 
- 579      666C6173 
- 579      6870726F 
- 579      74656374 
- 580              	.LASF15:
- 581 019b 63795F6D 		.ascii	"cy_meta_wonvl\000"
- 581      6574615F 
- 581      776F6E76 
- 581      6C00
- 582              	.LASF12:
- 583 01a9 73697A65 		.ascii	"sizetype\000"
- 583      74797065 
- 583      00
- 584              	.LASF6:
- 585 01b2 6C6F6E67 		.ascii	"long long int\000"
- 585      206C6F6E 
- 585      6720696E 
- 585      7400
- 586              	.LASF11:
- 587 01c0 63686172 		.ascii	"char\000"
- 587      00
- 588              	.LASF2:
- 589 01c5 73686F72 		.ascii	"short int\000"
- 589      7420696E 
- 589      7400
- 590              	.LASF21:
- 591 01cf 75696E74 		.ascii	"uint8\000"
- 591      3800
- 592              	.LASF4:
- 593 01d5 6C6F6E67 		.ascii	"long int\000"
- 593      20696E74 
+ 579      2D736563 
+ 579      74696F6E 
+ 580              	.LASF8:
+ 581 013c 756E7369 		.ascii	"unsigned int\000"
+ 581      676E6564 
+ 581      20696E74 
+ 581      00
+ 582              	.LASF7:
+ 583 0149 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 583      206C6F6E 
+ 583      6720756E 
+ 583      7369676E 
+ 583      65642069 
+ 584              	.LASF16:
+ 585 0160 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 585      6574615F 
+ 585      666C6173 
+ 585      6870726F 
+ 585      74656374 
+ 586              	.LASF15:
+ 587 0175 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 587      6574615F 
+ 587      776F6E76 
+ 587      6C00
+ 588              	.LASF12:
+ 589 0183 73697A65 		.ascii	"sizetype\000"
+ 589      74797065 
+ 589      00
+ 590              	.LASF6:
+ 591 018c 6C6F6E67 		.ascii	"long long int\000"
+ 591      206C6F6E 
+ 591      6720696E 
+ 591      7400
+ 592              	.LASF11:
+ 593 019a 63686172 		.ascii	"char\000"
  593      00
- 594              	.LASF0:
- 595 01de 7369676E 		.ascii	"signed char\000"
- 595      65642063 
- 595      68617200 
- 596              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 594              	.LASF2:
+ 595 019f 73686F72 		.ascii	"short int\000"
+ 595      7420696E 
+ 595      7400
+ 596              	.LASF21:
+ 597 01a9 75696E74 		.ascii	"uint8\000"
+ 597      3800
+ 598              	.LASF4:
+ 599 01af 6C6F6E67 		.ascii	"long int\000"
+ 599      20696E74 
+ 599      00
+ 600              	.LASF0:
+ 601 01b8 7369676E 		.ascii	"signed char\000"
+ 601      65642063 
+ 601      68617200 
+ 602              	.LASF19:
+ 603 01c4 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 603      72617465 
+ 603      645F536F 
+ 603      75726365 
+ 603      5C50536F 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccYIS8Bw.s 			page 13
+
+
+ 604              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

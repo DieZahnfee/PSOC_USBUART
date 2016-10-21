@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: project.h
 * 
-* PSoC Creator  3.3 CP3
+* PSoC Creator  4.0
 *
 * Description:
 * It contains references to all generated header files and should not be modified.
@@ -32,6 +32,12 @@
 #include "Analog_In_Pos.h"
 #include "Analog_In_Neg_aliases.h"
 #include "Analog_In_Neg.h"
+#include "OPAMP.h"
+#include "Vref_source_aliases.h"
+#include "Vref_source.h"
+#include "IDAC8.h"
+#include "Vref_sink_aliases.h"
+#include "Vref_sink.h"
 #include "ADC_DelSig_Ext_CP_Clk.h"
 #include "ADC_DelSig_IRQ.h"
 #include "ADC_DelSig_theACLK.h"

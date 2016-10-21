@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 1
 
 
    1              		.syntax unified
@@ -26,61 +26,61 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
   23              		.type	USBUART_DispatchMSCClassRqst, %function
   24              	USBUART_DispatchMSCClassRqst:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\USBUART_msc.c"
-   1:.\Generated_Source\PSoC5/USBUART_msc.c **** /***************************************************************************//**
-   2:.\Generated_Source\PSoC5/USBUART_msc.c **** * \file USBUART_cdc.c
-   3:.\Generated_Source\PSoC5/USBUART_msc.c **** * \version 3.0
-   4:.\Generated_Source\PSoC5/USBUART_msc.c **** *
-   5:.\Generated_Source\PSoC5/USBUART_msc.c **** * \brief
-   6:.\Generated_Source\PSoC5/USBUART_msc.c **** *  This file contains the USB MSC Class request handler and global API for MSC 
-   7:.\Generated_Source\PSoC5/USBUART_msc.c **** *  class.
-   8:.\Generated_Source\PSoC5/USBUART_msc.c **** *
-   9:.\Generated_Source\PSoC5/USBUART_msc.c **** * Related Document:
-  10:.\Generated_Source\PSoC5/USBUART_msc.c **** *  Universal Serial Bus Class Definitions for Communication Devices Version 1.1
-  11:.\Generated_Source\PSoC5/USBUART_msc.c **** *
-  12:.\Generated_Source\PSoC5/USBUART_msc.c **** ********************************************************************************
-  13:.\Generated_Source\PSoC5/USBUART_msc.c **** * \copyright
-  14:.\Generated_Source\PSoC5/USBUART_msc.c **** * Copyright 2012-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  15:.\Generated_Source\PSoC5/USBUART_msc.c **** * You may use this file only in accordance with the license, terms, conditions,
-  16:.\Generated_Source\PSoC5/USBUART_msc.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  17:.\Generated_Source\PSoC5/USBUART_msc.c **** * the software package with which this file was provided.
-  18:.\Generated_Source\PSoC5/USBUART_msc.c **** *******************************************************************************/
-  19:.\Generated_Source\PSoC5/USBUART_msc.c **** 
-  20:.\Generated_Source\PSoC5/USBUART_msc.c **** #include "USBUART_msc.h"
-  21:.\Generated_Source\PSoC5/USBUART_msc.c **** #include "USBUART_pvt.h"
-  22:.\Generated_Source\PSoC5/USBUART_msc.c **** #include "cyapicallbacks.h"
-  23:.\Generated_Source\PSoC5/USBUART_msc.c **** 
-  24:.\Generated_Source\PSoC5/USBUART_msc.c **** #if (USBUART_HANDLE_MSC_REQUESTS)
-  25:.\Generated_Source\PSoC5/USBUART_msc.c **** 
-  26:.\Generated_Source\PSoC5/USBUART_msc.c **** /***************************************
-  27:.\Generated_Source\PSoC5/USBUART_msc.c **** *          Internal variables
-  28:.\Generated_Source\PSoC5/USBUART_msc.c **** ***************************************/
-  29:.\Generated_Source\PSoC5/USBUART_msc.c **** 
-  30:.\Generated_Source\PSoC5/USBUART_msc.c **** static uint8 USBUART_lunCount = USBUART_MSC_LUN_NUMBER;
-  31:.\Generated_Source\PSoC5/USBUART_msc.c **** 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\USBUART_msc.c"
+   1:Generated_Source\PSoC5/USBUART_msc.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC5/USBUART_msc.c **** * \file USBUART_cdc.c
+   3:Generated_Source\PSoC5/USBUART_msc.c **** * \version 3.0
+   4:Generated_Source\PSoC5/USBUART_msc.c **** *
+   5:Generated_Source\PSoC5/USBUART_msc.c **** * \brief
+   6:Generated_Source\PSoC5/USBUART_msc.c **** *  This file contains the USB MSC Class request handler and global API for MSC 
+   7:Generated_Source\PSoC5/USBUART_msc.c **** *  class.
+   8:Generated_Source\PSoC5/USBUART_msc.c **** *
+   9:Generated_Source\PSoC5/USBUART_msc.c **** * Related Document:
+  10:Generated_Source\PSoC5/USBUART_msc.c **** *  Universal Serial Bus Class Definitions for Communication Devices Version 1.1
+  11:Generated_Source\PSoC5/USBUART_msc.c **** *
+  12:Generated_Source\PSoC5/USBUART_msc.c **** ********************************************************************************
+  13:Generated_Source\PSoC5/USBUART_msc.c **** * \copyright
+  14:Generated_Source\PSoC5/USBUART_msc.c **** * Copyright 2012-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  15:Generated_Source\PSoC5/USBUART_msc.c **** * You may use this file only in accordance with the license, terms, conditions,
+  16:Generated_Source\PSoC5/USBUART_msc.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  17:Generated_Source\PSoC5/USBUART_msc.c **** * the software package with which this file was provided.
+  18:Generated_Source\PSoC5/USBUART_msc.c **** *******************************************************************************/
+  19:Generated_Source\PSoC5/USBUART_msc.c **** 
+  20:Generated_Source\PSoC5/USBUART_msc.c **** #include "USBUART_msc.h"
+  21:Generated_Source\PSoC5/USBUART_msc.c **** #include "USBUART_pvt.h"
+  22:Generated_Source\PSoC5/USBUART_msc.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC5/USBUART_msc.c **** 
+  24:Generated_Source\PSoC5/USBUART_msc.c **** #if (USBUART_HANDLE_MSC_REQUESTS)
+  25:Generated_Source\PSoC5/USBUART_msc.c **** 
+  26:Generated_Source\PSoC5/USBUART_msc.c **** /***************************************
+  27:Generated_Source\PSoC5/USBUART_msc.c **** *          Internal variables
+  28:Generated_Source\PSoC5/USBUART_msc.c **** ***************************************/
+  29:Generated_Source\PSoC5/USBUART_msc.c **** 
+  30:Generated_Source\PSoC5/USBUART_msc.c **** static uint8 USBUART_lunCount = USBUART_MSC_LUN_NUMBER;
+  31:Generated_Source\PSoC5/USBUART_msc.c **** 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/USBUART_msc.c **** 
-  33:.\Generated_Source\PSoC5/USBUART_msc.c **** /*******************************************************************************
-  34:.\Generated_Source\PSoC5/USBUART_msc.c **** * Function Name: USBUART_DispatchMSCClassRqst
-  35:.\Generated_Source\PSoC5/USBUART_msc.c **** ****************************************************************************//**
-  36:.\Generated_Source\PSoC5/USBUART_msc.c **** *   
-  37:.\Generated_Source\PSoC5/USBUART_msc.c **** *  \internal 
-  38:.\Generated_Source\PSoC5/USBUART_msc.c **** *  This routine dispatches MSC class requests.
-  39:.\Generated_Source\PSoC5/USBUART_msc.c **** *
-  40:.\Generated_Source\PSoC5/USBUART_msc.c **** * \return
-  41:.\Generated_Source\PSoC5/USBUART_msc.c **** *  Status of request processing: handled or not handled.
-  42:.\Generated_Source\PSoC5/USBUART_msc.c **** *
-  43:.\Generated_Source\PSoC5/USBUART_msc.c **** * \globalvars
-  44:.\Generated_Source\PSoC5/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
-  45:.\Generated_Source\PSoC5/USBUART_msc.c **** *
-  46:.\Generated_Source\PSoC5/USBUART_msc.c **** * \reentrant
-  47:.\Generated_Source\PSoC5/USBUART_msc.c **** *  No.
-  48:.\Generated_Source\PSoC5/USBUART_msc.c **** *
-  49:.\Generated_Source\PSoC5/USBUART_msc.c **** *******************************************************************************/
-  50:.\Generated_Source\PSoC5/USBUART_msc.c **** uint8 USBUART_DispatchMSCClassRqst(void) 
-  51:.\Generated_Source\PSoC5/USBUART_msc.c **** {
+  32:Generated_Source\PSoC5/USBUART_msc.c **** 
+  33:Generated_Source\PSoC5/USBUART_msc.c **** /*******************************************************************************
+  34:Generated_Source\PSoC5/USBUART_msc.c **** * Function Name: USBUART_DispatchMSCClassRqst
+  35:Generated_Source\PSoC5/USBUART_msc.c **** ****************************************************************************//**
+  36:Generated_Source\PSoC5/USBUART_msc.c **** *   
+  37:Generated_Source\PSoC5/USBUART_msc.c **** *  \internal 
+  38:Generated_Source\PSoC5/USBUART_msc.c **** *  This routine dispatches MSC class requests.
+  39:Generated_Source\PSoC5/USBUART_msc.c **** *
+  40:Generated_Source\PSoC5/USBUART_msc.c **** * \return
+  41:Generated_Source\PSoC5/USBUART_msc.c **** *  Status of request processing: handled or not handled.
+  42:Generated_Source\PSoC5/USBUART_msc.c **** *
+  43:Generated_Source\PSoC5/USBUART_msc.c **** * \globalvars
+  44:Generated_Source\PSoC5/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
+  45:Generated_Source\PSoC5/USBUART_msc.c **** *
+  46:Generated_Source\PSoC5/USBUART_msc.c **** * \reentrant
+  47:Generated_Source\PSoC5/USBUART_msc.c **** *  No.
+  48:Generated_Source\PSoC5/USBUART_msc.c **** *
+  49:Generated_Source\PSoC5/USBUART_msc.c **** *******************************************************************************/
+  50:Generated_Source\PSoC5/USBUART_msc.c **** uint8 USBUART_DispatchMSCClassRqst(void) 
+  51:Generated_Source\PSoC5/USBUART_msc.c **** {
   27              		.loc 1 51 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -90,35 +90,35 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
   33              		.cfi_offset 3, -8
   34              		.cfi_offset 14, -4
   35              	.LVL0:
-  52:.\Generated_Source\PSoC5/USBUART_msc.c ****     uint8 requestHandled = USBUART_FALSE;
-  53:.\Generated_Source\PSoC5/USBUART_msc.c ****     
-  54:.\Generated_Source\PSoC5/USBUART_msc.c ****     /* Get request data. */
-  55:.\Generated_Source\PSoC5/USBUART_msc.c ****     uint16 value  = USBUART_GET_UINT16(USBUART_wValueHiReg,  USBUART_wValueLoReg);
+  52:Generated_Source\PSoC5/USBUART_msc.c ****     uint8 requestHandled = USBUART_FALSE;
+  53:Generated_Source\PSoC5/USBUART_msc.c ****     
+  54:Generated_Source\PSoC5/USBUART_msc.c ****     /* Get request data. */
+  55:Generated_Source\PSoC5/USBUART_msc.c ****     uint16 value  = USBUART_GET_UINT16(USBUART_wValueHiReg,  USBUART_wValueLoReg);
   36              		.loc 1 55 0
   37 0002 1A4B     		ldr	r3, .L11
   38 0004 D978     		ldrb	r1, [r3, #3]	@ zero_extendqisi2
   39 0006 9A78     		ldrb	r2, [r3, #2]	@ zero_extendqisi2
   40 0008 42EA0122 		orr	r2, r2, r1, lsl #8
   41              	.LVL1:
-  56:.\Generated_Source\PSoC5/USBUART_msc.c ****     uint16 dataLength = USBUART_GET_UINT16(USBUART_wLengthHiReg, USBUART_wLengthLoReg);
+  56:Generated_Source\PSoC5/USBUART_msc.c ****     uint16 dataLength = USBUART_GET_UINT16(USBUART_wLengthHiReg, USBUART_wLengthLoReg);
   42              		.loc 1 56 0
   43 000c D879     		ldrb	r0, [r3, #7]	@ zero_extendqisi2
   44 000e 9979     		ldrb	r1, [r3, #6]	@ zero_extendqisi2
   45 0010 41EA0021 		orr	r1, r1, r0, lsl #8
   46              	.LVL2:
-  57:.\Generated_Source\PSoC5/USBUART_msc.c ****        
-  58:.\Generated_Source\PSoC5/USBUART_msc.c ****     /* Check request direction: D2H or H2D. */
-  59:.\Generated_Source\PSoC5/USBUART_msc.c ****     if (0u != (USBUART_bmRequestTypeReg & USBUART_RQST_DIR_D2H))
+  57:Generated_Source\PSoC5/USBUART_msc.c ****        
+  58:Generated_Source\PSoC5/USBUART_msc.c ****     /* Check request direction: D2H or H2D. */
+  59:Generated_Source\PSoC5/USBUART_msc.c ****     if (0u != (USBUART_bmRequestTypeReg & USBUART_RQST_DIR_D2H))
   47              		.loc 1 59 0
   48 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
   49 0016 13F0800F 		tst	r3, #128
   50 001a 0FD0     		beq	.L2
-  60:.\Generated_Source\PSoC5/USBUART_msc.c ****     {
-  61:.\Generated_Source\PSoC5/USBUART_msc.c ****         /* Handle direction from device to host. */
-  62:.\Generated_Source\PSoC5/USBUART_msc.c ****         
-  63:.\Generated_Source\PSoC5/USBUART_msc.c ****         if (USBUART_MSC_GET_MAX_LUN == USBUART_bRequestReg)
+  60:Generated_Source\PSoC5/USBUART_msc.c ****     {
+  61:Generated_Source\PSoC5/USBUART_msc.c ****         /* Handle direction from device to host. */
+  62:Generated_Source\PSoC5/USBUART_msc.c ****         
+  63:Generated_Source\PSoC5/USBUART_msc.c ****         if (USBUART_MSC_GET_MAX_LUN == USBUART_bRequestReg)
   51              		.loc 1 63 0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 3
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 3
 
 
   52 001c 134B     		ldr	r3, .L11
@@ -126,79 +126,79 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
   54 0020 DBB2     		uxtb	r3, r3
   55 0022 FE2B     		cmp	r3, #254
   56 0024 16D1     		bne	.L4
-  64:.\Generated_Source\PSoC5/USBUART_msc.c ****         {
-  65:.\Generated_Source\PSoC5/USBUART_msc.c ****             /* Check request fields. */
-  66:.\Generated_Source\PSoC5/USBUART_msc.c ****             if ((value  == USBUART_MSC_GET_MAX_LUN_WVALUE) &&
+  64:Generated_Source\PSoC5/USBUART_msc.c ****         {
+  65:Generated_Source\PSoC5/USBUART_msc.c ****             /* Check request fields. */
+  66:Generated_Source\PSoC5/USBUART_msc.c ****             if ((value  == USBUART_MSC_GET_MAX_LUN_WVALUE) &&
   57              		.loc 1 66 0
   58 0026 BAB9     		cbnz	r2, .L5
   59              		.loc 1 66 0 is_stmt 0 discriminator 1
   60 0028 0129     		cmp	r1, #1
   61 002a 17D1     		bne	.L6
-  67:.\Generated_Source\PSoC5/USBUART_msc.c ****                 (dataLength == USBUART_MSC_GET_MAX_LUN_WLENGTH))
-  68:.\Generated_Source\PSoC5/USBUART_msc.c ****             {
-  69:.\Generated_Source\PSoC5/USBUART_msc.c ****                 /* Reply to Get Max LUN request: setup control read. */
-  70:.\Generated_Source\PSoC5/USBUART_msc.c ****                 USBUART_currentTD.pData = &USBUART_lunCount;
+  67:Generated_Source\PSoC5/USBUART_msc.c ****                 (dataLength == USBUART_MSC_GET_MAX_LUN_WLENGTH))
+  68:Generated_Source\PSoC5/USBUART_msc.c ****             {
+  69:Generated_Source\PSoC5/USBUART_msc.c ****                 /* Reply to Get Max LUN request: setup control read. */
+  70:Generated_Source\PSoC5/USBUART_msc.c ****                 USBUART_currentTD.pData = &USBUART_lunCount;
   62              		.loc 1 70 0 is_stmt 1
   63 002c 104B     		ldr	r3, .L11+4
   64 002e 114A     		ldr	r2, .L11+8
   65              	.LVL3:
   66 0030 5A60     		str	r2, [r3, #4]
-  71:.\Generated_Source\PSoC5/USBUART_msc.c ****                 USBUART_currentTD.count =  USBUART_MSC_GET_MAX_LUN_WLENGTH;
+  71:Generated_Source\PSoC5/USBUART_msc.c ****                 USBUART_currentTD.count =  USBUART_MSC_GET_MAX_LUN_WLENGTH;
   67              		.loc 1 71 0
   68 0032 0122     		movs	r2, #1
   69 0034 1A80     		strh	r2, [r3]	@ movhi
-  72:.\Generated_Source\PSoC5/USBUART_msc.c ****                 
-  73:.\Generated_Source\PSoC5/USBUART_msc.c ****                 requestHandled  = USBUART_InitControlRead();
+  72:Generated_Source\PSoC5/USBUART_msc.c ****                 
+  73:Generated_Source\PSoC5/USBUART_msc.c ****                 requestHandled  = USBUART_InitControlRead();
   70              		.loc 1 73 0
   71 0036 FFF7FEFF 		bl	USBUART_InitControlRead
   72              	.LVL4:
   73 003a 08BD     		pop	{r3, pc}
   74              	.LVL5:
   75              	.L2:
-  74:.\Generated_Source\PSoC5/USBUART_msc.c ****             }
-  75:.\Generated_Source\PSoC5/USBUART_msc.c ****         }
-  76:.\Generated_Source\PSoC5/USBUART_msc.c ****     }
-  77:.\Generated_Source\PSoC5/USBUART_msc.c ****     else
-  78:.\Generated_Source\PSoC5/USBUART_msc.c ****     {
-  79:.\Generated_Source\PSoC5/USBUART_msc.c ****         /* Handle direction from host to device. */
-  80:.\Generated_Source\PSoC5/USBUART_msc.c ****         
-  81:.\Generated_Source\PSoC5/USBUART_msc.c ****         if (USBUART_MSC_RESET == USBUART_bRequestReg)
+  74:Generated_Source\PSoC5/USBUART_msc.c ****             }
+  75:Generated_Source\PSoC5/USBUART_msc.c ****         }
+  76:Generated_Source\PSoC5/USBUART_msc.c ****     }
+  77:Generated_Source\PSoC5/USBUART_msc.c ****     else
+  78:Generated_Source\PSoC5/USBUART_msc.c ****     {
+  79:Generated_Source\PSoC5/USBUART_msc.c ****         /* Handle direction from host to device. */
+  80:Generated_Source\PSoC5/USBUART_msc.c ****         
+  81:Generated_Source\PSoC5/USBUART_msc.c ****         if (USBUART_MSC_RESET == USBUART_bRequestReg)
   76              		.loc 1 81 0
   77 003c 0B4B     		ldr	r3, .L11
   78 003e 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
   79 0040 DBB2     		uxtb	r3, r3
   80 0042 FF2B     		cmp	r3, #255
   81 0044 0CD1     		bne	.L7
-  82:.\Generated_Source\PSoC5/USBUART_msc.c ****         {
-  83:.\Generated_Source\PSoC5/USBUART_msc.c ****             /* Check request fields. */
-  84:.\Generated_Source\PSoC5/USBUART_msc.c ****             if ((value  == USBUART_MSC_RESET_WVALUE) &&
+  82:Generated_Source\PSoC5/USBUART_msc.c ****         {
+  83:Generated_Source\PSoC5/USBUART_msc.c ****             /* Check request fields. */
+  84:Generated_Source\PSoC5/USBUART_msc.c ****             if ((value  == USBUART_MSC_RESET_WVALUE) &&
   82              		.loc 1 84 0
   83 0046 6AB9     		cbnz	r2, .L8
   84              		.loc 1 84 0 is_stmt 0 discriminator 1
   85 0048 71B9     		cbnz	r1, .L9
-  85:.\Generated_Source\PSoC5/USBUART_msc.c ****                 (dataLength == USBUART_MSC_RESET_WLENGTH))
-  86:.\Generated_Source\PSoC5/USBUART_msc.c ****             {
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 4
+  85:Generated_Source\PSoC5/USBUART_msc.c ****                 (dataLength == USBUART_MSC_RESET_WLENGTH))
+  86:Generated_Source\PSoC5/USBUART_msc.c ****             {
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 4
 
 
-  87:.\Generated_Source\PSoC5/USBUART_msc.c ****                 /* Handle to Bulk-Only Reset request: no data control transfer. */
-  88:.\Generated_Source\PSoC5/USBUART_msc.c ****                 USBUART_currentTD.count = USBUART_MSC_RESET_WLENGTH;
+  87:Generated_Source\PSoC5/USBUART_msc.c ****                 /* Handle to Bulk-Only Reset request: no data control transfer. */
+  88:Generated_Source\PSoC5/USBUART_msc.c ****                 USBUART_currentTD.count = USBUART_MSC_RESET_WLENGTH;
   86              		.loc 1 88 0 is_stmt 1
   87 004a 094B     		ldr	r3, .L11+4
   88 004c 1A80     		strh	r2, [r3]	@ movhi
-  89:.\Generated_Source\PSoC5/USBUART_msc.c ****                 
-  90:.\Generated_Source\PSoC5/USBUART_msc.c ****             #ifdef USBUART_DISPATCH_MSC_CLASS_MSC_RESET_RQST_CALLBACK
-  91:.\Generated_Source\PSoC5/USBUART_msc.c ****                 USBUART_DispatchMSCClass_MSC_RESET_RQST_Callback();
-  92:.\Generated_Source\PSoC5/USBUART_msc.c ****             #endif /* (USBUART_DISPATCH_MSC_CLASS_MSC_RESET_RQST_CALLBACK) */
-  93:.\Generated_Source\PSoC5/USBUART_msc.c ****                 
-  94:.\Generated_Source\PSoC5/USBUART_msc.c ****                 requestHandled = USBUART_InitNoDataControlTransfer();
+  89:Generated_Source\PSoC5/USBUART_msc.c ****                 
+  90:Generated_Source\PSoC5/USBUART_msc.c ****             #ifdef USBUART_DISPATCH_MSC_CLASS_MSC_RESET_RQST_CALLBACK
+  91:Generated_Source\PSoC5/USBUART_msc.c ****                 USBUART_DispatchMSCClass_MSC_RESET_RQST_Callback();
+  92:Generated_Source\PSoC5/USBUART_msc.c ****             #endif /* (USBUART_DISPATCH_MSC_CLASS_MSC_RESET_RQST_CALLBACK) */
+  93:Generated_Source\PSoC5/USBUART_msc.c ****                 
+  94:Generated_Source\PSoC5/USBUART_msc.c ****                 requestHandled = USBUART_InitNoDataControlTransfer();
   89              		.loc 1 94 0
   90 004e FFF7FEFF 		bl	USBUART_InitNoDataControlTransfer
   91              	.LVL6:
   92 0052 08BD     		pop	{r3, pc}
   93              	.LVL7:
   94              	.L4:
-  52:.\Generated_Source\PSoC5/USBUART_msc.c ****     
+  52:Generated_Source\PSoC5/USBUART_msc.c ****     
   95              		.loc 1 52 0
   96 0054 0020     		movs	r0, #0
   97 0056 08BD     		pop	{r3, pc}
@@ -217,12 +217,12 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  110              	.L9:
  111 0068 0020     		movs	r0, #0
  112              	.LVL8:
-  95:.\Generated_Source\PSoC5/USBUART_msc.c ****             }
-  96:.\Generated_Source\PSoC5/USBUART_msc.c ****         }
-  97:.\Generated_Source\PSoC5/USBUART_msc.c ****     }
-  98:.\Generated_Source\PSoC5/USBUART_msc.c ****     
-  99:.\Generated_Source\PSoC5/USBUART_msc.c ****     return (requestHandled);
- 100:.\Generated_Source\PSoC5/USBUART_msc.c **** }
+  95:Generated_Source\PSoC5/USBUART_msc.c ****             }
+  96:Generated_Source\PSoC5/USBUART_msc.c ****         }
+  97:Generated_Source\PSoC5/USBUART_msc.c ****     }
+  98:Generated_Source\PSoC5/USBUART_msc.c ****     
+  99:Generated_Source\PSoC5/USBUART_msc.c ****     return (requestHandled);
+ 100:Generated_Source\PSoC5/USBUART_msc.c **** }
  113              		.loc 1 100 0
  114 006a 08BD     		pop	{r3, pc}
  115              	.L12:
@@ -238,41 +238,41 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  125              		.align	2
  126              		.global	USBUART_MSC_SetLunCount
  127              		.thumb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 5
 
 
  128              		.thumb_func
  129              		.type	USBUART_MSC_SetLunCount, %function
  130              	USBUART_MSC_SetLunCount:
  131              	.LFB1:
- 101:.\Generated_Source\PSoC5/USBUART_msc.c **** 
- 102:.\Generated_Source\PSoC5/USBUART_msc.c **** 
- 103:.\Generated_Source\PSoC5/USBUART_msc.c **** /*******************************************************************************
- 104:.\Generated_Source\PSoC5/USBUART_msc.c **** * Function Name: USBUART_MSC_SetLunCount
- 105:.\Generated_Source\PSoC5/USBUART_msc.c **** ****************************************************************************//**
- 106:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 107:.\Generated_Source\PSoC5/USBUART_msc.c **** *  This function sets the number of logical units supported in the application. 
- 108:.\Generated_Source\PSoC5/USBUART_msc.c **** *  The default number of logical units is set in the component customizer.
- 109:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 110:.\Generated_Source\PSoC5/USBUART_msc.c **** *  \param lunCount: Count of the logical units. Valid range is between 1 and 16.
- 111:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 112:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 113:.\Generated_Source\PSoC5/USBUART_msc.c **** * \globalvars
- 114:.\Generated_Source\PSoC5/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
- 115:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 116:.\Generated_Source\PSoC5/USBUART_msc.c **** * \reentrant
- 117:.\Generated_Source\PSoC5/USBUART_msc.c **** *  No.
- 118:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 119:.\Generated_Source\PSoC5/USBUART_msc.c **** *******************************************************************************/
- 120:.\Generated_Source\PSoC5/USBUART_msc.c **** void USBUART_MSC_SetLunCount(uint8 lunCount) 
- 121:.\Generated_Source\PSoC5/USBUART_msc.c **** {
+ 101:Generated_Source\PSoC5/USBUART_msc.c **** 
+ 102:Generated_Source\PSoC5/USBUART_msc.c **** 
+ 103:Generated_Source\PSoC5/USBUART_msc.c **** /*******************************************************************************
+ 104:Generated_Source\PSoC5/USBUART_msc.c **** * Function Name: USBUART_MSC_SetLunCount
+ 105:Generated_Source\PSoC5/USBUART_msc.c **** ****************************************************************************//**
+ 106:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 107:Generated_Source\PSoC5/USBUART_msc.c **** *  This function sets the number of logical units supported in the application. 
+ 108:Generated_Source\PSoC5/USBUART_msc.c **** *  The default number of logical units is set in the component customizer.
+ 109:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 110:Generated_Source\PSoC5/USBUART_msc.c **** *  \param lunCount: Count of the logical units. Valid range is between 1 and 16.
+ 111:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 112:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 113:Generated_Source\PSoC5/USBUART_msc.c **** * \globalvars
+ 114:Generated_Source\PSoC5/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
+ 115:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 116:Generated_Source\PSoC5/USBUART_msc.c **** * \reentrant
+ 117:Generated_Source\PSoC5/USBUART_msc.c **** *  No.
+ 118:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 119:Generated_Source\PSoC5/USBUART_msc.c **** *******************************************************************************/
+ 120:Generated_Source\PSoC5/USBUART_msc.c **** void USBUART_MSC_SetLunCount(uint8 lunCount) 
+ 121:Generated_Source\PSoC5/USBUART_msc.c **** {
  132              		.loc 1 121 0
  133              		.cfi_startproc
  134              		@ args = 0, pretend = 0, frame = 0
  135              		@ frame_needed = 0, uses_anonymous_args = 0
  136              		@ link register save eliminated.
  137              	.LVL9:
- 122:.\Generated_Source\PSoC5/USBUART_msc.c ****     USBUART_lunCount = (lunCount - 1u);
+ 122:Generated_Source\PSoC5/USBUART_msc.c ****     USBUART_lunCount = (lunCount - 1u);
  138              		.loc 1 122 0
  139 0000 0138     		subs	r0, r0, #1
  140              	.LVL10:
@@ -294,41 +294,41 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  156              		.type	USBUART_MSC_GetLunCount, %function
  157              	USBUART_MSC_GetLunCount:
  158              	.LFB2:
- 123:.\Generated_Source\PSoC5/USBUART_msc.c **** }
- 124:.\Generated_Source\PSoC5/USBUART_msc.c **** 
- 125:.\Generated_Source\PSoC5/USBUART_msc.c **** 
- 126:.\Generated_Source\PSoC5/USBUART_msc.c **** /*******************************************************************************
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 6
+ 123:Generated_Source\PSoC5/USBUART_msc.c **** }
+ 124:Generated_Source\PSoC5/USBUART_msc.c **** 
+ 125:Generated_Source\PSoC5/USBUART_msc.c **** 
+ 126:Generated_Source\PSoC5/USBUART_msc.c **** /*******************************************************************************
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 6
 
 
- 127:.\Generated_Source\PSoC5/USBUART_msc.c **** * Function Name: USBUART_MSC_GetLunCount
- 128:.\Generated_Source\PSoC5/USBUART_msc.c **** ****************************************************************************//**
- 129:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 130:.\Generated_Source\PSoC5/USBUART_msc.c **** *  This function returns the number of logical units.
- 131:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 132:.\Generated_Source\PSoC5/USBUART_msc.c **** * \return
- 133:.\Generated_Source\PSoC5/USBUART_msc.c **** *   Number of the logical units.
- 134:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 135:.\Generated_Source\PSoC5/USBUART_msc.c **** * \globalvars
- 136:.\Generated_Source\PSoC5/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
- 137:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 138:.\Generated_Source\PSoC5/USBUART_msc.c **** * \reentrant
- 139:.\Generated_Source\PSoC5/USBUART_msc.c **** *  No.
- 140:.\Generated_Source\PSoC5/USBUART_msc.c **** *
- 141:.\Generated_Source\PSoC5/USBUART_msc.c **** *******************************************************************************/
- 142:.\Generated_Source\PSoC5/USBUART_msc.c **** uint8 USBUART_MSC_GetLunCount(void) 
- 143:.\Generated_Source\PSoC5/USBUART_msc.c **** {
+ 127:Generated_Source\PSoC5/USBUART_msc.c **** * Function Name: USBUART_MSC_GetLunCount
+ 128:Generated_Source\PSoC5/USBUART_msc.c **** ****************************************************************************//**
+ 129:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 130:Generated_Source\PSoC5/USBUART_msc.c **** *  This function returns the number of logical units.
+ 131:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 132:Generated_Source\PSoC5/USBUART_msc.c **** * \return
+ 133:Generated_Source\PSoC5/USBUART_msc.c **** *   Number of the logical units.
+ 134:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 135:Generated_Source\PSoC5/USBUART_msc.c **** * \globalvars
+ 136:Generated_Source\PSoC5/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
+ 137:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 138:Generated_Source\PSoC5/USBUART_msc.c **** * \reentrant
+ 139:Generated_Source\PSoC5/USBUART_msc.c **** *  No.
+ 140:Generated_Source\PSoC5/USBUART_msc.c **** *
+ 141:Generated_Source\PSoC5/USBUART_msc.c **** *******************************************************************************/
+ 142:Generated_Source\PSoC5/USBUART_msc.c **** uint8 USBUART_MSC_GetLunCount(void) 
+ 143:Generated_Source\PSoC5/USBUART_msc.c **** {
  159              		.loc 1 143 0
  160              		.cfi_startproc
  161              		@ args = 0, pretend = 0, frame = 0
  162              		@ frame_needed = 0, uses_anonymous_args = 0
  163              		@ link register save eliminated.
- 144:.\Generated_Source\PSoC5/USBUART_msc.c ****     return (USBUART_lunCount + 1u);
+ 144:Generated_Source\PSoC5/USBUART_msc.c ****     return (USBUART_lunCount + 1u);
  164              		.loc 1 144 0
  165 0000 024B     		ldr	r3, .L17
  166 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  167 0004 0130     		adds	r0, r0, #1
- 145:.\Generated_Source\PSoC5/USBUART_msc.c **** }   
+ 145:Generated_Source\PSoC5/USBUART_msc.c **** }   
  168              		.loc 1 145 0
  169 0006 C0B2     		uxtb	r0, r0
  170 0008 7047     		bx	lr
@@ -347,9 +347,9 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  183 0000 00       		.space	1
  184              		.text
  185              	.Letext0:
- 186              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
- 187              		.file 3 ".\\Generated_Source\\PSoC5\\USBUART.h"
- 188              		.file 4 ".\\Generated_Source\\PSoC5\\USBUART_pvt.h"
+ 186              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 187              		.file 3 "Generated_Source\\PSoC5\\USBUART.h"
+ 188              		.file 4 "Generated_Source\\PSoC5\\USBUART_pvt.h"
  189              		.section	.debug_info,"",%progbits
  190              	.Ldebug_info0:
  191 0000 0B020000 		.4byte	0x20b
@@ -357,12 +357,12 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  193 0006 00000000 		.4byte	.Ldebug_abbrev0
  194 000a 04       		.byte	0x4
  195 000b 01       		.uleb128 0x1
- 196 000c 41010000 		.4byte	.LASF30
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 7
+ 196 000c 66010000 		.4byte	.LASF30
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 7
 
 
  197 0010 01       		.byte	0x1
- 198 0011 3B020000 		.4byte	.LASF31
+ 198 0011 41010000 		.4byte	.LASF31
  199 0015 91000000 		.4byte	.LASF32
  200 0019 00000000 		.4byte	.Ldebug_ranges0+0
  201 001d 00000000 		.4byte	0
@@ -370,7 +370,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  203 0025 02       		.uleb128 0x2
  204 0026 01       		.byte	0x1
  205 0027 06       		.byte	0x6
- 206 0028 D0020000 		.4byte	.LASF0
+ 206 0028 CE020000 		.4byte	.LASF0
  207 002c 02       		.uleb128 0x2
  208 002d 01       		.byte	0x1
  209 002e 08       		.byte	0x8
@@ -378,7 +378,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  211 0033 02       		.uleb128 0x2
  212 0034 02       		.byte	0x2
  213 0035 05       		.byte	0x5
- 214 0036 96020000 		.4byte	.LASF2
+ 214 0036 94020000 		.4byte	.LASF2
  215 003a 02       		.uleb128 0x2
  216 003b 02       		.byte	0x2
  217 003c 07       		.byte	0x7
@@ -386,7 +386,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  219 0041 02       		.uleb128 0x2
  220 0042 04       		.byte	0x4
  221 0043 05       		.byte	0x5
- 222 0044 C7020000 		.4byte	.LASF4
+ 222 0044 C5020000 		.4byte	.LASF4
  223 0048 02       		.uleb128 0x2
  224 0049 04       		.byte	0x4
  225 004a 07       		.byte	0x7
@@ -394,11 +394,11 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  227 004f 02       		.uleb128 0x2
  228 0050 08       		.byte	0x8
  229 0051 05       		.byte	0x5
- 230 0052 83020000 		.4byte	.LASF6
+ 230 0052 81020000 		.4byte	.LASF6
  231 0056 02       		.uleb128 0x2
  232 0057 08       		.byte	0x8
  233 0058 07       		.byte	0x7
- 234 0059 DC010000 		.4byte	.LASF7
+ 234 0059 01020000 		.4byte	.LASF7
  235 005d 03       		.uleb128 0x3
  236 005e 04       		.byte	0x4
  237 005f 05       		.byte	0x5
@@ -406,7 +406,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  239 0064 02       		.uleb128 0x2
  240 0065 04       		.byte	0x4
  241 0066 07       		.byte	0x7
- 242 0067 CF010000 		.4byte	.LASF8
+ 242 0067 F4010000 		.4byte	.LASF8
  243 006b 04       		.uleb128 0x4
  244 006c 1B010000 		.4byte	.LASF9
  245 0070 02       		.byte	0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  251 007d 9301     		.2byte	0x193
  252 007f 3A000000 		.4byte	0x3a
  253 0083 02       		.uleb128 0x2
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 8
 
 
  254 0084 04       		.byte	0x4
@@ -431,13 +431,13 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  261 0091 02       		.uleb128 0x2
  262 0092 01       		.byte	0x1
  263 0093 08       		.byte	0x8
- 264 0094 91020000 		.4byte	.LASF13
+ 264 0094 8F020000 		.4byte	.LASF13
  265 0098 05       		.uleb128 0x5
  266 0099 6B000000 		.4byte	0x6b
  267 009d 02       		.uleb128 0x2
  268 009e 04       		.byte	0x4
  269 009f 07       		.byte	0x7
- 270 00a0 7A020000 		.4byte	.LASF14
+ 270 00a0 78020000 		.4byte	.LASF14
  271 00a4 06       		.uleb128 0x6
  272 00a5 04       		.byte	0x4
  273 00a6 03       		.byte	0x3
@@ -450,14 +450,14 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  280 00b3 6B000000 		.4byte	0x6b
  281 00b7 00       		.byte	0
  282 00b8 07       		.uleb128 0x7
- 283 00b9 DC020000 		.4byte	.LASF16
+ 283 00b9 DA020000 		.4byte	.LASF16
  284 00bd 03       		.byte	0x3
  285 00be A7       		.byte	0xa7
  286 00bf 77000000 		.4byte	0x77
  287 00c3 02       		.byte	0x2
  288 00c4 00       		.byte	0
  289 00c5 08       		.uleb128 0x8
- 290 00c6 07020000 		.4byte	.LASF17
+ 290 00c6 2C020000 		.4byte	.LASF17
  291 00ca 03       		.byte	0x3
  292 00cb A8       		.byte	0xa8
  293 00cc A4000000 		.4byte	0xa4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  308 00ea AD       		.byte	0xad
  309 00eb FD000000 		.4byte	0xfd
  310 00ef 04       		.byte	0x4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 9
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 9
 
 
  311 00f0 07       		.uleb128 0x7
@@ -519,7 +519,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  346 0137 07       		.byte	0x7
  347 0138 00       		.byte	0
  348 0139 08       		.uleb128 0x8
- 349 013a 23020000 		.4byte	.LASF23
+ 349 013a 48020000 		.4byte	.LASF23
  350 013e 03       		.byte	0x3
  351 013f C8       		.byte	0xc8
  352 0140 14010000 		.4byte	0x114
@@ -534,11 +534,11 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  361 0158 9C       		.byte	0x9c
  362 0159 9D010000 		.4byte	0x19d
  363 015d 0D       		.uleb128 0xd
- 364 015e B8020000 		.4byte	.LASF24
+ 364 015e B6020000 		.4byte	.LASF24
  365 0162 01       		.byte	0x1
  366 0163 34       		.byte	0x34
  367 0164 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 10
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 10
 
 
  368 0168 00000000 		.4byte	.LLST0
@@ -549,7 +549,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  373 0173 77000000 		.4byte	0x77
  374 0177 4D000000 		.4byte	.LLST1
  375 017b 0D       		.uleb128 0xd
- 376 017c FC010000 		.4byte	.LASF26
+ 376 017c 21020000 		.4byte	.LASF26
  377 0180 01       		.byte	0x1
  378 0181 38       		.byte	0x38
  379 0182 77000000 		.4byte	0x77
@@ -571,14 +571,14 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  395 01ad 9C       		.byte	0x9c
  396 01ae C2010000 		.4byte	0x1c2
  397 01b2 10       		.uleb128 0x10
- 398 01b3 F3010000 		.4byte	.LASF35
+ 398 01b3 18020000 		.4byte	.LASF35
  399 01b7 01       		.byte	0x1
  400 01b8 78       		.byte	0x78
  401 01b9 6B000000 		.4byte	0x6b
  402 01bd 9F000000 		.4byte	.LLST3
  403 01c1 00       		.byte	0
  404 01c2 11       		.uleb128 0x11
- 405 01c3 A0020000 		.4byte	.LASF36
+ 405 01c3 9E020000 		.4byte	.LASF36
  406 01c7 01       		.byte	0x1
  407 01c8 8E       		.byte	0x8e
  408 01c9 6B000000 		.4byte	0x6b
@@ -598,14 +598,14 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  422 01e9 28010000 		.4byte	.LASF37
  423 01ed 04       		.byte	0x4
  424 01ee 7A       		.byte	0x7a
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 11
 
 
  425 01ef F3010000 		.4byte	0x1f3
  426 01f3 05       		.uleb128 0x5
  427 01f4 09010000 		.4byte	0x109
  428 01f8 14       		.uleb128 0x14
- 429 01f9 62020000 		.4byte	.LASF28
+ 429 01f9 60020000 		.4byte	.LASF28
  430 01fd 04       		.byte	0x4
  431 01fe A9       		.byte	0xa9
  432 01ff 6B000000 		.4byte	0x6b
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  479 0026 08       		.uleb128 0x8
  480 0027 00       		.byte	0
  481 0028 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 12
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 12
 
 
  482 0029 04       		.uleb128 0x4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  536 005f 0B       		.uleb128 0xb
  537 0060 3B       		.uleb128 0x3b
  538 0061 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 13
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 13
 
 
  539 0062 49       		.uleb128 0x49
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  593 0099 01       		.uleb128 0x1
  594 009a 13       		.uleb128 0x13
  595 009b 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 14
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 14
 
 
  596 009c 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  650 00d5 0E       		.uleb128 0xe
  651 00d6 3A       		.uleb128 0x3a
  652 00d7 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 15
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 15
 
 
  653 00d8 3B       		.uleb128 0x3b
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  707 010f 0B       		.uleb128 0xb
  708 0110 3B       		.uleb128 0x3b
  709 0111 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 16
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 16
 
 
  710 0112 49       		.uleb128 0x49
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  764 003a 6A000000 		.4byte	.LVL8
  765 003e 78000000 		.4byte	.LFE0
  766 0042 0100     		.2byte	0x1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 17
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 17
 
 
  767 0044 50       		.byte	0x50
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  821 000e 0000     		.2byte	0
  822 0010 00000000 		.4byte	.LFB0
  823 0014 78000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 18
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 18
 
 
  824 0018 00000000 		.4byte	.LFB1
@@ -1039,8 +1039,8 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  839 001c 00000000 		.4byte	0
  840              		.section	.debug_line,"",%progbits
  841              	.Ldebug_line0:
- 842 0000 C0000000 		.section	.debug_str,"MS",%progbits,1
- 842      02006800 
+ 842 0000 BE000000 		.section	.debug_str,"MS",%progbits,1
+ 842      02006600 
  842      00000201 
  842      FB0E0D00 
  842      01010101 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  856      757300
  857              	.LASF29:
  858 005c 55534255 		.ascii	"USBUART_InitNoDataControlTransfer\000"
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 19
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 19
 
 
  858      4152545F 
@@ -1138,111 +1138,111 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 1
  881      4152545F 
  881      63757272 
  881      656E7454 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 20
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 20
 
 
  881      4400
  882              	.LASF10:
  883 013a 75696E74 		.ascii	"uint16\000"
  883      313600
- 884              	.LASF30:
- 885 0141 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 885      4320342E 
- 885      392E3320 
- 885      32303135 
- 885      30333033 
- 886 0174 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 886      20726576 
- 886      6973696F 
- 886      6E203232 
- 886      31323230 
- 887 01a7 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 887      66756E63 
- 887      74696F6E 
- 887      2D736563 
- 887      74696F6E 
- 888              	.LASF8:
- 889 01cf 756E7369 		.ascii	"unsigned int\000"
- 889      676E6564 
- 889      20696E74 
- 889      00
- 890              	.LASF7:
- 891 01dc 6C6F6E67 		.ascii	"long long unsigned int\000"
- 891      206C6F6E 
- 891      6720756E 
- 891      7369676E 
- 891      65642069 
- 892              	.LASF35:
- 893 01f3 6C756E43 		.ascii	"lunCount\000"
- 893      6F756E74 
- 893      00
- 894              	.LASF26:
- 895 01fc 64617461 		.ascii	"dataLength\000"
- 895      4C656E67 
- 895      746800
- 896              	.LASF17:
- 897 0207 545F5553 		.ascii	"T_USBUART_XFER_STATUS_BLOCK\000"
- 897      42554152 
- 897      545F5846 
- 897      45525F53 
- 897      54415455 
- 898              	.LASF23:
- 899 0223 55534255 		.ascii	"USBUART_ep0_data_struct\000"
- 899      4152545F 
- 899      6570305F 
- 899      64617461 
- 899      5F737472 
- 900              	.LASF31:
- 901 023b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBUART_msc.c\000"
- 901      6E657261 
- 901      7465645F 
- 901      536F7572 
- 901      63655C50 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccy6coJz.s 			page 21
+ 884              	.LASF31:
+ 885 0141 47656E65 		.ascii	"Generated_Source\\PSoC5\\USBUART_msc.c\000"
+ 885      72617465 
+ 885      645F536F 
+ 885      75726365 
+ 885      5C50536F 
+ 886              	.LASF30:
+ 887 0166 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 887      4320342E 
+ 887      392E3320 
+ 887      32303135 
+ 887      30333033 
+ 888 0199 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 888      20726576 
+ 888      6973696F 
+ 888      6E203232 
+ 888      31323230 
+ 889 01cc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 889      66756E63 
+ 889      74696F6E 
+ 889      2D736563 
+ 889      74696F6E 
+ 890              	.LASF8:
+ 891 01f4 756E7369 		.ascii	"unsigned int\000"
+ 891      676E6564 
+ 891      20696E74 
+ 891      00
+ 892              	.LASF7:
+ 893 0201 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 893      206C6F6E 
+ 893      6720756E 
+ 893      7369676E 
+ 893      65642069 
+ 894              	.LASF35:
+ 895 0218 6C756E43 		.ascii	"lunCount\000"
+ 895      6F756E74 
+ 895      00
+ 896              	.LASF26:
+ 897 0221 64617461 		.ascii	"dataLength\000"
+ 897      4C656E67 
+ 897      746800
+ 898              	.LASF17:
+ 899 022c 545F5553 		.ascii	"T_USBUART_XFER_STATUS_BLOCK\000"
+ 899      42554152 
+ 899      545F5846 
+ 899      45525F53 
+ 899      54415455 
+ 900              	.LASF23:
+ 901 0248 55534255 		.ascii	"USBUART_ep0_data_struct\000"
+ 901      4152545F 
+ 901      6570305F 
+ 901      64617461 
+ 901      5F737472 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccKlXV3U.s 			page 21
 
 
  902              	.LASF28:
- 903 0262 55534255 		.ascii	"USBUART_InitControlRead\000"
+ 903 0260 55534255 		.ascii	"USBUART_InitControlRead\000"
  903      4152545F 
  903      496E6974 
  903      436F6E74 
  903      726F6C52 
  904              	.LASF14:
- 905 027a 73697A65 		.ascii	"sizetype\000"
+ 905 0278 73697A65 		.ascii	"sizetype\000"
  905      74797065 
  905      00
  906              	.LASF6:
- 907 0283 6C6F6E67 		.ascii	"long long int\000"
+ 907 0281 6C6F6E67 		.ascii	"long long int\000"
  907      206C6F6E 
  907      6720696E 
  907      7400
  908              	.LASF13:
- 909 0291 63686172 		.ascii	"char\000"
+ 909 028f 63686172 		.ascii	"char\000"
  909      00
  910              	.LASF2:
- 911 0296 73686F72 		.ascii	"short int\000"
+ 911 0294 73686F72 		.ascii	"short int\000"
  911      7420696E 
  911      7400
  912              	.LASF36:
- 913 02a0 55534255 		.ascii	"USBUART_MSC_GetLunCount\000"
+ 913 029e 55534255 		.ascii	"USBUART_MSC_GetLunCount\000"
  913      4152545F 
  913      4D53435F 
  913      4765744C 
  913      756E436F 
  914              	.LASF24:
- 915 02b8 72657175 		.ascii	"requestHandled\000"
+ 915 02b6 72657175 		.ascii	"requestHandled\000"
  915      65737448 
  915      616E646C 
  915      656400
  916              	.LASF4:
- 917 02c7 6C6F6E67 		.ascii	"long int\000"
+ 917 02c5 6C6F6E67 		.ascii	"long int\000"
  917      20696E74 
  917      00
  918              	.LASF0:
- 919 02d0 7369676E 		.ascii	"signed char\000"
+ 919 02ce 7369676E 		.ascii	"signed char\000"
  919      65642063 
  919      68617200 
  920              	.LASF16:
- 921 02dc 6C656E67 		.ascii	"length\000"
+ 921 02da 6C656E67 		.ascii	"length\000"
  921      746800
  922              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

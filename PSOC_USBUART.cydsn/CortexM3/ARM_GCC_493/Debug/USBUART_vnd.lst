@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 1
 
 
    1              		.syntax unified
@@ -26,113 +26,113 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
   23              		.type	USBUART_HandleVendorRqst, %function
   24              	USBUART_HandleVendorRqst:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\USBUART_vnd.c"
-   1:.\Generated_Source\PSoC5/USBUART_vnd.c **** /***************************************************************************//**
-   2:.\Generated_Source\PSoC5/USBUART_vnd.c **** * \file USBUART_vnd.c
-   3:.\Generated_Source\PSoC5/USBUART_vnd.c **** * \version 3.0
-   4:.\Generated_Source\PSoC5/USBUART_vnd.c **** *
-   5:.\Generated_Source\PSoC5/USBUART_vnd.c **** * \brief
-   6:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  This file contains the  USB vendor request handler.
-   7:.\Generated_Source\PSoC5/USBUART_vnd.c **** *
-   8:.\Generated_Source\PSoC5/USBUART_vnd.c **** ********************************************************************************
-   9:.\Generated_Source\PSoC5/USBUART_vnd.c **** * \copyright
-  10:.\Generated_Source\PSoC5/USBUART_vnd.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  11:.\Generated_Source\PSoC5/USBUART_vnd.c **** * You may use this file only in accordance with the license, terms, conditions,
-  12:.\Generated_Source\PSoC5/USBUART_vnd.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  13:.\Generated_Source\PSoC5/USBUART_vnd.c **** * the software package with which this file was provided.
-  14:.\Generated_Source\PSoC5/USBUART_vnd.c **** *******************************************************************************/
-  15:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  16:.\Generated_Source\PSoC5/USBUART_vnd.c **** #include "USBUART_pvt.h"
-  17:.\Generated_Source\PSoC5/USBUART_vnd.c **** #include "cyapicallbacks.h"
-  18:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  19:.\Generated_Source\PSoC5/USBUART_vnd.c **** #if(USBUART_EXTERN_VND == USBUART_FALSE)
-  20:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  21:.\Generated_Source\PSoC5/USBUART_vnd.c **** /***************************************
-  22:.\Generated_Source\PSoC5/USBUART_vnd.c **** * Vendor Specific Declarations
-  23:.\Generated_Source\PSoC5/USBUART_vnd.c **** ***************************************/
-  24:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  25:.\Generated_Source\PSoC5/USBUART_vnd.c **** /* `#START VENDOR_SPECIFIC_DECLARATIONS` Place your declaration here */
-  26:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  27:.\Generated_Source\PSoC5/USBUART_vnd.c **** /* `#END` */
-  28:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  29:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  30:.\Generated_Source\PSoC5/USBUART_vnd.c **** /*******************************************************************************
-  31:.\Generated_Source\PSoC5/USBUART_vnd.c **** * Function Name: USBUART_HandleVendorRqst
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\USBUART_vnd.c"
+   1:Generated_Source\PSoC5/USBUART_vnd.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC5/USBUART_vnd.c **** * \file USBUART_vnd.c
+   3:Generated_Source\PSoC5/USBUART_vnd.c **** * \version 3.0
+   4:Generated_Source\PSoC5/USBUART_vnd.c **** *
+   5:Generated_Source\PSoC5/USBUART_vnd.c **** * \brief
+   6:Generated_Source\PSoC5/USBUART_vnd.c **** *  This file contains the  USB vendor request handler.
+   7:Generated_Source\PSoC5/USBUART_vnd.c **** *
+   8:Generated_Source\PSoC5/USBUART_vnd.c **** ********************************************************************************
+   9:Generated_Source\PSoC5/USBUART_vnd.c **** * \copyright
+  10:Generated_Source\PSoC5/USBUART_vnd.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  11:Generated_Source\PSoC5/USBUART_vnd.c **** * You may use this file only in accordance with the license, terms, conditions,
+  12:Generated_Source\PSoC5/USBUART_vnd.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  13:Generated_Source\PSoC5/USBUART_vnd.c **** * the software package with which this file was provided.
+  14:Generated_Source\PSoC5/USBUART_vnd.c **** *******************************************************************************/
+  15:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  16:Generated_Source\PSoC5/USBUART_vnd.c **** #include "USBUART_pvt.h"
+  17:Generated_Source\PSoC5/USBUART_vnd.c **** #include "cyapicallbacks.h"
+  18:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  19:Generated_Source\PSoC5/USBUART_vnd.c **** #if(USBUART_EXTERN_VND == USBUART_FALSE)
+  20:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  21:Generated_Source\PSoC5/USBUART_vnd.c **** /***************************************
+  22:Generated_Source\PSoC5/USBUART_vnd.c **** * Vendor Specific Declarations
+  23:Generated_Source\PSoC5/USBUART_vnd.c **** ***************************************/
+  24:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  25:Generated_Source\PSoC5/USBUART_vnd.c **** /* `#START VENDOR_SPECIFIC_DECLARATIONS` Place your declaration here */
+  26:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  27:Generated_Source\PSoC5/USBUART_vnd.c **** /* `#END` */
+  28:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  29:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  30:Generated_Source\PSoC5/USBUART_vnd.c **** /*******************************************************************************
+  31:Generated_Source\PSoC5/USBUART_vnd.c **** * Function Name: USBUART_HandleVendorRqst
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/USBUART_vnd.c **** ****************************************************************************//**
-  33:.\Generated_Source\PSoC5/USBUART_vnd.c **** *
-  34:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  This routine provide users with a method to implement vendor specific
-  35:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  requests.
-  36:.\Generated_Source\PSoC5/USBUART_vnd.c **** *
-  37:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  To implement vendor specific requests, add your code in this function to
-  38:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  decode and disposition the request.  If the request is handled, your code
-  39:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  must set the variable "requestHandled" to TRUE, indicating that the
-  40:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  request has been handled.
-  41:.\Generated_Source\PSoC5/USBUART_vnd.c **** *
-  42:.\Generated_Source\PSoC5/USBUART_vnd.c **** * \return
-  43:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  requestHandled.
-  44:.\Generated_Source\PSoC5/USBUART_vnd.c **** *
-  45:.\Generated_Source\PSoC5/USBUART_vnd.c **** * \reentrant
-  46:.\Generated_Source\PSoC5/USBUART_vnd.c **** *  No.
-  47:.\Generated_Source\PSoC5/USBUART_vnd.c **** *
-  48:.\Generated_Source\PSoC5/USBUART_vnd.c **** *******************************************************************************/
-  49:.\Generated_Source\PSoC5/USBUART_vnd.c **** uint8 USBUART_HandleVendorRqst(void) 
-  50:.\Generated_Source\PSoC5/USBUART_vnd.c **** {
+  32:Generated_Source\PSoC5/USBUART_vnd.c **** ****************************************************************************//**
+  33:Generated_Source\PSoC5/USBUART_vnd.c **** *
+  34:Generated_Source\PSoC5/USBUART_vnd.c **** *  This routine provide users with a method to implement vendor specific
+  35:Generated_Source\PSoC5/USBUART_vnd.c **** *  requests.
+  36:Generated_Source\PSoC5/USBUART_vnd.c **** *
+  37:Generated_Source\PSoC5/USBUART_vnd.c **** *  To implement vendor specific requests, add your code in this function to
+  38:Generated_Source\PSoC5/USBUART_vnd.c **** *  decode and disposition the request.  If the request is handled, your code
+  39:Generated_Source\PSoC5/USBUART_vnd.c **** *  must set the variable "requestHandled" to TRUE, indicating that the
+  40:Generated_Source\PSoC5/USBUART_vnd.c **** *  request has been handled.
+  41:Generated_Source\PSoC5/USBUART_vnd.c **** *
+  42:Generated_Source\PSoC5/USBUART_vnd.c **** * \return
+  43:Generated_Source\PSoC5/USBUART_vnd.c **** *  requestHandled.
+  44:Generated_Source\PSoC5/USBUART_vnd.c **** *
+  45:Generated_Source\PSoC5/USBUART_vnd.c **** * \reentrant
+  46:Generated_Source\PSoC5/USBUART_vnd.c **** *  No.
+  47:Generated_Source\PSoC5/USBUART_vnd.c **** *
+  48:Generated_Source\PSoC5/USBUART_vnd.c **** *******************************************************************************/
+  49:Generated_Source\PSoC5/USBUART_vnd.c **** uint8 USBUART_HandleVendorRqst(void) 
+  50:Generated_Source\PSoC5/USBUART_vnd.c **** {
   27              		.loc 1 50 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
   32              	.LVL0:
-  51:.\Generated_Source\PSoC5/USBUART_vnd.c ****     uint8 requestHandled = USBUART_FALSE;
-  52:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  53:.\Generated_Source\PSoC5/USBUART_vnd.c ****     /* Check request direction: D2H or H2D. */
-  54:.\Generated_Source\PSoC5/USBUART_vnd.c ****     if (0u != (USBUART_bmRequestTypeReg & USBUART_RQST_DIR_D2H))
+  51:Generated_Source\PSoC5/USBUART_vnd.c ****     uint8 requestHandled = USBUART_FALSE;
+  52:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  53:Generated_Source\PSoC5/USBUART_vnd.c ****     /* Check request direction: D2H or H2D. */
+  54:Generated_Source\PSoC5/USBUART_vnd.c ****     if (0u != (USBUART_bmRequestTypeReg & USBUART_RQST_DIR_D2H))
   33              		.loc 1 54 0
   34 0000 044B     		ldr	r3, .L3
   35 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
   36 0004 13F0800F 		tst	r3, #128
   37 0008 01D0     		beq	.L2
-  55:.\Generated_Source\PSoC5/USBUART_vnd.c ****     {
-  56:.\Generated_Source\PSoC5/USBUART_vnd.c ****         /* Handle direction from device to host. */
-  57:.\Generated_Source\PSoC5/USBUART_vnd.c ****         
-  58:.\Generated_Source\PSoC5/USBUART_vnd.c ****         switch (USBUART_bRequestReg)
+  55:Generated_Source\PSoC5/USBUART_vnd.c ****     {
+  56:Generated_Source\PSoC5/USBUART_vnd.c ****         /* Handle direction from device to host. */
+  57:Generated_Source\PSoC5/USBUART_vnd.c ****         
+  58:Generated_Source\PSoC5/USBUART_vnd.c ****         switch (USBUART_bRequestReg)
   38              		.loc 1 58 0
   39 000a 024B     		ldr	r3, .L3
   40 000c 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
   41              	.L2:
-  59:.\Generated_Source\PSoC5/USBUART_vnd.c ****         {
-  60:.\Generated_Source\PSoC5/USBUART_vnd.c ****             case USBUART_GET_EXTENDED_CONFIG_DESCRIPTOR:
-  61:.\Generated_Source\PSoC5/USBUART_vnd.c ****             #if defined(USBUART_ENABLE_MSOS_STRING)
-  62:.\Generated_Source\PSoC5/USBUART_vnd.c ****                 USBUART_currentTD.pData = (volatile uint8 *) &USBUART_MSOS_CONFIGURATION_DESCR[0u];
-  63:.\Generated_Source\PSoC5/USBUART_vnd.c ****                 USBUART_currentTD.count = USBUART_MSOS_CONFIGURATION_DESCR[0u];
-  64:.\Generated_Source\PSoC5/USBUART_vnd.c ****                 requestHandled  = USBUART_InitControlRead();
-  65:.\Generated_Source\PSoC5/USBUART_vnd.c ****             #endif /* (USBUART_ENABLE_MSOS_STRING) */
-  66:.\Generated_Source\PSoC5/USBUART_vnd.c ****                 break;
-  67:.\Generated_Source\PSoC5/USBUART_vnd.c ****             
-  68:.\Generated_Source\PSoC5/USBUART_vnd.c ****             default:
-  69:.\Generated_Source\PSoC5/USBUART_vnd.c ****                 break;
-  70:.\Generated_Source\PSoC5/USBUART_vnd.c ****         }
-  71:.\Generated_Source\PSoC5/USBUART_vnd.c ****     }
-  72:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  73:.\Generated_Source\PSoC5/USBUART_vnd.c ****     /* `#START VENDOR_SPECIFIC_CODE` Place your vendor specific request here */
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 3
+  59:Generated_Source\PSoC5/USBUART_vnd.c ****         {
+  60:Generated_Source\PSoC5/USBUART_vnd.c ****             case USBUART_GET_EXTENDED_CONFIG_DESCRIPTOR:
+  61:Generated_Source\PSoC5/USBUART_vnd.c ****             #if defined(USBUART_ENABLE_MSOS_STRING)
+  62:Generated_Source\PSoC5/USBUART_vnd.c ****                 USBUART_currentTD.pData = (volatile uint8 *) &USBUART_MSOS_CONFIGURATION_DESCR[0u];
+  63:Generated_Source\PSoC5/USBUART_vnd.c ****                 USBUART_currentTD.count = USBUART_MSOS_CONFIGURATION_DESCR[0u];
+  64:Generated_Source\PSoC5/USBUART_vnd.c ****                 requestHandled  = USBUART_InitControlRead();
+  65:Generated_Source\PSoC5/USBUART_vnd.c ****             #endif /* (USBUART_ENABLE_MSOS_STRING) */
+  66:Generated_Source\PSoC5/USBUART_vnd.c ****                 break;
+  67:Generated_Source\PSoC5/USBUART_vnd.c ****             
+  68:Generated_Source\PSoC5/USBUART_vnd.c ****             default:
+  69:Generated_Source\PSoC5/USBUART_vnd.c ****                 break;
+  70:Generated_Source\PSoC5/USBUART_vnd.c ****         }
+  71:Generated_Source\PSoC5/USBUART_vnd.c ****     }
+  72:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  73:Generated_Source\PSoC5/USBUART_vnd.c ****     /* `#START VENDOR_SPECIFIC_CODE` Place your vendor specific request here */
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 3
 
 
-  74:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  75:.\Generated_Source\PSoC5/USBUART_vnd.c ****     /* `#END` */
-  76:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  77:.\Generated_Source\PSoC5/USBUART_vnd.c **** #ifdef USBUART_HANDLE_VENDOR_RQST_CALLBACK
-  78:.\Generated_Source\PSoC5/USBUART_vnd.c ****     if (USBUART_FALSE == requestHandled)
-  79:.\Generated_Source\PSoC5/USBUART_vnd.c ****     {
-  80:.\Generated_Source\PSoC5/USBUART_vnd.c ****         requestHandled = USBUART_HandleVendorRqst_Callback();
-  81:.\Generated_Source\PSoC5/USBUART_vnd.c ****     }
-  82:.\Generated_Source\PSoC5/USBUART_vnd.c **** #endif /* (USBUART_HANDLE_VENDOR_RQST_CALLBACK) */
-  83:.\Generated_Source\PSoC5/USBUART_vnd.c **** 
-  84:.\Generated_Source\PSoC5/USBUART_vnd.c ****     return (requestHandled);
-  85:.\Generated_Source\PSoC5/USBUART_vnd.c **** }
+  74:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  75:Generated_Source\PSoC5/USBUART_vnd.c ****     /* `#END` */
+  76:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  77:Generated_Source\PSoC5/USBUART_vnd.c **** #ifdef USBUART_HANDLE_VENDOR_RQST_CALLBACK
+  78:Generated_Source\PSoC5/USBUART_vnd.c ****     if (USBUART_FALSE == requestHandled)
+  79:Generated_Source\PSoC5/USBUART_vnd.c ****     {
+  80:Generated_Source\PSoC5/USBUART_vnd.c ****         requestHandled = USBUART_HandleVendorRqst_Callback();
+  81:Generated_Source\PSoC5/USBUART_vnd.c ****     }
+  82:Generated_Source\PSoC5/USBUART_vnd.c **** #endif /* (USBUART_HANDLE_VENDOR_RQST_CALLBACK) */
+  83:Generated_Source\PSoC5/USBUART_vnd.c **** 
+  84:Generated_Source\PSoC5/USBUART_vnd.c ****     return (requestHandled);
+  85:Generated_Source\PSoC5/USBUART_vnd.c **** }
   42              		.loc 1 85 0
   43 000e 0020     		movs	r0, #0
   44 0010 7047     		bx	lr
@@ -145,8 +145,8 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
   51              		.size	USBUART_HandleVendorRqst, .-USBUART_HandleVendorRqst
   52              		.text
   53              	.Letext0:
-  54              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
-  55              		.file 3 ".\\Generated_Source\\PSoC5\\USBUART.h"
+  54              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+  55              		.file 3 "Generated_Source\\PSoC5\\USBUART.h"
   56              		.section	.debug_info,"",%progbits
   57              	.Ldebug_info0:
   58 0000 E2000000 		.4byte	0xe2
@@ -156,7 +156,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
   62 000b 01       		.uleb128 0x1
   63 000c C6000000 		.4byte	.LASF15
   64 0010 01       		.byte	0x1
-  65 0011 72010000 		.4byte	.LASF16
+  65 0011 B1010000 		.4byte	.LASF16
   66 0015 86000000 		.4byte	.LASF17
   67 0019 00000000 		.4byte	.Ldebug_ranges0+0
   68 001d 00000000 		.4byte	0
@@ -164,7 +164,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
   70 0025 02       		.uleb128 0x2
   71 0026 01       		.byte	0x1
   72 0027 06       		.byte	0x6
-  73 0028 BC010000 		.4byte	.LASF0
+  73 0028 95010000 		.4byte	.LASF0
   74 002c 02       		.uleb128 0x2
   75 002d 01       		.byte	0x1
   76 002e 08       		.byte	0x8
@@ -172,18 +172,18 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
   78 0033 02       		.uleb128 0x2
   79 0034 02       		.byte	0x2
   80 0035 05       		.byte	0x5
-  81 0036 CE010000 		.4byte	.LASF2
+  81 0036 A7010000 		.4byte	.LASF2
   82 003a 02       		.uleb128 0x2
   83 003b 02       		.byte	0x2
   84 003c 07       		.byte	0x7
-  85 003d A9010000 		.4byte	.LASF3
+  85 003d 82010000 		.4byte	.LASF3
   86 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 4
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 4
 
 
   87 0042 04       		.byte	0x4
   88 0043 05       		.byte	0x5
-  89 0044 99010000 		.4byte	.LASF4
+  89 0044 72010000 		.4byte	.LASF4
   90 0048 02       		.uleb128 0x2
   91 0049 04       		.byte	0x4
   92 004a 07       		.byte	0x7
@@ -212,11 +212,11 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  115 0077 02       		.uleb128 0x2
  116 0078 04       		.byte	0x4
  117 0079 04       		.byte	0x4
- 118 007a C8010000 		.4byte	.LASF9
+ 118 007a A1010000 		.4byte	.LASF9
  119 007e 02       		.uleb128 0x2
  120 007f 08       		.byte	0x8
  121 0080 04       		.byte	0x4
- 122 0081 A2010000 		.4byte	.LASF10
+ 122 0081 7B010000 		.4byte	.LASF10
  123 0085 02       		.uleb128 0x2
  124 0086 01       		.byte	0x1
  125 0087 08       		.byte	0x8
@@ -224,7 +224,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  127 008c 02       		.uleb128 0x2
  128 008d 04       		.byte	0x4
  129 008e 07       		.byte	0x7
- 130 008f D8010000 		.4byte	.LASF12
+ 130 008f D6010000 		.4byte	.LASF12
  131 0093 05       		.uleb128 0x5
  132 0094 08       		.byte	0x8
  133 0095 03       		.byte	0x3
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  141 00a6 00       		.byte	0
  142 00a7 00       		.byte	0
  143 00a8 07       		.uleb128 0x7
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 5
 
 
  144 00a9 6B000000 		.4byte	0x6b
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  198 0018 3E       		.uleb128 0x3e
  199 0019 0B       		.uleb128 0xb
  200 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 6
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 6
 
 
  201 001b 0E       		.uleb128 0xe
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  255 0051 00       		.byte	0
  256 0052 07       		.uleb128 0x7
  257 0053 01       		.uleb128 0x1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 7
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 7
 
 
  258 0054 01       		.byte	0x1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  312 008b 0B       		.uleb128 0xb
  313 008c 34       		.uleb128 0x34
  314 008d 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 8
 
 
  315 008e 03       		.uleb128 0x3
@@ -454,8 +454,8 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  345 000c 00000000 		.4byte	0
  346              		.section	.debug_line,"",%progbits
  347              	.Ldebug_line0:
- 348 0000 71000000 		.section	.debug_str,"MS",%progbits,1
- 348      02005700 
+ 348 0000 6F000000 		.section	.debug_str,"MS",%progbits,1
+ 348      02005500 
  348      00000201 
  348      FB0E0D00 
  348      01010101 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  356      20636861 
  356      7200
  357              	.LASF14:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 9
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 9
 
 
  358 0030 55534255 		.ascii	"USBUART_ep0_data_struct\000"
@@ -538,45 +538,45 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 1
  375      4152545F 
  375      48616E64 
  375      6C655665 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccaCtoQj.s 			page 10
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccUa95xH.s 			page 10
 
 
  375      6E646F72 
  376              	.LASF11:
  377 016d 63686172 		.ascii	"char\000"
  377      00
- 378              	.LASF16:
- 379 0172 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBUART_vnd.c\000"
- 379      6E657261 
- 379      7465645F 
- 379      536F7572 
- 379      63655C50 
- 380              	.LASF4:
- 381 0199 6C6F6E67 		.ascii	"long int\000"
- 381      20696E74 
- 381      00
- 382              	.LASF10:
- 383 01a2 646F7562 		.ascii	"double\000"
- 383      6C6500
- 384              	.LASF3:
- 385 01a9 73686F72 		.ascii	"short unsigned int\000"
- 385      7420756E 
- 385      7369676E 
- 385      65642069 
- 385      6E7400
- 386              	.LASF0:
- 387 01bc 7369676E 		.ascii	"signed char\000"
- 387      65642063 
- 387      68617200 
- 388              	.LASF9:
- 389 01c8 666C6F61 		.ascii	"float\000"
+ 378              	.LASF4:
+ 379 0172 6C6F6E67 		.ascii	"long int\000"
+ 379      20696E74 
+ 379      00
+ 380              	.LASF10:
+ 381 017b 646F7562 		.ascii	"double\000"
+ 381      6C6500
+ 382              	.LASF3:
+ 383 0182 73686F72 		.ascii	"short unsigned int\000"
+ 383      7420756E 
+ 383      7369676E 
+ 383      65642069 
+ 383      6E7400
+ 384              	.LASF0:
+ 385 0195 7369676E 		.ascii	"signed char\000"
+ 385      65642063 
+ 385      68617200 
+ 386              	.LASF9:
+ 387 01a1 666C6F61 		.ascii	"float\000"
+ 387      7400
+ 388              	.LASF2:
+ 389 01a7 73686F72 		.ascii	"short int\000"
+ 389      7420696E 
  389      7400
- 390              	.LASF2:
- 391 01ce 73686F72 		.ascii	"short int\000"
- 391      7420696E 
- 391      7400
+ 390              	.LASF16:
+ 391 01b1 47656E65 		.ascii	"Generated_Source\\PSoC5\\USBUART_vnd.c\000"
+ 391      72617465 
+ 391      645F536F 
+ 391      75726365 
+ 391      5C50536F 
  392              	.LASF12:
- 393 01d8 73697A65 		.ascii	"sizetype\000"
+ 393 01d6 73697A65 		.ascii	"sizetype\000"
  393      74797065 
  393      00
  394              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
