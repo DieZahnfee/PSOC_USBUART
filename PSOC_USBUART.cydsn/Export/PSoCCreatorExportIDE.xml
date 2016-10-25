@@ -37,6 +37,8 @@
       <Folder BuildType="STRICT" Path="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn">
         <Files Root="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
+          <File BuildType="BUILD" Toolchain="">serial.c</File>
+          <File BuildType="BUILD" Toolchain="">serial.h</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
         </Files>
       </Folder>

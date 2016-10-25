@@ -1,0 +1,496 @@
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"SerialPrint.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.SerialPrint,"ax",%progbits
+  19              		.align	2
+  20              		.global	SerialPrint
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	SerialPrint, %function
+  24              	SerialPrint:
+  25              	.LFB0:
+  26              		.file 1 "SerialPrint.c"
+   1:SerialPrint.c **** /* ========================================
+   2:SerialPrint.c ****  *
+   3:SerialPrint.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:SerialPrint.c ****  * All Rights Reserved
+   5:SerialPrint.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:SerialPrint.c ****  *
+   7:SerialPrint.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:SerialPrint.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:SerialPrint.c ****  *
+  10:SerialPrint.c ****  * ========================================
+  11:SerialPrint.c **** */
+  12:SerialPrint.c **** int SerialPrint(data){
+  27              		.loc 1 12 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0002 0446     		mov	r4, r0
+  37              	.LVL1:
+  38              	.L2:
+  13:SerialPrint.c ****     while( USBUART_CDCIsReady() == 0);
+  39              		.loc 1 13 0 discriminator 1
+  40 0004 FFF7FEFF 		bl	USBUART_CDCIsReady
+  41              	.LVL2:
+  42 0008 0028     		cmp	r0, #0
+  43 000a FBD0     		beq	.L2
+  14:SerialPrint.c **** 	USBUART_PutString(data); // print message
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 2
+
+
+  44              		.loc 1 14 0
+  45 000c 2046     		mov	r0, r4
+  46 000e FFF7FEFF 		bl	USBUART_PutString
+  47              	.LVL3:
+  48              	.L3:
+  15:SerialPrint.c ****     while(! USBUART_CDCIsReady());
+  49              		.loc 1 15 0 discriminator 1
+  50 0012 FFF7FEFF 		bl	USBUART_CDCIsReady
+  51              	.LVL4:
+  52 0016 0028     		cmp	r0, #0
+  53 0018 FBD0     		beq	.L3
+  16:SerialPrint.c **** 	USBUART_PutString("\n"); // set line feed
+  54              		.loc 1 16 0
+  55 001a 0348     		ldr	r0, .L5
+  56 001c FFF7FEFF 		bl	USBUART_PutString
+  57              	.LVL5:
+  17:SerialPrint.c **** 	CyDelay(50);
+  58              		.loc 1 17 0
+  59 0020 3220     		movs	r0, #50
+  60 0022 FFF7FEFF 		bl	CyDelay
+  61              	.LVL6:
+  18:SerialPrint.c ****     
+  19:SerialPrint.c **** }
+  62              		.loc 1 19 0
+  63 0026 10BD     		pop	{r4, pc}
+  64              	.LVL7:
+  65              	.L6:
+  66              		.align	2
+  67              	.L5:
+  68 0028 00000000 		.word	.LC0
+  69              		.cfi_endproc
+  70              	.LFE0:
+  71              		.size	SerialPrint, .-SerialPrint
+  72              		.section	.rodata.str1.4,"aMS",%progbits,1
+  73              		.align	2
+  74              	.LC0:
+  75 0000 0A00     		.ascii	"\012\000"
+  76 0002 0000     		.text
+  77              	.Letext0:
+  78              		.section	.debug_info,"",%progbits
+  79              	.Ldebug_info0:
+  80 0000 01010000 		.4byte	0x101
+  81 0004 0400     		.2byte	0x4
+  82 0006 00000000 		.4byte	.Ldebug_abbrev0
+  83 000a 04       		.byte	0x4
+  84 000b 01       		.uleb128 0x1
+  85 000c 8C000000 		.4byte	.LASF3
+  86 0010 01       		.byte	0x1
+  87 0011 00000000 		.4byte	.LASF4
+  88 0015 33000000 		.4byte	.LASF5
+  89 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  90 001d 00000000 		.4byte	0
+  91 0021 00000000 		.4byte	.Ldebug_line0
+  92 0025 02       		.uleb128 0x2
+  93 0026 80000000 		.4byte	.LASF6
+  94 002a 01       		.byte	0x1
+  95 002b 0C       		.byte	0xc
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 3
+
+
+  96 002c CE000000 		.4byte	0xce
+  97 0030 00000000 		.4byte	.LFB0
+  98 0034 2C000000 		.4byte	.LFE0-.LFB0
+  99 0038 01       		.uleb128 0x1
+ 100 0039 9C       		.byte	0x9c
+ 101 003a CE000000 		.4byte	0xce
+ 102 003e 03       		.uleb128 0x3
+ 103 003f 7B000000 		.4byte	.LASF7
+ 104 0043 01       		.byte	0x1
+ 105 0044 0C       		.byte	0xc
+ 106 0045 CE000000 		.4byte	0xce
+ 107 0049 00000000 		.4byte	.LLST0
+ 108 004d 04       		.uleb128 0x4
+ 109 004e 20000000 		.4byte	.LASF0
+ 110 0052 01       		.byte	0x1
+ 111 0053 0D       		.byte	0xd
+ 112 0054 CE000000 		.4byte	0xce
+ 113 0058 5E000000 		.4byte	0x5e
+ 114 005c 05       		.uleb128 0x5
+ 115 005d 00       		.byte	0
+ 116 005e 04       		.uleb128 0x4
+ 117 005f 0E000000 		.4byte	.LASF1
+ 118 0063 01       		.byte	0x1
+ 119 0064 0E       		.byte	0xe
+ 120 0065 CE000000 		.4byte	0xce
+ 121 0069 6F000000 		.4byte	0x6f
+ 122 006d 05       		.uleb128 0x5
+ 123 006e 00       		.byte	0
+ 124 006f 04       		.uleb128 0x4
+ 125 0070 73000000 		.4byte	.LASF2
+ 126 0074 01       		.byte	0x1
+ 127 0075 11       		.byte	0x11
+ 128 0076 CE000000 		.4byte	0xce
+ 129 007a 80000000 		.4byte	0x80
+ 130 007e 05       		.uleb128 0x5
+ 131 007f 00       		.byte	0
+ 132 0080 06       		.uleb128 0x6
+ 133 0081 08000000 		.4byte	.LVL2
+ 134 0085 D5000000 		.4byte	0xd5
+ 135 0089 07       		.uleb128 0x7
+ 136 008a 12000000 		.4byte	.LVL3
+ 137 008e E6000000 		.4byte	0xe6
+ 138 0092 9D000000 		.4byte	0x9d
+ 139 0096 08       		.uleb128 0x8
+ 140 0097 01       		.uleb128 0x1
+ 141 0098 50       		.byte	0x50
+ 142 0099 02       		.uleb128 0x2
+ 143 009a 74       		.byte	0x74
+ 144 009b 00       		.sleb128 0
+ 145 009c 00       		.byte	0
+ 146 009d 06       		.uleb128 0x6
+ 147 009e 16000000 		.4byte	.LVL4
+ 148 00a2 D5000000 		.4byte	0xd5
+ 149 00a6 07       		.uleb128 0x7
+ 150 00a7 20000000 		.4byte	.LVL5
+ 151 00ab E6000000 		.4byte	0xe6
+ 152 00af BD000000 		.4byte	0xbd
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 4
+
+
+ 153 00b3 08       		.uleb128 0x8
+ 154 00b4 01       		.uleb128 0x1
+ 155 00b5 50       		.byte	0x50
+ 156 00b6 05       		.uleb128 0x5
+ 157 00b7 03       		.byte	0x3
+ 158 00b8 00000000 		.4byte	.LC0
+ 159 00bc 00       		.byte	0
+ 160 00bd 09       		.uleb128 0x9
+ 161 00be 26000000 		.4byte	.LVL6
+ 162 00c2 F7000000 		.4byte	0xf7
+ 163 00c6 08       		.uleb128 0x8
+ 164 00c7 01       		.uleb128 0x1
+ 165 00c8 50       		.byte	0x50
+ 166 00c9 02       		.uleb128 0x2
+ 167 00ca 08       		.byte	0x8
+ 168 00cb 32       		.byte	0x32
+ 169 00cc 00       		.byte	0
+ 170 00cd 00       		.byte	0
+ 171 00ce 0A       		.uleb128 0xa
+ 172 00cf 04       		.byte	0x4
+ 173 00d0 05       		.byte	0x5
+ 174 00d1 696E7400 		.ascii	"int\000"
+ 175 00d5 04       		.uleb128 0x4
+ 176 00d6 20000000 		.4byte	.LASF0
+ 177 00da 01       		.byte	0x1
+ 178 00db 0D       		.byte	0xd
+ 179 00dc CE000000 		.4byte	0xce
+ 180 00e0 E6000000 		.4byte	0xe6
+ 181 00e4 05       		.uleb128 0x5
+ 182 00e5 00       		.byte	0
+ 183 00e6 04       		.uleb128 0x4
+ 184 00e7 0E000000 		.4byte	.LASF1
+ 185 00eb 01       		.byte	0x1
+ 186 00ec 0E       		.byte	0xe
+ 187 00ed CE000000 		.4byte	0xce
+ 188 00f1 F7000000 		.4byte	0xf7
+ 189 00f5 05       		.uleb128 0x5
+ 190 00f6 00       		.byte	0
+ 191 00f7 0B       		.uleb128 0xb
+ 192 00f8 73000000 		.4byte	.LASF2
+ 193 00fc 01       		.byte	0x1
+ 194 00fd 11       		.byte	0x11
+ 195 00fe CE000000 		.4byte	0xce
+ 196 0102 05       		.uleb128 0x5
+ 197 0103 00       		.byte	0
+ 198 0104 00       		.byte	0
+ 199              		.section	.debug_abbrev,"",%progbits
+ 200              	.Ldebug_abbrev0:
+ 201 0000 01       		.uleb128 0x1
+ 202 0001 11       		.uleb128 0x11
+ 203 0002 01       		.byte	0x1
+ 204 0003 25       		.uleb128 0x25
+ 205 0004 0E       		.uleb128 0xe
+ 206 0005 13       		.uleb128 0x13
+ 207 0006 0B       		.uleb128 0xb
+ 208 0007 03       		.uleb128 0x3
+ 209 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 5
+
+
+ 210 0009 1B       		.uleb128 0x1b
+ 211 000a 0E       		.uleb128 0xe
+ 212 000b 55       		.uleb128 0x55
+ 213 000c 17       		.uleb128 0x17
+ 214 000d 11       		.uleb128 0x11
+ 215 000e 01       		.uleb128 0x1
+ 216 000f 10       		.uleb128 0x10
+ 217 0010 17       		.uleb128 0x17
+ 218 0011 00       		.byte	0
+ 219 0012 00       		.byte	0
+ 220 0013 02       		.uleb128 0x2
+ 221 0014 2E       		.uleb128 0x2e
+ 222 0015 01       		.byte	0x1
+ 223 0016 3F       		.uleb128 0x3f
+ 224 0017 19       		.uleb128 0x19
+ 225 0018 03       		.uleb128 0x3
+ 226 0019 0E       		.uleb128 0xe
+ 227 001a 3A       		.uleb128 0x3a
+ 228 001b 0B       		.uleb128 0xb
+ 229 001c 3B       		.uleb128 0x3b
+ 230 001d 0B       		.uleb128 0xb
+ 231 001e 49       		.uleb128 0x49
+ 232 001f 13       		.uleb128 0x13
+ 233 0020 11       		.uleb128 0x11
+ 234 0021 01       		.uleb128 0x1
+ 235 0022 12       		.uleb128 0x12
+ 236 0023 06       		.uleb128 0x6
+ 237 0024 40       		.uleb128 0x40
+ 238 0025 18       		.uleb128 0x18
+ 239 0026 9742     		.uleb128 0x2117
+ 240 0028 19       		.uleb128 0x19
+ 241 0029 01       		.uleb128 0x1
+ 242 002a 13       		.uleb128 0x13
+ 243 002b 00       		.byte	0
+ 244 002c 00       		.byte	0
+ 245 002d 03       		.uleb128 0x3
+ 246 002e 05       		.uleb128 0x5
+ 247 002f 00       		.byte	0
+ 248 0030 03       		.uleb128 0x3
+ 249 0031 0E       		.uleb128 0xe
+ 250 0032 3A       		.uleb128 0x3a
+ 251 0033 0B       		.uleb128 0xb
+ 252 0034 3B       		.uleb128 0x3b
+ 253 0035 0B       		.uleb128 0xb
+ 254 0036 49       		.uleb128 0x49
+ 255 0037 13       		.uleb128 0x13
+ 256 0038 02       		.uleb128 0x2
+ 257 0039 17       		.uleb128 0x17
+ 258 003a 00       		.byte	0
+ 259 003b 00       		.byte	0
+ 260 003c 04       		.uleb128 0x4
+ 261 003d 2E       		.uleb128 0x2e
+ 262 003e 01       		.byte	0x1
+ 263 003f 3F       		.uleb128 0x3f
+ 264 0040 19       		.uleb128 0x19
+ 265 0041 03       		.uleb128 0x3
+ 266 0042 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 6
+
+
+ 267 0043 3A       		.uleb128 0x3a
+ 268 0044 0B       		.uleb128 0xb
+ 269 0045 3B       		.uleb128 0x3b
+ 270 0046 0B       		.uleb128 0xb
+ 271 0047 49       		.uleb128 0x49
+ 272 0048 13       		.uleb128 0x13
+ 273 0049 3C       		.uleb128 0x3c
+ 274 004a 19       		.uleb128 0x19
+ 275 004b 01       		.uleb128 0x1
+ 276 004c 13       		.uleb128 0x13
+ 277 004d 00       		.byte	0
+ 278 004e 00       		.byte	0
+ 279 004f 05       		.uleb128 0x5
+ 280 0050 18       		.uleb128 0x18
+ 281 0051 00       		.byte	0
+ 282 0052 00       		.byte	0
+ 283 0053 00       		.byte	0
+ 284 0054 06       		.uleb128 0x6
+ 285 0055 898201   		.uleb128 0x4109
+ 286 0058 00       		.byte	0
+ 287 0059 11       		.uleb128 0x11
+ 288 005a 01       		.uleb128 0x1
+ 289 005b 31       		.uleb128 0x31
+ 290 005c 13       		.uleb128 0x13
+ 291 005d 00       		.byte	0
+ 292 005e 00       		.byte	0
+ 293 005f 07       		.uleb128 0x7
+ 294 0060 898201   		.uleb128 0x4109
+ 295 0063 01       		.byte	0x1
+ 296 0064 11       		.uleb128 0x11
+ 297 0065 01       		.uleb128 0x1
+ 298 0066 31       		.uleb128 0x31
+ 299 0067 13       		.uleb128 0x13
+ 300 0068 01       		.uleb128 0x1
+ 301 0069 13       		.uleb128 0x13
+ 302 006a 00       		.byte	0
+ 303 006b 00       		.byte	0
+ 304 006c 08       		.uleb128 0x8
+ 305 006d 8A8201   		.uleb128 0x410a
+ 306 0070 00       		.byte	0
+ 307 0071 02       		.uleb128 0x2
+ 308 0072 18       		.uleb128 0x18
+ 309 0073 9142     		.uleb128 0x2111
+ 310 0075 18       		.uleb128 0x18
+ 311 0076 00       		.byte	0
+ 312 0077 00       		.byte	0
+ 313 0078 09       		.uleb128 0x9
+ 314 0079 898201   		.uleb128 0x4109
+ 315 007c 01       		.byte	0x1
+ 316 007d 11       		.uleb128 0x11
+ 317 007e 01       		.uleb128 0x1
+ 318 007f 31       		.uleb128 0x31
+ 319 0080 13       		.uleb128 0x13
+ 320 0081 00       		.byte	0
+ 321 0082 00       		.byte	0
+ 322 0083 0A       		.uleb128 0xa
+ 323 0084 24       		.uleb128 0x24
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 7
+
+
+ 324 0085 00       		.byte	0
+ 325 0086 0B       		.uleb128 0xb
+ 326 0087 0B       		.uleb128 0xb
+ 327 0088 3E       		.uleb128 0x3e
+ 328 0089 0B       		.uleb128 0xb
+ 329 008a 03       		.uleb128 0x3
+ 330 008b 08       		.uleb128 0x8
+ 331 008c 00       		.byte	0
+ 332 008d 00       		.byte	0
+ 333 008e 0B       		.uleb128 0xb
+ 334 008f 2E       		.uleb128 0x2e
+ 335 0090 01       		.byte	0x1
+ 336 0091 3F       		.uleb128 0x3f
+ 337 0092 19       		.uleb128 0x19
+ 338 0093 03       		.uleb128 0x3
+ 339 0094 0E       		.uleb128 0xe
+ 340 0095 3A       		.uleb128 0x3a
+ 341 0096 0B       		.uleb128 0xb
+ 342 0097 3B       		.uleb128 0x3b
+ 343 0098 0B       		.uleb128 0xb
+ 344 0099 49       		.uleb128 0x49
+ 345 009a 13       		.uleb128 0x13
+ 346 009b 3C       		.uleb128 0x3c
+ 347 009c 19       		.uleb128 0x19
+ 348 009d 00       		.byte	0
+ 349 009e 00       		.byte	0
+ 350 009f 00       		.byte	0
+ 351              		.section	.debug_loc,"",%progbits
+ 352              	.Ldebug_loc0:
+ 353              	.LLST0:
+ 354 0000 00000000 		.4byte	.LVL0
+ 355 0004 04000000 		.4byte	.LVL1
+ 356 0008 0100     		.2byte	0x1
+ 357 000a 50       		.byte	0x50
+ 358 000b 04000000 		.4byte	.LVL1
+ 359 000f 28000000 		.4byte	.LVL7
+ 360 0013 0100     		.2byte	0x1
+ 361 0015 54       		.byte	0x54
+ 362 0016 28000000 		.4byte	.LVL7
+ 363 001a 2C000000 		.4byte	.LFE0
+ 364 001e 0400     		.2byte	0x4
+ 365 0020 F3       		.byte	0xf3
+ 366 0021 01       		.uleb128 0x1
+ 367 0022 50       		.byte	0x50
+ 368 0023 9F       		.byte	0x9f
+ 369 0024 00000000 		.4byte	0
+ 370 0028 00000000 		.4byte	0
+ 371              		.section	.debug_aranges,"",%progbits
+ 372 0000 1C000000 		.4byte	0x1c
+ 373 0004 0200     		.2byte	0x2
+ 374 0006 00000000 		.4byte	.Ldebug_info0
+ 375 000a 04       		.byte	0x4
+ 376 000b 00       		.byte	0
+ 377 000c 0000     		.2byte	0
+ 378 000e 0000     		.2byte	0
+ 379 0010 00000000 		.4byte	.LFB0
+ 380 0014 2C000000 		.4byte	.LFE0-.LFB0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 8
+
+
+ 381 0018 00000000 		.4byte	0
+ 382 001c 00000000 		.4byte	0
+ 383              		.section	.debug_ranges,"",%progbits
+ 384              	.Ldebug_ranges0:
+ 385 0000 00000000 		.4byte	.LFB0
+ 386 0004 2C000000 		.4byte	.LFE0
+ 387 0008 00000000 		.4byte	0
+ 388 000c 00000000 		.4byte	0
+ 389              		.section	.debug_line,"",%progbits
+ 390              	.Ldebug_line0:
+ 391 0000 47000000 		.section	.debug_str,"MS",%progbits,1
+ 391      02002400 
+ 391      00000201 
+ 391      FB0E0D00 
+ 391      01010101 
+ 392              	.LASF4:
+ 393 0000 53657269 		.ascii	"SerialPrint.c\000"
+ 393      616C5072 
+ 393      696E742E 
+ 393      6300
+ 394              	.LASF1:
+ 395 000e 55534255 		.ascii	"USBUART_PutString\000"
+ 395      4152545F 
+ 395      50757453 
+ 395      7472696E 
+ 395      6700
+ 396              	.LASF0:
+ 397 0020 55534255 		.ascii	"USBUART_CDCIsReady\000"
+ 397      4152545F 
+ 397      43444349 
+ 397      73526561 
+ 397      647900
+ 398              	.LASF5:
+ 399 0033 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
+ 399      73657273 
+ 399      5C546F6D 
+ 399      6D695C44 
+ 399      6F63756D 
+ 400 0060 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
+ 400      5F555342 
+ 400      55415254 
+ 400      2E637964 
+ 400      736E00
+ 401              	.LASF2:
+ 402 0073 43794465 		.ascii	"CyDelay\000"
+ 402      6C617900 
+ 403              	.LASF7:
+ 404 007b 64617461 		.ascii	"data\000"
+ 404      00
+ 405              	.LASF6:
+ 406 0080 53657269 		.ascii	"SerialPrint\000"
+ 406      616C5072 
+ 406      696E7400 
+ 407              	.LASF3:
+ 408 008c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 408      4320342E 
+ 408      392E3320 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cctHhzws.s 			page 9
+
+
+ 408      32303135 
+ 408      30333033 
+ 409 00bf 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 409      20726576 
+ 409      6973696F 
+ 409      6E203232 
+ 409      31323230 
+ 410 00f2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 410      66756E63 
+ 410      74696F6E 
+ 410      2D736563 
+ 410      74696F6E 
+ 411              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
