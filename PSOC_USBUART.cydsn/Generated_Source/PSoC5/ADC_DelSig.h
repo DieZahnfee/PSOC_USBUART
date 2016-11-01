@@ -1346,11 +1346,11 @@ extern volatile int32 ADC_DelSig_CountsPerVolt;
 * ADC_DelSig_CFG1 Clock: 2785280 Hz
 */
 
-#define ADC_DelSig_CFG1_DEC_CR             (0x78u)
+#define ADC_DelSig_CFG1_DEC_CR             (0xF8u)
 #define ADC_DelSig_CFG1_DEC_SR             (0x14u)
 #define ADC_DelSig_CFG1_DEC_SHIFT1         (0x00u)
-#define ADC_DelSig_CFG1_DEC_SHIFT2         (0x0Au)
-#define ADC_DelSig_CFG1_DEC_DIV            (0)
+#define ADC_DelSig_CFG1_DEC_SHIFT2         (0x07u)
+#define ADC_DelSig_CFG1_DEC_DIV            (8)
 #define ADC_DelSig_CFG1_DEC_DR2            (0x7Fu)
 #define ADC_DelSig_CFG1_DEC_DR2H           (0x00u)
 #define ADC_DelSig_CFG1_DEC_DR1            (0x7Fu)
@@ -1360,7 +1360,7 @@ extern volatile int32 ADC_DelSig_CountsPerVolt;
 #define ADC_DelSig_CFG1_DEC_GVAL           (0x0Fu)
 #define ADC_DelSig_CFG1_DEC_GCOR           (0x00u)
 #define ADC_DelSig_CFG1_DEC_GCORH          (0x00u)
-#define ADC_DelSig_CFG1_DEC_COHER          (0x01u)
+#define ADC_DelSig_CFG1_DEC_COHER          (0x03u)
 #define ADC_DelSig_CFG1_DSM_CR0            (0x0Au)
 #define ADC_DelSig_CFG1_DSM_CR1            (0x00u)
 #define ADC_DelSig_CFG1_DSM_CR2            (0x7Au)
@@ -1402,7 +1402,7 @@ extern volatile int32 ADC_DelSig_CountsPerVolt;
 #define ADC_DelSig_CFG1_IDEAL_DEC_GAIN     (0x90DAu)
 #define ADC_DelSig_CFG1_IDEAL_ODDDEC_GAIN  (0x8000u)
 
-#define ADC_DelSig_CFG1_ALIGNMENT          (0u)
+#define ADC_DelSig_CFG1_ALIGNMENT          (1u)
 #define ADC_DelSig_CFG1_ADC_CLK_DIVIDER    (16u)
 #define ADC_DelSig_CFG1_CP_CLK_DIVIDER     (3u)
 

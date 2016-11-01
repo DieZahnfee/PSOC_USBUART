@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 1
 
 
    1              		.syntax unified
@@ -47,26 +47,27 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
   33              		.cfi_offset 3, -8
   34              		.cfi_offset 14, -4
   12:serial.c      ****     
-  13:serial.c      ****     // Set UART Interface again in case some parameters at the host computer changed
-  14:serial.c      ****     // f.e. Host can send double SET_INTERFACE request
-  15:serial.c      ****     if (0u != USBUART_IsConfigurationChanged()){
-  35              		.loc 1 15 0
+  13:serial.c      ****     // Setup UART Interface again if connection parameters at the host computer have changed
+  14:serial.c      ****     // e.g. Host can send double SET_INTERFACE request
+  15:serial.c      ****     
+  16:serial.c      ****     if (0u != USBUART_IsConfigurationChanged()){
+  35              		.loc 1 16 0
   36 0002 FFF7FEFF 		bl	USBUART_IsConfigurationChanged
   37              	.LVL0:
   38 0006 20B1     		cbz	r0, .L1
-  16:serial.c      ****         /* Initialize IN endpoints when device is configured. */
-  17:serial.c      ****         if (0u != USBUART_GetConfiguration()){
-  39              		.loc 1 17 0
+  17:serial.c      ****         /* Initialize IN endpoints when device is configured. */
+  18:serial.c      ****         if (0u != USBUART_GetConfiguration()){
+  39              		.loc 1 18 0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 2
+
+
   40 0008 FFF7FEFF 		bl	USBUART_GetConfiguration
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 2
-
-
   41              	.LVL1:
   42 000c 08B1     		cbz	r0, .L1
-  18:serial.c      ****             /* Enumeration is done, enable OUT endpoint to receive data 
-  19:serial.c      ****             * from host. */
-  20:serial.c      ****             USBUART_CDC_Init();
-  43              		.loc 1 20 0
+  19:serial.c      ****             /* Enumeration is done, enable OUT endpoint to receive data 
+  20:serial.c      ****             * from host. */
+  21:serial.c      ****             USBUART_CDC_Init();
+  43              		.loc 1 21 0
   44 000e FFF7FEFF 		bl	USBUART_CDC_Init
   45              	.LVL2:
   46              	.L1:
@@ -82,13 +83,13 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
   56              		.type	SerialPrint, %function
   57              	SerialPrint:
   58              	.LFB64:
-  21:serial.c      ****         }
-  22:serial.c      ****     }
-  23:serial.c      **** 
-  24:serial.c      **** }
-  25:serial.c      **** 
-  26:serial.c      **** void SerialPrint(const char8 string[]){
-  59              		.loc 1 26 0
+  22:serial.c      ****         }
+  23:serial.c      ****     }
+  24:serial.c      **** 
+  25:serial.c      **** }
+  26:serial.c      **** 
+  27:serial.c      **** void SerialPrint(const char8 string[]){
+  59              		.loc 1 27 0
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 0
   62              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -100,30 +101,30 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
   68 0002 0446     		mov	r4, r0
   69              	.LVL4:
   70              	.L5:
-  27:serial.c      ****     
-  28:serial.c      ****     while( USBUART_CDCIsReady() == 0);
-  71              		.loc 1 28 0 discriminator 1
+  28:serial.c      ****     
+  29:serial.c      ****     while( USBUART_CDCIsReady() == 0);
+  71              		.loc 1 29 0 discriminator 1
   72 0004 FFF7FEFF 		bl	USBUART_CDCIsReady
   73              	.LVL5:
   74 0008 0028     		cmp	r0, #0
   75 000a FBD0     		beq	.L5
-  29:serial.c      **** 	USBUART_PutString(string); // print message
-  76              		.loc 1 29 0
+  30:serial.c      **** 	USBUART_PutString(string); // print message
+  76              		.loc 1 30 0
   77 000c 2046     		mov	r0, r4
   78 000e FFF7FEFF 		bl	USBUART_PutString
   79              	.LVL6:
   80              	.L6:
-  30:serial.c      ****     while(! USBUART_CDCIsReady());
-  81              		.loc 1 30 0 discriminator 1
+  31:serial.c      ****     while(! USBUART_CDCIsReady());
+  81              		.loc 1 31 0 discriminator 1
   82 0012 FFF7FEFF 		bl	USBUART_CDCIsReady
   83              	.LVL7:
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 3
+
+
   84 0016 0028     		cmp	r0, #0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 3
-
-
   85 0018 FBD0     		beq	.L6
-  31:serial.c      **** 	USBUART_PutString("\n"); // set line feed
-  86              		.loc 1 31 0
+  32:serial.c      **** 	USBUART_PutString("\n"); // set line feed
+  86              		.loc 1 32 0
   87 001a 0248     		ldr	r0, .L8
   88 001c FFF7FEFF 		bl	USBUART_PutString
   89              	.LVL8:
@@ -177,10 +178,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  137 003a 02       		.uleb128 0x2
  138 003b 02       		.byte	0x2
  139 003c 07       		.byte	0x7
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 4
+
+
  140 003d 0E000000 		.4byte	.LASF3
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 4
-
-
  141 0041 03       		.uleb128 0x3
  142 0042 D5010000 		.4byte	.LASF9
  143 0046 02       		.byte	0x2
@@ -237,10 +238,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  194 00a8 01       		.byte	0x1
  195 00a9 08       		.byte	0x8
  196 00aa 8E010000 		.4byte	.LASF15
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 5
+
+
  197 00ae 02       		.uleb128 0x2
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 5
-
-
  198 00af 04       		.byte	0x4
  199 00b0 07       		.byte	0x7
  200 00b1 23020000 		.4byte	.LASF16
@@ -266,7 +267,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  220 00e6 08       		.uleb128 0x8
  221 00e7 3F000000 		.4byte	.LASF25
  222 00eb 01       		.byte	0x1
- 223 00ec 1A       		.byte	0x1a
+ 223 00ec 1B       		.byte	0x1b
  224 00ed 00000000 		.4byte	.LFB64
  225 00f1 28000000 		.4byte	.LFE64-.LFB64
  226 00f5 01       		.uleb128 0x1
@@ -275,7 +276,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  229 00fb 09       		.uleb128 0x9
  230 00fc 93010000 		.4byte	.LASF26
  231 0100 01       		.byte	0x1
- 232 0101 1A       		.byte	0x1a
+ 232 0101 1B       		.byte	0x1b
  233 0102 44010000 		.4byte	0x144
  234 0106 00000000 		.4byte	.LLST0
  235 010a 07       		.uleb128 0x7
@@ -297,10 +298,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  251 012c 83010000 		.4byte	0x183
  252 0130 0C       		.uleb128 0xc
  253 0131 20000000 		.4byte	.LVL8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 6
+
+
  254 0135 8E010000 		.4byte	0x18e
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 6
-
-
  255 0139 0B       		.uleb128 0xb
  256 013a 01       		.uleb128 0x1
  257 013b 50       		.byte	0x50
@@ -357,10 +358,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  308 0003 25       		.uleb128 0x25
  309 0004 0E       		.uleb128 0xe
  310 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 7
+
+
  311 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 7
-
-
  312 0007 03       		.uleb128 0x3
  313 0008 0E       		.uleb128 0xe
  314 0009 1B       		.uleb128 0x1b
@@ -417,10 +418,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  365 003c 0B       		.uleb128 0xb
  366 003d 3B       		.uleb128 0x3b
  367 003e 05       		.uleb128 0x5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 8
+
+
  368 003f 49       		.uleb128 0x49
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 8
-
-
  369 0040 13       		.uleb128 0x13
  370 0041 00       		.byte	0
  371 0042 00       		.byte	0
@@ -477,10 +478,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  422 0078 18       		.uleb128 0x18
  423 0079 9742     		.uleb128 0x2117
  424 007b 19       		.uleb128 0x19
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 9
+
+
  425 007c 01       		.uleb128 0x1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 9
-
-
  426 007d 13       		.uleb128 0x13
  427 007e 00       		.byte	0
  428 007f 00       		.byte	0
@@ -537,10 +538,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  479 00b9 13       		.uleb128 0x13
  480 00ba 00       		.byte	0
  481 00bb 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 10
+
+
  482 00bc 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 10
-
-
  483 00bd 26       		.uleb128 0x26
  484 00be 00       		.byte	0
  485 00bf 49       		.uleb128 0x49
@@ -597,10 +598,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  536 00f2 19       		.uleb128 0x19
  537 00f3 03       		.uleb128 0x3
  538 00f4 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 11
+
+
  539 00f5 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 11
-
-
  540 00f6 0B       		.uleb128 0xb
  541 00f7 3B       		.uleb128 0x3b
  542 00f8 0B       		.uleb128 0xb
@@ -657,10 +658,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  593 0023 9F       		.byte	0x9f
  594 0024 00000000 		.4byte	0
  595 0028 00000000 		.4byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 12
+
+
  596              		.section	.debug_aranges,"",%progbits
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 12
-
-
  597 0000 24000000 		.4byte	0x24
  598 0004 0200     		.2byte	0x2
  599 0006 00000000 		.4byte	.Ldebug_info0
@@ -717,10 +718,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  630      696E7400 
  631              	.LASF22:
  632 004b 73657269 		.ascii	"serial.c\000"
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 13
+
+
  632      616C2E63 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 13
-
-
  632      00
  633              	.LASF11:
  634 0054 75696E74 		.ascii	"uint8\000"
@@ -777,10 +778,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  649      7200
  650              	.LASF24:
  651 017e 53657269 		.ascii	"SerialCheckConf\000"
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 14
+
+
  651      616C4368 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 14
-
-
  651      65636B43 
  651      6F6E6600 
  652              	.LASF15:
@@ -837,10 +838,10 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 1
  677      43444349 
  677      73526561 
  677      647900
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc3Gmyta.s 			page 15
+
+
  678              	.LASF16:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc1EPqC7.s 			page 15
-
-
  679 0223 73697A65 		.ascii	"sizetype\000"
  679      74797065 
  679      00

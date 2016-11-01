@@ -1,6 +1,6 @@
 -- ======================================================================
 -- PSOC_USBUART.ctl generated from PSOC_USBUART
--- 10/25/2016 at 13:18
+-- 11/01/2016 at 18:23
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

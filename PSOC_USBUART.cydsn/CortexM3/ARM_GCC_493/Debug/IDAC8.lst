@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
   29:Generated_Source\PSoC5/IDAC8.c **** 
   30:Generated_Source\PSoC5/IDAC8.c **** #if (CY_PSOC5A)
   31:Generated_Source\PSoC5/IDAC8.c ****     static IDAC8_LOWPOWER_BACKUP_STRUCT  IDAC8_lowPowerBackup;
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 2
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 2
 
 
   32:Generated_Source\PSoC5/IDAC8.c **** #endif /* CY_PSOC5A */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
   86:Generated_Source\PSoC5/IDAC8.c ****     IDAC8_SetSpeed(IDAC8_DEFAULT_SPEED);
   87:Generated_Source\PSoC5/IDAC8.c ****     
   88:Generated_Source\PSoC5/IDAC8.c ****     /* Set proper DAC trim */
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 3
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 3
 
 
   89:Generated_Source\PSoC5/IDAC8.c ****     IDAC8_DacTrim();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
   55              		.type	IDAC8_Stop, %function
   56              	IDAC8_Stop:
   57              	.LFB3:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 4
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 4
 
 
  115:Generated_Source\PSoC5/IDAC8.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  169:Generated_Source\PSoC5/IDAC8.c **** * Summary:
  170:Generated_Source\PSoC5/IDAC8.c **** *  Powers down IDAC8 to lowest power state.
  171:Generated_Source\PSoC5/IDAC8.c **** *
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 5
 
 
  172:Generated_Source\PSoC5/IDAC8.c **** * Parameters:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  195:Generated_Source\PSoC5/IDAC8.c ****         IDAC8_lowPowerBackup.DACCR0Reg = IDAC8_CR0;
  196:Generated_Source\PSoC5/IDAC8.c ****         IDAC8_CR0 = (IDAC8_MODE_I | IDAC8_RANGE_3 | IDAC8_HS_HIGHSPEED);
  197:Generated_Source\PSoC5/IDAC8.c ****     #endif /* CY_PSOC5A */
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 6
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 6
 
 
  198:Generated_Source\PSoC5/IDAC8.c **** }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  118              		.thumb_func
  119              		.type	IDAC8_SetValue, %function
  120              	IDAC8_SetValue:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 7
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 7
 
 
  121              	.LFB7:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  276:Generated_Source\PSoC5/IDAC8.c ****     IDAC8_CR0 |= ( range & IDAC8_RANGE_MASK );     /*  Set Range  */
  277:Generated_Source\PSoC5/IDAC8.c ****     IDAC8_DacTrim();
  278:Generated_Source\PSoC5/IDAC8.c **** }
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 8
 
 
  279:Generated_Source\PSoC5/IDAC8.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  308:Generated_Source\PSoC5/IDAC8.c ****     #if (CY_PSOC5A)
  309:Generated_Source\PSoC5/IDAC8.c ****         IDAC8_Data = value;
  310:Generated_Source\PSoC5/IDAC8.c ****         CyExitCriticalSection(IDAC8_intrStatus);
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 9
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 9
 
 
  311:Generated_Source\PSoC5/IDAC8.c ****     #endif /* CY_PSOC5A */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  161 000e 12F0040F 		tst	r2, #4
  162 0012 00D0     		beq	.L14
  351:Generated_Source\PSoC5/IDAC8.c ****     {
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 10
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 10
 
 
  352:Generated_Source\PSoC5/IDAC8.c ****         mode++;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  209 000e 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  210 0010 42F00402 		orr	r2, r2, #4
  211 0014 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 11
 
 
   86:Generated_Source\PSoC5/IDAC8.c ****     
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  258 0016 8020     		movs	r0, #128
  259 0018 FFF7FEFF 		bl	IDAC8_SetValue
  260              	.LVL10:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 12
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 12
 
 
  261 001c 08BD     		pop	{r3, pc}
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  311              		.thumb
  312              		.thumb_func
  313              		.type	IDAC8_SetRange, %function
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 13
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 13
 
 
  314              	IDAC8_SetRange:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  364 000c 58010000 		.4byte	.LASF27
  365 0010 01       		.byte	0x1
  366 0011 45000000 		.4byte	.LASF28
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 14
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 14
 
 
  367 0015 89000000 		.4byte	.LASF29
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  421 007f 08       		.byte	0x8
  422 0080 04       		.byte	0x4
  423 0081 1A020000 		.4byte	.LASF10
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 15
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 15
 
 
  424 0085 02       		.uleb128 0x2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  478 00ff 01       		.byte	0x1
  479 0100 2A01     		.2byte	0x12a
  480 0102 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 16
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 16
 
 
  481 0106 01       		.uleb128 0x1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  535 0180 0E       		.uleb128 0xe
  536 0181 16000000 		.4byte	.LVL9
  537 0185 9D000000 		.4byte	0x9d
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 17
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 17
 
 
  538 0189 0F       		.uleb128 0xf
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  592 0203 05       		.uleb128 0x5
  593 0204 03       		.byte	0x3
  594 0205 00000000 		.4byte	IDAC8_initVar
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 18
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 18
 
 
  595 0209 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  649 0033 13       		.uleb128 0x13
  650 0034 00       		.byte	0
  651 0035 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 19
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 19
 
 
  652 0036 05       		.uleb128 0x5
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  706 006e 00       		.byte	0
  707 006f 08       		.uleb128 0x8
  708 0070 05       		.uleb128 0x5
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 20
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 20
 
 
  709 0071 00       		.byte	0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  763 00a8 34       		.uleb128 0x34
  764 00a9 00       		.byte	0
  765 00aa 03       		.uleb128 0x3
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 21
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 21
 
 
  766 00ab 0E       		.uleb128 0xe
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  820 00ea 3A       		.uleb128 0x3a
  821 00eb 0B       		.uleb128 0xb
  822 00ec 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 22
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 22
 
 
  823 00ed 05       		.uleb128 0x5
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  877 0043 20000000 		.4byte	.LFE5
  878 0047 0400     		.2byte	0x4
  879 0049 F3       		.byte	0xf3
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 23
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 23
 
 
  880 004a 01       		.uleb128 0x1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  934 0014 1C000000 		.4byte	.LFE4
  935 0018 00000000 		.4byte	.LFB7
  936 001c 0C000000 		.4byte	.LFE7
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 24
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 24
 
 
  937 0020 00000000 		.4byte	.LFB8
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  969 0064 75696E74 		.ascii	"uint8\000"
  969      3800
  970              	.LASF21:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 25
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 25
 
 
  971 006a 49444143 		.ascii	"IDAC8_Init\000"
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  992      7369676E 
  992      65642069 
  993              	.LASF8:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 26
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 26
 
 
  994 012d 756E7369 		.ascii	"unsigned int\000"
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 1
  1015              	.LASF15:
  1016 0221 49444143 		.ascii	"IDAC8_Stop\000"
  1016      385F5374 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjjdluh.s 			page 27
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cc8l9UCe.s 			page 27
 
 
  1016      6F7000

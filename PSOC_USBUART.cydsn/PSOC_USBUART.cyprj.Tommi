@@ -109,19 +109,55 @@
 <file name=".\cyapicallbacks.h" />
 <file name=".\main.c" />
 <file name=".\serial.h" />
-<file name=".\CortexM3\ARM_GCC_493\Debug\serial.o">
+<file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig.o">
+<dep name=".\Generated_Source\PSoC5\ADC_DelSig.c" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig.h" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_Ext_CP_Clk.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_DelSig_IRQ.h" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_theACLK.h" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_DelSig.c" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig_INT.o">
+<dep name=".\Generated_Source\PSoC5\ADC_DelSig.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_DelSig_INT.c" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_DelSig_INT.c" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig_PM.o">
+<dep name=".\Generated_Source\PSoC5\ADC_DelSig.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_DelSig_PM.c" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_DelSig_PM.c" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\serial.o">
+<dep name=".\Generated_Source\PSoC5\ADC_DelSig_IRQ.h" />
 <dep name=".\Generated_Source\PSoC5\Analog_In_Neg.h" />
 <dep name=".\Generated_Source\PSoC5\Analog_In_Neg_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Analog_In_Pos.h" />
 <dep name=".\Generated_Source\PSoC5\Analog_In_Pos_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CyDmac.h" />
-<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC5\CyLib.h" />
-<dep name=".\Generated_Source\PSoC5\CySpc.h" />
 <dep name=".\Generated_Source\PSoC5\IDAC8.h" />
 <dep name=".\Generated_Source\PSoC5\OPAMP.h" />
 <dep name=".\Generated_Source\PSoC5\USBUART.h" />
@@ -146,22 +182,10 @@
 <dep name=".\Generated_Source\PSoC5\core_cm3_psoc5.h" />
 <dep name=".\Generated_Source\PSoC5\core_cmFunc.h" />
 <dep name=".\Generated_Source\PSoC5\core_cmInstr.h" />
-<dep name=".\Generated_Source\PSoC5\cyPm.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
-<dep name=".\cyapicallbacks.h" />
-<dep name=".\serial.c" />
-<dep name=".\serial.h" />
-</file>
-<file name=".\serial.c" />
-<file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig.o">
-<dep name=".\Generated_Source\PSoC5\ADC_DelSig.c" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig.h" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_Ext_CP_Clk.h" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_theACLK.h" />
@@ -173,8 +197,11 @@
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\cyapicallbacks.h" />
+<dep name=".\serial.c" />
+<dep name=".\serial.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_DelSig.c" />
+<file name=".\serial.c" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig_Ext_CP_Clk.o">
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_Ext_CP_Clk.c" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_Ext_CP_Clk.h" />
@@ -184,20 +211,6 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\ADC_DelSig_Ext_CP_Clk.c" />
-<file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig_INT.o">
-<dep name=".\Generated_Source\PSoC5\ADC_DelSig.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_DelSig_INT.c" />
-<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC5\CyLib.h" />
-<dep name=".\Generated_Source\PSoC5\CySpc.h" />
-<dep name=".\Generated_Source\PSoC5\cyPm.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\cyapicallbacks.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\ADC_DelSig_INT.c" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig_IRQ.o">
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_IRQ.c" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_IRQ.h" />
@@ -212,19 +225,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\ADC_DelSig_IRQ.c" />
-<file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig_PM.o">
-<dep name=".\Generated_Source\PSoC5\ADC_DelSig.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_DelSig_PM.c" />
-<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC5\CyLib.h" />
-<dep name=".\Generated_Source\PSoC5\CySpc.h" />
-<dep name=".\Generated_Source\PSoC5\cyPm.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\ADC_DelSig_PM.c" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\ADC_DelSig_theACLK.o">
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_theACLK.c" />
 <dep name=".\Generated_Source\PSoC5\ADC_DelSig_theACLK.h" />
@@ -742,10 +742,6 @@
 <dep name=".\Generated_Source\PSoC5\cyutils.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\cyutils.c" />
-<file name=".\CortexM3\ARM_GCC_493\Debug\SerialPrint.o">
-<dep name=".\SerialPrint.c" />
-</file>
-<file name=".\SerialPrint.c" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
 <dep name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
@@ -756,6 +752,10 @@
 <file name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
 <file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\SerialPrint.o">
+<dep name=".\SerialPrint.c" />
+</file>
+<file name=".\SerialPrint.c" />
 <file name=".\Generated_Source\PSoC5\Analog_In.h" />
 <file name=".\Generated_Source\PSoC5\Analog_In_aliases.h" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\Analog_In.o">
@@ -1001,7 +1001,7 @@
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="131218729863288997" />
+<deps_time v="131224959645731368" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">
