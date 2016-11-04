@@ -9,27 +9,41 @@
 #include <project.h>
 #include <stdio.h>
 #include <serial.h>
+#include <global.h>
 
-int main()
-{
-    // declare variables
-    int32 raw_input = 0;
-    int32 micros = 0;
-    char raw_Str[10], micros_Str[10];
-    uint8 new_data = 0;
+uint8 adc_new_data = 0u;
+int32 adc_input_data = 0;
+
+int main(){
+    // defining & initializing variables
+    int32       raw_average = 0, 
+                raw_cut = 0, 
+                micros = 0, 
+                micros_average = 0, 
+                micros_cut = 0;
+    char        str_raw[10], 
+                str_mv[10], 
+                str_cut[10];
+    int32       mv_filter[128] = {0};;
+    uint8       filter_index = 0;
+    const int32 BIT_MASK = 0xFFFFFFF0;
+    
+    
    
     
     CyGlobalIntDisable; //Disable Global Interupts
     
     //Start all components
-    
     ADC_DelSig_Start();
     OPAMP_Start();
     IDAC8_Start();
     
     CyGlobalIntEnable; // Enable global interrupts. 
+    
     // Start USBFS operation with 5-V operation.
     USBUART_Start(0u, USBUART_5V_OPERATION);
+    
+
     
     // Start ADC Conversion
     ADC_DelSig_StartConvert();
@@ -37,31 +51,45 @@ int main()
     for(;;){
         
         SerialCheckConf();
-      
-        if(ADC_DelSig_IsEndConversion(ADC_DelSig_RETURN_STATUS)){
+     
+        if(adc_new_data == 1u){
             
-            raw_input = ADC_DelSig_GetResult32();
-            sprintf(raw_Str,"r:%ld",raw_input);
-            micros = ADC_DelSig_CountsTo_uVolts(raw_input);
-            sprintf(micros_Str,"u:%ld",micros);
-            new_data = 1u; // set new_data flag
+            // FIR-Filter for calculating moving average
+            if(filter_index >= 128) filter_index = 0;
+            raw_average = raw_average - mv_filter[filter_index];
+            raw_average = raw_average + (adc_input_data >> 7);
+            mv_filter[filter_index++] = adc_input_data >> 7;
             
-        }
             
-        if(new_data == 1u){
+            // cutoff 4 Bits
+            raw_cut = adc_input_data & BIT_MASK;
             
-            // CALLING PRINT ROUTINE
-            SerialPrint(raw_Str);
-            SerialPrint(micros_Str);
-		    CyDelay(50); // wait for 50 ms -> I will try to remove this line in the future
             
-            //reset new_data flag to zero
-            new_data = 0u; // remove new_data flag
-            sprintf(raw_Str,"000000000%d",0);
-            sprintf(micros_Str,"000000000%d",0);
+            // converting data to printable format          
+            micros = ADC_DelSig_CountsTo_uVolts(adc_input_data);
+            sprintf(str_raw,"u:%ld;",micros);
+            
+            micros_average = ADC_DelSig_CountsTo_uVolts(raw_average);
+            sprintf(str_mv,"mv:%ld;",micros_average);
+            
+            micros_cut = ADC_DelSig_CountsTo_uVolts(raw_cut);
+            sprintf(str_cut,"c:%ld",micros_cut);
+           
+            
+            // Calling print routine
+            SerialPrint(str_mv);
+            SerialPrint(str_cut);
+            SerialPrint("\n");
+		    
+            
+            //reset new_data flag to zero & flush the strings
+            adc_new_data = 0u; // remove new_data flag
+            sprintf(str_raw,"000000000%d",0);
+            sprintf(str_mv,"000000000%d",0);
             
         }
     }
+    return 0;
 }
 
 /* [] END OF FILE */

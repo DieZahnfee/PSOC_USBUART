@@ -2,7 +2,7 @@
 --	Conversion of PSOC_USBUART.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Oct 25 13:18:50 2016
+--	Fri Nov 04 15:47:29 2016
 --
 
 USE cypress.cypress.all;
@@ -135,6 +135,15 @@ SIGNAL tmpFB_0__Vref_sink_net_0 : bit;
 SIGNAL tmpIO_0__Vref_sink_net_0 : bit;
 TERMINAL tmpSIOVREF__Vref_sink_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Vref_sink_net_0 : bit;
+SIGNAL \Filter:Net_1\ : bit;
+SIGNAL \Filter:Net_4\ : bit;
+SIGNAL \Filter:Net_5\ : bit;
+SIGNAL \Filter:Net_8\ : bit;
+SIGNAL \Filter:Net_9\ : bit;
+SIGNAL Net_106 : bit;
+SIGNAL Net_107 : bit;
+SIGNAL Net_108 : bit;
+SIGNAL Net_111 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -217,7 +226,7 @@ one <=  ('1') ;
 		id=>"386e1a85-95a1-41c5-bc79-3cb101c774e3/edd15f43-b66b-457b-be3a-5342345270c8",
 		source_clock_id=>"61737EF6-3B74-48f9-8B91-F7473A442AE7",
 		divisor=>0,
-		period=>"359066427.289048",
+		period=>"656598818.122127",
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>\ADC_DelSig:Net_488\,
@@ -731,5 +740,21 @@ Vref_sink:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Vref_sink_net_0);
+\Filter:DFB\:cy_psoc3_dfb_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>zero,
+		in_1=>zero,
+		in_2=>zero,
+		out_1=>\Filter:Net_8\,
+		out_2=>\Filter:Net_9\,
+		dmareq_1=>Net_106,
+		dmareq_2=>Net_107,
+		interrupt=>Net_108);
+DMA_1:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"10",
+		num_tds=>0)
+	PORT MAP(drq=>zero,
+		trq=>zero,
+		nrq=>Net_111);
 
 END R_T_L;

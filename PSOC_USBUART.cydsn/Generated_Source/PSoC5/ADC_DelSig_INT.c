@@ -17,6 +17,7 @@
 
 #include "ADC_DelSig.h"
 #include "cyapicallbacks.h"
+#include "global.h"
 
 
 /*******************************************************************************
@@ -25,6 +26,9 @@
 *   #START and #END tags
 *******************************************************************************/
 /* `#START ADC_SYS_VAR`  */
+
+extern uint8 adc_new_data;
+extern int32 adc_input_data;
 
 /* `#END`  */
 
@@ -60,7 +64,8 @@
         *  - add user ISR code between the following #START and #END tags
         **************************************************************************/
         /* `#START MAIN_ADC_ISR1`  */
-
+        adc_input_data = ADC_DelSig_GetResult32();
+        adc_new_data = 1u;
         /* `#END`  */
         
         /* Stop the conversion if conversion mode is single sample and resolution
