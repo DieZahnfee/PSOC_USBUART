@@ -18,6 +18,8 @@ net ClockBlock_BUS_CLK
 	term   ":interrupt_22.clock"
 	switch ":clockblockcell.clk_bus_glb==>:interrupt_21.clock"
 	term   ":interrupt_21.clock"
+	switch ":clockblockcell.clk_bus_glb==>:dma_0.clock"
+	term   ":dma_0.clock"
 end ClockBlock_BUS_CLK
 net Net_57
 	term   ":decimatorcell.interrupt"

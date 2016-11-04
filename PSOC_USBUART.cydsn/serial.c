@@ -28,9 +28,7 @@ void SerialPrint(const char8 string[]){
     
     while( USBUART_CDCIsReady() == 0);
 	USBUART_PutString(string); // print message
-    while(! USBUART_CDCIsReady());
-	USBUART_PutString("\n"); // set line feed
-	
+    	
 }
 
 /* [] END OF FILE */
