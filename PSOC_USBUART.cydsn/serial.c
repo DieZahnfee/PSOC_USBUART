@@ -26,8 +26,8 @@ void SerialCheckConf(){
 
 void SerialPrint(const char8 string[]){
     
-    while( USBUART_CDCIsReady() == 0);
-	USBUART_PutString(string); // print message
+    while( USBUART_CDCIsReady() == 0);  // wait till USBUART Interface is free
+	USBUART_PutString(string);          // print message
     	
 }
 

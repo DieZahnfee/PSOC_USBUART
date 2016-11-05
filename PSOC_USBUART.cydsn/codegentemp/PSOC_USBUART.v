@@ -1,6 +1,6 @@
 // ======================================================================
 // PSOC_USBUART.v generated from TopDesign.cysch
-// 11/04/2016 at 15:47
+// 11/05/2016 at 10:32
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -784,54 +784,9 @@ module IDAC8_v2_0_3 (
 
 endmodule
 
-// Filter_v2_30(ChannelEnableA=true, ChannelEnableB=false, ChannelSettingsA=<enabled=true>\r\n<userEntryEnabled=false>\r\n<sampleRate=93>\r\n<filterGain_dB=0>\r\n<filterGain_Linear=1>\r\n<gainScale=DB>\r\n<width=WIDTH_16>\r\n<signal=INTERRUPT>\r\n<stage_count=1>\r\n<bus_clock=12.555>\r\n<stage0=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=128>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=0.5/0.5/>\r\n    <userTapCount=2>\r\n>\r\n<stage1=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage2=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage3=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage4=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage5=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage6=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage7=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n, ChannelSettingsB="", ChannelTypeA=1, ChannelTypeB=0, CoefficientEntryEnableA=false, CoefficientEntryEnableB=false, DisplaySettingsA=50307, DisplaySettingsB=50307, DmaEnableA=false, DmaEnableB=false, IrqEnableA=true, IrqEnableB=false, MinBusClockVal=12.555, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=Filter_v2_30, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Filter, CY_INSTANCE_SHORT_NAME=Filter, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=30, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=Filter, )
-module Filter_v2_30_4 (
-    DMA_Req_A,
-    DMA_Req_B,
-    Interrupt);
-    output      DMA_Req_A;
-    output      DMA_Req_B;
-    output      Interrupt;
-
-
-          wire  Net_5;
-          wire  Net_9;
-          wire  Net_8;
-          wire  Net_4;
-          wire  Net_1;
-
-    ZeroTerminal ZeroTerminal_1 (
-        .z(Net_1));
-
-    cy_psoc3_dfb_v1_0 DFB (
-        .in_1(Net_4),
-        .out_1(Net_8),
-        .out_2(Net_9),
-        .interrupt(Interrupt),
-        .in_2(Net_5),
-        .clock(Net_1),
-        .dmareq_1(DMA_Req_A),
-        .dmareq_2(DMA_Req_B));
-
-    ZeroTerminal ZeroTerminal_4 (
-        .z(Net_5));
-
-    ZeroTerminal ZeroTerminal_5 (
-        .z(Net_4));
-
-
-
-endmodule
-
 // top
 module top ;
 
-          wire  Net_111;
-          wire  Net_110;
-          wire  Net_109;
-          wire  Net_108;
-          wire  Net_107;
-          wire  Net_106;
           wire  Net_89;
           wire  Net_88;
           wire [7:0] Net_86;
@@ -1205,20 +1160,6 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__Vref_sink_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
-    Filter_v2_30_4 Filter (
-        .DMA_Req_A(Net_106),
-        .DMA_Req_B(Net_107),
-        .Interrupt(Net_108));
-
-
-	cy_dma_v1_0
-		#(.drq_type(2'b10))
-		DMA_1
-		 (.drq(1'b0),
-		  .trq(1'b0),
-		  .nrq(Net_111));
-
 
 
 

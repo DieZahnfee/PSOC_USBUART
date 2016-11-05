@@ -11,8 +11,13 @@
 #include <serial.h>
 #include <global.h>
 
-uint8 adc_new_data = 0u;
-int32 adc_input_data = 0;
+// declaring global variables
+struct adc adc_del_sig;
+
+//function declaration
+
+int HwModulesStart();
+int HwModulesStop();
 
 int main(){
     // defining & initializing variables
@@ -28,22 +33,10 @@ int main(){
     uint8       filter_index = 0;
     const int32 BIT_MASK = 0xFFFFFFF0;
     
-    
-   
-    
-    CyGlobalIntDisable; //Disable Global Interupts
-    
-    //Start all components
-    ADC_DelSig_Start();
-    OPAMP_Start();
-    IDAC8_Start();
-    
-    CyGlobalIntEnable; // Enable global interrupts. 
-    
-    // Start USBFS operation with 5-V operation.
-    USBUART_Start(0u, USBUART_5V_OPERATION);
-    
+    adc_del_sig.new_data = 0u;
+    adc_del_sig.data = 0;
 
+    HwModulesStart();
     
     // Start ADC Conversion
     ADC_DelSig_StartConvert();
@@ -51,22 +44,23 @@ int main(){
     for(;;){
         
         SerialCheckConf();
+        
      
-        if(adc_new_data == 1u){
+        if(adc_del_sig.new_data == 1u){
             
             // FIR-Filter for calculating moving average
             if(filter_index >= 128) filter_index = 0;
             raw_average = raw_average - mv_filter[filter_index];
-            raw_average = raw_average + (adc_input_data >> 7);
-            mv_filter[filter_index++] = adc_input_data >> 7;
+            raw_average = raw_average + (adc_del_sig.data >> 7);
+            mv_filter[filter_index++] = adc_del_sig.data >> 7;
             
             
             // cutoff 4 Bits
-            raw_cut = adc_input_data & BIT_MASK;
+            raw_cut = adc_del_sig.data & BIT_MASK;
             
             
             // converting data to printable format          
-            micros = ADC_DelSig_CountsTo_uVolts(adc_input_data);
+            micros = ADC_DelSig_CountsTo_uVolts(adc_del_sig.data);
             sprintf(str_raw,"u:%ld;",micros);
             
             micros_average = ADC_DelSig_CountsTo_uVolts(raw_average);
@@ -83,7 +77,7 @@ int main(){
 		    
             
             //reset new_data flag to zero & flush the strings
-            adc_new_data = 0u; // remove new_data flag
+            adc_del_sig.new_data = 0u; // remove new_data flag
             sprintf(str_raw,"000000000%d",0);
             sprintf(str_mv,"000000000%d",0);
             
@@ -91,5 +85,35 @@ int main(){
     }
     return 0;
 }
+
+int HwModulesStart(){
+        
+    CyGlobalIntDisable; //Disable Global Interupts
+    
+    //Start all components
+    ADC_DelSig_Start();
+    OPAMP_Start();
+    IDAC8_Start();
+    USBUART_Start(0u, USBUART_5V_OPERATION);
+    
+    CyGlobalIntEnable; // Enable global interrupts. 
+    
+    return 1;
+};
+
+int HwModulesStop(){
+        
+    CyGlobalIntDisable; //Disable Global Interupts
+    
+    //Start all components
+    ADC_DelSig_Stop();
+    OPAMP_Stop();
+    IDAC8_Stop();
+    USBUART_Stop();
+    
+    CyGlobalIntEnable; // Enable global interrupts. 
+    
+    return 1;
+};
 
 /* [] END OF FILE */

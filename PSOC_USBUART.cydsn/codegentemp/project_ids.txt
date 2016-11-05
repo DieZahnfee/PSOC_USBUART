@@ -1,6 +1,5 @@
-G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\PSOC_USBUART.cyprj|6d8e1ea3-52db-4dcb-972e-8d5548446673
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|21f25a42-2e96-4563-809d-7b785769d1a8
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|620f3228-ea5d-4bb5-aa41-45711c747b04
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7eca21d4-3de3-4167-8300-20c25ae45992
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|6b7600fc-62b4-4ce5-9b30-2bfdf4ad7581
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|acebf8e2-6bdc-47a4-9474-b90cd42a8ca0
+G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\PSOC_USBUART.cyprj|9e718d67-e3d3-4b19-ad16-8a4c2d9c9c8b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9a49e46b-d918-4bb4-a725-f2b49a64e139
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a6bdc255-20e5-4796-9b0b-b1b34aef3576
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ba08fbc7-07f7-4f16-a026-d874e768be0f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|bdbaf4a3-1f5b-41eb-b2d9-4ac516484608

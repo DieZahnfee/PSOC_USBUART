@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 1
 
 
    1              		.syntax unified
@@ -58,35 +58,36 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 1
   29:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
   30:Generated_Source\PSoC5/ADC_DelSig_INT.c **** extern uint8 adc_new_data;
   31:Generated_Source\PSoC5/ADC_DelSig_INT.c **** extern int32 adc_input_data;
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 2
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 2
 
 
-  32:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
-  33:Generated_Source\PSoC5/ADC_DelSig_INT.c **** /* `#END`  */
-  34:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
-  35:Generated_Source\PSoC5/ADC_DelSig_INT.c **** #if(ADC_DelSig_IRQ_REMOVE == 0u)
-  36:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+  32:Generated_Source\PSoC5/ADC_DelSig_INT.c **** extern struct adc adc_del_sig;
+  33:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+  34:Generated_Source\PSoC5/ADC_DelSig_INT.c **** /* `#END`  */
+  35:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+  36:Generated_Source\PSoC5/ADC_DelSig_INT.c **** #if(ADC_DelSig_IRQ_REMOVE == 0u)
   37:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
-  38:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     /*****************************************************************************
-  39:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Function Name: ADC_DelSig_ISR1
-  40:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     ******************************************************************************
-  41:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-  42:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Summary:
-  43:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  Handle Interrupt Service Routine.
-  44:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-  45:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Parameters:
-  46:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
-  47:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-  48:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Return:
-  49:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
-  50:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-  51:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Reentrant:
-  52:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  No
-  53:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-  54:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *****************************************************************************/
-  55:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     CY_ISR( ADC_DelSig_ISR1)
-  56:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     {
-  27              		.loc 1 56 0
+  38:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+  39:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     /*****************************************************************************
+  40:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Function Name: ADC_DelSig_ISR1
+  41:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     ******************************************************************************
+  42:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
+  43:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Summary:
+  44:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  Handle Interrupt Service Routine.
+  45:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
+  46:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Parameters:
+  47:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
+  48:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
+  49:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Return:
+  50:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
+  51:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
+  52:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Reentrant:
+  53:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  No
+  54:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
+  55:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *****************************************************************************/
+  56:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     CY_ISR( ADC_DelSig_ISR1)
+  57:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     {
+  27              		.loc 1 57 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -94,789 +95,838 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 1
   32              		.cfi_def_cfa_offset 8
   33              		.cfi_offset 3, -8
   34              		.cfi_offset 14, -4
-  57:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR1_ENTRY_CALLBACK
-  58:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR1_EntryCallback();
-  59:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR1_ENTRY_CALLBACK */
-  60:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
-  61:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
-  62:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /**************************************************************************
-  63:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  Custom Code
-  64:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  - add user ISR code between the following #START and #END tags
-  65:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         **************************************************************************/
-  66:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#START MAIN_ADC_ISR1`  */
-  67:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         adc_input_data = ADC_DelSig_GetResult32();
-  35              		.loc 1 67 0
+  58:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR1_ENTRY_CALLBACK
+  59:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR1_EntryCallback();
+  60:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR1_ENTRY_CALLBACK */
+  61:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
+  62:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+  63:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /**************************************************************************
+  64:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  Custom Code
+  65:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  - add user ISR code between the following #START and #END tags
+  66:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         **************************************************************************/
+  67:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#START MAIN_ADC_ISR1`  */
+  68:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         //adc_input_data = ADC_DelSig_GetResult32();
+  69:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         //adc_new_data = 1u;
+  70:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         adc_del_sig.data = ADC_DelSig_GetResult32();
+  35              		.loc 1 70 0
   36 0002 FFF7FEFF 		bl	ADC_DelSig_GetResult32
   37              	.LVL0:
-  38 0006 034B     		ldr	r3, .L3
-  39 0008 1860     		str	r0, [r3]
-  68:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         adc_new_data = 1u;
-  40              		.loc 1 68 0
+  38 0006 024B     		ldr	r3, .L3
+  39 0008 5860     		str	r0, [r3, #4]
+  71:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         adc_del_sig.new_data = 1u;
+  40              		.loc 1 71 0
   41 000a 0122     		movs	r2, #1
-  42 000c 024B     		ldr	r3, .L3+4
-  43 000e 1A70     		strb	r2, [r3]
-  44 0010 08BD     		pop	{r3, pc}
-  45              	.L4:
-  46 0012 00BF     		.align	2
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 3
+  42 000c 1A70     		strb	r2, [r3]
+  43 000e 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 3
 
 
-  47              	.L3:
-  48 0014 00000000 		.word	adc_input_data
-  49 0018 00000000 		.word	adc_new_data
-  50              		.cfi_endproc
-  51              	.LFE63:
-  52              		.size	ADC_DelSig_ISR1, .-ADC_DelSig_ISR1
-  53              		.section	.text.ADC_DelSig_ISR2,"ax",%progbits
-  54              		.align	2
-  55              		.global	ADC_DelSig_ISR2
-  56              		.thumb
-  57              		.thumb_func
-  58              		.type	ADC_DelSig_ISR2, %function
-  59              	ADC_DelSig_ISR2:
-  60              	.LFB64:
-  69:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#END`  */
-  70:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
-  71:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* Stop the conversion if conversion mode is single sample and resolution
-  72:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  is above 16 bits.
-  73:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         */
-  74:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #if(ADC_DelSig_CFG1_RESOLUTION > 16 && \
-  75:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_CFG1_CONV_MODE == ADC_DelSig_MODE_SINGLE_SAMPLE)
-  76:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_StopConvert();
-  77:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             /* Software flag for checking conversion complete or not. Will be used when
-  78:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             *  resolution is above 16 bits and conversion mode is single sample 
-  79:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 			*/
-  80:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_convDone = ADC_DelSig_DEC_CONV_DONE;
-  81:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* Single sample conversion mode with resolution above 16 bits */
-  82:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
-  83:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR1_EXIT_CALLBACK
-  84:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR1_ExitCallback();
-  85:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR1_EXIT_CALLBACK */
-  86:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     }
-  87:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
-  88:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
-  89:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     /*****************************************************************************
-  90:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Function Name: ADC_DelSig_ISR2
-  91:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     ******************************************************************************
-  92:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-  93:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Summary:
-  94:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  Handle Interrupt Service Routine.
+  44              	.L4:
+  45              		.align	2
+  46              	.L3:
+  47 0010 00000000 		.word	adc_del_sig
+  48              		.cfi_endproc
+  49              	.LFE63:
+  50              		.size	ADC_DelSig_ISR1, .-ADC_DelSig_ISR1
+  51              		.section	.text.ADC_DelSig_ISR2,"ax",%progbits
+  52              		.align	2
+  53              		.global	ADC_DelSig_ISR2
+  54              		.thumb
+  55              		.thumb_func
+  56              		.type	ADC_DelSig_ISR2, %function
+  57              	ADC_DelSig_ISR2:
+  58              	.LFB64:
+  72:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#END`  */
+  73:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
+  74:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* Stop the conversion if conversion mode is single sample and resolution
+  75:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  is above 16 bits.
+  76:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         */
+  77:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #if(ADC_DelSig_CFG1_RESOLUTION > 16 && \
+  78:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_CFG1_CONV_MODE == ADC_DelSig_MODE_SINGLE_SAMPLE)
+  79:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_StopConvert();
+  80:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             /* Software flag for checking conversion complete or not. Will be used when
+  81:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             *  resolution is above 16 bits and conversion mode is single sample 
+  82:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 			*/
+  83:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_convDone = ADC_DelSig_DEC_CONV_DONE;
+  84:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* Single sample conversion mode with resolution above 16 bits */
+  85:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+  86:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR1_EXIT_CALLBACK
+  87:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR1_ExitCallback();
+  88:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR1_EXIT_CALLBACK */
+  89:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     }
+  90:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+  91:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+  92:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     /*****************************************************************************
+  93:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Function Name: ADC_DelSig_ISR2
+  94:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     ******************************************************************************
   95:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-  96:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Parameters:
-  97:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
+  96:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Summary:
+  97:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  Handle Interrupt Service Routine.
   98:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-  99:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Return:
+  99:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Parameters:
  100:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
  101:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 102:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Reentrant:
- 103:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  No
+ 102:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Return:
+ 103:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
  104:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 105:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *****************************************************************************/
- 106:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     CY_ISR( ADC_DelSig_ISR2)
- 107:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     {
-  61              		.loc 1 107 0
-  62              		.cfi_startproc
-  63              		@ args = 0, pretend = 0, frame = 0
-  64              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 4
+ 105:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Reentrant:
+ 106:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  No
+ 107:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
+ 108:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *****************************************************************************/
+ 109:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     CY_ISR( ADC_DelSig_ISR2)
+ 110:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     {
+  59              		.loc 1 110 0
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 4
 
 
-  65              		@ link register save eliminated.
-  66 0000 7047     		bx	lr
-  67              		.cfi_endproc
-  68              	.LFE64:
-  69              		.size	ADC_DelSig_ISR2, .-ADC_DelSig_ISR2
-  70 0002 00BF     		.section	.text.ADC_DelSig_ISR3,"ax",%progbits
-  71              		.align	2
-  72              		.global	ADC_DelSig_ISR3
-  73              		.thumb
-  74              		.thumb_func
-  75              		.type	ADC_DelSig_ISR3, %function
-  76              	ADC_DelSig_ISR3:
-  77              	.LFB65:
- 108:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR2_ENTRY_CALLBACK
- 109:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR2_EntryCallback();
- 110:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR2_ENTRY_CALLBACK */
- 111:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
- 112:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
- 113:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /***************************************************************************
- 114:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  Custom Code
- 115:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  - add user ISR code between the following #START and #END tags
- 116:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         **************************************************************************/
- 117:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#START MAIN_ADC_ISR2`  */
- 118:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 119:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#END`  */
- 120:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 121:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* Stop the conversion conversion mode is single sample and resolution
- 122:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  is above 16 bits.
- 123:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         */
- 124:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #if(ADC_DelSig_CFG2_RESOLUTION > 16 && \
- 125:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_CFG2_CONVMODE == ADC_DelSig_MODE_SINGLE_SAMPLE)
- 126:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_StopConvert();
- 127:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             /* Software flag for checking conversion complete or not. Will be used when
- 128:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             *   resolution is above 16 bits and conversion mode is single sample 
- 129:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 			*/
- 130:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_convDone = ADC_DelSig_DEC_CONV_DONE;
- 131:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* Single sample conversion mode with resolution above 16 bits */
- 132:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 133:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR2_EXIT_CALLBACK
- 134:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR2_ExitCallback();
- 135:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR2_EXIT_CALLBACK */
- 136:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     }
- 137:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 138:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 139:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     /*****************************************************************************
- 140:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Function Name: ADC_DelSig_ISR3
- 141:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     ******************************************************************************
- 142:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 143:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Summary:
- 144:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  Handle Interrupt Service Routine.
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 7047     		bx	lr
+  65              		.cfi_endproc
+  66              	.LFE64:
+  67              		.size	ADC_DelSig_ISR2, .-ADC_DelSig_ISR2
+  68 0002 00BF     		.section	.text.ADC_DelSig_ISR3,"ax",%progbits
+  69              		.align	2
+  70              		.global	ADC_DelSig_ISR3
+  71              		.thumb
+  72              		.thumb_func
+  73              		.type	ADC_DelSig_ISR3, %function
+  74              	ADC_DelSig_ISR3:
+  75              	.LFB65:
+ 111:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR2_ENTRY_CALLBACK
+ 112:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR2_EntryCallback();
+ 113:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR2_ENTRY_CALLBACK */
+ 114:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
+ 115:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
+ 116:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /***************************************************************************
+ 117:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  Custom Code
+ 118:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  - add user ISR code between the following #START and #END tags
+ 119:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         **************************************************************************/
+ 120:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#START MAIN_ADC_ISR2`  */
+ 121:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 122:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#END`  */
+ 123:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 124:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* Stop the conversion conversion mode is single sample and resolution
+ 125:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  is above 16 bits.
+ 126:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         */
+ 127:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #if(ADC_DelSig_CFG2_RESOLUTION > 16 && \
+ 128:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_CFG2_CONVMODE == ADC_DelSig_MODE_SINGLE_SAMPLE)
+ 129:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_StopConvert();
+ 130:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             /* Software flag for checking conversion complete or not. Will be used when
+ 131:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             *   resolution is above 16 bits and conversion mode is single sample 
+ 132:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 			*/
+ 133:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_convDone = ADC_DelSig_DEC_CONV_DONE;
+ 134:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* Single sample conversion mode with resolution above 16 bits */
+ 135:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 136:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR2_EXIT_CALLBACK
+ 137:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR2_ExitCallback();
+ 138:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR2_EXIT_CALLBACK */
+ 139:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     }
+ 140:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 141:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 142:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     /*****************************************************************************
+ 143:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Function Name: ADC_DelSig_ISR3
+ 144:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     ******************************************************************************
  145:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 146:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Parameters:
- 147:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
+ 146:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Summary:
+ 147:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  Handle Interrupt Service Routine.
  148:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 149:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Return:
+ 149:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Parameters:
  150:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
  151:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 5
+ 152:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Return:
+ 153:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 5
 
 
- 152:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Reentrant:
- 153:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  No
  154:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 155:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *****************************************************************************/
- 156:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     CY_ISR( ADC_DelSig_ISR3)
- 157:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     {
-  78              		.loc 1 157 0
-  79              		.cfi_startproc
-  80              		@ args = 0, pretend = 0, frame = 0
-  81              		@ frame_needed = 0, uses_anonymous_args = 0
-  82              		@ link register save eliminated.
-  83 0000 7047     		bx	lr
-  84              		.cfi_endproc
-  85              	.LFE65:
-  86              		.size	ADC_DelSig_ISR3, .-ADC_DelSig_ISR3
-  87 0002 00BF     		.section	.text.ADC_DelSig_ISR4,"ax",%progbits
-  88              		.align	2
-  89              		.global	ADC_DelSig_ISR4
-  90              		.thumb
-  91              		.thumb_func
-  92              		.type	ADC_DelSig_ISR4, %function
-  93              	ADC_DelSig_ISR4:
-  94              	.LFB66:
- 158:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR3_ENTRY_CALLBACK
- 159:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR3_EntryCallback();
- 160:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR3_ENTRY_CALLBACK */        
- 161:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 162:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
- 163:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /***************************************************************************
- 164:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  Custom Code
- 165:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  - add user ISR code between the following #START and #END tags
- 166:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         **************************************************************************/
- 167:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#START MAIN_ADC_ISR3`  */
- 168:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 169:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#END`  */
- 170:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
- 171:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* Stop the conversion if conversion mode is set to single sample and
- 172:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  resolution is above 16 bits.
- 173:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         */
- 174:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #if(ADC_DelSig_CFG3_RESOLUTION > 16 && \
- 175:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_CFG3_CONVMODE == ADC_DelSig_MODE_SINGLE_SAMPLE)
- 176:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_StopConvert();
- 177:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             /* Software flag for checking conversion complete or not. Will be used when
- 178:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             *  resolution is above 16 bits and conversion mode is single sample 
- 179:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 			*/
- 180:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_convDone = ADC_DelSig_DEC_CONV_DONE;
- 181:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* Single sample conversion mode with resolution above 16 bits */
- 182:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 183:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR3_EXIT_CALLBACK
- 184:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR3_ExitCallback();
- 185:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR3_EXIT_CALLBACK */        
- 186:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     }
- 187:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 188:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
- 189:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     /*****************************************************************************
- 190:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Function Name: ADC_DelSig_ISR4
- 191:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     ******************************************************************************
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 6
+ 155:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Reentrant:
+ 156:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  No
+ 157:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
+ 158:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *****************************************************************************/
+ 159:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     CY_ISR( ADC_DelSig_ISR3)
+ 160:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     {
+  76              		.loc 1 160 0
+  77              		.cfi_startproc
+  78              		@ args = 0, pretend = 0, frame = 0
+  79              		@ frame_needed = 0, uses_anonymous_args = 0
+  80              		@ link register save eliminated.
+  81 0000 7047     		bx	lr
+  82              		.cfi_endproc
+  83              	.LFE65:
+  84              		.size	ADC_DelSig_ISR3, .-ADC_DelSig_ISR3
+  85 0002 00BF     		.section	.text.ADC_DelSig_ISR4,"ax",%progbits
+  86              		.align	2
+  87              		.global	ADC_DelSig_ISR4
+  88              		.thumb
+  89              		.thumb_func
+  90              		.type	ADC_DelSig_ISR4, %function
+  91              	ADC_DelSig_ISR4:
+  92              	.LFB66:
+ 161:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR3_ENTRY_CALLBACK
+ 162:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR3_EntryCallback();
+ 163:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR3_ENTRY_CALLBACK */        
+ 164:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 165:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
+ 166:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /***************************************************************************
+ 167:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  Custom Code
+ 168:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  - add user ISR code between the following #START and #END tags
+ 169:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         **************************************************************************/
+ 170:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#START MAIN_ADC_ISR3`  */
+ 171:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 172:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* `#END`  */
+ 173:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         
+ 174:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         /* Stop the conversion if conversion mode is set to single sample and
+ 175:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         *  resolution is above 16 bits.
+ 176:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         */
+ 177:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #if(ADC_DelSig_CFG3_RESOLUTION > 16 && \
+ 178:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_CFG3_CONVMODE == ADC_DelSig_MODE_SINGLE_SAMPLE)
+ 179:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_StopConvert();
+ 180:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             /* Software flag for checking conversion complete or not. Will be used when
+ 181:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             *  resolution is above 16 bits and conversion mode is single sample 
+ 182:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 			*/
+ 183:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_convDone = ADC_DelSig_DEC_CONV_DONE;
+ 184:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* Single sample conversion mode with resolution above 16 bits */
+ 185:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 186:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #ifdef ADC_DelSig_ISR3_EXIT_CALLBACK
+ 187:Generated_Source\PSoC5/ADC_DelSig_INT.c ****             ADC_DelSig_ISR3_ExitCallback();
+ 188:Generated_Source\PSoC5/ADC_DelSig_INT.c ****         #endif /* ADC_DelSig_ISR3_EXIT_CALLBACK */        
+ 189:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     }
+ 190:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 191:Generated_Source\PSoC5/ADC_DelSig_INT.c **** 
+ 192:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     /*****************************************************************************
+ 193:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Function Name: ADC_DelSig_ISR4
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 6
 
 
- 192:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 193:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Summary:
- 194:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  Handle Interrupt Service Routine.
+ 194:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     ******************************************************************************
  195:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 196:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Parameters:
- 197:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
+ 196:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Summary:
+ 197:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  Handle Interrupt Service Routine.
  198:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 199:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Return:
+ 199:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Parameters:
  200:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
  201:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 202:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Reentrant:
- 203:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  No
+ 202:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Return:
+ 203:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  None
  204:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
- 205:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *****************************************************************************/
- 206:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     CY_ISR( ADC_DelSig_ISR4)
- 207:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     {
-  95              		.loc 1 207 0
-  96              		.cfi_startproc
-  97              		@ args = 0, pretend = 0, frame = 0
-  98              		@ frame_needed = 0, uses_anonymous_args = 0
-  99              		@ link register save eliminated.
- 100 0000 7047     		bx	lr
- 101              		.cfi_endproc
- 102              	.LFE66:
- 103              		.size	ADC_DelSig_ISR4, .-ADC_DelSig_ISR4
- 104 0002 00BF     		.text
- 105              	.Letext0:
- 106              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
- 107              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
- 108              		.file 4 "Generated_Source\\PSoC5\\cytypes.h"
- 109              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
- 110              		.file 6 "Generated_Source\\PSoC5\\ADC_DelSig.h"
- 111              		.section	.debug_info,"",%progbits
- 112              	.Ldebug_info0:
- 113 0000 36010000 		.4byte	0x136
- 114 0004 0400     		.2byte	0x4
- 115 0006 00000000 		.4byte	.Ldebug_abbrev0
- 116 000a 04       		.byte	0x4
- 117 000b 01       		.uleb128 0x1
- 118 000c E7000000 		.4byte	.LASF23
- 119 0010 01       		.byte	0x1
- 120 0011 AA010000 		.4byte	.LASF24
- 121 0015 97000000 		.4byte	.LASF25
- 122 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 123 001d 00000000 		.4byte	0
- 124 0021 00000000 		.4byte	.Ldebug_line0
- 125 0025 02       		.uleb128 0x2
- 126 0026 01       		.byte	0x1
- 127 0027 06       		.byte	0x6
- 128 0028 DF010000 		.4byte	.LASF0
- 129 002c 02       		.uleb128 0x2
- 130 002d 01       		.byte	0x1
- 131 002e 08       		.byte	0x8
- 132 002f 75010000 		.4byte	.LASF1
- 133 0033 02       		.uleb128 0x2
- 134 0034 02       		.byte	0x2
- 135 0035 05       		.byte	0x5
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 7
+ 205:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     * Reentrant:
+ 206:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *  No
+ 207:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *
+ 208:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     *****************************************************************************/
+ 209:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     CY_ISR( ADC_DelSig_ISR4)
+ 210:Generated_Source\PSoC5/ADC_DelSig_INT.c ****     {
+  93              		.loc 1 210 0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              		@ link register save eliminated.
+  98 0000 7047     		bx	lr
+  99              		.cfi_endproc
+ 100              	.LFE66:
+ 101              		.size	ADC_DelSig_ISR4, .-ADC_DelSig_ISR4
+ 102 0002 00BF     		.text
+ 103              	.Letext0:
+ 104              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 105              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 106              		.file 4 "Generated_Source\\PSoC5\\cytypes.h"
+ 107              		.file 5 "./global.h"
+ 108              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 109              		.file 7 "Generated_Source\\PSoC5\\ADC_DelSig.h"
+ 110              		.section	.debug_info,"",%progbits
+ 111              	.Ldebug_info0:
+ 112 0000 50010000 		.4byte	0x150
+ 113 0004 0400     		.2byte	0x4
+ 114 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 115 000a 04       		.byte	0x4
+ 116 000b 01       		.uleb128 0x1
+ 117 000c 8E000000 		.4byte	.LASF24
+ 118 0010 01       		.byte	0x1
+ 119 0011 40010000 		.4byte	.LASF25
+ 120 0015 C6010000 		.4byte	.LASF26
+ 121 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 122 001d 00000000 		.4byte	0
+ 123 0021 00000000 		.4byte	.Ldebug_line0
+ 124 0025 02       		.uleb128 0x2
+ 125 0026 01       		.byte	0x1
+ 126 0027 06       		.byte	0x6
+ 127 0028 15020000 		.4byte	.LASF0
+ 128 002c 02       		.uleb128 0x2
+ 129 002d 01       		.byte	0x1
+ 130 002e 08       		.byte	0x8
+ 131 002f 54000000 		.4byte	.LASF1
+ 132 0033 02       		.uleb128 0x2
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 7
 
 
- 136 0036 12020000 		.4byte	.LASF2
- 137 003a 02       		.uleb128 0x2
- 138 003b 02       		.byte	0x2
- 139 003c 07       		.byte	0x7
- 140 003d 0E000000 		.4byte	.LASF3
- 141 0041 03       		.uleb128 0x3
- 142 0042 EB010000 		.4byte	.LASF9
- 143 0046 02       		.byte	0x2
- 144 0047 3F       		.byte	0x3f
- 145 0048 4C000000 		.4byte	0x4c
- 146 004c 02       		.uleb128 0x2
- 147 004d 04       		.byte	0x4
- 148 004e 05       		.byte	0x5
- 149 004f 88010000 		.4byte	.LASF4
- 150 0053 02       		.uleb128 0x2
- 151 0054 04       		.byte	0x4
- 152 0055 07       		.byte	0x7
- 153 0056 98010000 		.4byte	.LASF5
- 154 005a 02       		.uleb128 0x2
- 155 005b 08       		.byte	0x8
- 156 005c 05       		.byte	0x5
- 157 005d 00000000 		.4byte	.LASF6
- 158 0061 02       		.uleb128 0x2
- 159 0062 08       		.byte	0x8
- 160 0063 07       		.byte	0x7
- 161 0064 70000000 		.4byte	.LASF7
- 162 0068 04       		.uleb128 0x4
- 163 0069 04       		.byte	0x4
- 164 006a 05       		.byte	0x5
- 165 006b 696E7400 		.ascii	"int\000"
- 166 006f 02       		.uleb128 0x2
- 167 0070 04       		.byte	0x4
- 168 0071 07       		.byte	0x7
- 169 0072 21000000 		.4byte	.LASF8
- 170 0076 03       		.uleb128 0x3
- 171 0077 1C020000 		.4byte	.LASF10
- 172 007b 03       		.byte	0x3
- 173 007c 2C       		.byte	0x2c
- 174 007d 41000000 		.4byte	0x41
- 175 0081 05       		.uleb128 0x5
- 176 0082 2E000000 		.4byte	.LASF11
- 177 0086 04       		.byte	0x4
- 178 0087 9201     		.2byte	0x192
- 179 0089 2C000000 		.4byte	0x2c
- 180 008d 05       		.uleb128 0x5
- 181 008e 2D020000 		.4byte	.LASF12
- 182 0092 04       		.byte	0x4
- 183 0093 9701     		.2byte	0x197
- 184 0095 4C000000 		.4byte	0x4c
- 185 0099 02       		.uleb128 0x2
- 186 009a 04       		.byte	0x4
- 187 009b 04       		.byte	0x4
- 188 009c F5010000 		.4byte	.LASF13
- 189 00a0 02       		.uleb128 0x2
- 190 00a1 08       		.byte	0x8
- 191 00a2 04       		.byte	0x4
- 192 00a3 91010000 		.4byte	.LASF14
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 8
+ 133 0034 02       		.byte	0x2
+ 134 0035 05       		.byte	0x5
+ 135 0036 BC010000 		.4byte	.LASF2
+ 136 003a 02       		.uleb128 0x2
+ 137 003b 02       		.byte	0x2
+ 138 003c 07       		.byte	0x7
+ 139 003d 13000000 		.4byte	.LASF3
+ 140 0041 03       		.uleb128 0x3
+ 141 0042 09000000 		.4byte	.LASF9
+ 142 0046 02       		.byte	0x2
+ 143 0047 3F       		.byte	0x3f
+ 144 0048 4C000000 		.4byte	0x4c
+ 145 004c 02       		.uleb128 0x2
+ 146 004d 04       		.byte	0x4
+ 147 004e 05       		.byte	0x5
+ 148 004f 0C020000 		.4byte	.LASF4
+ 149 0053 02       		.uleb128 0x2
+ 150 0054 04       		.byte	0x4
+ 151 0055 07       		.byte	0x7
+ 152 0056 62000000 		.4byte	.LASF5
+ 153 005a 02       		.uleb128 0x2
+ 154 005b 08       		.byte	0x8
+ 155 005c 05       		.byte	0x5
+ 156 005d 99010000 		.4byte	.LASF6
+ 157 0061 02       		.uleb128 0x2
+ 158 0062 08       		.byte	0x8
+ 159 0063 07       		.byte	0x7
+ 160 0064 29010000 		.4byte	.LASF7
+ 161 0068 04       		.uleb128 0x4
+ 162 0069 04       		.byte	0x4
+ 163 006a 05       		.byte	0x5
+ 164 006b 696E7400 		.ascii	"int\000"
+ 165 006f 02       		.uleb128 0x2
+ 166 0070 04       		.byte	0x4
+ 167 0071 07       		.byte	0x7
+ 168 0072 1C010000 		.4byte	.LASF8
+ 169 0076 03       		.uleb128 0x3
+ 170 0077 68010000 		.4byte	.LASF10
+ 171 007b 03       		.byte	0x3
+ 172 007c 2C       		.byte	0x2c
+ 173 007d 41000000 		.4byte	0x41
+ 174 0081 05       		.uleb128 0x5
+ 175 0082 06020000 		.4byte	.LASF11
+ 176 0086 04       		.byte	0x4
+ 177 0087 9201     		.2byte	0x192
+ 178 0089 2C000000 		.4byte	0x2c
+ 179 008d 05       		.uleb128 0x5
+ 180 008e 74000000 		.4byte	.LASF12
+ 181 0092 04       		.byte	0x4
+ 182 0093 9701     		.2byte	0x197
+ 183 0095 4C000000 		.4byte	0x4c
+ 184 0099 02       		.uleb128 0x2
+ 185 009a 04       		.byte	0x4
+ 186 009b 04       		.byte	0x4
+ 187 009c 32000000 		.4byte	.LASF13
+ 188 00a0 02       		.uleb128 0x2
+ 189 00a1 08       		.byte	0x8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 8
 
 
- 193 00a7 02       		.uleb128 0x2
- 194 00a8 01       		.byte	0x1
- 195 00a9 08       		.byte	0x8
- 196 00aa 83010000 		.4byte	.LASF15
- 197 00ae 02       		.uleb128 0x2
- 198 00af 04       		.byte	0x4
- 199 00b0 07       		.byte	0x7
- 200 00b1 24020000 		.4byte	.LASF16
- 201 00b5 06       		.uleb128 0x6
- 202 00b6 87000000 		.4byte	.LASF26
- 203 00ba 01       		.byte	0x1
- 204 00bb 37       		.byte	0x37
- 205 00bc 00000000 		.4byte	.LFB63
- 206 00c0 1C000000 		.4byte	.LFE63-.LFB63
- 207 00c4 01       		.uleb128 0x1
- 208 00c5 9C       		.byte	0x9c
- 209 00c6 D4000000 		.4byte	0xd4
- 210 00ca 07       		.uleb128 0x7
- 211 00cb 06000000 		.4byte	.LVL0
- 212 00cf 2E010000 		.4byte	0x12e
- 213 00d3 00       		.byte	0
- 214 00d4 08       		.uleb128 0x8
- 215 00d5 34000000 		.4byte	.LASF17
- 216 00d9 01       		.byte	0x1
- 217 00da 6A       		.byte	0x6a
- 218 00db 00000000 		.4byte	.LFB64
- 219 00df 02000000 		.4byte	.LFE64-.LFB64
- 220 00e3 01       		.uleb128 0x1
- 221 00e4 9C       		.byte	0x9c
- 222 00e5 08       		.uleb128 0x8
- 223 00e6 D7000000 		.4byte	.LASF18
- 224 00ea 01       		.byte	0x1
- 225 00eb 9C       		.byte	0x9c
- 226 00ec 00000000 		.4byte	.LFB65
- 227 00f0 02000000 		.4byte	.LFE65-.LFB65
- 228 00f4 01       		.uleb128 0x1
- 229 00f5 9C       		.byte	0x9c
- 230 00f6 08       		.uleb128 0x8
- 231 00f7 51000000 		.4byte	.LASF19
- 232 00fb 01       		.byte	0x1
- 233 00fc CE       		.byte	0xce
- 234 00fd 00000000 		.4byte	.LFB66
- 235 0101 02000000 		.4byte	.LFE66-.LFB66
- 236 0105 01       		.uleb128 0x1
- 237 0106 9C       		.byte	0x9c
- 238 0107 09       		.uleb128 0x9
- 239 0108 D2010000 		.4byte	.LASF20
- 240 010c 05       		.byte	0x5
- 241 010d 9606     		.2byte	0x696
- 242 010f 13010000 		.4byte	0x113
- 243 0113 0A       		.uleb128 0xa
- 244 0114 76000000 		.4byte	0x76
- 245 0118 0B       		.uleb128 0xb
- 246 0119 44000000 		.4byte	.LASF21
- 247 011d 01       		.byte	0x1
- 248 011e 1E       		.byte	0x1e
- 249 011f 81000000 		.4byte	0x81
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 9
+ 190 00a2 04       		.byte	0x4
+ 191 00a3 87000000 		.4byte	.LASF14
+ 192 00a7 02       		.uleb128 0x2
+ 193 00a8 01       		.byte	0x1
+ 194 00a9 08       		.byte	0x8
+ 195 00aa A7010000 		.4byte	.LASF15
+ 196 00ae 02       		.uleb128 0x2
+ 197 00af 04       		.byte	0x4
+ 198 00b0 07       		.byte	0x7
+ 199 00b1 70010000 		.4byte	.LASF16
+ 200 00b5 06       		.uleb128 0x6
+ 201 00b6 61646300 		.ascii	"adc\000"
+ 202 00ba 08       		.byte	0x8
+ 203 00bb 05       		.byte	0x5
+ 204 00bc 12       		.byte	0x12
+ 205 00bd DA000000 		.4byte	0xda
+ 206 00c1 07       		.uleb128 0x7
+ 207 00c2 00000000 		.4byte	.LASF17
+ 208 00c6 05       		.byte	0x5
+ 209 00c7 13       		.byte	0x13
+ 210 00c8 81000000 		.4byte	0x81
+ 211 00cc 00       		.byte	0
+ 212 00cd 07       		.uleb128 0x7
+ 213 00ce 38000000 		.4byte	.LASF18
+ 214 00d2 05       		.byte	0x5
+ 215 00d3 14       		.byte	0x14
+ 216 00d4 8D000000 		.4byte	0x8d
+ 217 00d8 04       		.byte	0x4
+ 218 00d9 00       		.byte	0
+ 219 00da 08       		.uleb128 0x8
+ 220 00db AC010000 		.4byte	.LASF27
+ 221 00df 01       		.byte	0x1
+ 222 00e0 38       		.byte	0x38
+ 223 00e1 00000000 		.4byte	.LFB63
+ 224 00e5 14000000 		.4byte	.LFE63-.LFB63
+ 225 00e9 01       		.uleb128 0x1
+ 226 00ea 9C       		.byte	0x9c
+ 227 00eb F9000000 		.4byte	0xf9
+ 228 00ef 09       		.uleb128 0x9
+ 229 00f0 06000000 		.4byte	.LVL0
+ 230 00f4 48010000 		.4byte	0x148
+ 231 00f8 00       		.byte	0
+ 232 00f9 0A       		.uleb128 0xa
+ 233 00fa 79010000 		.4byte	.LASF19
+ 234 00fe 01       		.byte	0x1
+ 235 00ff 6D       		.byte	0x6d
+ 236 0100 00000000 		.4byte	.LFB64
+ 237 0104 02000000 		.4byte	.LFE64-.LFB64
+ 238 0108 01       		.uleb128 0x1
+ 239 0109 9C       		.byte	0x9c
+ 240 010a 0A       		.uleb128 0xa
+ 241 010b 89010000 		.4byte	.LASF20
+ 242 010f 01       		.byte	0x1
+ 243 0110 9F       		.byte	0x9f
+ 244 0111 00000000 		.4byte	.LFB65
+ 245 0115 02000000 		.4byte	.LFE65-.LFB65
+ 246 0119 01       		.uleb128 0x1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 9
 
 
- 250 0123 0B       		.uleb128 0xb
- 251 0124 61000000 		.4byte	.LASF22
- 252 0128 01       		.byte	0x1
- 253 0129 1F       		.byte	0x1f
- 254 012a 8D000000 		.4byte	0x8d
- 255 012e 0C       		.uleb128 0xc
- 256 012f FB010000 		.4byte	.LASF27
- 257 0133 06       		.byte	0x6
- 258 0134 42       		.byte	0x42
- 259 0135 8D000000 		.4byte	0x8d
- 260 0139 00       		.byte	0
- 261              		.section	.debug_abbrev,"",%progbits
- 262              	.Ldebug_abbrev0:
- 263 0000 01       		.uleb128 0x1
- 264 0001 11       		.uleb128 0x11
- 265 0002 01       		.byte	0x1
- 266 0003 25       		.uleb128 0x25
- 267 0004 0E       		.uleb128 0xe
- 268 0005 13       		.uleb128 0x13
- 269 0006 0B       		.uleb128 0xb
- 270 0007 03       		.uleb128 0x3
- 271 0008 0E       		.uleb128 0xe
- 272 0009 1B       		.uleb128 0x1b
- 273 000a 0E       		.uleb128 0xe
- 274 000b 55       		.uleb128 0x55
- 275 000c 17       		.uleb128 0x17
- 276 000d 11       		.uleb128 0x11
- 277 000e 01       		.uleb128 0x1
- 278 000f 10       		.uleb128 0x10
- 279 0010 17       		.uleb128 0x17
- 280 0011 00       		.byte	0
- 281 0012 00       		.byte	0
- 282 0013 02       		.uleb128 0x2
- 283 0014 24       		.uleb128 0x24
- 284 0015 00       		.byte	0
- 285 0016 0B       		.uleb128 0xb
- 286 0017 0B       		.uleb128 0xb
- 287 0018 3E       		.uleb128 0x3e
- 288 0019 0B       		.uleb128 0xb
- 289 001a 03       		.uleb128 0x3
- 290 001b 0E       		.uleb128 0xe
- 291 001c 00       		.byte	0
- 292 001d 00       		.byte	0
- 293 001e 03       		.uleb128 0x3
- 294 001f 16       		.uleb128 0x16
- 295 0020 00       		.byte	0
- 296 0021 03       		.uleb128 0x3
- 297 0022 0E       		.uleb128 0xe
- 298 0023 3A       		.uleb128 0x3a
- 299 0024 0B       		.uleb128 0xb
- 300 0025 3B       		.uleb128 0x3b
- 301 0026 0B       		.uleb128 0xb
- 302 0027 49       		.uleb128 0x49
- 303 0028 13       		.uleb128 0x13
- 304 0029 00       		.byte	0
- 305 002a 00       		.byte	0
- 306 002b 04       		.uleb128 0x4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 10
+ 247 011a 9C       		.byte	0x9c
+ 248 011b 0A       		.uleb128 0xa
+ 249 011c 21020000 		.4byte	.LASF21
+ 250 0120 01       		.byte	0x1
+ 251 0121 D1       		.byte	0xd1
+ 252 0122 00000000 		.4byte	.LFB66
+ 253 0126 02000000 		.4byte	.LFE66-.LFB66
+ 254 012a 01       		.uleb128 0x1
+ 255 012b 9C       		.byte	0x9c
+ 256 012c 0B       		.uleb128 0xb
+ 257 012d 7A000000 		.4byte	.LASF22
+ 258 0131 06       		.byte	0x6
+ 259 0132 9606     		.2byte	0x696
+ 260 0134 38010000 		.4byte	0x138
+ 261 0138 0C       		.uleb128 0xc
+ 262 0139 76000000 		.4byte	0x76
+ 263 013d 0D       		.uleb128 0xd
+ 264 013e 26000000 		.4byte	.LASF23
+ 265 0142 01       		.byte	0x1
+ 266 0143 20       		.byte	0x20
+ 267 0144 B5000000 		.4byte	0xb5
+ 268 0148 0E       		.uleb128 0xe
+ 269 0149 3D000000 		.4byte	.LASF28
+ 270 014d 07       		.byte	0x7
+ 271 014e 42       		.byte	0x42
+ 272 014f 8D000000 		.4byte	0x8d
+ 273 0153 00       		.byte	0
+ 274              		.section	.debug_abbrev,"",%progbits
+ 275              	.Ldebug_abbrev0:
+ 276 0000 01       		.uleb128 0x1
+ 277 0001 11       		.uleb128 0x11
+ 278 0002 01       		.byte	0x1
+ 279 0003 25       		.uleb128 0x25
+ 280 0004 0E       		.uleb128 0xe
+ 281 0005 13       		.uleb128 0x13
+ 282 0006 0B       		.uleb128 0xb
+ 283 0007 03       		.uleb128 0x3
+ 284 0008 0E       		.uleb128 0xe
+ 285 0009 1B       		.uleb128 0x1b
+ 286 000a 0E       		.uleb128 0xe
+ 287 000b 55       		.uleb128 0x55
+ 288 000c 17       		.uleb128 0x17
+ 289 000d 11       		.uleb128 0x11
+ 290 000e 01       		.uleb128 0x1
+ 291 000f 10       		.uleb128 0x10
+ 292 0010 17       		.uleb128 0x17
+ 293 0011 00       		.byte	0
+ 294 0012 00       		.byte	0
+ 295 0013 02       		.uleb128 0x2
+ 296 0014 24       		.uleb128 0x24
+ 297 0015 00       		.byte	0
+ 298 0016 0B       		.uleb128 0xb
+ 299 0017 0B       		.uleb128 0xb
+ 300 0018 3E       		.uleb128 0x3e
+ 301 0019 0B       		.uleb128 0xb
+ 302 001a 03       		.uleb128 0x3
+ 303 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 10
 
 
- 307 002c 24       		.uleb128 0x24
- 308 002d 00       		.byte	0
- 309 002e 0B       		.uleb128 0xb
- 310 002f 0B       		.uleb128 0xb
- 311 0030 3E       		.uleb128 0x3e
- 312 0031 0B       		.uleb128 0xb
- 313 0032 03       		.uleb128 0x3
- 314 0033 08       		.uleb128 0x8
- 315 0034 00       		.byte	0
- 316 0035 00       		.byte	0
- 317 0036 05       		.uleb128 0x5
- 318 0037 16       		.uleb128 0x16
- 319 0038 00       		.byte	0
- 320 0039 03       		.uleb128 0x3
- 321 003a 0E       		.uleb128 0xe
- 322 003b 3A       		.uleb128 0x3a
- 323 003c 0B       		.uleb128 0xb
- 324 003d 3B       		.uleb128 0x3b
- 325 003e 05       		.uleb128 0x5
- 326 003f 49       		.uleb128 0x49
- 327 0040 13       		.uleb128 0x13
- 328 0041 00       		.byte	0
- 329 0042 00       		.byte	0
- 330 0043 06       		.uleb128 0x6
- 331 0044 2E       		.uleb128 0x2e
- 332 0045 01       		.byte	0x1
- 333 0046 3F       		.uleb128 0x3f
- 334 0047 19       		.uleb128 0x19
- 335 0048 03       		.uleb128 0x3
- 336 0049 0E       		.uleb128 0xe
- 337 004a 3A       		.uleb128 0x3a
- 338 004b 0B       		.uleb128 0xb
- 339 004c 3B       		.uleb128 0x3b
- 340 004d 0B       		.uleb128 0xb
- 341 004e 27       		.uleb128 0x27
- 342 004f 19       		.uleb128 0x19
- 343 0050 11       		.uleb128 0x11
- 344 0051 01       		.uleb128 0x1
- 345 0052 12       		.uleb128 0x12
- 346 0053 06       		.uleb128 0x6
- 347 0054 40       		.uleb128 0x40
- 348 0055 18       		.uleb128 0x18
- 349 0056 9742     		.uleb128 0x2117
- 350 0058 19       		.uleb128 0x19
- 351 0059 01       		.uleb128 0x1
- 352 005a 13       		.uleb128 0x13
- 353 005b 00       		.byte	0
- 354 005c 00       		.byte	0
- 355 005d 07       		.uleb128 0x7
- 356 005e 898201   		.uleb128 0x4109
- 357 0061 00       		.byte	0
- 358 0062 11       		.uleb128 0x11
- 359 0063 01       		.uleb128 0x1
- 360 0064 31       		.uleb128 0x31
- 361 0065 13       		.uleb128 0x13
- 362 0066 00       		.byte	0
- 363 0067 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 11
+ 304 001c 00       		.byte	0
+ 305 001d 00       		.byte	0
+ 306 001e 03       		.uleb128 0x3
+ 307 001f 16       		.uleb128 0x16
+ 308 0020 00       		.byte	0
+ 309 0021 03       		.uleb128 0x3
+ 310 0022 0E       		.uleb128 0xe
+ 311 0023 3A       		.uleb128 0x3a
+ 312 0024 0B       		.uleb128 0xb
+ 313 0025 3B       		.uleb128 0x3b
+ 314 0026 0B       		.uleb128 0xb
+ 315 0027 49       		.uleb128 0x49
+ 316 0028 13       		.uleb128 0x13
+ 317 0029 00       		.byte	0
+ 318 002a 00       		.byte	0
+ 319 002b 04       		.uleb128 0x4
+ 320 002c 24       		.uleb128 0x24
+ 321 002d 00       		.byte	0
+ 322 002e 0B       		.uleb128 0xb
+ 323 002f 0B       		.uleb128 0xb
+ 324 0030 3E       		.uleb128 0x3e
+ 325 0031 0B       		.uleb128 0xb
+ 326 0032 03       		.uleb128 0x3
+ 327 0033 08       		.uleb128 0x8
+ 328 0034 00       		.byte	0
+ 329 0035 00       		.byte	0
+ 330 0036 05       		.uleb128 0x5
+ 331 0037 16       		.uleb128 0x16
+ 332 0038 00       		.byte	0
+ 333 0039 03       		.uleb128 0x3
+ 334 003a 0E       		.uleb128 0xe
+ 335 003b 3A       		.uleb128 0x3a
+ 336 003c 0B       		.uleb128 0xb
+ 337 003d 3B       		.uleb128 0x3b
+ 338 003e 05       		.uleb128 0x5
+ 339 003f 49       		.uleb128 0x49
+ 340 0040 13       		.uleb128 0x13
+ 341 0041 00       		.byte	0
+ 342 0042 00       		.byte	0
+ 343 0043 06       		.uleb128 0x6
+ 344 0044 13       		.uleb128 0x13
+ 345 0045 01       		.byte	0x1
+ 346 0046 03       		.uleb128 0x3
+ 347 0047 08       		.uleb128 0x8
+ 348 0048 0B       		.uleb128 0xb
+ 349 0049 0B       		.uleb128 0xb
+ 350 004a 3A       		.uleb128 0x3a
+ 351 004b 0B       		.uleb128 0xb
+ 352 004c 3B       		.uleb128 0x3b
+ 353 004d 0B       		.uleb128 0xb
+ 354 004e 01       		.uleb128 0x1
+ 355 004f 13       		.uleb128 0x13
+ 356 0050 00       		.byte	0
+ 357 0051 00       		.byte	0
+ 358 0052 07       		.uleb128 0x7
+ 359 0053 0D       		.uleb128 0xd
+ 360 0054 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 11
 
 
- 364 0068 08       		.uleb128 0x8
- 365 0069 2E       		.uleb128 0x2e
- 366 006a 00       		.byte	0
- 367 006b 3F       		.uleb128 0x3f
- 368 006c 19       		.uleb128 0x19
- 369 006d 03       		.uleb128 0x3
- 370 006e 0E       		.uleb128 0xe
- 371 006f 3A       		.uleb128 0x3a
- 372 0070 0B       		.uleb128 0xb
- 373 0071 3B       		.uleb128 0x3b
- 374 0072 0B       		.uleb128 0xb
- 375 0073 27       		.uleb128 0x27
- 376 0074 19       		.uleb128 0x19
- 377 0075 11       		.uleb128 0x11
- 378 0076 01       		.uleb128 0x1
- 379 0077 12       		.uleb128 0x12
- 380 0078 06       		.uleb128 0x6
- 381 0079 40       		.uleb128 0x40
- 382 007a 18       		.uleb128 0x18
- 383 007b 9742     		.uleb128 0x2117
- 384 007d 19       		.uleb128 0x19
- 385 007e 00       		.byte	0
- 386 007f 00       		.byte	0
- 387 0080 09       		.uleb128 0x9
- 388 0081 34       		.uleb128 0x34
- 389 0082 00       		.byte	0
- 390 0083 03       		.uleb128 0x3
- 391 0084 0E       		.uleb128 0xe
- 392 0085 3A       		.uleb128 0x3a
- 393 0086 0B       		.uleb128 0xb
- 394 0087 3B       		.uleb128 0x3b
- 395 0088 05       		.uleb128 0x5
- 396 0089 49       		.uleb128 0x49
- 397 008a 13       		.uleb128 0x13
- 398 008b 3F       		.uleb128 0x3f
- 399 008c 19       		.uleb128 0x19
- 400 008d 3C       		.uleb128 0x3c
- 401 008e 19       		.uleb128 0x19
- 402 008f 00       		.byte	0
- 403 0090 00       		.byte	0
- 404 0091 0A       		.uleb128 0xa
- 405 0092 35       		.uleb128 0x35
- 406 0093 00       		.byte	0
- 407 0094 49       		.uleb128 0x49
- 408 0095 13       		.uleb128 0x13
- 409 0096 00       		.byte	0
- 410 0097 00       		.byte	0
- 411 0098 0B       		.uleb128 0xb
- 412 0099 34       		.uleb128 0x34
- 413 009a 00       		.byte	0
- 414 009b 03       		.uleb128 0x3
- 415 009c 0E       		.uleb128 0xe
- 416 009d 3A       		.uleb128 0x3a
- 417 009e 0B       		.uleb128 0xb
- 418 009f 3B       		.uleb128 0x3b
- 419 00a0 0B       		.uleb128 0xb
- 420 00a1 49       		.uleb128 0x49
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 12
+ 361 0055 03       		.uleb128 0x3
+ 362 0056 0E       		.uleb128 0xe
+ 363 0057 3A       		.uleb128 0x3a
+ 364 0058 0B       		.uleb128 0xb
+ 365 0059 3B       		.uleb128 0x3b
+ 366 005a 0B       		.uleb128 0xb
+ 367 005b 49       		.uleb128 0x49
+ 368 005c 13       		.uleb128 0x13
+ 369 005d 38       		.uleb128 0x38
+ 370 005e 0B       		.uleb128 0xb
+ 371 005f 00       		.byte	0
+ 372 0060 00       		.byte	0
+ 373 0061 08       		.uleb128 0x8
+ 374 0062 2E       		.uleb128 0x2e
+ 375 0063 01       		.byte	0x1
+ 376 0064 3F       		.uleb128 0x3f
+ 377 0065 19       		.uleb128 0x19
+ 378 0066 03       		.uleb128 0x3
+ 379 0067 0E       		.uleb128 0xe
+ 380 0068 3A       		.uleb128 0x3a
+ 381 0069 0B       		.uleb128 0xb
+ 382 006a 3B       		.uleb128 0x3b
+ 383 006b 0B       		.uleb128 0xb
+ 384 006c 27       		.uleb128 0x27
+ 385 006d 19       		.uleb128 0x19
+ 386 006e 11       		.uleb128 0x11
+ 387 006f 01       		.uleb128 0x1
+ 388 0070 12       		.uleb128 0x12
+ 389 0071 06       		.uleb128 0x6
+ 390 0072 40       		.uleb128 0x40
+ 391 0073 18       		.uleb128 0x18
+ 392 0074 9742     		.uleb128 0x2117
+ 393 0076 19       		.uleb128 0x19
+ 394 0077 01       		.uleb128 0x1
+ 395 0078 13       		.uleb128 0x13
+ 396 0079 00       		.byte	0
+ 397 007a 00       		.byte	0
+ 398 007b 09       		.uleb128 0x9
+ 399 007c 898201   		.uleb128 0x4109
+ 400 007f 00       		.byte	0
+ 401 0080 11       		.uleb128 0x11
+ 402 0081 01       		.uleb128 0x1
+ 403 0082 31       		.uleb128 0x31
+ 404 0083 13       		.uleb128 0x13
+ 405 0084 00       		.byte	0
+ 406 0085 00       		.byte	0
+ 407 0086 0A       		.uleb128 0xa
+ 408 0087 2E       		.uleb128 0x2e
+ 409 0088 00       		.byte	0
+ 410 0089 3F       		.uleb128 0x3f
+ 411 008a 19       		.uleb128 0x19
+ 412 008b 03       		.uleb128 0x3
+ 413 008c 0E       		.uleb128 0xe
+ 414 008d 3A       		.uleb128 0x3a
+ 415 008e 0B       		.uleb128 0xb
+ 416 008f 3B       		.uleb128 0x3b
+ 417 0090 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 12
 
 
- 421 00a2 13       		.uleb128 0x13
- 422 00a3 3F       		.uleb128 0x3f
- 423 00a4 19       		.uleb128 0x19
- 424 00a5 3C       		.uleb128 0x3c
- 425 00a6 19       		.uleb128 0x19
- 426 00a7 00       		.byte	0
- 427 00a8 00       		.byte	0
- 428 00a9 0C       		.uleb128 0xc
- 429 00aa 2E       		.uleb128 0x2e
- 430 00ab 00       		.byte	0
- 431 00ac 3F       		.uleb128 0x3f
- 432 00ad 19       		.uleb128 0x19
- 433 00ae 03       		.uleb128 0x3
- 434 00af 0E       		.uleb128 0xe
- 435 00b0 3A       		.uleb128 0x3a
- 436 00b1 0B       		.uleb128 0xb
- 437 00b2 3B       		.uleb128 0x3b
- 438 00b3 0B       		.uleb128 0xb
- 439 00b4 27       		.uleb128 0x27
- 440 00b5 19       		.uleb128 0x19
- 441 00b6 49       		.uleb128 0x49
- 442 00b7 13       		.uleb128 0x13
- 443 00b8 3C       		.uleb128 0x3c
- 444 00b9 19       		.uleb128 0x19
- 445 00ba 00       		.byte	0
- 446 00bb 00       		.byte	0
- 447 00bc 00       		.byte	0
- 448              		.section	.debug_aranges,"",%progbits
- 449 0000 34000000 		.4byte	0x34
- 450 0004 0200     		.2byte	0x2
- 451 0006 00000000 		.4byte	.Ldebug_info0
- 452 000a 04       		.byte	0x4
- 453 000b 00       		.byte	0
- 454 000c 0000     		.2byte	0
- 455 000e 0000     		.2byte	0
- 456 0010 00000000 		.4byte	.LFB63
- 457 0014 1C000000 		.4byte	.LFE63-.LFB63
- 458 0018 00000000 		.4byte	.LFB64
- 459 001c 02000000 		.4byte	.LFE64-.LFB64
- 460 0020 00000000 		.4byte	.LFB65
- 461 0024 02000000 		.4byte	.LFE65-.LFB65
- 462 0028 00000000 		.4byte	.LFB66
- 463 002c 02000000 		.4byte	.LFE66-.LFB66
- 464 0030 00000000 		.4byte	0
- 465 0034 00000000 		.4byte	0
- 466              		.section	.debug_ranges,"",%progbits
- 467              	.Ldebug_ranges0:
- 468 0000 00000000 		.4byte	.LFB63
- 469 0004 1C000000 		.4byte	.LFE63
- 470 0008 00000000 		.4byte	.LFB64
- 471 000c 02000000 		.4byte	.LFE64
- 472 0010 00000000 		.4byte	.LFB65
- 473 0014 02000000 		.4byte	.LFE65
- 474 0018 00000000 		.4byte	.LFB66
- 475 001c 02000000 		.4byte	.LFE66
- 476 0020 00000000 		.4byte	0
- 477 0024 00000000 		.4byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 13
+ 418 0091 27       		.uleb128 0x27
+ 419 0092 19       		.uleb128 0x19
+ 420 0093 11       		.uleb128 0x11
+ 421 0094 01       		.uleb128 0x1
+ 422 0095 12       		.uleb128 0x12
+ 423 0096 06       		.uleb128 0x6
+ 424 0097 40       		.uleb128 0x40
+ 425 0098 18       		.uleb128 0x18
+ 426 0099 9742     		.uleb128 0x2117
+ 427 009b 19       		.uleb128 0x19
+ 428 009c 00       		.byte	0
+ 429 009d 00       		.byte	0
+ 430 009e 0B       		.uleb128 0xb
+ 431 009f 34       		.uleb128 0x34
+ 432 00a0 00       		.byte	0
+ 433 00a1 03       		.uleb128 0x3
+ 434 00a2 0E       		.uleb128 0xe
+ 435 00a3 3A       		.uleb128 0x3a
+ 436 00a4 0B       		.uleb128 0xb
+ 437 00a5 3B       		.uleb128 0x3b
+ 438 00a6 05       		.uleb128 0x5
+ 439 00a7 49       		.uleb128 0x49
+ 440 00a8 13       		.uleb128 0x13
+ 441 00a9 3F       		.uleb128 0x3f
+ 442 00aa 19       		.uleb128 0x19
+ 443 00ab 3C       		.uleb128 0x3c
+ 444 00ac 19       		.uleb128 0x19
+ 445 00ad 00       		.byte	0
+ 446 00ae 00       		.byte	0
+ 447 00af 0C       		.uleb128 0xc
+ 448 00b0 35       		.uleb128 0x35
+ 449 00b1 00       		.byte	0
+ 450 00b2 49       		.uleb128 0x49
+ 451 00b3 13       		.uleb128 0x13
+ 452 00b4 00       		.byte	0
+ 453 00b5 00       		.byte	0
+ 454 00b6 0D       		.uleb128 0xd
+ 455 00b7 34       		.uleb128 0x34
+ 456 00b8 00       		.byte	0
+ 457 00b9 03       		.uleb128 0x3
+ 458 00ba 0E       		.uleb128 0xe
+ 459 00bb 3A       		.uleb128 0x3a
+ 460 00bc 0B       		.uleb128 0xb
+ 461 00bd 3B       		.uleb128 0x3b
+ 462 00be 0B       		.uleb128 0xb
+ 463 00bf 49       		.uleb128 0x49
+ 464 00c0 13       		.uleb128 0x13
+ 465 00c1 3F       		.uleb128 0x3f
+ 466 00c2 19       		.uleb128 0x19
+ 467 00c3 3C       		.uleb128 0x3c
+ 468 00c4 19       		.uleb128 0x19
+ 469 00c5 00       		.byte	0
+ 470 00c6 00       		.byte	0
+ 471 00c7 0E       		.uleb128 0xe
+ 472 00c8 2E       		.uleb128 0x2e
+ 473 00c9 00       		.byte	0
+ 474 00ca 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 13
 
 
- 478              		.section	.debug_line,"",%progbits
- 479              	.Ldebug_line0:
- 480 0000 AA010000 		.section	.debug_str,"MS",%progbits,1
- 480      02006101 
- 480      00000201 
- 480      FB0E0D00 
- 480      01010101 
- 481              	.LASF6:
- 482 0000 6C6F6E67 		.ascii	"long long int\000"
- 482      206C6F6E 
- 482      6720696E 
- 482      7400
- 483              	.LASF3:
- 484 000e 73686F72 		.ascii	"short unsigned int\000"
- 484      7420756E 
- 484      7369676E 
- 484      65642069 
- 484      6E7400
- 485              	.LASF8:
- 486 0021 756E7369 		.ascii	"unsigned int\000"
- 486      676E6564 
- 486      20696E74 
- 486      00
- 487              	.LASF11:
- 488 002e 75696E74 		.ascii	"uint8\000"
- 488      3800
- 489              	.LASF17:
- 490 0034 4144435F 		.ascii	"ADC_DelSig_ISR2\000"
- 490      44656C53 
- 490      69675F49 
- 490      53523200 
- 491              	.LASF21:
- 492 0044 6164635F 		.ascii	"adc_new_data\000"
- 492      6E65775F 
- 492      64617461 
- 492      00
- 493              	.LASF19:
- 494 0051 4144435F 		.ascii	"ADC_DelSig_ISR4\000"
- 494      44656C53 
- 494      69675F49 
- 494      53523400 
- 495              	.LASF22:
- 496 0061 6164635F 		.ascii	"adc_input_data\000"
- 496      696E7075 
- 496      745F6461 
- 496      746100
- 497              	.LASF7:
- 498 0070 6C6F6E67 		.ascii	"long long unsigned int\000"
- 498      206C6F6E 
- 498      6720756E 
- 498      7369676E 
- 498      65642069 
- 499              	.LASF26:
- 500 0087 4144435F 		.ascii	"ADC_DelSig_ISR1\000"
- 500      44656C53 
- 500      69675F49 
- 500      53523100 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 14
+ 475 00cb 19       		.uleb128 0x19
+ 476 00cc 03       		.uleb128 0x3
+ 477 00cd 0E       		.uleb128 0xe
+ 478 00ce 3A       		.uleb128 0x3a
+ 479 00cf 0B       		.uleb128 0xb
+ 480 00d0 3B       		.uleb128 0x3b
+ 481 00d1 0B       		.uleb128 0xb
+ 482 00d2 27       		.uleb128 0x27
+ 483 00d3 19       		.uleb128 0x19
+ 484 00d4 49       		.uleb128 0x49
+ 485 00d5 13       		.uleb128 0x13
+ 486 00d6 3C       		.uleb128 0x3c
+ 487 00d7 19       		.uleb128 0x19
+ 488 00d8 00       		.byte	0
+ 489 00d9 00       		.byte	0
+ 490 00da 00       		.byte	0
+ 491              		.section	.debug_aranges,"",%progbits
+ 492 0000 34000000 		.4byte	0x34
+ 493 0004 0200     		.2byte	0x2
+ 494 0006 00000000 		.4byte	.Ldebug_info0
+ 495 000a 04       		.byte	0x4
+ 496 000b 00       		.byte	0
+ 497 000c 0000     		.2byte	0
+ 498 000e 0000     		.2byte	0
+ 499 0010 00000000 		.4byte	.LFB63
+ 500 0014 14000000 		.4byte	.LFE63-.LFB63
+ 501 0018 00000000 		.4byte	.LFB64
+ 502 001c 02000000 		.4byte	.LFE64-.LFB64
+ 503 0020 00000000 		.4byte	.LFB65
+ 504 0024 02000000 		.4byte	.LFE65-.LFB65
+ 505 0028 00000000 		.4byte	.LFB66
+ 506 002c 02000000 		.4byte	.LFE66-.LFB66
+ 507 0030 00000000 		.4byte	0
+ 508 0034 00000000 		.4byte	0
+ 509              		.section	.debug_ranges,"",%progbits
+ 510              	.Ldebug_ranges0:
+ 511 0000 00000000 		.4byte	.LFB63
+ 512 0004 14000000 		.4byte	.LFE63
+ 513 0008 00000000 		.4byte	.LFB64
+ 514 000c 02000000 		.4byte	.LFE64
+ 515 0010 00000000 		.4byte	.LFB65
+ 516 0014 02000000 		.4byte	.LFE65
+ 517 0018 00000000 		.4byte	.LFB66
+ 518 001c 02000000 		.4byte	.LFE66
+ 519 0020 00000000 		.4byte	0
+ 520 0024 00000000 		.4byte	0
+ 521              		.section	.debug_line,"",%progbits
+ 522              	.Ldebug_line0:
+ 523 0000 B8010000 		.section	.debug_str,"MS",%progbits,1
+ 523      02006F01 
+ 523      00000201 
+ 523      FB0E0D00 
+ 523      01010101 
+ 524              	.LASF17:
+ 525 0000 6E65775F 		.ascii	"new_data\000"
+ 525      64617461 
+ 525      00
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 14
 
 
- 501              	.LASF25:
- 502 0097 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
- 502      73657273 
- 502      5C546F6D 
- 502      6D695C44 
- 502      6F63756D 
- 503 00c4 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
- 503      5F555342 
- 503      55415254 
- 503      2E637964 
- 503      736E00
- 504              	.LASF18:
- 505 00d7 4144435F 		.ascii	"ADC_DelSig_ISR3\000"
- 505      44656C53 
- 505      69675F49 
- 505      53523300 
- 506              	.LASF23:
- 507 00e7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 507      4320342E 
- 507      392E3320 
- 507      32303135 
- 507      30333033 
- 508 011a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 508      20726576 
- 508      6973696F 
- 508      6E203232 
- 508      31323230 
- 509 014d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 509      66756E63 
- 509      74696F6E 
- 509      2D736563 
- 509      74696F6E 
- 510              	.LASF1:
- 511 0175 756E7369 		.ascii	"unsigned char\000"
- 511      676E6564 
- 511      20636861 
- 511      7200
- 512              	.LASF15:
- 513 0183 63686172 		.ascii	"char\000"
- 513      00
- 514              	.LASF4:
- 515 0188 6C6F6E67 		.ascii	"long int\000"
- 515      20696E74 
- 515      00
- 516              	.LASF14:
- 517 0191 646F7562 		.ascii	"double\000"
- 517      6C6500
- 518              	.LASF5:
- 519 0198 6C6F6E67 		.ascii	"long unsigned int\000"
- 519      20756E73 
- 519      69676E65 
- 519      6420696E 
- 519      7400
- 520              	.LASF24:
- 521 01aa 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_DelSig_INT.c\000"
- 521      72617465 
- 521      645F536F 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccQC427g.s 			page 15
-
-
- 521      75726365 
- 521      5C50536F 
- 522              	.LASF20:
- 523 01d2 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 523      52784275 
- 523      66666572 
- 523      00
- 524              	.LASF0:
- 525 01df 7369676E 		.ascii	"signed char\000"
- 525      65642063 
- 525      68617200 
  526              	.LASF9:
- 527 01eb 5F5F696E 		.ascii	"__int32_t\000"
+ 527 0009 5F5F696E 		.ascii	"__int32_t\000"
  527      7433325F 
  527      7400
- 528              	.LASF13:
- 529 01f5 666C6F61 		.ascii	"float\000"
- 529      7400
- 530              	.LASF27:
- 531 01fb 4144435F 		.ascii	"ADC_DelSig_GetResult32\000"
- 531      44656C53 
- 531      69675F47 
- 531      65745265 
- 531      73756C74 
- 532              	.LASF2:
- 533 0212 73686F72 		.ascii	"short int\000"
- 533      7420696E 
+ 528              	.LASF3:
+ 529 0013 73686F72 		.ascii	"short unsigned int\000"
+ 529      7420756E 
+ 529      7369676E 
+ 529      65642069 
+ 529      6E7400
+ 530              	.LASF23:
+ 531 0026 6164635F 		.ascii	"adc_del_sig\000"
+ 531      64656C5F 
+ 531      73696700 
+ 532              	.LASF13:
+ 533 0032 666C6F61 		.ascii	"float\000"
  533      7400
- 534              	.LASF10:
- 535 021c 696E7433 		.ascii	"int32_t\000"
- 535      325F7400 
- 536              	.LASF16:
- 537 0224 73697A65 		.ascii	"sizetype\000"
- 537      74797065 
- 537      00
- 538              	.LASF12:
- 539 022d 696E7433 		.ascii	"int32\000"
- 539      3200
- 540              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 534              	.LASF18:
+ 535 0038 64617461 		.ascii	"data\000"
+ 535      00
+ 536              	.LASF28:
+ 537 003d 4144435F 		.ascii	"ADC_DelSig_GetResult32\000"
+ 537      44656C53 
+ 537      69675F47 
+ 537      65745265 
+ 537      73756C74 
+ 538              	.LASF1:
+ 539 0054 756E7369 		.ascii	"unsigned char\000"
+ 539      676E6564 
+ 539      20636861 
+ 539      7200
+ 540              	.LASF5:
+ 541 0062 6C6F6E67 		.ascii	"long unsigned int\000"
+ 541      20756E73 
+ 541      69676E65 
+ 541      6420696E 
+ 541      7400
+ 542              	.LASF12:
+ 543 0074 696E7433 		.ascii	"int32\000"
+ 543      3200
+ 544              	.LASF22:
+ 545 007a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 545      52784275 
+ 545      66666572 
+ 545      00
+ 546              	.LASF14:
+ 547 0087 646F7562 		.ascii	"double\000"
+ 547      6C6500
+ 548              	.LASF24:
+ 549 008e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 549      4320342E 
+ 549      392E3320 
+ 549      32303135 
+ 549      30333033 
+ 550 00c1 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 550      20726576 
+ 550      6973696F 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 15
+
+
+ 550      6E203232 
+ 550      31323230 
+ 551 00f4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 551      66756E63 
+ 551      74696F6E 
+ 551      2D736563 
+ 551      74696F6E 
+ 552              	.LASF8:
+ 553 011c 756E7369 		.ascii	"unsigned int\000"
+ 553      676E6564 
+ 553      20696E74 
+ 553      00
+ 554              	.LASF7:
+ 555 0129 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 555      206C6F6E 
+ 555      6720756E 
+ 555      7369676E 
+ 555      65642069 
+ 556              	.LASF25:
+ 557 0140 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_DelSig_INT.c\000"
+ 557      72617465 
+ 557      645F536F 
+ 557      75726365 
+ 557      5C50536F 
+ 558              	.LASF10:
+ 559 0168 696E7433 		.ascii	"int32_t\000"
+ 559      325F7400 
+ 560              	.LASF16:
+ 561 0170 73697A65 		.ascii	"sizetype\000"
+ 561      74797065 
+ 561      00
+ 562              	.LASF19:
+ 563 0179 4144435F 		.ascii	"ADC_DelSig_ISR2\000"
+ 563      44656C53 
+ 563      69675F49 
+ 563      53523200 
+ 564              	.LASF20:
+ 565 0189 4144435F 		.ascii	"ADC_DelSig_ISR3\000"
+ 565      44656C53 
+ 565      69675F49 
+ 565      53523300 
+ 566              	.LASF6:
+ 567 0199 6C6F6E67 		.ascii	"long long int\000"
+ 567      206C6F6E 
+ 567      6720696E 
+ 567      7400
+ 568              	.LASF15:
+ 569 01a7 63686172 		.ascii	"char\000"
+ 569      00
+ 570              	.LASF27:
+ 571 01ac 4144435F 		.ascii	"ADC_DelSig_ISR1\000"
+ 571      44656C53 
+ 571      69675F49 
+ 571      53523100 
+ 572              	.LASF2:
+ 573 01bc 73686F72 		.ascii	"short int\000"
+ 573      7420696E 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccDaC9WU.s 			page 16
+
+
+ 573      7400
+ 574              	.LASF26:
+ 575 01c6 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
+ 575      73657273 
+ 575      5C546F6D 
+ 575      6D695C44 
+ 575      6F63756D 
+ 576 01f3 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
+ 576      5F555342 
+ 576      55415254 
+ 576      2E637964 
+ 576      736E00
+ 577              	.LASF11:
+ 578 0206 75696E74 		.ascii	"uint8\000"
+ 578      3800
+ 579              	.LASF4:
+ 580 020c 6C6F6E67 		.ascii	"long int\000"
+ 580      20696E74 
+ 580      00
+ 581              	.LASF0:
+ 582 0215 7369676E 		.ascii	"signed char\000"
+ 582      65642063 
+ 582      68617200 
+ 583              	.LASF21:
+ 584 0221 4144435F 		.ascii	"ADC_DelSig_ISR4\000"
+ 584      44656C53 
+ 584      69675F49 
+ 584      53523400 
+ 585              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
