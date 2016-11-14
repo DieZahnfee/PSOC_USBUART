@@ -11,32 +11,53 @@
 #include <serial.h>
 #include <global.h>
 
+
+/* Defines for DMA */
+#define REQUEST_PER_BURST        (1u)
+#define BYTES_PER_BURST          (3u)
+#define UPPER_SRC_ADDRESS        CYDEV_PERIPH_BASE
+#define UPPER_DEST_ADDRESS       CYDEV_PERIPH_BASE
+
+
 // declaring global variables
-struct adc adc_del_sig;
+struct data adc_del_sig;
+struct data filter;
 
 //function declaration
 
 int HwModulesStart();
 int HwModulesStop();
+int DmaConfig();
 
 int main(){
     // defining & initializing variables
     int32       raw_average = 0, 
-                raw_cut = 0, 
-                micros = 0, 
-                micros_average = 0, 
-                micros_cut = 0;
-    char        str_raw[10], 
-                str_mv[10], 
-                str_cut[10];
+                raw_cut = 0;
+    uint32      micros_average = 0, 
+                micros_cut = 0,
+                micros_filter = 0;
+    char        str_mv[10], 
+                str_cut[10],
+                str_filter[10];
     int32       mv_filter[128] = {0};;
     uint8       filter_index = 0;
+    
+    
     const int32 BIT_MASK = 0xFFFFFFF0;
     
     adc_del_sig.new_data = 0u;
     adc_del_sig.data = 0;
-
+    
+    filter.new_data = 0u;
+    filter.data = 0;
+    
+    
     HwModulesStart();
+    
+    DmaConfig();
+    
+    //Set Filter Coherency to High Byte
+    Filter_SetCoherency(Filter_CHANNEL_A, Filter_KEY_HIGH);
     
     // Start ADC Conversion
     ADC_DelSig_StartConvert();
@@ -49,7 +70,9 @@ int main(){
         if(adc_del_sig.new_data == 1u){
             
             // FIR-Filter for calculating moving average
-            if(filter_index >= 128) filter_index = 0;
+            if(filter_index >= 128) 
+                filter_index = 0;
+            
             raw_average = raw_average - mv_filter[filter_index];
             raw_average = raw_average + (adc_del_sig.data >> 7);
             mv_filter[filter_index++] = adc_del_sig.data >> 7;
@@ -58,28 +81,36 @@ int main(){
             // cutoff 4 Bits
             raw_cut = adc_del_sig.data & BIT_MASK;
             
+            // reset new_data flag
+            adc_del_sig.new_data = 0u; 
+            
+            
+        }
+        //PRINTING DATA
+        if(filter.new_data == 1u){
             
             // converting data to printable format          
-            micros = ADC_DelSig_CountsTo_uVolts(adc_del_sig.data);
-            sprintf(str_raw,"u:%ld;",micros);
-            
             micros_average = ADC_DelSig_CountsTo_uVolts(raw_average);
-            sprintf(str_mv,"mv:%ld;",micros_average);
+            sprintf(str_mv,"a:%ld;",micros_average);
             
             micros_cut = ADC_DelSig_CountsTo_uVolts(raw_cut);
-            sprintf(str_cut,"c:%ld",micros_cut);
+            sprintf(str_cut,"c:%ld;",micros_cut);
            
+            micros_filter = ADC_DelSig_CountsTo_uVolts(filter.data);
+            sprintf(str_filter,"f:%ld",micros_filter);
             
             // Calling print routine
             SerialPrint(str_mv);
             SerialPrint(str_cut);
+            SerialPrint(str_filter);
             SerialPrint("\n");
 		    
+            filter.new_data = 0u;
             
-            //reset new_data flag to zero & flush the strings
-            adc_del_sig.new_data = 0u; // remove new_data flag
-            sprintf(str_raw,"000000000%d",0);
-            sprintf(str_mv,"000000000%d",0);
+            
+            
+            //for later use
+            //CyPmAltAct(PM_SLEEP_TIME_NONE,PM_SLEEP_SRC_PICU);
             
         }
     }
@@ -95,25 +126,69 @@ int HwModulesStart(){
     OPAMP_Start();
     IDAC8_Start();
     USBUART_Start(0u, USBUART_5V_OPERATION);
+    Filter_Start();
     
     CyGlobalIntEnable; // Enable global interrupts. 
     
+    isr_Start();
     return 1;
 };
 
 int HwModulesStop(){
         
-    CyGlobalIntDisable; //Disable Global Interupts
     
-    //Start all components
+    
+    //Stop all components
     ADC_DelSig_Stop();
     OPAMP_Stop();
     IDAC8_Stop();
     USBUART_Stop();
     
-    CyGlobalIntEnable; // Enable global interrupts. 
+    Filter_Stop();
+    isr_Stop();
+    
+    
     
     return 1;
 };
+
+int DmaConfig(){
+    
+
+/* Declare variable to hold the handle for DMA channel */
+    uint8 channelHandle;
+
+    /* Declare DMA Transaction Descriptor for memory transfer into
+     * Filter Channel. */
+    uint8 tdChanA;
+
+    /* Configure the DMA to Transfer the data in 1 burst with individual trigger
+     * for each burst.*/
+    channelHandle = DMA_DmaInitialize(BYTES_PER_BURST, REQUEST_PER_BURST,
+                                        HI16(UPPER_SRC_ADDRESS), HI16(UPPER_DEST_ADDRESS));
+
+    /* This function allocates a TD for use with an initialized DMA channel */
+    tdChanA = CyDmaTdAllocate();
+
+	/* Source and Destination address increments are needed as we are using 3 byte transfers
+	but Spoke Width is 16 bit */
+    CyDmaTdSetConfiguration(tdChanA, 3u, tdChanA, TD_INC_SRC_ADR | TD_INC_DST_ADR);
+
+    /* Set the source address as ADC_DelSig and the destination as
+     * Filter Channel A.*/
+    CyDmaTdSetAddress(tdChanA, LO16((uint32)ADC_DelSig_DEC_SAMP_PTR), LO16((uint32)Filter_STAGEA_PTR));
+
+    /* Set tdChanA to be the initial TD associated with channelHandle */
+    CyDmaChSetInitialTd(channelHandle, tdChanA);
+
+    /* Enable the DMA channel represented by channelHandle and preserve the TD */
+    CyDmaChEnable(channelHandle, 1u);
+
+
+    return 1;
+};
+
+
+
 
 /* [] END OF FILE */

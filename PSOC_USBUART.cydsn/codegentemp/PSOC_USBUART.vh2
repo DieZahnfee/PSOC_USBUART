@@ -2,7 +2,7 @@
 --	Conversion of PSOC_USBUART.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Nov 05 10:32:23 2016
+--	Mon Nov 14 13:50:23 2016
 --
 
 USE cypress.cypress.all;
@@ -44,7 +44,7 @@ TERMINAL \ADC_DelSig:Net_352\ : bit;
 TERMINAL \ADC_DelSig:Net_257\ : bit;
 TERMINAL \ADC_DelSig:Net_249\ : bit;
 TERMINAL Net_69 : bit;
-SIGNAL Net_57 : bit;
+SIGNAL Net_112 : bit;
 SIGNAL \ADC_DelSig:Net_250\ : bit;
 SIGNAL \ADC_DelSig:Net_252\ : bit;
 SIGNAL \ADC_DelSig:soc\ : bit;
@@ -135,6 +135,15 @@ SIGNAL tmpFB_0__Vref_sink_net_0 : bit;
 SIGNAL tmpIO_0__Vref_sink_net_0 : bit;
 TERMINAL tmpSIOVREF__Vref_sink_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Vref_sink_net_0 : bit;
+SIGNAL Net_114 : bit;
+SIGNAL \Filter:Net_1\ : bit;
+SIGNAL \Filter:Net_4\ : bit;
+SIGNAL \Filter:Net_5\ : bit;
+SIGNAL \Filter:Net_8\ : bit;
+SIGNAL \Filter:Net_9\ : bit;
+SIGNAL Net_121 : bit;
+SIGNAL Net_122 : bit;
+SIGNAL Net_124 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -211,7 +220,7 @@ one <=  ('1') ;
 \ADC_DelSig:IRQ\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_57);
+	PORT MAP(int_signal=>Net_112);
 \ADC_DelSig:theACLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"386e1a85-95a1-41c5-bc79-3cb101c774e3/edd15f43-b66b-457b-be3a-5342345270c8",
@@ -228,7 +237,7 @@ one <=  ('1') ;
 		mod_dat=>(\ADC_DelSig:mod_dat_3\, \ADC_DelSig:mod_dat_2\, \ADC_DelSig:mod_dat_1\, \ADC_DelSig:mod_dat_0\),
 		ext_start=>one,
 		mod_reset=>\ADC_DelSig:mod_reset\,
-		interrupt=>Net_57);
+		interrupt=>Net_112);
 \USBUART:dp_int\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
@@ -561,8 +570,8 @@ R:cy_annotation_universal_v1_0
 		width=>3)
 	PORT MAP(connect=>(Net_72, Net_74, Net_73));
 vRef:cy_vref_v1_0
-	GENERIC MAP(guid=>"4720866E-BC14-478d-B8A0-3E44F38CADAC",
-		name=>"Vdda/2",
+	GENERIC MAP(guid=>"89B398AD-36A8-4627-9212-707F2986319E",
+		name=>"1.024V",
 		autoenable=>'1',
 		ignoresleep=>'0')
 	PORT MAP(vout=>Net_83);
@@ -731,5 +740,25 @@ Vref_sink:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Vref_sink_net_0);
+DMA:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"10",
+		num_tds=>0)
+	PORT MAP(drq=>Net_112,
+		trq=>zero,
+		nrq=>Net_114);
+\Filter:DFB\:cy_psoc3_dfb_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>zero,
+		in_1=>zero,
+		in_2=>zero,
+		out_1=>\Filter:Net_8\,
+		out_2=>\Filter:Net_9\,
+		dmareq_1=>Net_121,
+		dmareq_2=>Net_122,
+		interrupt=>Net_124);
+isr:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_124);
 
 END R_T_L;

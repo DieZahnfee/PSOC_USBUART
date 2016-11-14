@@ -1,4 +1,4 @@
---------------- Clean Started: 11/04/2016 17:52:41 Project: PSOC_USBUART, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Clean Started: 11/14/2016 13:50:52 Project: PSOC_USBUART, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\main.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\serial.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\cyfitter_cfg.o"
@@ -46,7 +46,8 @@ Deleting file ".\CortexM3\ARM_GCC_493\Debug\Filter_PM.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\Filter_PVT.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\Filter_RAM_Data.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\Filter_Coefficients.o"
-Deleting file ".\CortexM3\ARM_GCC_493\Debug\DMA_1_dma.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\DMA_dma.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\isr.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\PSOC_USBUART.hex"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\PSOC_USBUART.elf"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\PSOC_USBUART.map"
@@ -56,4 +57,4 @@ Deleting file ".\PSOC_USBUART.rpt"
 Deleting file ".\PSOC_USBUART_timing.html"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
---------------- Clean Succeeded: 11/04/2016 17:52:41 ---------------
+--------------- Clean Succeeded: 11/14/2016 13:50:53 ---------------

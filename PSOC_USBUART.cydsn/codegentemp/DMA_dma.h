@@ -1,5 +1,5 @@
 /******************************************************************************
-* File Name: DMA_1_dma.h  
+* File Name: DMA_dma.h  
 * Version 1.70
 *
 *  Description:
@@ -12,24 +12,24 @@
 * disclaimers, and limitations in the end user license agreement accompanying 
 * the software package with which this file was provided.
 ********************************************************************************/
-#if !defined(CY_DMA_DMA_1_DMA_H__)
-#define CY_DMA_DMA_1_DMA_H__
+#if !defined(CY_DMA_DMA_DMA_H__)
+#define CY_DMA_DMA_DMA_H__
 
 
 
 #include <CYDMAC.H>
 #include <CYFITTER.H>
 
-#define DMA_1__TD_TERMOUT_EN (((0 != DMA_1__TERMOUT0_EN) ? TD_TERMOUT0_EN : 0) | \
-    (DMA_1__TERMOUT1_EN ? TD_TERMOUT1_EN : 0))
+#define DMA__TD_TERMOUT_EN (((0 != DMA__TERMOUT0_EN) ? TD_TERMOUT0_EN : 0) | \
+    (DMA__TERMOUT1_EN ? TD_TERMOUT1_EN : 0))
 
-/* Zero based index of DMA_1 dma channel */
-extern uint8 DMA_1_DmaHandle;
-
-
-uint8 DMA_1_DmaInitialize(uint8 BurstCount, uint8 ReqestPerBurst, uint16 UpperSrcAddress, uint16 UpperDestAddress) ;
-void  DMA_1_DmaRelease(void) ;
+/* Zero based index of DMA dma channel */
+extern uint8 DMA_DmaHandle;
 
 
-/* CY_DMA_DMA_1_DMA_H__ */
+uint8 DMA_DmaInitialize(uint8 BurstCount, uint8 ReqestPerBurst, uint16 UpperSrcAddress, uint16 UpperDestAddress) ;
+void  DMA_DmaRelease(void) ;
+
+
+/* CY_DMA_DMA_DMA_H__ */
 #endif

@@ -1,0 +1,888 @@
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Filter_1_Coefficients.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	Filter_1_ChannelAFirCoefficients
+  19              		.section	.rodata
+  20              		.align	2
+  21              		.type	Filter_1_ChannelAFirCoefficients, %object
+  22              		.size	Filter_1_ChannelAFirCoefficients, 512
+  23              	Filter_1_ChannelAFirCoefficients:
+  24 0000 9C       		.byte	-100
+  25 0001 0C       		.byte	12
+  26 0002 00       		.byte	0
+  27 0003 00       		.byte	0
+  28 0004 51       		.byte	81
+  29 0005 06       		.byte	6
+  30 0006 00       		.byte	0
+  31 0007 00       		.byte	0
+  32 0008 66       		.byte	102
+  33 0009 F9       		.byte	-7
+  34 000a FF       		.byte	-1
+  35 000b 00       		.byte	0
+  36 000c 9F       		.byte	-97
+  37 000d F1       		.byte	-15
+  38 000e FF       		.byte	-1
+  39 000f 00       		.byte	0
+  40 0010 32       		.byte	50
+  41 0011 F7       		.byte	-9
+  42 0012 FF       		.byte	-1
+  43 0013 00       		.byte	0
+  44 0014 92       		.byte	-110
+  45 0015 06       		.byte	6
+  46 0016 00       		.byte	0
+  47 0017 00       		.byte	0
+  48 0018 EF       		.byte	-17
+  49 0019 11       		.byte	17
+  50 001a 00       		.byte	0
+  51 001b 00       		.byte	0
+  52 001c F2       		.byte	-14
+  53 001d 0C       		.byte	12
+  54 001e 00       		.byte	0
+  55 001f 00       		.byte	0
+  56 0020 75       		.byte	117
+  57 0021 F9       		.byte	-7
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 2
+
+
+  58 0022 FF       		.byte	-1
+  59 0023 00       		.byte	0
+  60 0024 A7       		.byte	-89
+  61 0025 E8       		.byte	-24
+  62 0026 FF       		.byte	-1
+  63 0027 00       		.byte	0
+  64 0028 AF       		.byte	-81
+  65 0029 EC       		.byte	-20
+  66 002a FF       		.byte	-1
+  67 002b 00       		.byte	0
+  68 002c EF       		.byte	-17
+  69 002d 05       		.byte	5
+  70 002e 00       		.byte	0
+  71 002f 00       		.byte	0
+  72 0030 91       		.byte	-111
+  73 0031 1E       		.byte	30
+  74 0032 00       		.byte	0
+  75 0033 00       		.byte	0
+  76 0034 7D       		.byte	125
+  77 0035 1C       		.byte	28
+  78 0036 00       		.byte	0
+  79 0037 00       		.byte	0
+  80 0038 FA       		.byte	-6
+  81 0039 FB       		.byte	-5
+  82 003a FF       		.byte	-1
+  83 003b 00       		.byte	0
+  84 003c 9C       		.byte	-100
+  85 003d D8       		.byte	-40
+  86 003e FF       		.byte	-1
+  87 003f 00       		.byte	0
+  88 0040 FF       		.byte	-1
+  89 0041 D6       		.byte	-42
+  90 0042 FF       		.byte	-1
+  91 0043 00       		.byte	0
+  92 0044 00       		.byte	0
+  93 0045 00       		.byte	0
+  94 0046 00       		.byte	0
+  95 0047 00       		.byte	0
+  96 0048 7B       		.byte	123
+  97 0049 31       		.byte	49
+  98 004a 00       		.byte	0
+  99 004b 00       		.byte	0
+ 100 004c 5A       		.byte	90
+ 101 004d 39       		.byte	57
+ 102 004e 00       		.byte	0
+ 103 004f 00       		.byte	0
+ 104 0050 12       		.byte	18
+ 105 0051 07       		.byte	7
+ 106 0052 00       		.byte	0
+ 107 0053 00       		.byte	0
+ 108 0054 AE       		.byte	-82
+ 109 0055 C3       		.byte	-61
+ 110 0056 FF       		.byte	-1
+ 111 0057 00       		.byte	0
+ 112 0058 09       		.byte	9
+ 113 0059 B2       		.byte	-78
+ 114 005a FF       		.byte	-1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 3
+
+
+ 115 005b 00       		.byte	0
+ 116 005c CA       		.byte	-54
+ 117 005d ED       		.byte	-19
+ 118 005e FF       		.byte	-1
+ 119 005f 00       		.byte	0
+ 120 0060 3D       		.byte	61
+ 121 0061 47       		.byte	71
+ 122 0062 00       		.byte	0
+ 123 0063 00       		.byte	0
+ 124 0064 38       		.byte	56
+ 125 0065 67       		.byte	103
+ 126 0066 00       		.byte	0
+ 127 0067 00       		.byte	0
+ 128 0068 93       		.byte	-109
+ 129 0069 22       		.byte	34
+ 130 006a 00       		.byte	0
+ 131 006b 00       		.byte	0
+ 132 006c 9E       		.byte	-98
+ 133 006d AE       		.byte	-82
+ 134 006e FF       		.byte	-1
+ 135 006f 00       		.byte	0
+ 136 0070 91       		.byte	-111
+ 137 0071 7A       		.byte	122
+ 138 0072 FF       		.byte	-1
+ 139 0073 00       		.byte	0
+ 140 0074 8D       		.byte	-115
+ 141 0075 C6       		.byte	-58
+ 142 0076 FF       		.byte	-1
+ 143 0077 00       		.byte	0
+ 144 0078 B7       		.byte	-73
+ 145 0079 59       		.byte	89
+ 146 007a 00       		.byte	0
+ 147 007b 00       		.byte	0
+ 148 007c ED       		.byte	-19
+ 149 007d A8       		.byte	-88
+ 150 007e 00       		.byte	0
+ 151 007f 00       		.byte	0
+ 152 0080 55       		.byte	85
+ 153 0081 58       		.byte	88
+ 154 0082 00       		.byte	0
+ 155 0083 00       		.byte	0
+ 156 0084 04       		.byte	4
+ 157 0085 A1       		.byte	-95
+ 158 0086 FF       		.byte	-1
+ 159 0087 00       		.byte	0
+ 160 0088 F1       		.byte	-15
+ 161 0089 2D       		.byte	45
+ 162 008a FF       		.byte	-1
+ 163 008b 00       		.byte	0
+ 164 008c F2       		.byte	-14
+ 165 008d 7E       		.byte	126
+ 166 008e FF       		.byte	-1
+ 167 008f 00       		.byte	0
+ 168 0090 A7       		.byte	-89
+ 169 0091 5F       		.byte	95
+ 170 0092 00       		.byte	0
+ 171 0093 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 4
+
+
+ 172 0094 5C       		.byte	92
+ 173 0095 01       		.byte	1
+ 174 0096 01       		.byte	1
+ 175 0097 00       		.byte	0
+ 176 0098 05       		.byte	5
+ 177 0099 B6       		.byte	-74
+ 178 009a 00       		.byte	0
+ 179 009b 00       		.byte	0
+ 180 009c 36       		.byte	54
+ 181 009d A6       		.byte	-90
+ 182 009e FF       		.byte	-1
+ 183 009f 00       		.byte	0
+ 184 00a0 4C       		.byte	76
+ 185 00a1 C8       		.byte	-56
+ 186 00a2 FE       		.byte	-2
+ 187 00a3 00       		.byte	0
+ 188 00a4 60       		.byte	96
+ 189 00a5 05       		.byte	5
+ 190 00a6 FF       		.byte	-1
+ 191 00a7 00       		.byte	0
+ 192 00a8 CC       		.byte	-52
+ 193 00a9 4A       		.byte	74
+ 194 00aa 00       		.byte	0
+ 195 00ab 00       		.byte	0
+ 196 00ac B5       		.byte	-75
+ 197 00ad 76       		.byte	118
+ 198 00ae 01       		.byte	1
+ 199 00af 00       		.byte	0
+ 200 00b0 26       		.byte	38
+ 201 00b1 54       		.byte	84
+ 202 00b2 01       		.byte	1
+ 203 00b3 00       		.byte	0
+ 204 00b4 18       		.byte	24
+ 205 00b5 D1       		.byte	-47
+ 206 00b6 FF       		.byte	-1
+ 207 00b7 00       		.byte	0
+ 208 00b8 91       		.byte	-111
+ 209 00b9 3E       		.byte	62
+ 210 00ba FE       		.byte	-2
+ 211 00bb 00       		.byte	0
+ 212 00bc 6C       		.byte	108
+ 213 00bd 34       		.byte	52
+ 214 00be FE       		.byte	-2
+ 215 00bf 00       		.byte	0
+ 216 00c0 00       		.byte	0
+ 217 00c1 00       		.byte	0
+ 218 00c2 00       		.byte	0
+ 219 00c3 00       		.byte	0
+ 220 00c4 0A       		.byte	10
+ 221 00c5 1E       		.byte	30
+ 222 00c6 02       		.byte	2
+ 223 00c7 00       		.byte	0
+ 224 00c8 E3       		.byte	-29
+ 225 00c9 71       		.byte	113
+ 226 00ca 02       		.byte	2
+ 227 00cb 00       		.byte	0
+ 228 00cc 4F       		.byte	79
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 5
+
+
+ 229 00cd 4D       		.byte	77
+ 230 00ce 00       		.byte	0
+ 231 00cf 00       		.byte	0
+ 232 00d0 25       		.byte	37
+ 233 00d1 66       		.byte	102
+ 234 00d2 FD       		.byte	-3
+ 235 00d3 00       		.byte	0
+ 236 00d4 55       		.byte	85
+ 237 00d5 94       		.byte	-108
+ 238 00d6 FC       		.byte	-4
+ 239 00d7 00       		.byte	0
+ 240 00d8 E2       		.byte	-30
+ 241 00d9 2D       		.byte	45
+ 242 00da FF       		.byte	-1
+ 243 00db 00       		.byte	0
+ 244 00dc 2C       		.byte	44
+ 245 00dd 56       		.byte	86
+ 246 00de 03       		.byte	3
+ 247 00df 00       		.byte	0
+ 248 00e0 AD       		.byte	-83
+ 249 00e1 18       		.byte	24
+ 250 00e2 05       		.byte	5
+ 251 00e3 00       		.byte	0
+ 252 00e4 30       		.byte	48
+ 253 00e5 D5       		.byte	-43
+ 254 00e6 01       		.byte	1
+ 255 00e7 00       		.byte	0
+ 256 00e8 5F       		.byte	95
+ 257 00e9 41       		.byte	65
+ 258 00ea FB       		.byte	-5
+ 259 00eb 00       		.byte	0
+ 260 00ec 91       		.byte	-111
+ 261 00ed 26       		.byte	38
+ 262 00ee F7       		.byte	-9
+ 263 00ef 00       		.byte	0
+ 264 00f0 C4       		.byte	-60
+ 265 00f1 70       		.byte	112
+ 266 00f2 FB       		.byte	-5
+ 267 00f3 00       		.byte	0
+ 268 00f4 25       		.byte	37
+ 269 00f5 47       		.byte	71
+ 270 00f6 09       		.byte	9
+ 271 00f7 00       		.byte	0
+ 272 00f8 F9       		.byte	-7
+ 273 00f9 17       		.byte	23
+ 274 00fa 1B       		.byte	27
+ 275 00fb 00       		.byte	0
+ 276 00fc 5C       		.byte	92
+ 277 00fd 8A       		.byte	-118
+ 278 00fe 27       		.byte	39
+ 279 00ff 00       		.byte	0
+ 280 0100 5C       		.byte	92
+ 281 0101 8A       		.byte	-118
+ 282 0102 27       		.byte	39
+ 283 0103 00       		.byte	0
+ 284 0104 F9       		.byte	-7
+ 285 0105 17       		.byte	23
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 6
+
+
+ 286 0106 1B       		.byte	27
+ 287 0107 00       		.byte	0
+ 288 0108 25       		.byte	37
+ 289 0109 47       		.byte	71
+ 290 010a 09       		.byte	9
+ 291 010b 00       		.byte	0
+ 292 010c C4       		.byte	-60
+ 293 010d 70       		.byte	112
+ 294 010e FB       		.byte	-5
+ 295 010f 00       		.byte	0
+ 296 0110 91       		.byte	-111
+ 297 0111 26       		.byte	38
+ 298 0112 F7       		.byte	-9
+ 299 0113 00       		.byte	0
+ 300 0114 5F       		.byte	95
+ 301 0115 41       		.byte	65
+ 302 0116 FB       		.byte	-5
+ 303 0117 00       		.byte	0
+ 304 0118 30       		.byte	48
+ 305 0119 D5       		.byte	-43
+ 306 011a 01       		.byte	1
+ 307 011b 00       		.byte	0
+ 308 011c AD       		.byte	-83
+ 309 011d 18       		.byte	24
+ 310 011e 05       		.byte	5
+ 311 011f 00       		.byte	0
+ 312 0120 2C       		.byte	44
+ 313 0121 56       		.byte	86
+ 314 0122 03       		.byte	3
+ 315 0123 00       		.byte	0
+ 316 0124 E2       		.byte	-30
+ 317 0125 2D       		.byte	45
+ 318 0126 FF       		.byte	-1
+ 319 0127 00       		.byte	0
+ 320 0128 55       		.byte	85
+ 321 0129 94       		.byte	-108
+ 322 012a FC       		.byte	-4
+ 323 012b 00       		.byte	0
+ 324 012c 25       		.byte	37
+ 325 012d 66       		.byte	102
+ 326 012e FD       		.byte	-3
+ 327 012f 00       		.byte	0
+ 328 0130 4F       		.byte	79
+ 329 0131 4D       		.byte	77
+ 330 0132 00       		.byte	0
+ 331 0133 00       		.byte	0
+ 332 0134 E3       		.byte	-29
+ 333 0135 71       		.byte	113
+ 334 0136 02       		.byte	2
+ 335 0137 00       		.byte	0
+ 336 0138 0A       		.byte	10
+ 337 0139 1E       		.byte	30
+ 338 013a 02       		.byte	2
+ 339 013b 00       		.byte	0
+ 340 013c 00       		.byte	0
+ 341 013d 00       		.byte	0
+ 342 013e 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 7
+
+
+ 343 013f 00       		.byte	0
+ 344 0140 6C       		.byte	108
+ 345 0141 34       		.byte	52
+ 346 0142 FE       		.byte	-2
+ 347 0143 00       		.byte	0
+ 348 0144 91       		.byte	-111
+ 349 0145 3E       		.byte	62
+ 350 0146 FE       		.byte	-2
+ 351 0147 00       		.byte	0
+ 352 0148 18       		.byte	24
+ 353 0149 D1       		.byte	-47
+ 354 014a FF       		.byte	-1
+ 355 014b 00       		.byte	0
+ 356 014c 26       		.byte	38
+ 357 014d 54       		.byte	84
+ 358 014e 01       		.byte	1
+ 359 014f 00       		.byte	0
+ 360 0150 B5       		.byte	-75
+ 361 0151 76       		.byte	118
+ 362 0152 01       		.byte	1
+ 363 0153 00       		.byte	0
+ 364 0154 CC       		.byte	-52
+ 365 0155 4A       		.byte	74
+ 366 0156 00       		.byte	0
+ 367 0157 00       		.byte	0
+ 368 0158 60       		.byte	96
+ 369 0159 05       		.byte	5
+ 370 015a FF       		.byte	-1
+ 371 015b 00       		.byte	0
+ 372 015c 4C       		.byte	76
+ 373 015d C8       		.byte	-56
+ 374 015e FE       		.byte	-2
+ 375 015f 00       		.byte	0
+ 376 0160 36       		.byte	54
+ 377 0161 A6       		.byte	-90
+ 378 0162 FF       		.byte	-1
+ 379 0163 00       		.byte	0
+ 380 0164 05       		.byte	5
+ 381 0165 B6       		.byte	-74
+ 382 0166 00       		.byte	0
+ 383 0167 00       		.byte	0
+ 384 0168 5C       		.byte	92
+ 385 0169 01       		.byte	1
+ 386 016a 01       		.byte	1
+ 387 016b 00       		.byte	0
+ 388 016c A7       		.byte	-89
+ 389 016d 5F       		.byte	95
+ 390 016e 00       		.byte	0
+ 391 016f 00       		.byte	0
+ 392 0170 F2       		.byte	-14
+ 393 0171 7E       		.byte	126
+ 394 0172 FF       		.byte	-1
+ 395 0173 00       		.byte	0
+ 396 0174 F1       		.byte	-15
+ 397 0175 2D       		.byte	45
+ 398 0176 FF       		.byte	-1
+ 399 0177 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 8
+
+
+ 400 0178 04       		.byte	4
+ 401 0179 A1       		.byte	-95
+ 402 017a FF       		.byte	-1
+ 403 017b 00       		.byte	0
+ 404 017c 55       		.byte	85
+ 405 017d 58       		.byte	88
+ 406 017e 00       		.byte	0
+ 407 017f 00       		.byte	0
+ 408 0180 ED       		.byte	-19
+ 409 0181 A8       		.byte	-88
+ 410 0182 00       		.byte	0
+ 411 0183 00       		.byte	0
+ 412 0184 B7       		.byte	-73
+ 413 0185 59       		.byte	89
+ 414 0186 00       		.byte	0
+ 415 0187 00       		.byte	0
+ 416 0188 8D       		.byte	-115
+ 417 0189 C6       		.byte	-58
+ 418 018a FF       		.byte	-1
+ 419 018b 00       		.byte	0
+ 420 018c 91       		.byte	-111
+ 421 018d 7A       		.byte	122
+ 422 018e FF       		.byte	-1
+ 423 018f 00       		.byte	0
+ 424 0190 9E       		.byte	-98
+ 425 0191 AE       		.byte	-82
+ 426 0192 FF       		.byte	-1
+ 427 0193 00       		.byte	0
+ 428 0194 93       		.byte	-109
+ 429 0195 22       		.byte	34
+ 430 0196 00       		.byte	0
+ 431 0197 00       		.byte	0
+ 432 0198 38       		.byte	56
+ 433 0199 67       		.byte	103
+ 434 019a 00       		.byte	0
+ 435 019b 00       		.byte	0
+ 436 019c 3D       		.byte	61
+ 437 019d 47       		.byte	71
+ 438 019e 00       		.byte	0
+ 439 019f 00       		.byte	0
+ 440 01a0 CA       		.byte	-54
+ 441 01a1 ED       		.byte	-19
+ 442 01a2 FF       		.byte	-1
+ 443 01a3 00       		.byte	0
+ 444 01a4 09       		.byte	9
+ 445 01a5 B2       		.byte	-78
+ 446 01a6 FF       		.byte	-1
+ 447 01a7 00       		.byte	0
+ 448 01a8 AE       		.byte	-82
+ 449 01a9 C3       		.byte	-61
+ 450 01aa FF       		.byte	-1
+ 451 01ab 00       		.byte	0
+ 452 01ac 12       		.byte	18
+ 453 01ad 07       		.byte	7
+ 454 01ae 00       		.byte	0
+ 455 01af 00       		.byte	0
+ 456 01b0 5A       		.byte	90
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 9
+
+
+ 457 01b1 39       		.byte	57
+ 458 01b2 00       		.byte	0
+ 459 01b3 00       		.byte	0
+ 460 01b4 7B       		.byte	123
+ 461 01b5 31       		.byte	49
+ 462 01b6 00       		.byte	0
+ 463 01b7 00       		.byte	0
+ 464 01b8 00       		.byte	0
+ 465 01b9 00       		.byte	0
+ 466 01ba 00       		.byte	0
+ 467 01bb 00       		.byte	0
+ 468 01bc FF       		.byte	-1
+ 469 01bd D6       		.byte	-42
+ 470 01be FF       		.byte	-1
+ 471 01bf 00       		.byte	0
+ 472 01c0 9C       		.byte	-100
+ 473 01c1 D8       		.byte	-40
+ 474 01c2 FF       		.byte	-1
+ 475 01c3 00       		.byte	0
+ 476 01c4 FA       		.byte	-6
+ 477 01c5 FB       		.byte	-5
+ 478 01c6 FF       		.byte	-1
+ 479 01c7 00       		.byte	0
+ 480 01c8 7D       		.byte	125
+ 481 01c9 1C       		.byte	28
+ 482 01ca 00       		.byte	0
+ 483 01cb 00       		.byte	0
+ 484 01cc 91       		.byte	-111
+ 485 01cd 1E       		.byte	30
+ 486 01ce 00       		.byte	0
+ 487 01cf 00       		.byte	0
+ 488 01d0 EF       		.byte	-17
+ 489 01d1 05       		.byte	5
+ 490 01d2 00       		.byte	0
+ 491 01d3 00       		.byte	0
+ 492 01d4 AF       		.byte	-81
+ 493 01d5 EC       		.byte	-20
+ 494 01d6 FF       		.byte	-1
+ 495 01d7 00       		.byte	0
+ 496 01d8 A7       		.byte	-89
+ 497 01d9 E8       		.byte	-24
+ 498 01da FF       		.byte	-1
+ 499 01db 00       		.byte	0
+ 500 01dc 75       		.byte	117
+ 501 01dd F9       		.byte	-7
+ 502 01de FF       		.byte	-1
+ 503 01df 00       		.byte	0
+ 504 01e0 F2       		.byte	-14
+ 505 01e1 0C       		.byte	12
+ 506 01e2 00       		.byte	0
+ 507 01e3 00       		.byte	0
+ 508 01e4 EF       		.byte	-17
+ 509 01e5 11       		.byte	17
+ 510 01e6 00       		.byte	0
+ 511 01e7 00       		.byte	0
+ 512 01e8 92       		.byte	-110
+ 513 01e9 06       		.byte	6
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 10
+
+
+ 514 01ea 00       		.byte	0
+ 515 01eb 00       		.byte	0
+ 516 01ec 32       		.byte	50
+ 517 01ed F7       		.byte	-9
+ 518 01ee FF       		.byte	-1
+ 519 01ef 00       		.byte	0
+ 520 01f0 9F       		.byte	-97
+ 521 01f1 F1       		.byte	-15
+ 522 01f2 FF       		.byte	-1
+ 523 01f3 00       		.byte	0
+ 524 01f4 66       		.byte	102
+ 525 01f5 F9       		.byte	-7
+ 526 01f6 FF       		.byte	-1
+ 527 01f7 00       		.byte	0
+ 528 01f8 51       		.byte	81
+ 529 01f9 06       		.byte	6
+ 530 01fa 00       		.byte	0
+ 531 01fb 00       		.byte	0
+ 532 01fc 9C       		.byte	-100
+ 533 01fd 0C       		.byte	12
+ 534 01fe 00       		.byte	0
+ 535 01ff 00       		.byte	0
+ 536              		.text
+ 537              	.Letext0:
+ 538              		.file 1 "Generated_Source\\PSoC5\\cytypes.h"
+ 539              		.file 2 "Generated_Source\\PSoC5\\Filter_1_Coefficients.c"
+ 540              		.section	.debug_info,"",%progbits
+ 541              	.Ldebug_info0:
+ 542 0000 AF000000 		.4byte	0xaf
+ 543 0004 0400     		.2byte	0x4
+ 544 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 545 000a 04       		.byte	0x4
+ 546 000b 01       		.uleb128 0x1
+ 547 000c B9000000 		.4byte	.LASF13
+ 548 0010 01       		.byte	0x1
+ 549 0011 4A000000 		.4byte	.LASF14
+ 550 0015 79000000 		.4byte	.LASF15
+ 551 0019 00000000 		.4byte	.Ldebug_line0
+ 552 001d 02       		.uleb128 0x2
+ 553 001e 04       		.byte	0x4
+ 554 001f 05       		.byte	0x5
+ 555 0020 696E7400 		.ascii	"int\000"
+ 556 0024 03       		.uleb128 0x3
+ 557 0025 04       		.byte	0x4
+ 558 0026 07       		.byte	0x7
+ 559 0027 0E000000 		.4byte	.LASF0
+ 560 002b 03       		.uleb128 0x3
+ 561 002c 01       		.byte	0x1
+ 562 002d 06       		.byte	0x6
+ 563 002e 9E010000 		.4byte	.LASF1
+ 564 0032 03       		.uleb128 0x3
+ 565 0033 01       		.byte	0x1
+ 566 0034 08       		.byte	0x8
+ 567 0035 47010000 		.4byte	.LASF2
+ 568 0039 03       		.uleb128 0x3
+ 569 003a 02       		.byte	0x2
+ 570 003b 05       		.byte	0x5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 11
+
+
+ 571 003c B0010000 		.4byte	.LASF3
+ 572 0040 03       		.uleb128 0x3
+ 573 0041 02       		.byte	0x2
+ 574 0042 07       		.byte	0x7
+ 575 0043 8B010000 		.4byte	.LASF4
+ 576 0047 03       		.uleb128 0x3
+ 577 0048 04       		.byte	0x4
+ 578 0049 05       		.byte	0x5
+ 579 004a 5A010000 		.4byte	.LASF5
+ 580 004e 03       		.uleb128 0x3
+ 581 004f 04       		.byte	0x4
+ 582 0050 07       		.byte	0x7
+ 583 0051 21000000 		.4byte	.LASF6
+ 584 0055 03       		.uleb128 0x3
+ 585 0056 08       		.byte	0x8
+ 586 0057 05       		.byte	0x5
+ 587 0058 00000000 		.4byte	.LASF7
+ 588 005c 03       		.uleb128 0x3
+ 589 005d 08       		.byte	0x8
+ 590 005e 07       		.byte	0x7
+ 591 005f 33000000 		.4byte	.LASF8
+ 592 0063 03       		.uleb128 0x3
+ 593 0064 04       		.byte	0x4
+ 594 0065 07       		.byte	0x7
+ 595 0066 BA010000 		.4byte	.LASF9
+ 596 006a 03       		.uleb128 0x3
+ 597 006b 01       		.byte	0x1
+ 598 006c 08       		.byte	0x8
+ 599 006d 55010000 		.4byte	.LASF10
+ 600 0071 04       		.uleb128 0x4
+ 601 0072 1B000000 		.4byte	.LASF16
+ 602 0076 01       		.byte	0x1
+ 603 0077 9201     		.2byte	0x192
+ 604 0079 32000000 		.4byte	0x32
+ 605 007d 03       		.uleb128 0x3
+ 606 007e 04       		.byte	0x4
+ 607 007f 04       		.byte	0x4
+ 608 0080 AA010000 		.4byte	.LASF11
+ 609 0084 03       		.uleb128 0x3
+ 610 0085 08       		.byte	0x8
+ 611 0086 04       		.byte	0x4
+ 612 0087 84010000 		.4byte	.LASF12
+ 613 008b 05       		.uleb128 0x5
+ 614 008c 71000000 		.4byte	0x71
+ 615 0090 9C000000 		.4byte	0x9c
+ 616 0094 06       		.uleb128 0x6
+ 617 0095 63000000 		.4byte	0x63
+ 618 0099 FF01     		.2byte	0x1ff
+ 619 009b 00       		.byte	0
+ 620 009c 07       		.uleb128 0x7
+ 621 009d 63010000 		.4byte	.LASF17
+ 622 00a1 02       		.byte	0x2
+ 623 00a2 11       		.byte	0x11
+ 624 00a3 AD000000 		.4byte	0xad
+ 625 00a7 05       		.uleb128 0x5
+ 626 00a8 03       		.byte	0x3
+ 627 00a9 00000000 		.4byte	Filter_1_ChannelAFirCoefficients
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 12
+
+
+ 628 00ad 08       		.uleb128 0x8
+ 629 00ae 8B000000 		.4byte	0x8b
+ 630 00b2 00       		.byte	0
+ 631              		.section	.debug_abbrev,"",%progbits
+ 632              	.Ldebug_abbrev0:
+ 633 0000 01       		.uleb128 0x1
+ 634 0001 11       		.uleb128 0x11
+ 635 0002 01       		.byte	0x1
+ 636 0003 25       		.uleb128 0x25
+ 637 0004 0E       		.uleb128 0xe
+ 638 0005 13       		.uleb128 0x13
+ 639 0006 0B       		.uleb128 0xb
+ 640 0007 03       		.uleb128 0x3
+ 641 0008 0E       		.uleb128 0xe
+ 642 0009 1B       		.uleb128 0x1b
+ 643 000a 0E       		.uleb128 0xe
+ 644 000b 10       		.uleb128 0x10
+ 645 000c 17       		.uleb128 0x17
+ 646 000d 00       		.byte	0
+ 647 000e 00       		.byte	0
+ 648 000f 02       		.uleb128 0x2
+ 649 0010 24       		.uleb128 0x24
+ 650 0011 00       		.byte	0
+ 651 0012 0B       		.uleb128 0xb
+ 652 0013 0B       		.uleb128 0xb
+ 653 0014 3E       		.uleb128 0x3e
+ 654 0015 0B       		.uleb128 0xb
+ 655 0016 03       		.uleb128 0x3
+ 656 0017 08       		.uleb128 0x8
+ 657 0018 00       		.byte	0
+ 658 0019 00       		.byte	0
+ 659 001a 03       		.uleb128 0x3
+ 660 001b 24       		.uleb128 0x24
+ 661 001c 00       		.byte	0
+ 662 001d 0B       		.uleb128 0xb
+ 663 001e 0B       		.uleb128 0xb
+ 664 001f 3E       		.uleb128 0x3e
+ 665 0020 0B       		.uleb128 0xb
+ 666 0021 03       		.uleb128 0x3
+ 667 0022 0E       		.uleb128 0xe
+ 668 0023 00       		.byte	0
+ 669 0024 00       		.byte	0
+ 670 0025 04       		.uleb128 0x4
+ 671 0026 16       		.uleb128 0x16
+ 672 0027 00       		.byte	0
+ 673 0028 03       		.uleb128 0x3
+ 674 0029 0E       		.uleb128 0xe
+ 675 002a 3A       		.uleb128 0x3a
+ 676 002b 0B       		.uleb128 0xb
+ 677 002c 3B       		.uleb128 0x3b
+ 678 002d 05       		.uleb128 0x5
+ 679 002e 49       		.uleb128 0x49
+ 680 002f 13       		.uleb128 0x13
+ 681 0030 00       		.byte	0
+ 682 0031 00       		.byte	0
+ 683 0032 05       		.uleb128 0x5
+ 684 0033 01       		.uleb128 0x1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 13
+
+
+ 685 0034 01       		.byte	0x1
+ 686 0035 49       		.uleb128 0x49
+ 687 0036 13       		.uleb128 0x13
+ 688 0037 01       		.uleb128 0x1
+ 689 0038 13       		.uleb128 0x13
+ 690 0039 00       		.byte	0
+ 691 003a 00       		.byte	0
+ 692 003b 06       		.uleb128 0x6
+ 693 003c 21       		.uleb128 0x21
+ 694 003d 00       		.byte	0
+ 695 003e 49       		.uleb128 0x49
+ 696 003f 13       		.uleb128 0x13
+ 697 0040 2F       		.uleb128 0x2f
+ 698 0041 05       		.uleb128 0x5
+ 699 0042 00       		.byte	0
+ 700 0043 00       		.byte	0
+ 701 0044 07       		.uleb128 0x7
+ 702 0045 34       		.uleb128 0x34
+ 703 0046 00       		.byte	0
+ 704 0047 03       		.uleb128 0x3
+ 705 0048 0E       		.uleb128 0xe
+ 706 0049 3A       		.uleb128 0x3a
+ 707 004a 0B       		.uleb128 0xb
+ 708 004b 3B       		.uleb128 0x3b
+ 709 004c 0B       		.uleb128 0xb
+ 710 004d 49       		.uleb128 0x49
+ 711 004e 13       		.uleb128 0x13
+ 712 004f 3F       		.uleb128 0x3f
+ 713 0050 19       		.uleb128 0x19
+ 714 0051 02       		.uleb128 0x2
+ 715 0052 18       		.uleb128 0x18
+ 716 0053 00       		.byte	0
+ 717 0054 00       		.byte	0
+ 718 0055 08       		.uleb128 0x8
+ 719 0056 26       		.uleb128 0x26
+ 720 0057 00       		.byte	0
+ 721 0058 49       		.uleb128 0x49
+ 722 0059 13       		.uleb128 0x13
+ 723 005a 00       		.byte	0
+ 724 005b 00       		.byte	0
+ 725 005c 00       		.byte	0
+ 726              		.section	.debug_aranges,"",%progbits
+ 727 0000 14000000 		.4byte	0x14
+ 728 0004 0200     		.2byte	0x2
+ 729 0006 00000000 		.4byte	.Ldebug_info0
+ 730 000a 04       		.byte	0x4
+ 731 000b 00       		.byte	0
+ 732 000c 0000     		.2byte	0
+ 733 000e 0000     		.2byte	0
+ 734 0010 00000000 		.4byte	0
+ 735 0014 00000000 		.4byte	0
+ 736              		.section	.debug_line,"",%progbits
+ 737              	.Ldebug_line0:
+ 738 0000 58000000 		.section	.debug_str,"MS",%progbits,1
+ 738      02005200 
+ 738      00000201 
+ 738      FB0E0D00 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 14
+
+
+ 738      01010101 
+ 739              	.LASF7:
+ 740 0000 6C6F6E67 		.ascii	"long long int\000"
+ 740      206C6F6E 
+ 740      6720696E 
+ 740      7400
+ 741              	.LASF0:
+ 742 000e 756E7369 		.ascii	"unsigned int\000"
+ 742      676E6564 
+ 742      20696E74 
+ 742      00
+ 743              	.LASF16:
+ 744 001b 75696E74 		.ascii	"uint8\000"
+ 744      3800
+ 745              	.LASF6:
+ 746 0021 6C6F6E67 		.ascii	"long unsigned int\000"
+ 746      20756E73 
+ 746      69676E65 
+ 746      6420696E 
+ 746      7400
+ 747              	.LASF8:
+ 748 0033 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 748      206C6F6E 
+ 748      6720756E 
+ 748      7369676E 
+ 748      65642069 
+ 749              	.LASF14:
+ 750 004a 47656E65 		.ascii	"Generated_Source\\PSoC5\\Filter_1_Coefficients.c\000"
+ 750      72617465 
+ 750      645F536F 
+ 750      75726365 
+ 750      5C50536F 
+ 751              	.LASF15:
+ 752 0079 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
+ 752      73657273 
+ 752      5C546F6D 
+ 752      6D695C44 
+ 752      6F63756D 
+ 753 00a6 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
+ 753      5F555342 
+ 753      55415254 
+ 753      2E637964 
+ 753      736E00
+ 754              	.LASF13:
+ 755 00b9 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 755      4320342E 
+ 755      392E3320 
+ 755      32303135 
+ 755      30333033 
+ 756 00ec 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 756      20726576 
+ 756      6973696F 
+ 756      6E203232 
+ 756      31323230 
+ 757 011f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 757      66756E63 
+ 757      74696F6E 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccHQIAPc.s 			page 15
+
+
+ 757      2D736563 
+ 757      74696F6E 
+ 758              	.LASF2:
+ 759 0147 756E7369 		.ascii	"unsigned char\000"
+ 759      676E6564 
+ 759      20636861 
+ 759      7200
+ 760              	.LASF10:
+ 761 0155 63686172 		.ascii	"char\000"
+ 761      00
+ 762              	.LASF5:
+ 763 015a 6C6F6E67 		.ascii	"long int\000"
+ 763      20696E74 
+ 763      00
+ 764              	.LASF17:
+ 765 0163 46696C74 		.ascii	"Filter_1_ChannelAFirCoefficients\000"
+ 765      65725F31 
+ 765      5F436861 
+ 765      6E6E656C 
+ 765      41466972 
+ 766              	.LASF12:
+ 767 0184 646F7562 		.ascii	"double\000"
+ 767      6C6500
+ 768              	.LASF4:
+ 769 018b 73686F72 		.ascii	"short unsigned int\000"
+ 769      7420756E 
+ 769      7369676E 
+ 769      65642069 
+ 769      6E7400
+ 770              	.LASF1:
+ 771 019e 7369676E 		.ascii	"signed char\000"
+ 771      65642063 
+ 771      68617200 
+ 772              	.LASF11:
+ 773 01aa 666C6F61 		.ascii	"float\000"
+ 773      7400
+ 774              	.LASF3:
+ 775 01b0 73686F72 		.ascii	"short int\000"
+ 775      7420696E 
+ 775      7400
+ 776              	.LASF9:
+ 777 01ba 73697A65 		.ascii	"sizetype\000"
+ 777      74797065 
+ 777      00
+ 778              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

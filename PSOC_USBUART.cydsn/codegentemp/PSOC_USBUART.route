@@ -18,14 +18,28 @@ net ClockBlock_BUS_CLK
 	term   ":interrupt_22.clock"
 	switch ":clockblockcell.clk_bus_glb==>:interrupt_21.clock"
 	term   ":interrupt_21.clock"
+	switch ":clockblockcell.clk_bus_glb==>:dma_10.clock"
+	term   ":dma_10.clock"
+	switch ":clockblockcell.clk_bus_glb==>:interrupt_28.clock"
+	term   ":interrupt_28.clock"
 end ClockBlock_BUS_CLK
-net Net_57
+net Net_112
 	term   ":decimatorcell.interrupt"
 	switch ":decimatorcell.interrupt==>Stub-:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v20+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v22"
 	switch "Stub-:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v20+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v22==>:interrupt_idmux_29.in_0"
 	switch ":interrupt_idmux_29.interrupt_idmux_29__out==>:interrupt_29.interrupt"
 	term   ":interrupt_29.interrupt"
-end Net_57
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v20+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v22==>:dma_idmux_10.in_0"
+	switch ":dma_idmux_10.dma_10__dmareq==>:dma_10.dmareq"
+	term   ":dma_10.dmareq"
+end Net_112
+net Net_124
+	term   ":dfbcell.interrupt"
+	switch ":dfbcell.interrupt==>Stub-:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v13+:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v15"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v13+:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v15==>:interrupt_idmux_28.in_0"
+	switch ":interrupt_idmux_28.interrupt_idmux_28__out==>:interrupt_28.interrupt"
+	term   ":interrupt_28.interrupt"
+end Net_124
 net Net_61
 	term   ":usbcell.sof_int"
 	switch ":usbcell.sof_int==>Stub-:dsiswitch_top@[DSI=(0,2)][side=top]:dsihc_top:v4+:dsiswitch_top@[DSI=(0,2)][side=top]:dsihc_top:v6"
