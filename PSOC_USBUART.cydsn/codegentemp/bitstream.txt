@@ -1,7 +1,7 @@
 ===========Generating Bitstream===========
 # IDMUX (count=6)
 00000000: 00 00 00 00 00 00
-# PHUB_CFGMEM0 (count=4)
+# PHUB_CFGMEM10 (count=4)
 00000006: 00 00 00 00
 # IOPORT_0 (count=7)
 0000000a: 00 00 00 00 00 00 00

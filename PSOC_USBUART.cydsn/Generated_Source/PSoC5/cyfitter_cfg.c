@@ -288,12 +288,11 @@ static void AnalogSetDefault(void)
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_BG_DFT0), (bg_xover_inl_trim & 0x07u));
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_BG_DFT1), ((bg_xover_inl_trim >> 4) & 0x0Fu));
 	CY_SET_XTND_REG16((void CYFAR *)CYREG_PRT0_AMUX, 0x0208u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_BG_CR0, 0x0Cu);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_DAC0_SW3, 0x10u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_DSM0_SW0, 0x20u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_DSM0_SW4, 0x80u);
 	CY_SET_XTND_REG16((void CYFAR *)CYREG_OPAMP0_MX, 0x0404u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_OPAMP2_MX, 0x15u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_OPAMP2_MX, 0x19u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_PUMP_CR0, 0x44u);
 }
 
@@ -390,7 +389,7 @@ void cyfitter_cfg(void)
 
 		/* Perform normal device configuration. Order is not critical for these items. */
 		CY_SET_XTND_REG8((void CYFAR *)(CYREG_DSM0_CR3), 0x0Au);
-		CYMEMZERO((void CYFAR *)(CYREG_PHUB_CFGMEM0_CFG0), 4u);
+		CYMEMZERO((void CYFAR *)(CYREG_PHUB_CFGMEM10_CFG0), 4u);
 
 		/* Enable digital routing */
 		CY_SET_XTND_REG8((void CYFAR *)CYREG_BCTL0_BANK_CTL, CY_GET_XTND_REG8((void CYFAR *)CYREG_BCTL0_BANK_CTL) | 0x02u);

@@ -12,7 +12,13 @@
 #include <serial.h>
 
 //Global Variables
-extern uint8 new_adc_data;
-extern int32 raw_input;
+
+struct data{
+    uint8 new_data;
+    int32 data;
+};
+ extern struct data adc_del_sig;
+
+extern struct data filter;
 
 /* [] END OF FILE */

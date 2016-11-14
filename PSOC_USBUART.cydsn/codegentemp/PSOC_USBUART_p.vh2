@@ -1,5 +1,5 @@
 -- Project:   PSOC_USBUART
--- Generated: 11/04/2016 15:47:30
+-- Generated: 11/14/2016 13:50:24
 -- PSoC Creator  4.0
 
 ENTITY PSOC_USBUART IS
@@ -28,11 +28,11 @@ ARCHITECTURE __DEFAULT__ OF PSOC_USBUART IS
     SIGNAL ClockBlock_PLL_OUT : bit;
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
-    SIGNAL Net_106 : bit;
-    SIGNAL Net_107 : bit;
-    SIGNAL Net_108 : bit;
-    SIGNAL Net_111 : bit;
-    SIGNAL Net_57 : bit;
+    SIGNAL Net_112 : bit;
+    SIGNAL Net_114 : bit;
+    SIGNAL Net_121 : bit;
+    SIGNAL Net_122 : bit;
+    SIGNAL Net_124 : bit;
     SIGNAL Net_61 : bit;
     SIGNAL Vref_sink(0)__PA : bit;
     SIGNAL Vref_source(0)__PA : bit;
@@ -110,7 +110,7 @@ ARCHITECTURE __DEFAULT__ OF PSOC_USBUART IS
     ATTRIBUTE Location OF \USBUART:USB\ : LABEL IS "F(USB,0)";
     ATTRIBUTE Location OF \OPAMP:ABuf\ : LABEL IS "F(OpAmp,2)";
     ATTRIBUTE Location OF \IDAC8:viDAC8\ : LABEL IS "F(VIDAC,0)";
-    ATTRIBUTE lib_model OF DMA_1 : LABEL IS "drqcell1";
+    ATTRIBUTE lib_model OF DMA : LABEL IS "drqcell1";
     COMPONENT abufcell
     END COMPONENT;
     COMPONENT clockblockcell
@@ -962,7 +962,7 @@ BEGIN
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_57,
+            interrupt => Net_112,
             clock => ClockBlock_BUS_CLK);
 
     \ADC_DelSig:DEC\:decimatorcell
@@ -976,7 +976,7 @@ BEGIN
             mod_dat_0 => \ADC_DelSig:mod_dat_0\,
             ext_start => __ONE__,
             modrst => \ADC_DelSig:mod_reset\,
-            interrupt => Net_57);
+            interrupt => Net_112);
 
     __ONE__:macrocell
         GENERIC MAP(
@@ -1091,6 +1091,16 @@ BEGIN
             idir => open,
             ioff => open);
 
+    DMA:drqcell
+        GENERIC MAP(
+            drq_type => "10",
+            num_tds => 0)
+        PORT MAP(
+            dmareq => Net_112,
+            termin => '0',
+            termout => Net_114,
+            clock => ClockBlock_BUS_CLK);
+
     \Filter:DFB\:dfbcell
         GENERIC MAP(
             cy_registers => "")
@@ -1099,18 +1109,16 @@ BEGIN
             in_2 => open,
             out_1 => \Filter:Net_8\,
             out_2 => \Filter:Net_9\,
-            dmareq_1 => Net_106,
-            dmareq_2 => Net_107,
-            interrupt => Net_108);
+            dmareq_1 => Net_121,
+            dmareq_2 => Net_122,
+            interrupt => Net_124);
 
-    DMA_1:drqcell
+    isr:interrupt
         GENERIC MAP(
-            drq_type => "10",
-            num_tds => 0)
+            int_type => "10",
+            is_nmi => 0)
         PORT MAP(
-            dmareq => '0',
-            termin => '0',
-            termout => Net_111,
+            interrupt => Net_124,
             clock => ClockBlock_BUS_CLK);
 
 END __DEFAULT__;

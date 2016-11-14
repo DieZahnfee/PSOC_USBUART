@@ -3,17 +3,28 @@
 #include "cydevice.h"
 #include "cydevice_trm.h"
 
-/* DMA_1 */
-#define DMA_1__DRQ_CTL CYREG_IDMUX_DRQ_CTL0
-#define DMA_1__DRQ_NUMBER 0u
-#define DMA_1__NUMBEROF_TDS 0u
-#define DMA_1__PRIORITY 2u
-#define DMA_1__TERMIN_EN 0u
-#define DMA_1__TERMIN_SEL 0u
-#define DMA_1__TERMOUT0_EN 0u
-#define DMA_1__TERMOUT0_SEL 0u
-#define DMA_1__TERMOUT1_EN 0u
-#define DMA_1__TERMOUT1_SEL 0u
+/* DMA */
+#define DMA__DRQ_CTL CYREG_IDMUX_DRQ_CTL2
+#define DMA__DRQ_NUMBER 10u
+#define DMA__NUMBEROF_TDS 0u
+#define DMA__PRIORITY 2u
+#define DMA__TERMIN_EN 0u
+#define DMA__TERMIN_SEL 0u
+#define DMA__TERMOUT0_EN 0u
+#define DMA__TERMOUT0_SEL 0u
+#define DMA__TERMOUT1_EN 0u
+#define DMA__TERMOUT1_SEL 0u
+#define DMA_CHANNELS_USED__MASK0 0x00000400u
+
+/* isr */
+#define isr__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
+#define isr__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
+#define isr__INTC_MASK 0x10000000u
+#define isr__INTC_NUMBER 28u
+#define isr__INTC_PRIOR_NUM 7u
+#define isr__INTC_PRIOR_REG CYREG_NVIC_PRI_28
+#define isr__INTC_SET_EN_REG CYREG_NVIC_SETENA0
+#define isr__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
 /* IDAC8_viDAC8 */
 #define IDAC8_viDAC8__CR0 CYREG_DAC0_CR0
@@ -799,7 +810,6 @@
 #define CYIPBLOCK_S8_SAR_VERSION 0
 #define CYIPBLOCK_S8_SIO_VERSION 0
 #define CYIPBLOCK_S8_UDB_VERSION 0
-#define DMA_CHANNELS_USED__MASK0 0x00000001u
 #define CYDEV_BOOTLOADER_ENABLE 0
 
 #endif /* INCLUDED_CYFITTER_H */

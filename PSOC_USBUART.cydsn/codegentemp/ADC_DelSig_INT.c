@@ -25,6 +25,9 @@
 *   #START and #END tags
 *******************************************************************************/
 /* `#START ADC_SYS_VAR`  */
+#include "global.h"
+// declaring global variables
+extern struct data adc_del_sig;
 
 /* `#END`  */
 
@@ -60,6 +63,9 @@
         *  - add user ISR code between the following #START and #END tags
         **************************************************************************/
         /* `#START MAIN_ADC_ISR1`  */
+        
+        adc_del_sig.data = ADC_DelSig_GetResult32();
+        adc_del_sig.new_data = 1u;
         
         /* `#END`  */
         
