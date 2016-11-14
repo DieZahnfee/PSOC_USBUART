@@ -1,5 +1,5 @@
 -- Project:   G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\PSOC_USBUART.cyprj
--- Generated: 11/05/2016 10:32:27
+-- Generated: 11/14/2016 13:50:26
 -- PSoC Creator  4.0
 
 ENTITY PSOC_USBUART IS
@@ -28,7 +28,11 @@ ARCHITECTURE __DEFAULT__ OF PSOC_USBUART IS
     SIGNAL ClockBlock_PLL_OUT : bit;
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
-    SIGNAL Net_57 : bit;
+    SIGNAL Net_112 : bit;
+    SIGNAL Net_114 : bit;
+    SIGNAL Net_121 : bit;
+    SIGNAL Net_122 : bit;
+    SIGNAL Net_124 : bit;
     SIGNAL Net_61 : bit;
     SIGNAL Vref_sink(0)__PA : bit;
     SIGNAL Vref_source(0)__PA : bit;
@@ -54,6 +58,8 @@ ARCHITECTURE __DEFAULT__ OF PSOC_USBUART IS
     SIGNAL \ADC_DelSig:mod_dat_2\ : bit;
     SIGNAL \ADC_DelSig:mod_dat_3\ : bit;
     SIGNAL \ADC_DelSig:mod_reset\ : bit;
+    SIGNAL \Filter:Net_8\ : bit;
+    SIGNAL \Filter:Net_9\ : bit;
     SIGNAL \\\USBUART:Dm(0)\\__PA\ : bit;
     SIGNAL \\\USBUART:Dp(0)\\__PA\ : bit;
     SIGNAL \USBUART:Net_1010\ : bit;
@@ -118,6 +124,10 @@ ARCHITECTURE __DEFAULT__ OF PSOC_USBUART IS
     ATTRIBUTE Location OF \USBUART:sof_int\ : LABEL IS "[IntrContainer=(0)][IntrId=(21)]";
     ATTRIBUTE Location OF \OPAMP:ABuf\ : LABEL IS "F(OpAmp,2)";
     ATTRIBUTE Location OF \IDAC8:viDAC8\ : LABEL IS "F(VIDAC,0)";
+    ATTRIBUTE lib_model OF DMA : LABEL IS "drqcell1";
+    ATTRIBUTE Location OF DMA : LABEL IS "[DrqContainer=(0)][DrqId=(10)]";
+    ATTRIBUTE Location OF \Filter:DFB\ : LABEL IS "F(DFB,0)";
+    ATTRIBUTE Location OF isr : LABEL IS "[IntrContainer=(0)][IntrId=(28)]";
     COMPONENT abufcell
     END COMPONENT;
     COMPONENT clockblockcell
@@ -210,6 +220,24 @@ ARCHITECTURE __DEFAULT__ OF PSOC_USBUART IS
             ext_start : IN std_ulogic;
             modrst : OUT std_ulogic;
             interrupt : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT dfbcell
+        PORT (
+            clock : IN std_ulogic;
+            in_1 : IN std_ulogic;
+            in_2 : IN std_ulogic;
+            out_1 : OUT std_ulogic;
+            out_2 : OUT std_ulogic;
+            dmareq_1 : OUT std_ulogic;
+            dmareq_2 : OUT std_ulogic;
+            interrupt : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT drqcell
+        PORT (
+            dmareq : IN std_ulogic;
+            termin : IN std_ulogic;
+            termout : OUT std_ulogic;
+            clock : IN std_ulogic);
     END COMPONENT;
     COMPONENT dsmodcell
         PORT (
@@ -944,7 +972,7 @@ BEGIN
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_57,
+            interrupt => Net_112,
             clock => ClockBlock_BUS_CLK);
 
     \ADC_DelSig:DEC\:decimatorcell
@@ -958,7 +986,7 @@ BEGIN
             mod_dat_0 => \ADC_DelSig:mod_dat_0\,
             ext_start => __ONE__,
             modrst => \ADC_DelSig:mod_reset\,
-            interrupt => Net_57);
+            interrupt => Net_112);
 
     __ONE__:macrocell
         GENERIC MAP(
@@ -1072,5 +1100,35 @@ BEGIN
             reset => open,
             idir => open,
             ioff => open);
+
+    DMA:drqcell
+        GENERIC MAP(
+            drq_type => "10",
+            num_tds => 0)
+        PORT MAP(
+            dmareq => Net_112,
+            termin => '0',
+            termout => Net_114,
+            clock => ClockBlock_BUS_CLK);
+
+    \Filter:DFB\:dfbcell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            in_1 => open,
+            in_2 => open,
+            out_1 => \Filter:Net_8\,
+            out_2 => \Filter:Net_9\,
+            dmareq_1 => Net_121,
+            dmareq_2 => Net_122,
+            interrupt => Net_124);
+
+    isr:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_124,
+            clock => ClockBlock_BUS_CLK);
 
 END __DEFAULT__;

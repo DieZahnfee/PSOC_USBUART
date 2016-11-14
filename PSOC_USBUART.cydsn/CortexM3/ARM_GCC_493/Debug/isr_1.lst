@@ -1,0 +1,2054 @@
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"isr_1.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.isr_1_Interrupt,"ax",%progbits
+  19              		.align	2
+  20              		.global	isr_1_Interrupt
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	isr_1_Interrupt, %function
+  24              	isr_1_Interrupt:
+  25              	.LFB66:
+  26              		.file 1 "Generated_Source\\PSoC5\\isr_1.c"
+   1:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/isr_1.c **** * File Name: isr_1.c  
+   3:Generated_Source\PSoC5/isr_1.c **** * Version 1.70
+   4:Generated_Source\PSoC5/isr_1.c **** *
+   5:Generated_Source\PSoC5/isr_1.c **** *  Description:
+   6:Generated_Source\PSoC5/isr_1.c **** *   API for controlling the state of an interrupt.
+   7:Generated_Source\PSoC5/isr_1.c **** *
+   8:Generated_Source\PSoC5/isr_1.c **** *
+   9:Generated_Source\PSoC5/isr_1.c **** *  Note:
+  10:Generated_Source\PSoC5/isr_1.c **** *
+  11:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/isr_1.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/isr_1.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC5/isr_1.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC5/isr_1.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/isr_1.c **** 
+  18:Generated_Source\PSoC5/isr_1.c **** 
+  19:Generated_Source\PSoC5/isr_1.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC5/isr_1.c **** #include <CyLib.h>
+  21:Generated_Source\PSoC5/isr_1.c **** #include <isr_1.h>
+  22:Generated_Source\PSoC5/isr_1.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC5/isr_1.c **** 
+  24:Generated_Source\PSoC5/isr_1.c **** #if !defined(isr_1__REMOVED) /* Check for removal by optimization */
+  25:Generated_Source\PSoC5/isr_1.c **** 
+  26:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+  27:Generated_Source\PSoC5/isr_1.c **** *  Place your includes, defines and code here 
+  28:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************/
+  29:Generated_Source\PSoC5/isr_1.c **** /* `#START isr_1_intc` */
+  30:Generated_Source\PSoC5/isr_1.c **** #include "global.h"
+  31:Generated_Source\PSoC5/isr_1.c ****     
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 2
+
+
+  32:Generated_Source\PSoC5/isr_1.c ****     extern struct adc adc_del_sig;
+  33:Generated_Source\PSoC5/isr_1.c **** /* `#END` */
+  34:Generated_Source\PSoC5/isr_1.c **** 
+  35:Generated_Source\PSoC5/isr_1.c **** #ifndef CYINT_IRQ_BASE
+  36:Generated_Source\PSoC5/isr_1.c **** #define CYINT_IRQ_BASE      16
+  37:Generated_Source\PSoC5/isr_1.c **** #endif /* CYINT_IRQ_BASE */
+  38:Generated_Source\PSoC5/isr_1.c **** #ifndef CYINT_VECT_TABLE
+  39:Generated_Source\PSoC5/isr_1.c **** #define CYINT_VECT_TABLE    ((cyisraddress **) CYREG_NVIC_VECT_OFFSET)
+  40:Generated_Source\PSoC5/isr_1.c **** #endif /* CYINT_VECT_TABLE */
+  41:Generated_Source\PSoC5/isr_1.c **** 
+  42:Generated_Source\PSoC5/isr_1.c **** /* Declared in startup, used to set unused interrupts to. */
+  43:Generated_Source\PSoC5/isr_1.c **** CY_ISR_PROTO(IntDefaultHandler);
+  44:Generated_Source\PSoC5/isr_1.c **** 
+  45:Generated_Source\PSoC5/isr_1.c **** 
+  46:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+  47:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_Start
+  48:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+  49:Generated_Source\PSoC5/isr_1.c **** *
+  50:Generated_Source\PSoC5/isr_1.c **** * Summary:
+  51:Generated_Source\PSoC5/isr_1.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
+  52:Generated_Source\PSoC5/isr_1.c **** *  sets the default interrupt vector, sets the priority from the value in the
+  53:Generated_Source\PSoC5/isr_1.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
+  54:Generated_Source\PSoC5/isr_1.c **** *  interrupt controller.
+  55:Generated_Source\PSoC5/isr_1.c **** *
+  56:Generated_Source\PSoC5/isr_1.c **** * Parameters:  
+  57:Generated_Source\PSoC5/isr_1.c **** *   None
+  58:Generated_Source\PSoC5/isr_1.c **** *
+  59:Generated_Source\PSoC5/isr_1.c **** * Return:
+  60:Generated_Source\PSoC5/isr_1.c **** *   None
+  61:Generated_Source\PSoC5/isr_1.c **** *
+  62:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+  63:Generated_Source\PSoC5/isr_1.c **** void isr_1_Start(void)
+  64:Generated_Source\PSoC5/isr_1.c **** {
+  65:Generated_Source\PSoC5/isr_1.c ****     /* For all we know the interrupt is active. */
+  66:Generated_Source\PSoC5/isr_1.c ****     isr_1_Disable();
+  67:Generated_Source\PSoC5/isr_1.c **** 
+  68:Generated_Source\PSoC5/isr_1.c ****     /* Set the ISR to point to the isr_1 Interrupt. */
+  69:Generated_Source\PSoC5/isr_1.c ****     isr_1_SetVector(&isr_1_Interrupt);
+  70:Generated_Source\PSoC5/isr_1.c **** 
+  71:Generated_Source\PSoC5/isr_1.c ****     /* Set the priority. */
+  72:Generated_Source\PSoC5/isr_1.c ****     isr_1_SetPriority((uint8)isr_1_INTC_PRIOR_NUMBER);
+  73:Generated_Source\PSoC5/isr_1.c **** 
+  74:Generated_Source\PSoC5/isr_1.c ****     /* Enable it. */
+  75:Generated_Source\PSoC5/isr_1.c ****     isr_1_Enable();
+  76:Generated_Source\PSoC5/isr_1.c **** }
+  77:Generated_Source\PSoC5/isr_1.c **** 
+  78:Generated_Source\PSoC5/isr_1.c **** 
+  79:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+  80:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_StartEx
+  81:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+  82:Generated_Source\PSoC5/isr_1.c **** *
+  83:Generated_Source\PSoC5/isr_1.c **** * Summary:
+  84:Generated_Source\PSoC5/isr_1.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
+  85:Generated_Source\PSoC5/isr_1.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
+  86:Generated_Source\PSoC5/isr_1.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
+  87:Generated_Source\PSoC5/isr_1.c **** *  the interrupt to the interrupt controller.
+  88:Generated_Source\PSoC5/isr_1.c **** *  
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 3
+
+
+  89:Generated_Source\PSoC5/isr_1.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+  90:Generated_Source\PSoC5/isr_1.c **** *  used to provide consistent definition across compilers:
+  91:Generated_Source\PSoC5/isr_1.c **** *  
+  92:Generated_Source\PSoC5/isr_1.c **** *  Function definition example:
+  93:Generated_Source\PSoC5/isr_1.c **** *   CY_ISR(MyISR)
+  94:Generated_Source\PSoC5/isr_1.c **** *   {
+  95:Generated_Source\PSoC5/isr_1.c **** *   }
+  96:Generated_Source\PSoC5/isr_1.c **** *   Function prototype example:
+  97:Generated_Source\PSoC5/isr_1.c **** *   CY_ISR_PROTO(MyISR);
+  98:Generated_Source\PSoC5/isr_1.c **** *
+  99:Generated_Source\PSoC5/isr_1.c **** * Parameters:  
+ 100:Generated_Source\PSoC5/isr_1.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 101:Generated_Source\PSoC5/isr_1.c **** *
+ 102:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 103:Generated_Source\PSoC5/isr_1.c **** *   None
+ 104:Generated_Source\PSoC5/isr_1.c **** *
+ 105:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 106:Generated_Source\PSoC5/isr_1.c **** void isr_1_StartEx(cyisraddress address)
+ 107:Generated_Source\PSoC5/isr_1.c **** {
+ 108:Generated_Source\PSoC5/isr_1.c ****     /* For all we know the interrupt is active. */
+ 109:Generated_Source\PSoC5/isr_1.c ****     isr_1_Disable();
+ 110:Generated_Source\PSoC5/isr_1.c **** 
+ 111:Generated_Source\PSoC5/isr_1.c ****     /* Set the ISR to point to the isr_1 Interrupt. */
+ 112:Generated_Source\PSoC5/isr_1.c ****     isr_1_SetVector(address);
+ 113:Generated_Source\PSoC5/isr_1.c **** 
+ 114:Generated_Source\PSoC5/isr_1.c ****     /* Set the priority. */
+ 115:Generated_Source\PSoC5/isr_1.c ****     isr_1_SetPriority((uint8)isr_1_INTC_PRIOR_NUMBER);
+ 116:Generated_Source\PSoC5/isr_1.c **** 
+ 117:Generated_Source\PSoC5/isr_1.c ****     /* Enable it. */
+ 118:Generated_Source\PSoC5/isr_1.c ****     isr_1_Enable();
+ 119:Generated_Source\PSoC5/isr_1.c **** }
+ 120:Generated_Source\PSoC5/isr_1.c **** 
+ 121:Generated_Source\PSoC5/isr_1.c **** 
+ 122:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 123:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_Stop
+ 124:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 125:Generated_Source\PSoC5/isr_1.c **** *
+ 126:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 127:Generated_Source\PSoC5/isr_1.c **** *   Disables and removes the interrupt.
+ 128:Generated_Source\PSoC5/isr_1.c **** *
+ 129:Generated_Source\PSoC5/isr_1.c **** * Parameters:  
+ 130:Generated_Source\PSoC5/isr_1.c **** *   None
+ 131:Generated_Source\PSoC5/isr_1.c **** *
+ 132:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 133:Generated_Source\PSoC5/isr_1.c **** *   None
+ 134:Generated_Source\PSoC5/isr_1.c **** *
+ 135:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 136:Generated_Source\PSoC5/isr_1.c **** void isr_1_Stop(void)
+ 137:Generated_Source\PSoC5/isr_1.c **** {
+ 138:Generated_Source\PSoC5/isr_1.c ****     /* Disable this interrupt. */
+ 139:Generated_Source\PSoC5/isr_1.c ****     isr_1_Disable();
+ 140:Generated_Source\PSoC5/isr_1.c **** 
+ 141:Generated_Source\PSoC5/isr_1.c ****     /* Set the ISR to point to the passive one. */
+ 142:Generated_Source\PSoC5/isr_1.c ****     isr_1_SetVector(&IntDefaultHandler);
+ 143:Generated_Source\PSoC5/isr_1.c **** }
+ 144:Generated_Source\PSoC5/isr_1.c **** 
+ 145:Generated_Source\PSoC5/isr_1.c **** 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 4
+
+
+ 146:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 147:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_Interrupt
+ 148:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 149:Generated_Source\PSoC5/isr_1.c **** *
+ 150:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 151:Generated_Source\PSoC5/isr_1.c **** *   The default Interrupt Service Routine for isr_1.
+ 152:Generated_Source\PSoC5/isr_1.c **** *
+ 153:Generated_Source\PSoC5/isr_1.c **** *   Add custom code between the coments to keep the next version of this file
+ 154:Generated_Source\PSoC5/isr_1.c **** *   from over writting your code.
+ 155:Generated_Source\PSoC5/isr_1.c **** *
+ 156:Generated_Source\PSoC5/isr_1.c **** * Parameters:  
+ 157:Generated_Source\PSoC5/isr_1.c **** *
+ 158:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 159:Generated_Source\PSoC5/isr_1.c **** *   None
+ 160:Generated_Source\PSoC5/isr_1.c **** *
+ 161:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 162:Generated_Source\PSoC5/isr_1.c **** CY_ISR(isr_1_Interrupt)
+ 163:Generated_Source\PSoC5/isr_1.c **** {
+  27              		.loc 1 163 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+ 164:Generated_Source\PSoC5/isr_1.c ****     #ifdef isr_1_INTERRUPT_INTERRUPT_CALLBACK
+ 165:Generated_Source\PSoC5/isr_1.c ****         isr_1_Interrupt_InterruptCallback();
+ 166:Generated_Source\PSoC5/isr_1.c ****     #endif /* isr_1_INTERRUPT_INTERRUPT_CALLBACK */ 
+ 167:Generated_Source\PSoC5/isr_1.c **** 
+ 168:Generated_Source\PSoC5/isr_1.c ****     /*  Place your Interrupt code here. */
+ 169:Generated_Source\PSoC5/isr_1.c ****     /* `#START isr_1_Interrupt` */
+ 170:Generated_Source\PSoC5/isr_1.c ****     adc_del_sig.new_data = 1u;
+  32              		.loc 1 170 0
+  33 0000 0122     		movs	r2, #1
+  34 0002 014B     		ldr	r3, .L2
+  35 0004 1A70     		strb	r2, [r3]
+  36 0006 7047     		bx	lr
+  37              	.L3:
+  38              		.align	2
+  39              	.L2:
+  40 0008 00000000 		.word	adc_del_sig
+  41              		.cfi_endproc
+  42              	.LFE66:
+  43              		.size	isr_1_Interrupt, .-isr_1_Interrupt
+  44              		.section	.text.isr_1_SetVector,"ax",%progbits
+  45              		.align	2
+  46              		.global	isr_1_SetVector
+  47              		.thumb
+  48              		.thumb_func
+  49              		.type	isr_1_SetVector, %function
+  50              	isr_1_SetVector:
+  51              	.LFB67:
+ 171:Generated_Source\PSoC5/isr_1.c ****     /* `#END` */
+ 172:Generated_Source\PSoC5/isr_1.c **** }
+ 173:Generated_Source\PSoC5/isr_1.c **** 
+ 174:Generated_Source\PSoC5/isr_1.c **** 
+ 175:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 176:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_SetVector
+ 177:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 5
+
+
+ 178:Generated_Source\PSoC5/isr_1.c **** *
+ 179:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 180:Generated_Source\PSoC5/isr_1.c **** *   Change the ISR vector for the Interrupt. Note calling isr_1_Start
+ 181:Generated_Source\PSoC5/isr_1.c **** *   will override any effect this method would have had. To set the vector 
+ 182:Generated_Source\PSoC5/isr_1.c **** *   before the component has been started use isr_1_StartEx instead.
+ 183:Generated_Source\PSoC5/isr_1.c **** * 
+ 184:Generated_Source\PSoC5/isr_1.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ 185:Generated_Source\PSoC5/isr_1.c **** *   used to provide consistent definition across compilers:
+ 186:Generated_Source\PSoC5/isr_1.c **** *
+ 187:Generated_Source\PSoC5/isr_1.c **** *   Function definition example:
+ 188:Generated_Source\PSoC5/isr_1.c **** *   CY_ISR(MyISR)
+ 189:Generated_Source\PSoC5/isr_1.c **** *   {
+ 190:Generated_Source\PSoC5/isr_1.c **** *   }
+ 191:Generated_Source\PSoC5/isr_1.c **** *
+ 192:Generated_Source\PSoC5/isr_1.c **** *   Function prototype example:
+ 193:Generated_Source\PSoC5/isr_1.c **** *     CY_ISR_PROTO(MyISR);
+ 194:Generated_Source\PSoC5/isr_1.c **** *
+ 195:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 196:Generated_Source\PSoC5/isr_1.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 197:Generated_Source\PSoC5/isr_1.c **** *
+ 198:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 199:Generated_Source\PSoC5/isr_1.c **** *   None
+ 200:Generated_Source\PSoC5/isr_1.c **** *
+ 201:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 202:Generated_Source\PSoC5/isr_1.c **** void isr_1_SetVector(cyisraddress address)
+ 203:Generated_Source\PSoC5/isr_1.c **** {
+  52              		.loc 1 203 0
+  53              		.cfi_startproc
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56              		@ link register save eliminated.
+  57              	.LVL0:
+ 204:Generated_Source\PSoC5/isr_1.c ****     cyisraddress * ramVectorTable;
+ 205:Generated_Source\PSoC5/isr_1.c **** 
+ 206:Generated_Source\PSoC5/isr_1.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  58              		.loc 1 206 0
+  59 0000 014B     		ldr	r3, .L5
+  60 0002 1B68     		ldr	r3, [r3]
+  61              	.LVL1:
+ 207:Generated_Source\PSoC5/isr_1.c **** 
+ 208:Generated_Source\PSoC5/isr_1.c ****     ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_1__INTC_NUMBER] = address;
+  62              		.loc 1 208 0
+  63 0004 D864     		str	r0, [r3, #76]
+  64 0006 7047     		bx	lr
+  65              	.L6:
+  66              		.align	2
+  67              	.L5:
+  68 0008 08ED00E0 		.word	-536810232
+  69              		.cfi_endproc
+  70              	.LFE67:
+  71              		.size	isr_1_SetVector, .-isr_1_SetVector
+  72              		.section	.text.isr_1_GetVector,"ax",%progbits
+  73              		.align	2
+  74              		.global	isr_1_GetVector
+  75              		.thumb
+  76              		.thumb_func
+  77              		.type	isr_1_GetVector, %function
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 6
+
+
+  78              	isr_1_GetVector:
+  79              	.LFB68:
+ 209:Generated_Source\PSoC5/isr_1.c **** }
+ 210:Generated_Source\PSoC5/isr_1.c **** 
+ 211:Generated_Source\PSoC5/isr_1.c **** 
+ 212:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 213:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_GetVector
+ 214:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 215:Generated_Source\PSoC5/isr_1.c **** *
+ 216:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 217:Generated_Source\PSoC5/isr_1.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 218:Generated_Source\PSoC5/isr_1.c **** *
+ 219:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 220:Generated_Source\PSoC5/isr_1.c **** *   None
+ 221:Generated_Source\PSoC5/isr_1.c **** *
+ 222:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 223:Generated_Source\PSoC5/isr_1.c **** *   Address of the ISR in the interrupt vector table.
+ 224:Generated_Source\PSoC5/isr_1.c **** *
+ 225:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 226:Generated_Source\PSoC5/isr_1.c **** cyisraddress isr_1_GetVector(void)
+ 227:Generated_Source\PSoC5/isr_1.c **** {
+  80              		.loc 1 227 0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84              		@ link register save eliminated.
+ 228:Generated_Source\PSoC5/isr_1.c ****     cyisraddress * ramVectorTable;
+ 229:Generated_Source\PSoC5/isr_1.c **** 
+ 230:Generated_Source\PSoC5/isr_1.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  85              		.loc 1 230 0
+  86 0000 014B     		ldr	r3, .L8
+  87 0002 1B68     		ldr	r3, [r3]
+  88              	.LVL2:
+ 231:Generated_Source\PSoC5/isr_1.c **** 
+ 232:Generated_Source\PSoC5/isr_1.c ****     return ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_1__INTC_NUMBER];
+ 233:Generated_Source\PSoC5/isr_1.c **** }
+  89              		.loc 1 233 0
+  90 0004 D86C     		ldr	r0, [r3, #76]
+  91 0006 7047     		bx	lr
+  92              	.L9:
+  93              		.align	2
+  94              	.L8:
+  95 0008 08ED00E0 		.word	-536810232
+  96              		.cfi_endproc
+  97              	.LFE68:
+  98              		.size	isr_1_GetVector, .-isr_1_GetVector
+  99              		.section	.text.isr_1_SetPriority,"ax",%progbits
+ 100              		.align	2
+ 101              		.global	isr_1_SetPriority
+ 102              		.thumb
+ 103              		.thumb_func
+ 104              		.type	isr_1_SetPriority, %function
+ 105              	isr_1_SetPriority:
+ 106              	.LFB69:
+ 234:Generated_Source\PSoC5/isr_1.c **** 
+ 235:Generated_Source\PSoC5/isr_1.c **** 
+ 236:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 7
+
+
+ 237:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_SetPriority
+ 238:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 239:Generated_Source\PSoC5/isr_1.c **** *
+ 240:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 241:Generated_Source\PSoC5/isr_1.c **** *   Sets the Priority of the Interrupt. 
+ 242:Generated_Source\PSoC5/isr_1.c **** *
+ 243:Generated_Source\PSoC5/isr_1.c **** *   Note calling isr_1_Start or isr_1_StartEx will 
+ 244:Generated_Source\PSoC5/isr_1.c **** *   override any effect this API would have had. This API should only be called
+ 245:Generated_Source\PSoC5/isr_1.c **** *   after isr_1_Start or isr_1_StartEx has been called. 
+ 246:Generated_Source\PSoC5/isr_1.c **** *   To set the initial priority for the component, use the Design-Wide Resources
+ 247:Generated_Source\PSoC5/isr_1.c **** *   Interrupt Editor.
+ 248:Generated_Source\PSoC5/isr_1.c **** *
+ 249:Generated_Source\PSoC5/isr_1.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
+ 250:Generated_Source\PSoC5/isr_1.c **** *
+ 251:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 252:Generated_Source\PSoC5/isr_1.c **** *   priority: Priority of the interrupt, 0 being the highest priority
+ 253:Generated_Source\PSoC5/isr_1.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 254:Generated_Source\PSoC5/isr_1.c **** *             PSoC 4: Priority is from 0 to 3.
+ 255:Generated_Source\PSoC5/isr_1.c **** *
+ 256:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 257:Generated_Source\PSoC5/isr_1.c **** *   None
+ 258:Generated_Source\PSoC5/isr_1.c **** *
+ 259:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 260:Generated_Source\PSoC5/isr_1.c **** void isr_1_SetPriority(uint8 priority)
+ 261:Generated_Source\PSoC5/isr_1.c **** {
+ 107              		.loc 1 261 0
+ 108              		.cfi_startproc
+ 109              		@ args = 0, pretend = 0, frame = 0
+ 110              		@ frame_needed = 0, uses_anonymous_args = 0
+ 111              		@ link register save eliminated.
+ 112              	.LVL3:
+ 262:Generated_Source\PSoC5/isr_1.c ****     *isr_1_INTC_PRIOR = priority << 5;
+ 113              		.loc 1 262 0
+ 114 0000 4001     		lsls	r0, r0, #5
+ 115              	.LVL4:
+ 116 0002 C0B2     		uxtb	r0, r0
+ 117 0004 014B     		ldr	r3, .L11
+ 118 0006 1870     		strb	r0, [r3]
+ 119 0008 7047     		bx	lr
+ 120              	.L12:
+ 121 000a 00BF     		.align	2
+ 122              	.L11:
+ 123 000c 03E400E0 		.word	-536812541
+ 124              		.cfi_endproc
+ 125              	.LFE69:
+ 126              		.size	isr_1_SetPriority, .-isr_1_SetPriority
+ 127              		.section	.text.isr_1_GetPriority,"ax",%progbits
+ 128              		.align	2
+ 129              		.global	isr_1_GetPriority
+ 130              		.thumb
+ 131              		.thumb_func
+ 132              		.type	isr_1_GetPriority, %function
+ 133              	isr_1_GetPriority:
+ 134              	.LFB70:
+ 263:Generated_Source\PSoC5/isr_1.c **** }
+ 264:Generated_Source\PSoC5/isr_1.c **** 
+ 265:Generated_Source\PSoC5/isr_1.c **** 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 8
+
+
+ 266:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 267:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_GetPriority
+ 268:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 269:Generated_Source\PSoC5/isr_1.c **** *
+ 270:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 271:Generated_Source\PSoC5/isr_1.c **** *   Gets the Priority of the Interrupt.
+ 272:Generated_Source\PSoC5/isr_1.c **** *
+ 273:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 274:Generated_Source\PSoC5/isr_1.c **** *   None
+ 275:Generated_Source\PSoC5/isr_1.c **** *
+ 276:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 277:Generated_Source\PSoC5/isr_1.c **** *   Priority of the interrupt, 0 being the highest priority
+ 278:Generated_Source\PSoC5/isr_1.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 279:Generated_Source\PSoC5/isr_1.c **** *    PSoC 4: Priority is from 0 to 3.
+ 280:Generated_Source\PSoC5/isr_1.c **** *
+ 281:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 282:Generated_Source\PSoC5/isr_1.c **** uint8 isr_1_GetPriority(void)
+ 283:Generated_Source\PSoC5/isr_1.c **** {
+ 135              		.loc 1 283 0
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+ 284:Generated_Source\PSoC5/isr_1.c ****     uint8 priority;
+ 285:Generated_Source\PSoC5/isr_1.c **** 
+ 286:Generated_Source\PSoC5/isr_1.c **** 
+ 287:Generated_Source\PSoC5/isr_1.c ****     priority = *isr_1_INTC_PRIOR >> 5;
+ 140              		.loc 1 287 0
+ 141 0000 014B     		ldr	r3, .L14
+ 142 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 143              	.LVL5:
+ 288:Generated_Source\PSoC5/isr_1.c **** 
+ 289:Generated_Source\PSoC5/isr_1.c ****     return priority;
+ 290:Generated_Source\PSoC5/isr_1.c **** }
+ 144              		.loc 1 290 0
+ 145 0004 4009     		lsrs	r0, r0, #5
+ 146              	.LVL6:
+ 147 0006 7047     		bx	lr
+ 148              	.L15:
+ 149              		.align	2
+ 150              	.L14:
+ 151 0008 03E400E0 		.word	-536812541
+ 152              		.cfi_endproc
+ 153              	.LFE70:
+ 154              		.size	isr_1_GetPriority, .-isr_1_GetPriority
+ 155              		.section	.text.isr_1_Enable,"ax",%progbits
+ 156              		.align	2
+ 157              		.global	isr_1_Enable
+ 158              		.thumb
+ 159              		.thumb_func
+ 160              		.type	isr_1_Enable, %function
+ 161              	isr_1_Enable:
+ 162              	.LFB71:
+ 291:Generated_Source\PSoC5/isr_1.c **** 
+ 292:Generated_Source\PSoC5/isr_1.c **** 
+ 293:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 294:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_Enable
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 9
+
+
+ 295:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 296:Generated_Source\PSoC5/isr_1.c **** *
+ 297:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 298:Generated_Source\PSoC5/isr_1.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
+ 299:Generated_Source\PSoC5/isr_1.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
+ 300:Generated_Source\PSoC5/isr_1.c **** *   function, which sets the vector and the priority, has been called.
+ 301:Generated_Source\PSoC5/isr_1.c **** *
+ 302:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 303:Generated_Source\PSoC5/isr_1.c **** *   None
+ 304:Generated_Source\PSoC5/isr_1.c **** *
+ 305:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 306:Generated_Source\PSoC5/isr_1.c **** *   None
+ 307:Generated_Source\PSoC5/isr_1.c **** *
+ 308:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 309:Generated_Source\PSoC5/isr_1.c **** void isr_1_Enable(void)
+ 310:Generated_Source\PSoC5/isr_1.c **** {
+ 163              		.loc 1 310 0
+ 164              		.cfi_startproc
+ 165              		@ args = 0, pretend = 0, frame = 0
+ 166              		@ frame_needed = 0, uses_anonymous_args = 0
+ 167              		@ link register save eliminated.
+ 311:Generated_Source\PSoC5/isr_1.c ****     /* Enable the general interrupt. */
+ 312:Generated_Source\PSoC5/isr_1.c ****     *isr_1_INTC_SET_EN = isr_1__INTC_MASK;
+ 168              		.loc 1 312 0
+ 169 0000 0822     		movs	r2, #8
+ 170 0002 014B     		ldr	r3, .L17
+ 171 0004 1A60     		str	r2, [r3]
+ 172 0006 7047     		bx	lr
+ 173              	.L18:
+ 174              		.align	2
+ 175              	.L17:
+ 176 0008 00E100E0 		.word	-536813312
+ 177              		.cfi_endproc
+ 178              	.LFE71:
+ 179              		.size	isr_1_Enable, .-isr_1_Enable
+ 180              		.section	.text.isr_1_GetState,"ax",%progbits
+ 181              		.align	2
+ 182              		.global	isr_1_GetState
+ 183              		.thumb
+ 184              		.thumb_func
+ 185              		.type	isr_1_GetState, %function
+ 186              	isr_1_GetState:
+ 187              	.LFB72:
+ 313:Generated_Source\PSoC5/isr_1.c **** }
+ 314:Generated_Source\PSoC5/isr_1.c **** 
+ 315:Generated_Source\PSoC5/isr_1.c **** 
+ 316:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 317:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_GetState
+ 318:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 319:Generated_Source\PSoC5/isr_1.c **** *
+ 320:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 321:Generated_Source\PSoC5/isr_1.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 322:Generated_Source\PSoC5/isr_1.c **** *
+ 323:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 324:Generated_Source\PSoC5/isr_1.c **** *   None
+ 325:Generated_Source\PSoC5/isr_1.c **** *
+ 326:Generated_Source\PSoC5/isr_1.c **** * Return:
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 10
+
+
+ 327:Generated_Source\PSoC5/isr_1.c **** *   1 if enabled, 0 if disabled.
+ 328:Generated_Source\PSoC5/isr_1.c **** *
+ 329:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 330:Generated_Source\PSoC5/isr_1.c **** uint8 isr_1_GetState(void)
+ 331:Generated_Source\PSoC5/isr_1.c **** {
+ 188              		.loc 1 331 0
+ 189              		.cfi_startproc
+ 190              		@ args = 0, pretend = 0, frame = 0
+ 191              		@ frame_needed = 0, uses_anonymous_args = 0
+ 192              		@ link register save eliminated.
+ 332:Generated_Source\PSoC5/isr_1.c ****     /* Get the state of the general interrupt. */
+ 333:Generated_Source\PSoC5/isr_1.c ****     return ((*isr_1_INTC_SET_EN & (uint32)isr_1__INTC_MASK) != 0u) ? 1u:0u;
+ 193              		.loc 1 333 0
+ 194 0000 044B     		ldr	r3, .L22
+ 195 0002 1B68     		ldr	r3, [r3]
+ 196 0004 13F0080F 		tst	r3, #8
+ 197 0008 01D0     		beq	.L21
+ 198 000a 0120     		movs	r0, #1
+ 199 000c 7047     		bx	lr
+ 200              	.L21:
+ 201 000e 0020     		movs	r0, #0
+ 334:Generated_Source\PSoC5/isr_1.c **** }
+ 202              		.loc 1 334 0
+ 203 0010 7047     		bx	lr
+ 204              	.L23:
+ 205 0012 00BF     		.align	2
+ 206              	.L22:
+ 207 0014 00E100E0 		.word	-536813312
+ 208              		.cfi_endproc
+ 209              	.LFE72:
+ 210              		.size	isr_1_GetState, .-isr_1_GetState
+ 211              		.section	.text.isr_1_Disable,"ax",%progbits
+ 212              		.align	2
+ 213              		.global	isr_1_Disable
+ 214              		.thumb
+ 215              		.thumb_func
+ 216              		.type	isr_1_Disable, %function
+ 217              	isr_1_Disable:
+ 218              	.LFB73:
+ 335:Generated_Source\PSoC5/isr_1.c **** 
+ 336:Generated_Source\PSoC5/isr_1.c **** 
+ 337:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 338:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_Disable
+ 339:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 340:Generated_Source\PSoC5/isr_1.c **** *
+ 341:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 342:Generated_Source\PSoC5/isr_1.c **** *   Disables the Interrupt in the interrupt controller.
+ 343:Generated_Source\PSoC5/isr_1.c **** *
+ 344:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 345:Generated_Source\PSoC5/isr_1.c **** *   None
+ 346:Generated_Source\PSoC5/isr_1.c **** *
+ 347:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 348:Generated_Source\PSoC5/isr_1.c **** *   None
+ 349:Generated_Source\PSoC5/isr_1.c **** *
+ 350:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 351:Generated_Source\PSoC5/isr_1.c **** void isr_1_Disable(void)
+ 352:Generated_Source\PSoC5/isr_1.c **** {
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 11
+
+
+ 219              		.loc 1 352 0
+ 220              		.cfi_startproc
+ 221              		@ args = 0, pretend = 0, frame = 0
+ 222              		@ frame_needed = 0, uses_anonymous_args = 0
+ 223              		@ link register save eliminated.
+ 353:Generated_Source\PSoC5/isr_1.c ****     /* Disable the general interrupt. */
+ 354:Generated_Source\PSoC5/isr_1.c ****     *isr_1_INTC_CLR_EN = isr_1__INTC_MASK;
+ 224              		.loc 1 354 0
+ 225 0000 0822     		movs	r2, #8
+ 226 0002 014B     		ldr	r3, .L25
+ 227 0004 1A60     		str	r2, [r3]
+ 228 0006 7047     		bx	lr
+ 229              	.L26:
+ 230              		.align	2
+ 231              	.L25:
+ 232 0008 80E100E0 		.word	-536813184
+ 233              		.cfi_endproc
+ 234              	.LFE73:
+ 235              		.size	isr_1_Disable, .-isr_1_Disable
+ 236              		.section	.text.isr_1_Start,"ax",%progbits
+ 237              		.align	2
+ 238              		.global	isr_1_Start
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.type	isr_1_Start, %function
+ 242              	isr_1_Start:
+ 243              	.LFB63:
+  64:Generated_Source\PSoC5/isr_1.c ****     /* For all we know the interrupt is active. */
+ 244              		.loc 1 64 0
+ 245              		.cfi_startproc
+ 246              		@ args = 0, pretend = 0, frame = 0
+ 247              		@ frame_needed = 0, uses_anonymous_args = 0
+ 248 0000 08B5     		push	{r3, lr}
+ 249              		.cfi_def_cfa_offset 8
+ 250              		.cfi_offset 3, -8
+ 251              		.cfi_offset 14, -4
+  66:Generated_Source\PSoC5/isr_1.c **** 
+ 252              		.loc 1 66 0
+ 253 0002 FFF7FEFF 		bl	isr_1_Disable
+ 254              	.LVL7:
+  69:Generated_Source\PSoC5/isr_1.c **** 
+ 255              		.loc 1 69 0
+ 256 0006 0448     		ldr	r0, .L29
+ 257 0008 FFF7FEFF 		bl	isr_1_SetVector
+ 258              	.LVL8:
+  72:Generated_Source\PSoC5/isr_1.c **** 
+ 259              		.loc 1 72 0
+ 260 000c 0720     		movs	r0, #7
+ 261 000e FFF7FEFF 		bl	isr_1_SetPriority
+ 262              	.LVL9:
+  75:Generated_Source\PSoC5/isr_1.c **** }
+ 263              		.loc 1 75 0
+ 264 0012 FFF7FEFF 		bl	isr_1_Enable
+ 265              	.LVL10:
+ 266 0016 08BD     		pop	{r3, pc}
+ 267              	.L30:
+ 268              		.align	2
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 12
+
+
+ 269              	.L29:
+ 270 0018 00000000 		.word	isr_1_Interrupt
+ 271              		.cfi_endproc
+ 272              	.LFE63:
+ 273              		.size	isr_1_Start, .-isr_1_Start
+ 274              		.section	.text.isr_1_StartEx,"ax",%progbits
+ 275              		.align	2
+ 276              		.global	isr_1_StartEx
+ 277              		.thumb
+ 278              		.thumb_func
+ 279              		.type	isr_1_StartEx, %function
+ 280              	isr_1_StartEx:
+ 281              	.LFB64:
+ 107:Generated_Source\PSoC5/isr_1.c ****     /* For all we know the interrupt is active. */
+ 282              		.loc 1 107 0
+ 283              		.cfi_startproc
+ 284              		@ args = 0, pretend = 0, frame = 0
+ 285              		@ frame_needed = 0, uses_anonymous_args = 0
+ 286              	.LVL11:
+ 287 0000 10B5     		push	{r4, lr}
+ 288              		.cfi_def_cfa_offset 8
+ 289              		.cfi_offset 4, -8
+ 290              		.cfi_offset 14, -4
+ 291 0002 0446     		mov	r4, r0
+ 109:Generated_Source\PSoC5/isr_1.c **** 
+ 292              		.loc 1 109 0
+ 293 0004 FFF7FEFF 		bl	isr_1_Disable
+ 294              	.LVL12:
+ 112:Generated_Source\PSoC5/isr_1.c **** 
+ 295              		.loc 1 112 0
+ 296 0008 2046     		mov	r0, r4
+ 297 000a FFF7FEFF 		bl	isr_1_SetVector
+ 298              	.LVL13:
+ 115:Generated_Source\PSoC5/isr_1.c **** 
+ 299              		.loc 1 115 0
+ 300 000e 0720     		movs	r0, #7
+ 301 0010 FFF7FEFF 		bl	isr_1_SetPriority
+ 302              	.LVL14:
+ 118:Generated_Source\PSoC5/isr_1.c **** }
+ 303              		.loc 1 118 0
+ 304 0014 FFF7FEFF 		bl	isr_1_Enable
+ 305              	.LVL15:
+ 306 0018 10BD     		pop	{r4, pc}
+ 307              		.cfi_endproc
+ 308              	.LFE64:
+ 309              		.size	isr_1_StartEx, .-isr_1_StartEx
+ 310 001a 00BF     		.section	.text.isr_1_Stop,"ax",%progbits
+ 311              		.align	2
+ 312              		.global	isr_1_Stop
+ 313              		.thumb
+ 314              		.thumb_func
+ 315              		.type	isr_1_Stop, %function
+ 316              	isr_1_Stop:
+ 317              	.LFB65:
+ 137:Generated_Source\PSoC5/isr_1.c ****     /* Disable this interrupt. */
+ 318              		.loc 1 137 0
+ 319              		.cfi_startproc
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 13
+
+
+ 320              		@ args = 0, pretend = 0, frame = 0
+ 321              		@ frame_needed = 0, uses_anonymous_args = 0
+ 322 0000 08B5     		push	{r3, lr}
+ 323              		.cfi_def_cfa_offset 8
+ 324              		.cfi_offset 3, -8
+ 325              		.cfi_offset 14, -4
+ 139:Generated_Source\PSoC5/isr_1.c **** 
+ 326              		.loc 1 139 0
+ 327 0002 FFF7FEFF 		bl	isr_1_Disable
+ 328              	.LVL16:
+ 142:Generated_Source\PSoC5/isr_1.c **** }
+ 329              		.loc 1 142 0
+ 330 0006 0248     		ldr	r0, .L35
+ 331 0008 FFF7FEFF 		bl	isr_1_SetVector
+ 332              	.LVL17:
+ 333 000c 08BD     		pop	{r3, pc}
+ 334              	.L36:
+ 335 000e 00BF     		.align	2
+ 336              	.L35:
+ 337 0010 00000000 		.word	IntDefaultHandler
+ 338              		.cfi_endproc
+ 339              	.LFE65:
+ 340              		.size	isr_1_Stop, .-isr_1_Stop
+ 341              		.section	.text.isr_1_SetPending,"ax",%progbits
+ 342              		.align	2
+ 343              		.global	isr_1_SetPending
+ 344              		.thumb
+ 345              		.thumb_func
+ 346              		.type	isr_1_SetPending, %function
+ 347              	isr_1_SetPending:
+ 348              	.LFB74:
+ 355:Generated_Source\PSoC5/isr_1.c **** }
+ 356:Generated_Source\PSoC5/isr_1.c **** 
+ 357:Generated_Source\PSoC5/isr_1.c **** 
+ 358:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 359:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_SetPending
+ 360:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 361:Generated_Source\PSoC5/isr_1.c **** *
+ 362:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 363:Generated_Source\PSoC5/isr_1.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 364:Generated_Source\PSoC5/isr_1.c **** *   generating the interrupt.
+ 365:Generated_Source\PSoC5/isr_1.c **** *
+ 366:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 367:Generated_Source\PSoC5/isr_1.c **** *   None
+ 368:Generated_Source\PSoC5/isr_1.c **** *
+ 369:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 370:Generated_Source\PSoC5/isr_1.c **** *   None
+ 371:Generated_Source\PSoC5/isr_1.c **** *
+ 372:Generated_Source\PSoC5/isr_1.c **** * Side Effects:
+ 373:Generated_Source\PSoC5/isr_1.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
+ 374:Generated_Source\PSoC5/isr_1.c **** *   entered (depending on the priority of this interrupt and other pending 
+ 375:Generated_Source\PSoC5/isr_1.c **** *   interrupts).
+ 376:Generated_Source\PSoC5/isr_1.c **** *
+ 377:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 378:Generated_Source\PSoC5/isr_1.c **** void isr_1_SetPending(void)
+ 379:Generated_Source\PSoC5/isr_1.c **** {
+ 349              		.loc 1 379 0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 14
+
+
+ 350              		.cfi_startproc
+ 351              		@ args = 0, pretend = 0, frame = 0
+ 352              		@ frame_needed = 0, uses_anonymous_args = 0
+ 353              		@ link register save eliminated.
+ 380:Generated_Source\PSoC5/isr_1.c ****     *isr_1_INTC_SET_PD = isr_1__INTC_MASK;
+ 354              		.loc 1 380 0
+ 355 0000 0822     		movs	r2, #8
+ 356 0002 014B     		ldr	r3, .L38
+ 357 0004 1A60     		str	r2, [r3]
+ 358 0006 7047     		bx	lr
+ 359              	.L39:
+ 360              		.align	2
+ 361              	.L38:
+ 362 0008 00E200E0 		.word	-536813056
+ 363              		.cfi_endproc
+ 364              	.LFE74:
+ 365              		.size	isr_1_SetPending, .-isr_1_SetPending
+ 366              		.section	.text.isr_1_ClearPending,"ax",%progbits
+ 367              		.align	2
+ 368              		.global	isr_1_ClearPending
+ 369              		.thumb
+ 370              		.thumb_func
+ 371              		.type	isr_1_ClearPending, %function
+ 372              	isr_1_ClearPending:
+ 373              	.LFB75:
+ 381:Generated_Source\PSoC5/isr_1.c **** }
+ 382:Generated_Source\PSoC5/isr_1.c **** 
+ 383:Generated_Source\PSoC5/isr_1.c **** 
+ 384:Generated_Source\PSoC5/isr_1.c **** /*******************************************************************************
+ 385:Generated_Source\PSoC5/isr_1.c **** * Function Name: isr_1_ClearPending
+ 386:Generated_Source\PSoC5/isr_1.c **** ********************************************************************************
+ 387:Generated_Source\PSoC5/isr_1.c **** *
+ 388:Generated_Source\PSoC5/isr_1.c **** * Summary:
+ 389:Generated_Source\PSoC5/isr_1.c **** *   Clears a pending interrupt in the interrupt controller.
+ 390:Generated_Source\PSoC5/isr_1.c **** *
+ 391:Generated_Source\PSoC5/isr_1.c **** *   Note Some interrupt sources are clear-on-read and require the block 
+ 392:Generated_Source\PSoC5/isr_1.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
+ 393:Generated_Source\PSoC5/isr_1.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
+ 394:Generated_Source\PSoC5/isr_1.c **** *   pending state even though the interrupt itself is cleared using this API.
+ 395:Generated_Source\PSoC5/isr_1.c **** *
+ 396:Generated_Source\PSoC5/isr_1.c **** * Parameters:
+ 397:Generated_Source\PSoC5/isr_1.c **** *   None
+ 398:Generated_Source\PSoC5/isr_1.c **** *
+ 399:Generated_Source\PSoC5/isr_1.c **** * Return:
+ 400:Generated_Source\PSoC5/isr_1.c **** *   None
+ 401:Generated_Source\PSoC5/isr_1.c **** *
+ 402:Generated_Source\PSoC5/isr_1.c **** *******************************************************************************/
+ 403:Generated_Source\PSoC5/isr_1.c **** void isr_1_ClearPending(void)
+ 404:Generated_Source\PSoC5/isr_1.c **** {
+ 374              		.loc 1 404 0
+ 375              		.cfi_startproc
+ 376              		@ args = 0, pretend = 0, frame = 0
+ 377              		@ frame_needed = 0, uses_anonymous_args = 0
+ 378              		@ link register save eliminated.
+ 405:Generated_Source\PSoC5/isr_1.c ****     *isr_1_INTC_CLR_PD = isr_1__INTC_MASK;
+ 379              		.loc 1 405 0
+ 380 0000 0822     		movs	r2, #8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 15
+
+
+ 381 0002 014B     		ldr	r3, .L41
+ 382 0004 1A60     		str	r2, [r3]
+ 383 0006 7047     		bx	lr
+ 384              	.L42:
+ 385              		.align	2
+ 386              	.L41:
+ 387 0008 80E200E0 		.word	-536812928
+ 388              		.cfi_endproc
+ 389              	.LFE75:
+ 390              		.size	isr_1_ClearPending, .-isr_1_ClearPending
+ 391              		.text
+ 392              	.Letext0:
+ 393              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 394              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 395              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 396              		.file 5 "./global.h"
+ 397              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 398              		.section	.debug_info,"",%progbits
+ 399              	.Ldebug_info0:
+ 400 0000 2A030000 		.4byte	0x32a
+ 401 0004 0400     		.2byte	0x4
+ 402 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 403 000a 04       		.byte	0x4
+ 404 000b 01       		.uleb128 0x1
+ 405 000c 6B010000 		.4byte	.LASF40
+ 406 0010 01       		.byte	0x1
+ 407 0011 45010000 		.4byte	.LASF41
+ 408 0015 A2000000 		.4byte	.LASF42
+ 409 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 410 001d 00000000 		.4byte	0
+ 411 0021 00000000 		.4byte	.Ldebug_line0
+ 412 0025 02       		.uleb128 0x2
+ 413 0026 04       		.byte	0x4
+ 414 0027 05       		.byte	0x5
+ 415 0028 696E7400 		.ascii	"int\000"
+ 416 002c 03       		.uleb128 0x3
+ 417 002d 04       		.byte	0x4
+ 418 002e 07       		.byte	0x7
+ 419 002f F9010000 		.4byte	.LASF0
+ 420 0033 03       		.uleb128 0x3
+ 421 0034 01       		.byte	0x1
+ 422 0035 06       		.byte	0x6
+ 423 0036 AB020000 		.4byte	.LASF1
+ 424 003a 03       		.uleb128 0x3
+ 425 003b 01       		.byte	0x1
+ 426 003c 08       		.byte	0x8
+ 427 003d E2000000 		.4byte	.LASF2
+ 428 0041 03       		.uleb128 0x3
+ 429 0042 02       		.byte	0x2
+ 430 0043 05       		.byte	0x5
+ 431 0044 78020000 		.4byte	.LASF3
+ 432 0048 03       		.uleb128 0x3
+ 433 0049 02       		.byte	0x2
+ 434 004a 07       		.byte	0x7
+ 435 004b 66000000 		.4byte	.LASF4
+ 436 004f 04       		.uleb128 0x4
+ 437 0050 50000000 		.4byte	.LASF11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 16
+
+
+ 438 0054 02       		.byte	0x2
+ 439 0055 3F       		.byte	0x3f
+ 440 0056 5A000000 		.4byte	0x5a
+ 441 005a 03       		.uleb128 0x3
+ 442 005b 04       		.byte	0x4
+ 443 005c 05       		.byte	0x5
+ 444 005d A2020000 		.4byte	.LASF5
+ 445 0061 03       		.uleb128 0x3
+ 446 0062 04       		.byte	0x4
+ 447 0063 07       		.byte	0x7
+ 448 0064 F5000000 		.4byte	.LASF6
+ 449 0068 03       		.uleb128 0x3
+ 450 0069 08       		.byte	0x8
+ 451 006a 05       		.byte	0x5
+ 452 006b 56020000 		.4byte	.LASF7
+ 453 006f 03       		.uleb128 0x3
+ 454 0070 08       		.byte	0x8
+ 455 0071 07       		.byte	0x7
+ 456 0072 0E020000 		.4byte	.LASF8
+ 457 0076 03       		.uleb128 0x3
+ 458 0077 04       		.byte	0x4
+ 459 0078 07       		.byte	0x7
+ 460 0079 4D020000 		.4byte	.LASF9
+ 461 007d 05       		.uleb128 0x5
+ 462 007e 04       		.byte	0x4
+ 463 007f 83000000 		.4byte	0x83
+ 464 0083 06       		.uleb128 0x6
+ 465 0084 03       		.uleb128 0x3
+ 466 0085 01       		.byte	0x1
+ 467 0086 08       		.byte	0x8
+ 468 0087 64020000 		.4byte	.LASF10
+ 469 008b 04       		.uleb128 0x4
+ 470 008c 45020000 		.4byte	.LASF12
+ 471 0090 03       		.byte	0x3
+ 472 0091 2C       		.byte	0x2c
+ 473 0092 4F000000 		.4byte	0x4f
+ 474 0096 07       		.uleb128 0x7
+ 475 0097 32020000 		.4byte	.LASF13
+ 476 009b 04       		.byte	0x4
+ 477 009c 9201     		.2byte	0x192
+ 478 009e 3A000000 		.4byte	0x3a
+ 479 00a2 07       		.uleb128 0x7
+ 480 00a3 64010000 		.4byte	.LASF14
+ 481 00a7 04       		.byte	0x4
+ 482 00a8 9401     		.2byte	0x194
+ 483 00aa 61000000 		.4byte	0x61
+ 484 00ae 07       		.uleb128 0x7
+ 485 00af 07010000 		.4byte	.LASF15
+ 486 00b3 04       		.byte	0x4
+ 487 00b4 9701     		.2byte	0x197
+ 488 00b6 5A000000 		.4byte	0x5a
+ 489 00ba 03       		.uleb128 0x3
+ 490 00bb 04       		.byte	0x4
+ 491 00bc 04       		.byte	0x4
+ 492 00bd 97000000 		.4byte	.LASF16
+ 493 00c1 03       		.uleb128 0x3
+ 494 00c2 08       		.byte	0x8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 17
+
+
+ 495 00c3 04       		.byte	0x4
+ 496 00c4 B7020000 		.4byte	.LASF17
+ 497 00c8 07       		.uleb128 0x7
+ 498 00c9 F0000000 		.4byte	.LASF18
+ 499 00cd 04       		.byte	0x4
+ 500 00ce 3C02     		.2byte	0x23c
+ 501 00d0 D4000000 		.4byte	0xd4
+ 502 00d4 08       		.uleb128 0x8
+ 503 00d5 96000000 		.4byte	0x96
+ 504 00d9 07       		.uleb128 0x7
+ 505 00da 1C000000 		.4byte	.LASF19
+ 506 00de 04       		.byte	0x4
+ 507 00df 3E02     		.2byte	0x23e
+ 508 00e1 E5000000 		.4byte	0xe5
+ 509 00e5 08       		.uleb128 0x8
+ 510 00e6 A2000000 		.4byte	0xa2
+ 511 00ea 07       		.uleb128 0x7
+ 512 00eb 25020000 		.4byte	.LASF20
+ 513 00ef 04       		.byte	0x4
+ 514 00f0 4E02     		.2byte	0x24e
+ 515 00f2 7D000000 		.4byte	0x7d
+ 516 00f6 09       		.uleb128 0x9
+ 517 00f7 61646300 		.ascii	"adc\000"
+ 518 00fb 08       		.byte	0x8
+ 519 00fc 05       		.byte	0x5
+ 520 00fd 13       		.byte	0x13
+ 521 00fe 1B010000 		.4byte	0x11b
+ 522 0102 0A       		.uleb128 0xa
+ 523 0103 13000000 		.4byte	.LASF21
+ 524 0107 05       		.byte	0x5
+ 525 0108 14       		.byte	0x14
+ 526 0109 96000000 		.4byte	0x96
+ 527 010d 00       		.byte	0
+ 528 010e 0A       		.uleb128 0xa
+ 529 010f 9D000000 		.4byte	.LASF22
+ 530 0113 05       		.byte	0x5
+ 531 0114 15       		.byte	0x15
+ 532 0115 AE000000 		.4byte	0xae
+ 533 0119 04       		.byte	0x4
+ 534 011a 00       		.byte	0
+ 535 011b 0B       		.uleb128 0xb
+ 536 011c 92020000 		.4byte	.LASF30
+ 537 0120 01       		.byte	0x1
+ 538 0121 A2       		.byte	0xa2
+ 539 0122 00000000 		.4byte	.LFB66
+ 540 0126 0C000000 		.4byte	.LFE66-.LFB66
+ 541 012a 01       		.uleb128 0x1
+ 542 012b 9C       		.byte	0x9c
+ 543 012c 0C       		.uleb128 0xc
+ 544 012d 1A010000 		.4byte	.LASF24
+ 545 0131 01       		.byte	0x1
+ 546 0132 CA       		.byte	0xca
+ 547 0133 00000000 		.4byte	.LFB67
+ 548 0137 0C000000 		.4byte	.LFE67-.LFB67
+ 549 013b 01       		.uleb128 0x1
+ 550 013c 9C       		.byte	0x9c
+ 551 013d 5C010000 		.4byte	0x15c
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 18
+
+
+ 552 0141 0D       		.uleb128 0xd
+ 553 0142 06020000 		.4byte	.LASF26
+ 554 0146 01       		.byte	0x1
+ 555 0147 CA       		.byte	0xca
+ 556 0148 EA000000 		.4byte	0xea
+ 557 014c 01       		.uleb128 0x1
+ 558 014d 50       		.byte	0x50
+ 559 014e 0E       		.uleb128 0xe
+ 560 014f 69020000 		.4byte	.LASF23
+ 561 0153 01       		.byte	0x1
+ 562 0154 CC       		.byte	0xcc
+ 563 0155 5C010000 		.4byte	0x15c
+ 564 0159 01       		.uleb128 0x1
+ 565 015a 53       		.byte	0x53
+ 566 015b 00       		.byte	0
+ 567 015c 05       		.uleb128 0x5
+ 568 015d 04       		.byte	0x4
+ 569 015e EA000000 		.4byte	0xea
+ 570 0162 0F       		.uleb128 0xf
+ 571 0163 82020000 		.4byte	.LASF28
+ 572 0167 01       		.byte	0x1
+ 573 0168 E2       		.byte	0xe2
+ 574 0169 EA000000 		.4byte	0xea
+ 575 016d 00000000 		.4byte	.LFB68
+ 576 0171 0C000000 		.4byte	.LFE68-.LFB68
+ 577 0175 01       		.uleb128 0x1
+ 578 0176 9C       		.byte	0x9c
+ 579 0177 89010000 		.4byte	0x189
+ 580 017b 0E       		.uleb128 0xe
+ 581 017c 69020000 		.4byte	.LASF23
+ 582 0180 01       		.byte	0x1
+ 583 0181 E4       		.byte	0xe4
+ 584 0182 5C010000 		.4byte	0x15c
+ 585 0186 01       		.uleb128 0x1
+ 586 0187 53       		.byte	0x53
+ 587 0188 00       		.byte	0
+ 588 0189 10       		.uleb128 0x10
+ 589 018a 2A010000 		.4byte	.LASF25
+ 590 018e 01       		.byte	0x1
+ 591 018f 0401     		.2byte	0x104
+ 592 0191 00000000 		.4byte	.LFB69
+ 593 0195 10000000 		.4byte	.LFE69-.LFB69
+ 594 0199 01       		.uleb128 0x1
+ 595 019a 9C       		.byte	0x9c
+ 596 019b B0010000 		.4byte	0x1b0
+ 597 019f 11       		.uleb128 0x11
+ 598 01a0 3C010000 		.4byte	.LASF27
+ 599 01a4 01       		.byte	0x1
+ 600 01a5 0401     		.2byte	0x104
+ 601 01a7 96000000 		.4byte	0x96
+ 602 01ab 00000000 		.4byte	.LLST0
+ 603 01af 00       		.byte	0
+ 604 01b0 12       		.uleb128 0x12
+ 605 01b1 79000000 		.4byte	.LASF29
+ 606 01b5 01       		.byte	0x1
+ 607 01b6 1A01     		.2byte	0x11a
+ 608 01b8 96000000 		.4byte	0x96
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 19
+
+
+ 609 01bc 00000000 		.4byte	.LFB70
+ 610 01c0 0C000000 		.4byte	.LFE70-.LFB70
+ 611 01c4 01       		.uleb128 0x1
+ 612 01c5 9C       		.byte	0x9c
+ 613 01c6 DB010000 		.4byte	0x1db
+ 614 01ca 13       		.uleb128 0x13
+ 615 01cb 3C010000 		.4byte	.LASF27
+ 616 01cf 01       		.byte	0x1
+ 617 01d0 1C01     		.2byte	0x11c
+ 618 01d2 96000000 		.4byte	0x96
+ 619 01d6 21000000 		.4byte	.LLST1
+ 620 01da 00       		.byte	0
+ 621 01db 14       		.uleb128 0x14
+ 622 01dc 0D010000 		.4byte	.LASF31
+ 623 01e0 01       		.byte	0x1
+ 624 01e1 3501     		.2byte	0x135
+ 625 01e3 00000000 		.4byte	.LFB71
+ 626 01e7 0C000000 		.4byte	.LFE71-.LFB71
+ 627 01eb 01       		.uleb128 0x1
+ 628 01ec 9C       		.byte	0x9c
+ 629 01ed 15       		.uleb128 0x15
+ 630 01ee 33000000 		.4byte	.LASF43
+ 631 01f2 01       		.byte	0x1
+ 632 01f3 4A01     		.2byte	0x14a
+ 633 01f5 96000000 		.4byte	0x96
+ 634 01f9 00000000 		.4byte	.LFB72
+ 635 01fd 18000000 		.4byte	.LFE72-.LFB72
+ 636 0201 01       		.uleb128 0x1
+ 637 0202 9C       		.byte	0x9c
+ 638 0203 14       		.uleb128 0x14
+ 639 0204 42000000 		.4byte	.LASF32
+ 640 0208 01       		.byte	0x1
+ 641 0209 5F01     		.2byte	0x15f
+ 642 020b 00000000 		.4byte	.LFB73
+ 643 020f 0C000000 		.4byte	.LFE73-.LFB73
+ 644 0213 01       		.uleb128 0x1
+ 645 0214 9C       		.byte	0x9c
+ 646 0215 0C       		.uleb128 0xc
+ 647 0216 5A000000 		.4byte	.LASF33
+ 648 021a 01       		.byte	0x1
+ 649 021b 3F       		.byte	0x3f
+ 650 021c 00000000 		.4byte	.LFB63
+ 651 0220 1C000000 		.4byte	.LFE63-.LFB63
+ 652 0224 01       		.uleb128 0x1
+ 653 0225 9C       		.byte	0x9c
+ 654 0226 67020000 		.4byte	0x267
+ 655 022a 16       		.uleb128 0x16
+ 656 022b 06000000 		.4byte	.LVL7
+ 657 022f 03020000 		.4byte	0x203
+ 658 0233 17       		.uleb128 0x17
+ 659 0234 0C000000 		.4byte	.LVL8
+ 660 0238 2C010000 		.4byte	0x12c
+ 661 023c 4A020000 		.4byte	0x24a
+ 662 0240 18       		.uleb128 0x18
+ 663 0241 01       		.uleb128 0x1
+ 664 0242 50       		.byte	0x50
+ 665 0243 05       		.uleb128 0x5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 20
+
+
+ 666 0244 03       		.byte	0x3
+ 667 0245 00000000 		.4byte	isr_1_Interrupt
+ 668 0249 00       		.byte	0
+ 669 024a 17       		.uleb128 0x17
+ 670 024b 12000000 		.4byte	.LVL9
+ 671 024f 89010000 		.4byte	0x189
+ 672 0253 5D020000 		.4byte	0x25d
+ 673 0257 18       		.uleb128 0x18
+ 674 0258 01       		.uleb128 0x1
+ 675 0259 50       		.byte	0x50
+ 676 025a 01       		.uleb128 0x1
+ 677 025b 37       		.byte	0x37
+ 678 025c 00       		.byte	0
+ 679 025d 16       		.uleb128 0x16
+ 680 025e 16000000 		.4byte	.LVL10
+ 681 0262 DB010000 		.4byte	0x1db
+ 682 0266 00       		.byte	0
+ 683 0267 0C       		.uleb128 0xc
+ 684 0268 BE020000 		.4byte	.LASF34
+ 685 026c 01       		.byte	0x1
+ 686 026d 6A       		.byte	0x6a
+ 687 026e 00000000 		.4byte	.LFB64
+ 688 0272 1A000000 		.4byte	.LFE64-.LFB64
+ 689 0276 01       		.uleb128 0x1
+ 690 0277 9C       		.byte	0x9c
+ 691 0278 C5020000 		.4byte	0x2c5
+ 692 027c 19       		.uleb128 0x19
+ 693 027d 06020000 		.4byte	.LASF26
+ 694 0281 01       		.byte	0x1
+ 695 0282 6A       		.byte	0x6a
+ 696 0283 EA000000 		.4byte	0xea
+ 697 0287 38000000 		.4byte	.LLST2
+ 698 028b 16       		.uleb128 0x16
+ 699 028c 08000000 		.4byte	.LVL12
+ 700 0290 03020000 		.4byte	0x203
+ 701 0294 17       		.uleb128 0x17
+ 702 0295 0E000000 		.4byte	.LVL13
+ 703 0299 2C010000 		.4byte	0x12c
+ 704 029d A8020000 		.4byte	0x2a8
+ 705 02a1 18       		.uleb128 0x18
+ 706 02a2 01       		.uleb128 0x1
+ 707 02a3 50       		.byte	0x50
+ 708 02a4 02       		.uleb128 0x2
+ 709 02a5 74       		.byte	0x74
+ 710 02a6 00       		.sleb128 0
+ 711 02a7 00       		.byte	0
+ 712 02a8 17       		.uleb128 0x17
+ 713 02a9 14000000 		.4byte	.LVL14
+ 714 02ad 89010000 		.4byte	0x189
+ 715 02b1 BB020000 		.4byte	0x2bb
+ 716 02b5 18       		.uleb128 0x18
+ 717 02b6 01       		.uleb128 0x1
+ 718 02b7 50       		.byte	0x50
+ 719 02b8 01       		.uleb128 0x1
+ 720 02b9 37       		.byte	0x37
+ 721 02ba 00       		.byte	0
+ 722 02bb 16       		.uleb128 0x16
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 21
+
+
+ 723 02bc 18000000 		.4byte	.LVL15
+ 724 02c0 DB010000 		.4byte	0x1db
+ 725 02c4 00       		.byte	0
+ 726 02c5 0C       		.uleb128 0xc
+ 727 02c6 CC020000 		.4byte	.LASF35
+ 728 02ca 01       		.byte	0x1
+ 729 02cb 88       		.byte	0x88
+ 730 02cc 00000000 		.4byte	.LFB65
+ 731 02d0 14000000 		.4byte	.LFE65-.LFB65
+ 732 02d4 01       		.uleb128 0x1
+ 733 02d5 9C       		.byte	0x9c
+ 734 02d6 ED020000 		.4byte	0x2ed
+ 735 02da 16       		.uleb128 0x16
+ 736 02db 06000000 		.4byte	.LVL16
+ 737 02df 03020000 		.4byte	0x203
+ 738 02e3 16       		.uleb128 0x16
+ 739 02e4 0C000000 		.4byte	.LVL17
+ 740 02e8 2C010000 		.4byte	0x12c
+ 741 02ec 00       		.byte	0
+ 742 02ed 14       		.uleb128 0x14
+ 743 02ee 22000000 		.4byte	.LASF36
+ 744 02f2 01       		.byte	0x1
+ 745 02f3 7A01     		.2byte	0x17a
+ 746 02f5 00000000 		.4byte	.LFB74
+ 747 02f9 0C000000 		.4byte	.LFE74-.LFB74
+ 748 02fd 01       		.uleb128 0x1
+ 749 02fe 9C       		.byte	0x9c
+ 750 02ff 14       		.uleb128 0x14
+ 751 0300 00000000 		.4byte	.LASF37
+ 752 0304 01       		.byte	0x1
+ 753 0305 9301     		.2byte	0x193
+ 754 0307 00000000 		.4byte	.LFB75
+ 755 030b 0C000000 		.4byte	.LFE75-.LFB75
+ 756 030f 01       		.uleb128 0x1
+ 757 0310 9C       		.byte	0x9c
+ 758 0311 1A       		.uleb128 0x1a
+ 759 0312 38020000 		.4byte	.LASF38
+ 760 0316 06       		.byte	0x6
+ 761 0317 9606     		.2byte	0x696
+ 762 0319 1D030000 		.4byte	0x31d
+ 763 031d 08       		.uleb128 0x8
+ 764 031e 8B000000 		.4byte	0x8b
+ 765 0322 1B       		.uleb128 0x1b
+ 766 0323 8B000000 		.4byte	.LASF39
+ 767 0327 01       		.byte	0x1
+ 768 0328 20       		.byte	0x20
+ 769 0329 F6000000 		.4byte	0xf6
+ 770 032d 00       		.byte	0
+ 771              		.section	.debug_abbrev,"",%progbits
+ 772              	.Ldebug_abbrev0:
+ 773 0000 01       		.uleb128 0x1
+ 774 0001 11       		.uleb128 0x11
+ 775 0002 01       		.byte	0x1
+ 776 0003 25       		.uleb128 0x25
+ 777 0004 0E       		.uleb128 0xe
+ 778 0005 13       		.uleb128 0x13
+ 779 0006 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 22
+
+
+ 780 0007 03       		.uleb128 0x3
+ 781 0008 0E       		.uleb128 0xe
+ 782 0009 1B       		.uleb128 0x1b
+ 783 000a 0E       		.uleb128 0xe
+ 784 000b 55       		.uleb128 0x55
+ 785 000c 17       		.uleb128 0x17
+ 786 000d 11       		.uleb128 0x11
+ 787 000e 01       		.uleb128 0x1
+ 788 000f 10       		.uleb128 0x10
+ 789 0010 17       		.uleb128 0x17
+ 790 0011 00       		.byte	0
+ 791 0012 00       		.byte	0
+ 792 0013 02       		.uleb128 0x2
+ 793 0014 24       		.uleb128 0x24
+ 794 0015 00       		.byte	0
+ 795 0016 0B       		.uleb128 0xb
+ 796 0017 0B       		.uleb128 0xb
+ 797 0018 3E       		.uleb128 0x3e
+ 798 0019 0B       		.uleb128 0xb
+ 799 001a 03       		.uleb128 0x3
+ 800 001b 08       		.uleb128 0x8
+ 801 001c 00       		.byte	0
+ 802 001d 00       		.byte	0
+ 803 001e 03       		.uleb128 0x3
+ 804 001f 24       		.uleb128 0x24
+ 805 0020 00       		.byte	0
+ 806 0021 0B       		.uleb128 0xb
+ 807 0022 0B       		.uleb128 0xb
+ 808 0023 3E       		.uleb128 0x3e
+ 809 0024 0B       		.uleb128 0xb
+ 810 0025 03       		.uleb128 0x3
+ 811 0026 0E       		.uleb128 0xe
+ 812 0027 00       		.byte	0
+ 813 0028 00       		.byte	0
+ 814 0029 04       		.uleb128 0x4
+ 815 002a 16       		.uleb128 0x16
+ 816 002b 00       		.byte	0
+ 817 002c 03       		.uleb128 0x3
+ 818 002d 0E       		.uleb128 0xe
+ 819 002e 3A       		.uleb128 0x3a
+ 820 002f 0B       		.uleb128 0xb
+ 821 0030 3B       		.uleb128 0x3b
+ 822 0031 0B       		.uleb128 0xb
+ 823 0032 49       		.uleb128 0x49
+ 824 0033 13       		.uleb128 0x13
+ 825 0034 00       		.byte	0
+ 826 0035 00       		.byte	0
+ 827 0036 05       		.uleb128 0x5
+ 828 0037 0F       		.uleb128 0xf
+ 829 0038 00       		.byte	0
+ 830 0039 0B       		.uleb128 0xb
+ 831 003a 0B       		.uleb128 0xb
+ 832 003b 49       		.uleb128 0x49
+ 833 003c 13       		.uleb128 0x13
+ 834 003d 00       		.byte	0
+ 835 003e 00       		.byte	0
+ 836 003f 06       		.uleb128 0x6
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 23
+
+
+ 837 0040 15       		.uleb128 0x15
+ 838 0041 00       		.byte	0
+ 839 0042 27       		.uleb128 0x27
+ 840 0043 19       		.uleb128 0x19
+ 841 0044 00       		.byte	0
+ 842 0045 00       		.byte	0
+ 843 0046 07       		.uleb128 0x7
+ 844 0047 16       		.uleb128 0x16
+ 845 0048 00       		.byte	0
+ 846 0049 03       		.uleb128 0x3
+ 847 004a 0E       		.uleb128 0xe
+ 848 004b 3A       		.uleb128 0x3a
+ 849 004c 0B       		.uleb128 0xb
+ 850 004d 3B       		.uleb128 0x3b
+ 851 004e 05       		.uleb128 0x5
+ 852 004f 49       		.uleb128 0x49
+ 853 0050 13       		.uleb128 0x13
+ 854 0051 00       		.byte	0
+ 855 0052 00       		.byte	0
+ 856 0053 08       		.uleb128 0x8
+ 857 0054 35       		.uleb128 0x35
+ 858 0055 00       		.byte	0
+ 859 0056 49       		.uleb128 0x49
+ 860 0057 13       		.uleb128 0x13
+ 861 0058 00       		.byte	0
+ 862 0059 00       		.byte	0
+ 863 005a 09       		.uleb128 0x9
+ 864 005b 13       		.uleb128 0x13
+ 865 005c 01       		.byte	0x1
+ 866 005d 03       		.uleb128 0x3
+ 867 005e 08       		.uleb128 0x8
+ 868 005f 0B       		.uleb128 0xb
+ 869 0060 0B       		.uleb128 0xb
+ 870 0061 3A       		.uleb128 0x3a
+ 871 0062 0B       		.uleb128 0xb
+ 872 0063 3B       		.uleb128 0x3b
+ 873 0064 0B       		.uleb128 0xb
+ 874 0065 01       		.uleb128 0x1
+ 875 0066 13       		.uleb128 0x13
+ 876 0067 00       		.byte	0
+ 877 0068 00       		.byte	0
+ 878 0069 0A       		.uleb128 0xa
+ 879 006a 0D       		.uleb128 0xd
+ 880 006b 00       		.byte	0
+ 881 006c 03       		.uleb128 0x3
+ 882 006d 0E       		.uleb128 0xe
+ 883 006e 3A       		.uleb128 0x3a
+ 884 006f 0B       		.uleb128 0xb
+ 885 0070 3B       		.uleb128 0x3b
+ 886 0071 0B       		.uleb128 0xb
+ 887 0072 49       		.uleb128 0x49
+ 888 0073 13       		.uleb128 0x13
+ 889 0074 38       		.uleb128 0x38
+ 890 0075 0B       		.uleb128 0xb
+ 891 0076 00       		.byte	0
+ 892 0077 00       		.byte	0
+ 893 0078 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 24
+
+
+ 894 0079 2E       		.uleb128 0x2e
+ 895 007a 00       		.byte	0
+ 896 007b 3F       		.uleb128 0x3f
+ 897 007c 19       		.uleb128 0x19
+ 898 007d 03       		.uleb128 0x3
+ 899 007e 0E       		.uleb128 0xe
+ 900 007f 3A       		.uleb128 0x3a
+ 901 0080 0B       		.uleb128 0xb
+ 902 0081 3B       		.uleb128 0x3b
+ 903 0082 0B       		.uleb128 0xb
+ 904 0083 27       		.uleb128 0x27
+ 905 0084 19       		.uleb128 0x19
+ 906 0085 11       		.uleb128 0x11
+ 907 0086 01       		.uleb128 0x1
+ 908 0087 12       		.uleb128 0x12
+ 909 0088 06       		.uleb128 0x6
+ 910 0089 40       		.uleb128 0x40
+ 911 008a 18       		.uleb128 0x18
+ 912 008b 9742     		.uleb128 0x2117
+ 913 008d 19       		.uleb128 0x19
+ 914 008e 00       		.byte	0
+ 915 008f 00       		.byte	0
+ 916 0090 0C       		.uleb128 0xc
+ 917 0091 2E       		.uleb128 0x2e
+ 918 0092 01       		.byte	0x1
+ 919 0093 3F       		.uleb128 0x3f
+ 920 0094 19       		.uleb128 0x19
+ 921 0095 03       		.uleb128 0x3
+ 922 0096 0E       		.uleb128 0xe
+ 923 0097 3A       		.uleb128 0x3a
+ 924 0098 0B       		.uleb128 0xb
+ 925 0099 3B       		.uleb128 0x3b
+ 926 009a 0B       		.uleb128 0xb
+ 927 009b 27       		.uleb128 0x27
+ 928 009c 19       		.uleb128 0x19
+ 929 009d 11       		.uleb128 0x11
+ 930 009e 01       		.uleb128 0x1
+ 931 009f 12       		.uleb128 0x12
+ 932 00a0 06       		.uleb128 0x6
+ 933 00a1 40       		.uleb128 0x40
+ 934 00a2 18       		.uleb128 0x18
+ 935 00a3 9742     		.uleb128 0x2117
+ 936 00a5 19       		.uleb128 0x19
+ 937 00a6 01       		.uleb128 0x1
+ 938 00a7 13       		.uleb128 0x13
+ 939 00a8 00       		.byte	0
+ 940 00a9 00       		.byte	0
+ 941 00aa 0D       		.uleb128 0xd
+ 942 00ab 05       		.uleb128 0x5
+ 943 00ac 00       		.byte	0
+ 944 00ad 03       		.uleb128 0x3
+ 945 00ae 0E       		.uleb128 0xe
+ 946 00af 3A       		.uleb128 0x3a
+ 947 00b0 0B       		.uleb128 0xb
+ 948 00b1 3B       		.uleb128 0x3b
+ 949 00b2 0B       		.uleb128 0xb
+ 950 00b3 49       		.uleb128 0x49
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 25
+
+
+ 951 00b4 13       		.uleb128 0x13
+ 952 00b5 02       		.uleb128 0x2
+ 953 00b6 18       		.uleb128 0x18
+ 954 00b7 00       		.byte	0
+ 955 00b8 00       		.byte	0
+ 956 00b9 0E       		.uleb128 0xe
+ 957 00ba 34       		.uleb128 0x34
+ 958 00bb 00       		.byte	0
+ 959 00bc 03       		.uleb128 0x3
+ 960 00bd 0E       		.uleb128 0xe
+ 961 00be 3A       		.uleb128 0x3a
+ 962 00bf 0B       		.uleb128 0xb
+ 963 00c0 3B       		.uleb128 0x3b
+ 964 00c1 0B       		.uleb128 0xb
+ 965 00c2 49       		.uleb128 0x49
+ 966 00c3 13       		.uleb128 0x13
+ 967 00c4 02       		.uleb128 0x2
+ 968 00c5 18       		.uleb128 0x18
+ 969 00c6 00       		.byte	0
+ 970 00c7 00       		.byte	0
+ 971 00c8 0F       		.uleb128 0xf
+ 972 00c9 2E       		.uleb128 0x2e
+ 973 00ca 01       		.byte	0x1
+ 974 00cb 3F       		.uleb128 0x3f
+ 975 00cc 19       		.uleb128 0x19
+ 976 00cd 03       		.uleb128 0x3
+ 977 00ce 0E       		.uleb128 0xe
+ 978 00cf 3A       		.uleb128 0x3a
+ 979 00d0 0B       		.uleb128 0xb
+ 980 00d1 3B       		.uleb128 0x3b
+ 981 00d2 0B       		.uleb128 0xb
+ 982 00d3 27       		.uleb128 0x27
+ 983 00d4 19       		.uleb128 0x19
+ 984 00d5 49       		.uleb128 0x49
+ 985 00d6 13       		.uleb128 0x13
+ 986 00d7 11       		.uleb128 0x11
+ 987 00d8 01       		.uleb128 0x1
+ 988 00d9 12       		.uleb128 0x12
+ 989 00da 06       		.uleb128 0x6
+ 990 00db 40       		.uleb128 0x40
+ 991 00dc 18       		.uleb128 0x18
+ 992 00dd 9742     		.uleb128 0x2117
+ 993 00df 19       		.uleb128 0x19
+ 994 00e0 01       		.uleb128 0x1
+ 995 00e1 13       		.uleb128 0x13
+ 996 00e2 00       		.byte	0
+ 997 00e3 00       		.byte	0
+ 998 00e4 10       		.uleb128 0x10
+ 999 00e5 2E       		.uleb128 0x2e
+ 1000 00e6 01       		.byte	0x1
+ 1001 00e7 3F       		.uleb128 0x3f
+ 1002 00e8 19       		.uleb128 0x19
+ 1003 00e9 03       		.uleb128 0x3
+ 1004 00ea 0E       		.uleb128 0xe
+ 1005 00eb 3A       		.uleb128 0x3a
+ 1006 00ec 0B       		.uleb128 0xb
+ 1007 00ed 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 26
+
+
+ 1008 00ee 05       		.uleb128 0x5
+ 1009 00ef 27       		.uleb128 0x27
+ 1010 00f0 19       		.uleb128 0x19
+ 1011 00f1 11       		.uleb128 0x11
+ 1012 00f2 01       		.uleb128 0x1
+ 1013 00f3 12       		.uleb128 0x12
+ 1014 00f4 06       		.uleb128 0x6
+ 1015 00f5 40       		.uleb128 0x40
+ 1016 00f6 18       		.uleb128 0x18
+ 1017 00f7 9742     		.uleb128 0x2117
+ 1018 00f9 19       		.uleb128 0x19
+ 1019 00fa 01       		.uleb128 0x1
+ 1020 00fb 13       		.uleb128 0x13
+ 1021 00fc 00       		.byte	0
+ 1022 00fd 00       		.byte	0
+ 1023 00fe 11       		.uleb128 0x11
+ 1024 00ff 05       		.uleb128 0x5
+ 1025 0100 00       		.byte	0
+ 1026 0101 03       		.uleb128 0x3
+ 1027 0102 0E       		.uleb128 0xe
+ 1028 0103 3A       		.uleb128 0x3a
+ 1029 0104 0B       		.uleb128 0xb
+ 1030 0105 3B       		.uleb128 0x3b
+ 1031 0106 05       		.uleb128 0x5
+ 1032 0107 49       		.uleb128 0x49
+ 1033 0108 13       		.uleb128 0x13
+ 1034 0109 02       		.uleb128 0x2
+ 1035 010a 17       		.uleb128 0x17
+ 1036 010b 00       		.byte	0
+ 1037 010c 00       		.byte	0
+ 1038 010d 12       		.uleb128 0x12
+ 1039 010e 2E       		.uleb128 0x2e
+ 1040 010f 01       		.byte	0x1
+ 1041 0110 3F       		.uleb128 0x3f
+ 1042 0111 19       		.uleb128 0x19
+ 1043 0112 03       		.uleb128 0x3
+ 1044 0113 0E       		.uleb128 0xe
+ 1045 0114 3A       		.uleb128 0x3a
+ 1046 0115 0B       		.uleb128 0xb
+ 1047 0116 3B       		.uleb128 0x3b
+ 1048 0117 05       		.uleb128 0x5
+ 1049 0118 27       		.uleb128 0x27
+ 1050 0119 19       		.uleb128 0x19
+ 1051 011a 49       		.uleb128 0x49
+ 1052 011b 13       		.uleb128 0x13
+ 1053 011c 11       		.uleb128 0x11
+ 1054 011d 01       		.uleb128 0x1
+ 1055 011e 12       		.uleb128 0x12
+ 1056 011f 06       		.uleb128 0x6
+ 1057 0120 40       		.uleb128 0x40
+ 1058 0121 18       		.uleb128 0x18
+ 1059 0122 9742     		.uleb128 0x2117
+ 1060 0124 19       		.uleb128 0x19
+ 1061 0125 01       		.uleb128 0x1
+ 1062 0126 13       		.uleb128 0x13
+ 1063 0127 00       		.byte	0
+ 1064 0128 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 27
+
+
+ 1065 0129 13       		.uleb128 0x13
+ 1066 012a 34       		.uleb128 0x34
+ 1067 012b 00       		.byte	0
+ 1068 012c 03       		.uleb128 0x3
+ 1069 012d 0E       		.uleb128 0xe
+ 1070 012e 3A       		.uleb128 0x3a
+ 1071 012f 0B       		.uleb128 0xb
+ 1072 0130 3B       		.uleb128 0x3b
+ 1073 0131 05       		.uleb128 0x5
+ 1074 0132 49       		.uleb128 0x49
+ 1075 0133 13       		.uleb128 0x13
+ 1076 0134 02       		.uleb128 0x2
+ 1077 0135 17       		.uleb128 0x17
+ 1078 0136 00       		.byte	0
+ 1079 0137 00       		.byte	0
+ 1080 0138 14       		.uleb128 0x14
+ 1081 0139 2E       		.uleb128 0x2e
+ 1082 013a 00       		.byte	0
+ 1083 013b 3F       		.uleb128 0x3f
+ 1084 013c 19       		.uleb128 0x19
+ 1085 013d 03       		.uleb128 0x3
+ 1086 013e 0E       		.uleb128 0xe
+ 1087 013f 3A       		.uleb128 0x3a
+ 1088 0140 0B       		.uleb128 0xb
+ 1089 0141 3B       		.uleb128 0x3b
+ 1090 0142 05       		.uleb128 0x5
+ 1091 0143 27       		.uleb128 0x27
+ 1092 0144 19       		.uleb128 0x19
+ 1093 0145 11       		.uleb128 0x11
+ 1094 0146 01       		.uleb128 0x1
+ 1095 0147 12       		.uleb128 0x12
+ 1096 0148 06       		.uleb128 0x6
+ 1097 0149 40       		.uleb128 0x40
+ 1098 014a 18       		.uleb128 0x18
+ 1099 014b 9742     		.uleb128 0x2117
+ 1100 014d 19       		.uleb128 0x19
+ 1101 014e 00       		.byte	0
+ 1102 014f 00       		.byte	0
+ 1103 0150 15       		.uleb128 0x15
+ 1104 0151 2E       		.uleb128 0x2e
+ 1105 0152 00       		.byte	0
+ 1106 0153 3F       		.uleb128 0x3f
+ 1107 0154 19       		.uleb128 0x19
+ 1108 0155 03       		.uleb128 0x3
+ 1109 0156 0E       		.uleb128 0xe
+ 1110 0157 3A       		.uleb128 0x3a
+ 1111 0158 0B       		.uleb128 0xb
+ 1112 0159 3B       		.uleb128 0x3b
+ 1113 015a 05       		.uleb128 0x5
+ 1114 015b 27       		.uleb128 0x27
+ 1115 015c 19       		.uleb128 0x19
+ 1116 015d 49       		.uleb128 0x49
+ 1117 015e 13       		.uleb128 0x13
+ 1118 015f 11       		.uleb128 0x11
+ 1119 0160 01       		.uleb128 0x1
+ 1120 0161 12       		.uleb128 0x12
+ 1121 0162 06       		.uleb128 0x6
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 28
+
+
+ 1122 0163 40       		.uleb128 0x40
+ 1123 0164 18       		.uleb128 0x18
+ 1124 0165 9742     		.uleb128 0x2117
+ 1125 0167 19       		.uleb128 0x19
+ 1126 0168 00       		.byte	0
+ 1127 0169 00       		.byte	0
+ 1128 016a 16       		.uleb128 0x16
+ 1129 016b 898201   		.uleb128 0x4109
+ 1130 016e 00       		.byte	0
+ 1131 016f 11       		.uleb128 0x11
+ 1132 0170 01       		.uleb128 0x1
+ 1133 0171 31       		.uleb128 0x31
+ 1134 0172 13       		.uleb128 0x13
+ 1135 0173 00       		.byte	0
+ 1136 0174 00       		.byte	0
+ 1137 0175 17       		.uleb128 0x17
+ 1138 0176 898201   		.uleb128 0x4109
+ 1139 0179 01       		.byte	0x1
+ 1140 017a 11       		.uleb128 0x11
+ 1141 017b 01       		.uleb128 0x1
+ 1142 017c 31       		.uleb128 0x31
+ 1143 017d 13       		.uleb128 0x13
+ 1144 017e 01       		.uleb128 0x1
+ 1145 017f 13       		.uleb128 0x13
+ 1146 0180 00       		.byte	0
+ 1147 0181 00       		.byte	0
+ 1148 0182 18       		.uleb128 0x18
+ 1149 0183 8A8201   		.uleb128 0x410a
+ 1150 0186 00       		.byte	0
+ 1151 0187 02       		.uleb128 0x2
+ 1152 0188 18       		.uleb128 0x18
+ 1153 0189 9142     		.uleb128 0x2111
+ 1154 018b 18       		.uleb128 0x18
+ 1155 018c 00       		.byte	0
+ 1156 018d 00       		.byte	0
+ 1157 018e 19       		.uleb128 0x19
+ 1158 018f 05       		.uleb128 0x5
+ 1159 0190 00       		.byte	0
+ 1160 0191 03       		.uleb128 0x3
+ 1161 0192 0E       		.uleb128 0xe
+ 1162 0193 3A       		.uleb128 0x3a
+ 1163 0194 0B       		.uleb128 0xb
+ 1164 0195 3B       		.uleb128 0x3b
+ 1165 0196 0B       		.uleb128 0xb
+ 1166 0197 49       		.uleb128 0x49
+ 1167 0198 13       		.uleb128 0x13
+ 1168 0199 02       		.uleb128 0x2
+ 1169 019a 17       		.uleb128 0x17
+ 1170 019b 00       		.byte	0
+ 1171 019c 00       		.byte	0
+ 1172 019d 1A       		.uleb128 0x1a
+ 1173 019e 34       		.uleb128 0x34
+ 1174 019f 00       		.byte	0
+ 1175 01a0 03       		.uleb128 0x3
+ 1176 01a1 0E       		.uleb128 0xe
+ 1177 01a2 3A       		.uleb128 0x3a
+ 1178 01a3 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 29
+
+
+ 1179 01a4 3B       		.uleb128 0x3b
+ 1180 01a5 05       		.uleb128 0x5
+ 1181 01a6 49       		.uleb128 0x49
+ 1182 01a7 13       		.uleb128 0x13
+ 1183 01a8 3F       		.uleb128 0x3f
+ 1184 01a9 19       		.uleb128 0x19
+ 1185 01aa 3C       		.uleb128 0x3c
+ 1186 01ab 19       		.uleb128 0x19
+ 1187 01ac 00       		.byte	0
+ 1188 01ad 00       		.byte	0
+ 1189 01ae 1B       		.uleb128 0x1b
+ 1190 01af 34       		.uleb128 0x34
+ 1191 01b0 00       		.byte	0
+ 1192 01b1 03       		.uleb128 0x3
+ 1193 01b2 0E       		.uleb128 0xe
+ 1194 01b3 3A       		.uleb128 0x3a
+ 1195 01b4 0B       		.uleb128 0xb
+ 1196 01b5 3B       		.uleb128 0x3b
+ 1197 01b6 0B       		.uleb128 0xb
+ 1198 01b7 49       		.uleb128 0x49
+ 1199 01b8 13       		.uleb128 0x13
+ 1200 01b9 3F       		.uleb128 0x3f
+ 1201 01ba 19       		.uleb128 0x19
+ 1202 01bb 3C       		.uleb128 0x3c
+ 1203 01bc 19       		.uleb128 0x19
+ 1204 01bd 00       		.byte	0
+ 1205 01be 00       		.byte	0
+ 1206 01bf 00       		.byte	0
+ 1207              		.section	.debug_loc,"",%progbits
+ 1208              	.Ldebug_loc0:
+ 1209              	.LLST0:
+ 1210 0000 00000000 		.4byte	.LVL3
+ 1211 0004 02000000 		.4byte	.LVL4
+ 1212 0008 0100     		.2byte	0x1
+ 1213 000a 50       		.byte	0x50
+ 1214 000b 02000000 		.4byte	.LVL4
+ 1215 000f 10000000 		.4byte	.LFE69
+ 1216 0013 0400     		.2byte	0x4
+ 1217 0015 F3       		.byte	0xf3
+ 1218 0016 01       		.uleb128 0x1
+ 1219 0017 50       		.byte	0x50
+ 1220 0018 9F       		.byte	0x9f
+ 1221 0019 00000000 		.4byte	0
+ 1222 001d 00000000 		.4byte	0
+ 1223              	.LLST1:
+ 1224 0021 04000000 		.4byte	.LVL5
+ 1225 0025 06000000 		.4byte	.LVL6
+ 1226 0029 0500     		.2byte	0x5
+ 1227 002b 70       		.byte	0x70
+ 1228 002c 00       		.sleb128 0
+ 1229 002d 35       		.byte	0x35
+ 1230 002e 25       		.byte	0x25
+ 1231 002f 9F       		.byte	0x9f
+ 1232 0030 00000000 		.4byte	0
+ 1233 0034 00000000 		.4byte	0
+ 1234              	.LLST2:
+ 1235 0038 00000000 		.4byte	.LVL11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 30
+
+
+ 1236 003c 07000000 		.4byte	.LVL12-1
+ 1237 0040 0100     		.2byte	0x1
+ 1238 0042 50       		.byte	0x50
+ 1239 0043 07000000 		.4byte	.LVL12-1
+ 1240 0047 1A000000 		.4byte	.LFE64
+ 1241 004b 0100     		.2byte	0x1
+ 1242 004d 54       		.byte	0x54
+ 1243 004e 00000000 		.4byte	0
+ 1244 0052 00000000 		.4byte	0
+ 1245              		.section	.debug_aranges,"",%progbits
+ 1246 0000 7C000000 		.4byte	0x7c
+ 1247 0004 0200     		.2byte	0x2
+ 1248 0006 00000000 		.4byte	.Ldebug_info0
+ 1249 000a 04       		.byte	0x4
+ 1250 000b 00       		.byte	0
+ 1251 000c 0000     		.2byte	0
+ 1252 000e 0000     		.2byte	0
+ 1253 0010 00000000 		.4byte	.LFB66
+ 1254 0014 0C000000 		.4byte	.LFE66-.LFB66
+ 1255 0018 00000000 		.4byte	.LFB67
+ 1256 001c 0C000000 		.4byte	.LFE67-.LFB67
+ 1257 0020 00000000 		.4byte	.LFB68
+ 1258 0024 0C000000 		.4byte	.LFE68-.LFB68
+ 1259 0028 00000000 		.4byte	.LFB69
+ 1260 002c 10000000 		.4byte	.LFE69-.LFB69
+ 1261 0030 00000000 		.4byte	.LFB70
+ 1262 0034 0C000000 		.4byte	.LFE70-.LFB70
+ 1263 0038 00000000 		.4byte	.LFB71
+ 1264 003c 0C000000 		.4byte	.LFE71-.LFB71
+ 1265 0040 00000000 		.4byte	.LFB72
+ 1266 0044 18000000 		.4byte	.LFE72-.LFB72
+ 1267 0048 00000000 		.4byte	.LFB73
+ 1268 004c 0C000000 		.4byte	.LFE73-.LFB73
+ 1269 0050 00000000 		.4byte	.LFB63
+ 1270 0054 1C000000 		.4byte	.LFE63-.LFB63
+ 1271 0058 00000000 		.4byte	.LFB64
+ 1272 005c 1A000000 		.4byte	.LFE64-.LFB64
+ 1273 0060 00000000 		.4byte	.LFB65
+ 1274 0064 14000000 		.4byte	.LFE65-.LFB65
+ 1275 0068 00000000 		.4byte	.LFB74
+ 1276 006c 0C000000 		.4byte	.LFE74-.LFB74
+ 1277 0070 00000000 		.4byte	.LFB75
+ 1278 0074 0C000000 		.4byte	.LFE75-.LFB75
+ 1279 0078 00000000 		.4byte	0
+ 1280 007c 00000000 		.4byte	0
+ 1281              		.section	.debug_ranges,"",%progbits
+ 1282              	.Ldebug_ranges0:
+ 1283 0000 00000000 		.4byte	.LFB66
+ 1284 0004 0C000000 		.4byte	.LFE66
+ 1285 0008 00000000 		.4byte	.LFB67
+ 1286 000c 0C000000 		.4byte	.LFE67
+ 1287 0010 00000000 		.4byte	.LFB68
+ 1288 0014 0C000000 		.4byte	.LFE68
+ 1289 0018 00000000 		.4byte	.LFB69
+ 1290 001c 10000000 		.4byte	.LFE69
+ 1291 0020 00000000 		.4byte	.LFB70
+ 1292 0024 0C000000 		.4byte	.LFE70
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 31
+
+
+ 1293 0028 00000000 		.4byte	.LFB71
+ 1294 002c 0C000000 		.4byte	.LFE71
+ 1295 0030 00000000 		.4byte	.LFB72
+ 1296 0034 18000000 		.4byte	.LFE72
+ 1297 0038 00000000 		.4byte	.LFB73
+ 1298 003c 0C000000 		.4byte	.LFE73
+ 1299 0040 00000000 		.4byte	.LFB63
+ 1300 0044 1C000000 		.4byte	.LFE63
+ 1301 0048 00000000 		.4byte	.LFB64
+ 1302 004c 1A000000 		.4byte	.LFE64
+ 1303 0050 00000000 		.4byte	.LFB65
+ 1304 0054 14000000 		.4byte	.LFE65
+ 1305 0058 00000000 		.4byte	.LFB74
+ 1306 005c 0C000000 		.4byte	.LFE74
+ 1307 0060 00000000 		.4byte	.LFB75
+ 1308 0064 0C000000 		.4byte	.LFE75
+ 1309 0068 00000000 		.4byte	0
+ 1310 006c 00000000 		.4byte	0
+ 1311              		.section	.debug_line,"",%progbits
+ 1312              	.Ldebug_line0:
+ 1313 0000 43020000 		.section	.debug_str,"MS",%progbits,1
+ 1313      02005601 
+ 1313      00000201 
+ 1313      FB0E0D00 
+ 1313      01010101 
+ 1314              	.LASF37:
+ 1315 0000 6973725F 		.ascii	"isr_1_ClearPending\000"
+ 1315      315F436C 
+ 1315      65617250 
+ 1315      656E6469 
+ 1315      6E6700
+ 1316              	.LASF21:
+ 1317 0013 6E65775F 		.ascii	"new_data\000"
+ 1317      64617461 
+ 1317      00
+ 1318              	.LASF19:
+ 1319 001c 72656733 		.ascii	"reg32\000"
+ 1319      3200
+ 1320              	.LASF36:
+ 1321 0022 6973725F 		.ascii	"isr_1_SetPending\000"
+ 1321      315F5365 
+ 1321      7450656E 
+ 1321      64696E67 
+ 1321      00
+ 1322              	.LASF43:
+ 1323 0033 6973725F 		.ascii	"isr_1_GetState\000"
+ 1323      315F4765 
+ 1323      74537461 
+ 1323      746500
+ 1324              	.LASF32:
+ 1325 0042 6973725F 		.ascii	"isr_1_Disable\000"
+ 1325      315F4469 
+ 1325      7361626C 
+ 1325      6500
+ 1326              	.LASF11:
+ 1327 0050 5F5F696E 		.ascii	"__int32_t\000"
+ 1327      7433325F 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 32
+
+
+ 1327      7400
+ 1328              	.LASF33:
+ 1329 005a 6973725F 		.ascii	"isr_1_Start\000"
+ 1329      315F5374 
+ 1329      61727400 
+ 1330              	.LASF4:
+ 1331 0066 73686F72 		.ascii	"short unsigned int\000"
+ 1331      7420756E 
+ 1331      7369676E 
+ 1331      65642069 
+ 1331      6E7400
+ 1332              	.LASF29:
+ 1333 0079 6973725F 		.ascii	"isr_1_GetPriority\000"
+ 1333      315F4765 
+ 1333      74507269 
+ 1333      6F726974 
+ 1333      7900
+ 1334              	.LASF39:
+ 1335 008b 6164635F 		.ascii	"adc_del_sig\000"
+ 1335      64656C5F 
+ 1335      73696700 
+ 1336              	.LASF16:
+ 1337 0097 666C6F61 		.ascii	"float\000"
+ 1337      7400
+ 1338              	.LASF22:
+ 1339 009d 64617461 		.ascii	"data\000"
+ 1339      00
+ 1340              	.LASF42:
+ 1341 00a2 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
+ 1341      73657273 
+ 1341      5C546F6D 
+ 1341      6D695C44 
+ 1341      6F63756D 
+ 1342 00cf 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
+ 1342      5F555342 
+ 1342      55415254 
+ 1342      2E637964 
+ 1342      736E00
+ 1343              	.LASF2:
+ 1344 00e2 756E7369 		.ascii	"unsigned char\000"
+ 1344      676E6564 
+ 1344      20636861 
+ 1344      7200
+ 1345              	.LASF18:
+ 1346 00f0 72656738 		.ascii	"reg8\000"
+ 1346      00
+ 1347              	.LASF6:
+ 1348 00f5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1348      20756E73 
+ 1348      69676E65 
+ 1348      6420696E 
+ 1348      7400
+ 1349              	.LASF15:
+ 1350 0107 696E7433 		.ascii	"int32\000"
+ 1350      3200
+ 1351              	.LASF31:
+ 1352 010d 6973725F 		.ascii	"isr_1_Enable\000"
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 33
+
+
+ 1352      315F456E 
+ 1352      61626C65 
+ 1352      00
+ 1353              	.LASF24:
+ 1354 011a 6973725F 		.ascii	"isr_1_SetVector\000"
+ 1354      315F5365 
+ 1354      74566563 
+ 1354      746F7200 
+ 1355              	.LASF25:
+ 1356 012a 6973725F 		.ascii	"isr_1_SetPriority\000"
+ 1356      315F5365 
+ 1356      74507269 
+ 1356      6F726974 
+ 1356      7900
+ 1357              	.LASF27:
+ 1358 013c 7072696F 		.ascii	"priority\000"
+ 1358      72697479 
+ 1358      00
+ 1359              	.LASF41:
+ 1360 0145 47656E65 		.ascii	"Generated_Source\\PSoC5\\isr_1.c\000"
+ 1360      72617465 
+ 1360      645F536F 
+ 1360      75726365 
+ 1360      5C50536F 
+ 1361              	.LASF14:
+ 1362 0164 75696E74 		.ascii	"uint32\000"
+ 1362      333200
+ 1363              	.LASF40:
+ 1364 016b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1364      4320342E 
+ 1364      392E3320 
+ 1364      32303135 
+ 1364      30333033 
+ 1365 019e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1365      20726576 
+ 1365      6973696F 
+ 1365      6E203232 
+ 1365      31323230 
+ 1366 01d1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1366      66756E63 
+ 1366      74696F6E 
+ 1366      2D736563 
+ 1366      74696F6E 
+ 1367              	.LASF0:
+ 1368 01f9 756E7369 		.ascii	"unsigned int\000"
+ 1368      676E6564 
+ 1368      20696E74 
+ 1368      00
+ 1369              	.LASF26:
+ 1370 0206 61646472 		.ascii	"address\000"
+ 1370      65737300 
+ 1371              	.LASF8:
+ 1372 020e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1372      206C6F6E 
+ 1372      6720756E 
+ 1372      7369676E 
+ 1372      65642069 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 34
+
+
+ 1373              	.LASF20:
+ 1374 0225 63796973 		.ascii	"cyisraddress\000"
+ 1374      72616464 
+ 1374      72657373 
+ 1374      00
+ 1375              	.LASF13:
+ 1376 0232 75696E74 		.ascii	"uint8\000"
+ 1376      3800
+ 1377              	.LASF38:
+ 1378 0238 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1378      52784275 
+ 1378      66666572 
+ 1378      00
+ 1379              	.LASF12:
+ 1380 0245 696E7433 		.ascii	"int32_t\000"
+ 1380      325F7400 
+ 1381              	.LASF9:
+ 1382 024d 73697A65 		.ascii	"sizetype\000"
+ 1382      74797065 
+ 1382      00
+ 1383              	.LASF7:
+ 1384 0256 6C6F6E67 		.ascii	"long long int\000"
+ 1384      206C6F6E 
+ 1384      6720696E 
+ 1384      7400
+ 1385              	.LASF10:
+ 1386 0264 63686172 		.ascii	"char\000"
+ 1386      00
+ 1387              	.LASF23:
+ 1388 0269 72616D56 		.ascii	"ramVectorTable\000"
+ 1388      6563746F 
+ 1388      72546162 
+ 1388      6C6500
+ 1389              	.LASF3:
+ 1390 0278 73686F72 		.ascii	"short int\000"
+ 1390      7420696E 
+ 1390      7400
+ 1391              	.LASF28:
+ 1392 0282 6973725F 		.ascii	"isr_1_GetVector\000"
+ 1392      315F4765 
+ 1392      74566563 
+ 1392      746F7200 
+ 1393              	.LASF30:
+ 1394 0292 6973725F 		.ascii	"isr_1_Interrupt\000"
+ 1394      315F496E 
+ 1394      74657272 
+ 1394      75707400 
+ 1395              	.LASF5:
+ 1396 02a2 6C6F6E67 		.ascii	"long int\000"
+ 1396      20696E74 
+ 1396      00
+ 1397              	.LASF1:
+ 1398 02ab 7369676E 		.ascii	"signed char\000"
+ 1398      65642063 
+ 1398      68617200 
+ 1399              	.LASF17:
+ 1400 02b7 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccrl30VC.s 			page 35
+
+
+ 1400      6C6500
+ 1401              	.LASF34:
+ 1402 02be 6973725F 		.ascii	"isr_1_StartEx\000"
+ 1402      315F5374 
+ 1402      61727445 
+ 1402      7800
+ 1403              	.LASF35:
+ 1404 02cc 6973725F 		.ascii	"isr_1_Stop\000"
+ 1404      315F5374 
+ 1404      6F7000
+ 1405              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -147,6 +147,17 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Vref_sink_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Vref_sink.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Vref_sink.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter_PVT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter_RAM_Data.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter_Coefficients.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DMA_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\Export\ARM_GCC_Generic">

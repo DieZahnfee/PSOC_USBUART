@@ -17,7 +17,6 @@
 
 #include "ADC_DelSig.h"
 #include "cyapicallbacks.h"
-#include "global.h"
 
 
 /*******************************************************************************
@@ -26,9 +25,9 @@
 *   #START and #END tags
 *******************************************************************************/
 /* `#START ADC_SYS_VAR`  */
-
+#include "global.h"
 // declaring global variables
-extern struct adc adc_del_sig;
+extern struct data adc_del_sig;
 
 /* `#END`  */
 
