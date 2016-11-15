@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Filter_INT.c  
+* File Name: Filter_Int.c  
 * Version 1.70
 *
 *  Description:
@@ -18,21 +18,19 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <Filter_INT.h>
+#include <Filter_Int.h>
 #include "cyapicallbacks.h"
 
-
-
-#if !defined(Filter_INT__REMOVED) /* Check for removal by optimization */
+#if !defined(Filter_Int__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START Filter_INT_intc` */
+/* `#START Filter_Int_intc` */
 #include "Filter.h"
 #include "global.h"
     
-extern uint32 raw_filter;
+extern struct data filter;
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE
@@ -47,7 +45,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_Start
+* Function Name: Filter_Int_Start
 ********************************************************************************
 *
 * Summary:
@@ -63,24 +61,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void Filter_INT_Start(void)
+void Filter_Int_Start(void)
 {
     /* For all we know the interrupt is active. */
-    Filter_INT_Disable();
+    Filter_Int_Disable();
 
-    /* Set the ISR to point to the Filter_INT Interrupt. */
-    Filter_INT_SetVector(&Filter_INT_Interrupt);
+    /* Set the ISR to point to the Filter_Int Interrupt. */
+    Filter_Int_SetVector(&Filter_Int_Interrupt);
 
     /* Set the priority. */
-    Filter_INT_SetPriority((uint8)Filter_INT_INTC_PRIOR_NUMBER);
+    Filter_Int_SetPriority((uint8)Filter_Int_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    Filter_INT_Enable();
+    Filter_Int_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_StartEx
+* Function Name: Filter_Int_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -106,24 +104,24 @@ void Filter_INT_Start(void)
 *   None
 *
 *******************************************************************************/
-void Filter_INT_StartEx(cyisraddress address)
+void Filter_Int_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    Filter_INT_Disable();
+    Filter_Int_Disable();
 
-    /* Set the ISR to point to the Filter_INT Interrupt. */
-    Filter_INT_SetVector(address);
+    /* Set the ISR to point to the Filter_Int Interrupt. */
+    Filter_Int_SetVector(address);
 
     /* Set the priority. */
-    Filter_INT_SetPriority((uint8)Filter_INT_INTC_PRIOR_NUMBER);
+    Filter_Int_SetPriority((uint8)Filter_Int_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    Filter_INT_Enable();
+    Filter_Int_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_Stop
+* Function Name: Filter_Int_Stop
 ********************************************************************************
 *
 * Summary:
@@ -136,22 +134,22 @@ void Filter_INT_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void Filter_INT_Stop(void)
+void Filter_Int_Stop(void)
 {
     /* Disable this interrupt. */
-    Filter_INT_Disable();
+    Filter_Int_Disable();
 
     /* Set the ISR to point to the passive one. */
-    Filter_INT_SetVector(&IntDefaultHandler);
+    Filter_Int_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_Interrupt
+* Function Name: Filter_Int_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for Filter_INT.
+*   The default Interrupt Service Routine for Filter_Int.
 *
 *   Add custom code between the coments to keep the next version of this file
 *   from over writting your code.
@@ -162,27 +160,28 @@ void Filter_INT_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(Filter_INT_Interrupt)
+CY_ISR(Filter_Int_Interrupt)
 {
-    #ifdef Filter_INT_INTERRUPT_INTERRUPT_CALLBACK
-        Filter_INT_Interrupt_InterruptCallback();
-    #endif /* Filter_INT_INTERRUPT_INTERRUPT_CALLBACK */ 
+    #ifdef Filter_Int_INTERRUPT_INTERRUPT_CALLBACK
+        Filter_Int_Interrupt_InterruptCallback();
+    #endif /* Filter_Int_INTERRUPT_INTERRUPT_CALLBACK */ 
 
     /*  Place your Interrupt code here. */
-    /* `#START Filter_INT_Interrupt` */
-    raw_filter = Filter_Read24(Filter_CHANNEL_A);
+    /* `#START Filter_Int_Interrupt` */
+    filter.data = Filter_Read24(Filter_CHANNEL_A);
+    filter.new_data = 1u;
     /* `#END` */
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_SetVector
+* Function Name: Filter_Int_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling Filter_INT_Start
+*   Change the ISR vector for the Interrupt. Note calling Filter_Int_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use Filter_INT_StartEx instead.
+*   before the component has been started use Filter_Int_StartEx instead.
 * 
 *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
 *   used to provide consistent definition across compilers:
@@ -202,18 +201,18 @@ CY_ISR(Filter_INT_Interrupt)
 *   None
 *
 *******************************************************************************/
-void Filter_INT_SetVector(cyisraddress address)
+void Filter_Int_SetVector(cyisraddress address)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_INT__INTC_NUMBER] = address;
+    ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_Int__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_GetVector
+* Function Name: Filter_Int_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -226,26 +225,26 @@ void Filter_INT_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress Filter_INT_GetVector(void)
+cyisraddress Filter_Int_GetVector(void)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    return ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_INT__INTC_NUMBER];
+    return ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_Int__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_SetPriority
+* Function Name: Filter_Int_SetPriority
 ********************************************************************************
 *
 * Summary:
 *   Sets the Priority of the Interrupt. 
 *
-*   Note calling Filter_INT_Start or Filter_INT_StartEx will 
+*   Note calling Filter_Int_Start or Filter_Int_StartEx will 
 *   override any effect this API would have had. This API should only be called
-*   after Filter_INT_Start or Filter_INT_StartEx has been called. 
+*   after Filter_Int_Start or Filter_Int_StartEx has been called. 
 *   To set the initial priority for the component, use the Design-Wide Resources
 *   Interrupt Editor.
 *
@@ -260,14 +259,14 @@ cyisraddress Filter_INT_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void Filter_INT_SetPriority(uint8 priority)
+void Filter_Int_SetPriority(uint8 priority)
 {
-    *Filter_INT_INTC_PRIOR = priority << 5;
+    *Filter_Int_INTC_PRIOR = priority << 5;
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_GetPriority
+* Function Name: Filter_Int_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -282,19 +281,19 @@ void Filter_INT_SetPriority(uint8 priority)
 *    PSoC 4: Priority is from 0 to 3.
 *
 *******************************************************************************/
-uint8 Filter_INT_GetPriority(void)
+uint8 Filter_Int_GetPriority(void)
 {
     uint8 priority;
 
 
-    priority = *Filter_INT_INTC_PRIOR >> 5;
+    priority = *Filter_Int_INTC_PRIOR >> 5;
 
     return priority;
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_Enable
+* Function Name: Filter_Int_Enable
 ********************************************************************************
 *
 * Summary:
@@ -309,15 +308,15 @@ uint8 Filter_INT_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void Filter_INT_Enable(void)
+void Filter_Int_Enable(void)
 {
     /* Enable the general interrupt. */
-    *Filter_INT_INTC_SET_EN = Filter_INT__INTC_MASK;
+    *Filter_Int_INTC_SET_EN = Filter_Int__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_GetState
+* Function Name: Filter_Int_GetState
 ********************************************************************************
 *
 * Summary:
@@ -330,15 +329,15 @@ void Filter_INT_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 Filter_INT_GetState(void)
+uint8 Filter_Int_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*Filter_INT_INTC_SET_EN & (uint32)Filter_INT__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*Filter_Int_INTC_SET_EN & (uint32)Filter_Int__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_Disable
+* Function Name: Filter_Int_Disable
 ********************************************************************************
 *
 * Summary:
@@ -351,15 +350,15 @@ uint8 Filter_INT_GetState(void)
 *   None
 *
 *******************************************************************************/
-void Filter_INT_Disable(void)
+void Filter_Int_Disable(void)
 {
     /* Disable the general interrupt. */
-    *Filter_INT_INTC_CLR_EN = Filter_INT__INTC_MASK;
+    *Filter_Int_INTC_CLR_EN = Filter_Int__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_SetPending
+* Function Name: Filter_Int_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -378,14 +377,14 @@ void Filter_INT_Disable(void)
 *   interrupts).
 *
 *******************************************************************************/
-void Filter_INT_SetPending(void)
+void Filter_Int_SetPending(void)
 {
-    *Filter_INT_INTC_SET_PD = Filter_INT__INTC_MASK;
+    *Filter_Int_INTC_SET_PD = Filter_Int__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: Filter_INT_ClearPending
+* Function Name: Filter_Int_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -403,12 +402,27 @@ void Filter_INT_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void Filter_INT_ClearPending(void)
+void Filter_Int_ClearPending(void)
 {
-    *Filter_INT_INTC_CLR_PD = Filter_INT__INTC_MASK;
+    *Filter_Int_INTC_CLR_PD = Filter_Int__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */
 
 
 /* [] END OF FILE */
+#if 0 /* begin disabled code */
+`#start Filter_INT_intc` -- section removed from template
+#include "Filter.h"
+#include "global.h"
+    
+extern uint32 raw_filter;
+`#end`
+
+#endif /* end disabled code */
+#if 0 /* begin disabled code */
+`#start Filter_INT_Interrupt` -- section removed from template
+    raw_filter = Filter_Read24(Filter_CHANNEL_A);
+`#end`
+
+#endif /* end disabled code */

@@ -122,7 +122,7 @@
   <block name="Vref_source" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DMA" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Filter_done" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Filter" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="DFB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

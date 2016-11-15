@@ -2,7 +2,7 @@
 --	Conversion of PSOC_USBUART.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Nov 15 12:29:33 2016
+--	Tue Nov 15 17:51:14 2016
 --
 
 USE cypress.cypress.all;
@@ -756,7 +756,7 @@ DMA:cy_dma_v1_0
 		dmareq_1=>Net_121,
 		dmareq_2=>Net_122,
 		interrupt=>Net_124);
-isr:cy_isr_v1_0
+Filter_done:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_124);

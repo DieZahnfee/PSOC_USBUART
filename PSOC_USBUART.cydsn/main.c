@@ -93,13 +93,13 @@ int main(){
             
             // converting data to printable format          
             micros_average = ADC_DelSig_CountsTo_uVolts(raw_average);
-            sprintf(str_mv,"a:%ld;",micros_average);
+            sprintf(str_mv,"%ld ",micros_average);
             
             micros_cut = ADC_DelSig_CountsTo_uVolts(raw_cut);
-            sprintf(str_cut,"c:%ld;",micros_cut);
+            sprintf(str_cut,"%ld ",micros_cut);
            
             micros_filter = ADC_DelSig_CountsTo_uVolts(filter.data);
-            sprintf(str_filter,"f:%ld",micros_filter);
+            sprintf(str_filter,"%ld ",micros_filter);
             
             // Calling print routine
             SerialPrint(str_mv);
@@ -129,7 +129,8 @@ int HwModulesStart(){
     
     CyGlobalIntEnable; // Enable global interrupts. 
     
-    isr_Start();
+    Filter_done_Start();
+    
     return 1;
 };
 
@@ -142,11 +143,9 @@ int HwModulesStop(){
     OPAMP_Stop();
     IDAC8_Stop();
     USBUART_Stop();
-    
     Filter_Stop();
-    isr_Stop();
     
-    
+    Filter_done_Stop();
     
     return 1;
 };
@@ -154,40 +153,37 @@ int HwModulesStop(){
 int DmaConfig(){
     
 
-/* Declare variable to hold the handle for DMA channel */
+    // Declare variable to hold the handle for DMA channel
     uint8 channelHandle;
 
-    /* Declare DMA Transaction Descriptor for memory transfer into
-     * Filter Channel. */
+    // Declare DMA Transaction Descriptor for memory transfer into
+    //  Filter Channel.
     uint8 tdChanA;
 
-    /* Configure the DMA to Transfer the data in 1 burst with individual trigger
-     * for each burst.*/
+    // Configure the DMA to Transfer the data in 1 burst with individual trigger
+    // for each burst.
     channelHandle = DMA_DmaInitialize(BYTES_PER_BURST, REQUEST_PER_BURST,
                                         HI16(UPPER_SRC_ADDRESS), HI16(UPPER_DEST_ADDRESS));
 
-    /* This function allocates a TD for use with an initialized DMA channel */
+    // This function allocates a TD for use with an initialized DMA channel
     tdChanA = CyDmaTdAllocate();
 
-	/* Source and Destination address increments are needed as we are using 3 byte transfers
-	but Spoke Width is 16 bit */
+	// Source and Destination address increments are needed as we are using 3 byte transfers
+	// but Spoke Width is 16 bit 
     CyDmaTdSetConfiguration(tdChanA, 4u, tdChanA, TD_INC_SRC_ADR | TD_INC_DST_ADR);
 
-    /* Set the source address as ADC_DelSig and the destination as
-     * Filter Channel A.*/
+    // Set the source address as ADC_DelSig and the destination as
+    // Filter Channel A.
     CyDmaTdSetAddress(tdChanA, LO16((uint32)ADC_DelSig_DEC_SAMP_PTR), LO16((uint32)Filter_STAGEA_PTR));
 
-    /* Set tdChanA to be the initial TD associated with channelHandle */
+    // Set tdChanA to be the initial TD associated with channelHandle 
     CyDmaChSetInitialTd(channelHandle, tdChanA);
 
-    /* Enable the DMA channel represented by channelHandle and preserve the TD */
+    // Enable the DMA channel represented by channelHandle and preserve the TD
     CyDmaChEnable(channelHandle, 1u);
-
 
     return 1;
 };
 
 
-
-
-/* [] END OF FILE */
+// [] END OF FILE

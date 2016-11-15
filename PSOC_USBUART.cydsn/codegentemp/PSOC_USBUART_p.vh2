@@ -1,5 +1,5 @@
 -- Project:   PSOC_USBUART
--- Generated: 11/15/2016 12:29:34
+-- Generated: 11/15/2016 17:51:15
 -- PSoC Creator  4.0
 
 ENTITY PSOC_USBUART IS
@@ -1113,7 +1113,7 @@ BEGIN
             dmareq_2 => Net_122,
             interrupt => Net_124);
 
-    isr:interrupt
+    Filter_done:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)

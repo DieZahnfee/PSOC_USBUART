@@ -1,5 +1,5 @@
 # PSOC_USBUART
-# 2016-11-15 11:29:35Z
+# 2016-11-15 16:51:16Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -32,4 +32,4 @@ set_location "\OPAMP:ABuf\" abufcell -1 -1 2
 set_location "\IDAC8:viDAC8\" vidaccell -1 -1 0
 set_location "DMA" drqcell -1 -1 10
 set_location "\Filter:DFB\" dfbcell -1 -1 0
-set_location "isr" interrupt -1 -1 28
+set_location "Filter_done" interrupt -1 -1 28

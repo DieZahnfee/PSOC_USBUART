@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 1
 
 
    1              		.syntax unified
@@ -14,2031 +14,1879 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 1
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.thumb
-  14              		.file	"Filter_INT.c"
+  14              		.file	"Filter_Int.c"
   15              		.text
   16              	.Ltext0:
   17              		.cfi_sections	.debug_frame
-  18              		.section	.text.Filter_INT_Interrupt,"ax",%progbits
+  18              		.section	.text.Filter_Int_Interrupt,"ax",%progbits
   19              		.align	2
-  20              		.global	Filter_INT_Interrupt
+  20              		.global	Filter_Int_Interrupt
   21              		.thumb
   22              		.thumb_func
-  23              		.type	Filter_INT_Interrupt, %function
-  24              	Filter_INT_Interrupt:
-  25              	.LFB66:
-  26              		.file 1 "Generated_Source\\PSoC5\\Filter_INT.c"
-   1:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
-   2:Generated_Source\PSoC5/Filter_INT.c **** * File Name: Filter_INT.c  
-   3:Generated_Source\PSoC5/Filter_INT.c **** * Version 1.70
-   4:Generated_Source\PSoC5/Filter_INT.c **** *
-   5:Generated_Source\PSoC5/Filter_INT.c **** *  Description:
-   6:Generated_Source\PSoC5/Filter_INT.c **** *   API for controlling the state of an interrupt.
-   7:Generated_Source\PSoC5/Filter_INT.c **** *
-   8:Generated_Source\PSoC5/Filter_INT.c **** *
-   9:Generated_Source\PSoC5/Filter_INT.c **** *  Note:
-  10:Generated_Source\PSoC5/Filter_INT.c **** *
-  11:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
-  12:Generated_Source\PSoC5/Filter_INT.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  13:Generated_Source\PSoC5/Filter_INT.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  14:Generated_Source\PSoC5/Filter_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  15:Generated_Source\PSoC5/Filter_INT.c **** * the software package with which this file was provided.
-  16:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
-  17:Generated_Source\PSoC5/Filter_INT.c **** 
-  18:Generated_Source\PSoC5/Filter_INT.c **** 
-  19:Generated_Source\PSoC5/Filter_INT.c **** #include <cydevice_trm.h>
-  20:Generated_Source\PSoC5/Filter_INT.c **** #include <CyLib.h>
-  21:Generated_Source\PSoC5/Filter_INT.c **** #include <Filter_INT.h>
-  22:Generated_Source\PSoC5/Filter_INT.c **** #include "cyapicallbacks.h"
-  23:Generated_Source\PSoC5/Filter_INT.c **** 
-  24:Generated_Source\PSoC5/Filter_INT.c **** 
-  25:Generated_Source\PSoC5/Filter_INT.c **** 
-  26:Generated_Source\PSoC5/Filter_INT.c **** #if !defined(Filter_INT__REMOVED) /* Check for removal by optimization */
-  27:Generated_Source\PSoC5/Filter_INT.c **** 
-  28:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
-  29:Generated_Source\PSoC5/Filter_INT.c **** *  Place your includes, defines and code here 
-  30:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************/
-  31:Generated_Source\PSoC5/Filter_INT.c **** /* `#START Filter_INT_intc` */
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 2
+  23              		.type	Filter_Int_Interrupt, %function
+  24              	Filter_Int_Interrupt:
+  25              	.LFB3:
+  26              		.file 1 "Generated_Source\\PSoC5\\Filter_Int.c"
+   1:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Filter_Int.c **** * File Name: Filter_Int.c  
+   3:Generated_Source\PSoC5/Filter_Int.c **** * Version 1.70
+   4:Generated_Source\PSoC5/Filter_Int.c **** *
+   5:Generated_Source\PSoC5/Filter_Int.c **** *  Description:
+   6:Generated_Source\PSoC5/Filter_Int.c **** *   API for controlling the state of an interrupt.
+   7:Generated_Source\PSoC5/Filter_Int.c **** *
+   8:Generated_Source\PSoC5/Filter_Int.c **** *
+   9:Generated_Source\PSoC5/Filter_Int.c **** *  Note:
+  10:Generated_Source\PSoC5/Filter_Int.c **** *
+  11:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/Filter_Int.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/Filter_Int.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC5/Filter_Int.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC5/Filter_Int.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/Filter_Int.c **** 
+  18:Generated_Source\PSoC5/Filter_Int.c **** 
+  19:Generated_Source\PSoC5/Filter_Int.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC5/Filter_Int.c **** #include <CyLib.h>
+  21:Generated_Source\PSoC5/Filter_Int.c **** #include <Filter_Int.h>
+  22:Generated_Source\PSoC5/Filter_Int.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC5/Filter_Int.c **** 
+  24:Generated_Source\PSoC5/Filter_Int.c **** #if !defined(Filter_Int__REMOVED) /* Check for removal by optimization */
+  25:Generated_Source\PSoC5/Filter_Int.c **** 
+  26:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+  27:Generated_Source\PSoC5/Filter_Int.c **** *  Place your includes, defines and code here 
+  28:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************/
+  29:Generated_Source\PSoC5/Filter_Int.c **** /* `#START Filter_Int_intc` */
+  30:Generated_Source\PSoC5/Filter_Int.c **** 
+  31:Generated_Source\PSoC5/Filter_Int.c **** /* `#END` */
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 2
 
 
-  32:Generated_Source\PSoC5/Filter_INT.c **** #include "Filter.h"
-  33:Generated_Source\PSoC5/Filter_INT.c **** #include "global.h"
-  34:Generated_Source\PSoC5/Filter_INT.c ****     
-  35:Generated_Source\PSoC5/Filter_INT.c **** extern uint32 raw_filter;
-  36:Generated_Source\PSoC5/Filter_INT.c **** /* `#END` */
-  37:Generated_Source\PSoC5/Filter_INT.c **** 
-  38:Generated_Source\PSoC5/Filter_INT.c **** #ifndef CYINT_IRQ_BASE
-  39:Generated_Source\PSoC5/Filter_INT.c **** #define CYINT_IRQ_BASE      16
-  40:Generated_Source\PSoC5/Filter_INT.c **** #endif /* CYINT_IRQ_BASE */
-  41:Generated_Source\PSoC5/Filter_INT.c **** #ifndef CYINT_VECT_TABLE
-  42:Generated_Source\PSoC5/Filter_INT.c **** #define CYINT_VECT_TABLE    ((cyisraddress **) CYREG_NVIC_VECT_OFFSET)
-  43:Generated_Source\PSoC5/Filter_INT.c **** #endif /* CYINT_VECT_TABLE */
-  44:Generated_Source\PSoC5/Filter_INT.c **** 
-  45:Generated_Source\PSoC5/Filter_INT.c **** /* Declared in startup, used to set unused interrupts to. */
-  46:Generated_Source\PSoC5/Filter_INT.c **** CY_ISR_PROTO(IntDefaultHandler);
-  47:Generated_Source\PSoC5/Filter_INT.c **** 
-  48:Generated_Source\PSoC5/Filter_INT.c **** 
-  49:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
-  50:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_Start
-  51:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
-  52:Generated_Source\PSoC5/Filter_INT.c **** *
-  53:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
-  54:Generated_Source\PSoC5/Filter_INT.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
-  55:Generated_Source\PSoC5/Filter_INT.c **** *  sets the default interrupt vector, sets the priority from the value in the
-  56:Generated_Source\PSoC5/Filter_INT.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
-  57:Generated_Source\PSoC5/Filter_INT.c **** *  interrupt controller.
-  58:Generated_Source\PSoC5/Filter_INT.c **** *
-  59:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:  
-  60:Generated_Source\PSoC5/Filter_INT.c **** *   None
-  61:Generated_Source\PSoC5/Filter_INT.c **** *
-  62:Generated_Source\PSoC5/Filter_INT.c **** * Return:
-  63:Generated_Source\PSoC5/Filter_INT.c **** *   None
-  64:Generated_Source\PSoC5/Filter_INT.c **** *
-  65:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
-  66:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_Start(void)
-  67:Generated_Source\PSoC5/Filter_INT.c **** {
-  68:Generated_Source\PSoC5/Filter_INT.c ****     /* For all we know the interrupt is active. */
-  69:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_Disable();
-  70:Generated_Source\PSoC5/Filter_INT.c **** 
-  71:Generated_Source\PSoC5/Filter_INT.c ****     /* Set the ISR to point to the Filter_INT Interrupt. */
-  72:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_SetVector(&Filter_INT_Interrupt);
-  73:Generated_Source\PSoC5/Filter_INT.c **** 
-  74:Generated_Source\PSoC5/Filter_INT.c ****     /* Set the priority. */
-  75:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_SetPriority((uint8)Filter_INT_INTC_PRIOR_NUMBER);
-  76:Generated_Source\PSoC5/Filter_INT.c **** 
-  77:Generated_Source\PSoC5/Filter_INT.c ****     /* Enable it. */
-  78:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_Enable();
-  79:Generated_Source\PSoC5/Filter_INT.c **** }
-  80:Generated_Source\PSoC5/Filter_INT.c **** 
-  81:Generated_Source\PSoC5/Filter_INT.c **** 
-  82:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
-  83:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_StartEx
-  84:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
-  85:Generated_Source\PSoC5/Filter_INT.c **** *
-  86:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
-  87:Generated_Source\PSoC5/Filter_INT.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
-  88:Generated_Source\PSoC5/Filter_INT.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 3
+  32:Generated_Source\PSoC5/Filter_Int.c **** 
+  33:Generated_Source\PSoC5/Filter_Int.c **** #ifndef CYINT_IRQ_BASE
+  34:Generated_Source\PSoC5/Filter_Int.c **** #define CYINT_IRQ_BASE      16
+  35:Generated_Source\PSoC5/Filter_Int.c **** #endif /* CYINT_IRQ_BASE */
+  36:Generated_Source\PSoC5/Filter_Int.c **** #ifndef CYINT_VECT_TABLE
+  37:Generated_Source\PSoC5/Filter_Int.c **** #define CYINT_VECT_TABLE    ((cyisraddress **) CYREG_NVIC_VECT_OFFSET)
+  38:Generated_Source\PSoC5/Filter_Int.c **** #endif /* CYINT_VECT_TABLE */
+  39:Generated_Source\PSoC5/Filter_Int.c **** 
+  40:Generated_Source\PSoC5/Filter_Int.c **** /* Declared in startup, used to set unused interrupts to. */
+  41:Generated_Source\PSoC5/Filter_Int.c **** CY_ISR_PROTO(IntDefaultHandler);
+  42:Generated_Source\PSoC5/Filter_Int.c **** 
+  43:Generated_Source\PSoC5/Filter_Int.c **** 
+  44:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+  45:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_Start
+  46:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+  47:Generated_Source\PSoC5/Filter_Int.c **** *
+  48:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+  49:Generated_Source\PSoC5/Filter_Int.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
+  50:Generated_Source\PSoC5/Filter_Int.c **** *  sets the default interrupt vector, sets the priority from the value in the
+  51:Generated_Source\PSoC5/Filter_Int.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
+  52:Generated_Source\PSoC5/Filter_Int.c **** *  interrupt controller.
+  53:Generated_Source\PSoC5/Filter_Int.c **** *
+  54:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:  
+  55:Generated_Source\PSoC5/Filter_Int.c **** *   None
+  56:Generated_Source\PSoC5/Filter_Int.c **** *
+  57:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+  58:Generated_Source\PSoC5/Filter_Int.c **** *   None
+  59:Generated_Source\PSoC5/Filter_Int.c **** *
+  60:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+  61:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_Start(void)
+  62:Generated_Source\PSoC5/Filter_Int.c **** {
+  63:Generated_Source\PSoC5/Filter_Int.c ****     /* For all we know the interrupt is active. */
+  64:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_Disable();
+  65:Generated_Source\PSoC5/Filter_Int.c **** 
+  66:Generated_Source\PSoC5/Filter_Int.c ****     /* Set the ISR to point to the Filter_Int Interrupt. */
+  67:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_SetVector(&Filter_Int_Interrupt);
+  68:Generated_Source\PSoC5/Filter_Int.c **** 
+  69:Generated_Source\PSoC5/Filter_Int.c ****     /* Set the priority. */
+  70:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_SetPriority((uint8)Filter_Int_INTC_PRIOR_NUMBER);
+  71:Generated_Source\PSoC5/Filter_Int.c **** 
+  72:Generated_Source\PSoC5/Filter_Int.c ****     /* Enable it. */
+  73:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_Enable();
+  74:Generated_Source\PSoC5/Filter_Int.c **** }
+  75:Generated_Source\PSoC5/Filter_Int.c **** 
+  76:Generated_Source\PSoC5/Filter_Int.c **** 
+  77:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+  78:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_StartEx
+  79:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+  80:Generated_Source\PSoC5/Filter_Int.c **** *
+  81:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+  82:Generated_Source\PSoC5/Filter_Int.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
+  83:Generated_Source\PSoC5/Filter_Int.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
+  84:Generated_Source\PSoC5/Filter_Int.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
+  85:Generated_Source\PSoC5/Filter_Int.c **** *  the interrupt to the interrupt controller.
+  86:Generated_Source\PSoC5/Filter_Int.c **** *  
+  87:Generated_Source\PSoC5/Filter_Int.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+  88:Generated_Source\PSoC5/Filter_Int.c **** *  used to provide consistent definition across compilers:
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 3
 
 
-  89:Generated_Source\PSoC5/Filter_INT.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
-  90:Generated_Source\PSoC5/Filter_INT.c **** *  the interrupt to the interrupt controller.
-  91:Generated_Source\PSoC5/Filter_INT.c **** *  
-  92:Generated_Source\PSoC5/Filter_INT.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
-  93:Generated_Source\PSoC5/Filter_INT.c **** *  used to provide consistent definition across compilers:
-  94:Generated_Source\PSoC5/Filter_INT.c **** *  
-  95:Generated_Source\PSoC5/Filter_INT.c **** *  Function definition example:
-  96:Generated_Source\PSoC5/Filter_INT.c **** *   CY_ISR(MyISR)
-  97:Generated_Source\PSoC5/Filter_INT.c **** *   {
-  98:Generated_Source\PSoC5/Filter_INT.c **** *   }
-  99:Generated_Source\PSoC5/Filter_INT.c **** *   Function prototype example:
- 100:Generated_Source\PSoC5/Filter_INT.c **** *   CY_ISR_PROTO(MyISR);
- 101:Generated_Source\PSoC5/Filter_INT.c **** *
- 102:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:  
- 103:Generated_Source\PSoC5/Filter_INT.c **** *   address: Address of the ISR to set in the interrupt vector table.
- 104:Generated_Source\PSoC5/Filter_INT.c **** *
- 105:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 106:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 107:Generated_Source\PSoC5/Filter_INT.c **** *
- 108:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 109:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_StartEx(cyisraddress address)
- 110:Generated_Source\PSoC5/Filter_INT.c **** {
- 111:Generated_Source\PSoC5/Filter_INT.c ****     /* For all we know the interrupt is active. */
- 112:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_Disable();
- 113:Generated_Source\PSoC5/Filter_INT.c **** 
- 114:Generated_Source\PSoC5/Filter_INT.c ****     /* Set the ISR to point to the Filter_INT Interrupt. */
- 115:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_SetVector(address);
- 116:Generated_Source\PSoC5/Filter_INT.c **** 
- 117:Generated_Source\PSoC5/Filter_INT.c ****     /* Set the priority. */
- 118:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_SetPriority((uint8)Filter_INT_INTC_PRIOR_NUMBER);
- 119:Generated_Source\PSoC5/Filter_INT.c **** 
- 120:Generated_Source\PSoC5/Filter_INT.c ****     /* Enable it. */
- 121:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_Enable();
- 122:Generated_Source\PSoC5/Filter_INT.c **** }
- 123:Generated_Source\PSoC5/Filter_INT.c **** 
- 124:Generated_Source\PSoC5/Filter_INT.c **** 
- 125:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 126:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_Stop
- 127:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 128:Generated_Source\PSoC5/Filter_INT.c **** *
- 129:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 130:Generated_Source\PSoC5/Filter_INT.c **** *   Disables and removes the interrupt.
- 131:Generated_Source\PSoC5/Filter_INT.c **** *
- 132:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:  
- 133:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 134:Generated_Source\PSoC5/Filter_INT.c **** *
- 135:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 136:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 137:Generated_Source\PSoC5/Filter_INT.c **** *
- 138:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 139:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_Stop(void)
- 140:Generated_Source\PSoC5/Filter_INT.c **** {
- 141:Generated_Source\PSoC5/Filter_INT.c ****     /* Disable this interrupt. */
- 142:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_Disable();
- 143:Generated_Source\PSoC5/Filter_INT.c **** 
- 144:Generated_Source\PSoC5/Filter_INT.c ****     /* Set the ISR to point to the passive one. */
- 145:Generated_Source\PSoC5/Filter_INT.c ****     Filter_INT_SetVector(&IntDefaultHandler);
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 4
+  89:Generated_Source\PSoC5/Filter_Int.c **** *  
+  90:Generated_Source\PSoC5/Filter_Int.c **** *  Function definition example:
+  91:Generated_Source\PSoC5/Filter_Int.c **** *   CY_ISR(MyISR)
+  92:Generated_Source\PSoC5/Filter_Int.c **** *   {
+  93:Generated_Source\PSoC5/Filter_Int.c **** *   }
+  94:Generated_Source\PSoC5/Filter_Int.c **** *   Function prototype example:
+  95:Generated_Source\PSoC5/Filter_Int.c **** *   CY_ISR_PROTO(MyISR);
+  96:Generated_Source\PSoC5/Filter_Int.c **** *
+  97:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:  
+  98:Generated_Source\PSoC5/Filter_Int.c **** *   address: Address of the ISR to set in the interrupt vector table.
+  99:Generated_Source\PSoC5/Filter_Int.c **** *
+ 100:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 101:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 102:Generated_Source\PSoC5/Filter_Int.c **** *
+ 103:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 104:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_StartEx(cyisraddress address)
+ 105:Generated_Source\PSoC5/Filter_Int.c **** {
+ 106:Generated_Source\PSoC5/Filter_Int.c ****     /* For all we know the interrupt is active. */
+ 107:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_Disable();
+ 108:Generated_Source\PSoC5/Filter_Int.c **** 
+ 109:Generated_Source\PSoC5/Filter_Int.c ****     /* Set the ISR to point to the Filter_Int Interrupt. */
+ 110:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_SetVector(address);
+ 111:Generated_Source\PSoC5/Filter_Int.c **** 
+ 112:Generated_Source\PSoC5/Filter_Int.c ****     /* Set the priority. */
+ 113:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_SetPriority((uint8)Filter_Int_INTC_PRIOR_NUMBER);
+ 114:Generated_Source\PSoC5/Filter_Int.c **** 
+ 115:Generated_Source\PSoC5/Filter_Int.c ****     /* Enable it. */
+ 116:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_Enable();
+ 117:Generated_Source\PSoC5/Filter_Int.c **** }
+ 118:Generated_Source\PSoC5/Filter_Int.c **** 
+ 119:Generated_Source\PSoC5/Filter_Int.c **** 
+ 120:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 121:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_Stop
+ 122:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 123:Generated_Source\PSoC5/Filter_Int.c **** *
+ 124:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 125:Generated_Source\PSoC5/Filter_Int.c **** *   Disables and removes the interrupt.
+ 126:Generated_Source\PSoC5/Filter_Int.c **** *
+ 127:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:  
+ 128:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 129:Generated_Source\PSoC5/Filter_Int.c **** *
+ 130:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 131:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 132:Generated_Source\PSoC5/Filter_Int.c **** *
+ 133:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 134:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_Stop(void)
+ 135:Generated_Source\PSoC5/Filter_Int.c **** {
+ 136:Generated_Source\PSoC5/Filter_Int.c ****     /* Disable this interrupt. */
+ 137:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_Disable();
+ 138:Generated_Source\PSoC5/Filter_Int.c **** 
+ 139:Generated_Source\PSoC5/Filter_Int.c ****     /* Set the ISR to point to the passive one. */
+ 140:Generated_Source\PSoC5/Filter_Int.c ****     Filter_Int_SetVector(&IntDefaultHandler);
+ 141:Generated_Source\PSoC5/Filter_Int.c **** }
+ 142:Generated_Source\PSoC5/Filter_Int.c **** 
+ 143:Generated_Source\PSoC5/Filter_Int.c **** 
+ 144:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 145:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_Interrupt
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 4
 
 
- 146:Generated_Source\PSoC5/Filter_INT.c **** }
- 147:Generated_Source\PSoC5/Filter_INT.c **** 
- 148:Generated_Source\PSoC5/Filter_INT.c **** 
- 149:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 150:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_Interrupt
- 151:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 152:Generated_Source\PSoC5/Filter_INT.c **** *
- 153:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 154:Generated_Source\PSoC5/Filter_INT.c **** *   The default Interrupt Service Routine for Filter_INT.
- 155:Generated_Source\PSoC5/Filter_INT.c **** *
- 156:Generated_Source\PSoC5/Filter_INT.c **** *   Add custom code between the coments to keep the next version of this file
- 157:Generated_Source\PSoC5/Filter_INT.c **** *   from over writting your code.
- 158:Generated_Source\PSoC5/Filter_INT.c **** *
- 159:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:  
- 160:Generated_Source\PSoC5/Filter_INT.c **** *
- 161:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 162:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 163:Generated_Source\PSoC5/Filter_INT.c **** *
- 164:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 165:Generated_Source\PSoC5/Filter_INT.c **** CY_ISR(Filter_INT_Interrupt)
- 166:Generated_Source\PSoC5/Filter_INT.c **** {
-  27              		.loc 1 166 0
+ 146:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 147:Generated_Source\PSoC5/Filter_Int.c **** *
+ 148:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 149:Generated_Source\PSoC5/Filter_Int.c **** *   The default Interrupt Service Routine for Filter_Int.
+ 150:Generated_Source\PSoC5/Filter_Int.c **** *
+ 151:Generated_Source\PSoC5/Filter_Int.c **** *   Add custom code between the coments to keep the next version of this file
+ 152:Generated_Source\PSoC5/Filter_Int.c **** *   from over writting your code.
+ 153:Generated_Source\PSoC5/Filter_Int.c **** *
+ 154:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:  
+ 155:Generated_Source\PSoC5/Filter_Int.c **** *
+ 156:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 157:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 158:Generated_Source\PSoC5/Filter_Int.c **** *
+ 159:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 160:Generated_Source\PSoC5/Filter_Int.c **** CY_ISR(Filter_Int_Interrupt)
+ 161:Generated_Source\PSoC5/Filter_Int.c **** {
+  27              		.loc 1 161 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
-  31 0000 08B5     		push	{r3, lr}
-  32              		.cfi_def_cfa_offset 8
-  33              		.cfi_offset 3, -8
-  34              		.cfi_offset 14, -4
- 167:Generated_Source\PSoC5/Filter_INT.c ****     #ifdef Filter_INT_INTERRUPT_INTERRUPT_CALLBACK
- 168:Generated_Source\PSoC5/Filter_INT.c ****         Filter_INT_Interrupt_InterruptCallback();
- 169:Generated_Source\PSoC5/Filter_INT.c ****     #endif /* Filter_INT_INTERRUPT_INTERRUPT_CALLBACK */ 
- 170:Generated_Source\PSoC5/Filter_INT.c **** 
- 171:Generated_Source\PSoC5/Filter_INT.c ****     /*  Place your Interrupt code here. */
- 172:Generated_Source\PSoC5/Filter_INT.c ****     /* `#START Filter_INT_Interrupt` */
- 173:Generated_Source\PSoC5/Filter_INT.c ****     raw_filter = Filter_Read24(Filter_CHANNEL_A);
-  35              		.loc 1 173 0
-  36 0002 0020     		movs	r0, #0
-  37 0004 FFF7FEFF 		bl	Filter_Read24
-  38              	.LVL0:
-  39 0008 014B     		ldr	r3, .L3
-  40 000a 1860     		str	r0, [r3]
-  41 000c 08BD     		pop	{r3, pc}
-  42              	.L4:
-  43 000e 00BF     		.align	2
-  44              	.L3:
-  45 0010 00000000 		.word	raw_filter
-  46              		.cfi_endproc
-  47              	.LFE66:
-  48              		.size	Filter_INT_Interrupt, .-Filter_INT_Interrupt
-  49              		.section	.text.Filter_INT_SetVector,"ax",%progbits
-  50              		.align	2
-  51              		.global	Filter_INT_SetVector
-  52              		.thumb
-  53              		.thumb_func
-  54              		.type	Filter_INT_SetVector, %function
-  55              	Filter_INT_SetVector:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 5
+  31              		@ link register save eliminated.
+  32 0000 7047     		bx	lr
+  33              		.cfi_endproc
+  34              	.LFE3:
+  35              		.size	Filter_Int_Interrupt, .-Filter_Int_Interrupt
+  36 0002 00BF     		.section	.text.Filter_Int_SetVector,"ax",%progbits
+  37              		.align	2
+  38              		.global	Filter_Int_SetVector
+  39              		.thumb
+  40              		.thumb_func
+  41              		.type	Filter_Int_SetVector, %function
+  42              	Filter_Int_SetVector:
+  43              	.LFB4:
+ 162:Generated_Source\PSoC5/Filter_Int.c ****     #ifdef Filter_Int_INTERRUPT_INTERRUPT_CALLBACK
+ 163:Generated_Source\PSoC5/Filter_Int.c ****         Filter_Int_Interrupt_InterruptCallback();
+ 164:Generated_Source\PSoC5/Filter_Int.c ****     #endif /* Filter_Int_INTERRUPT_INTERRUPT_CALLBACK */ 
+ 165:Generated_Source\PSoC5/Filter_Int.c **** 
+ 166:Generated_Source\PSoC5/Filter_Int.c ****     /*  Place your Interrupt code here. */
+ 167:Generated_Source\PSoC5/Filter_Int.c ****     /* `#START Filter_Int_Interrupt` */
+ 168:Generated_Source\PSoC5/Filter_Int.c **** 
+ 169:Generated_Source\PSoC5/Filter_Int.c ****     /* `#END` */
+ 170:Generated_Source\PSoC5/Filter_Int.c **** }
+ 171:Generated_Source\PSoC5/Filter_Int.c **** 
+ 172:Generated_Source\PSoC5/Filter_Int.c **** 
+ 173:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 174:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_SetVector
+ 175:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 176:Generated_Source\PSoC5/Filter_Int.c **** *
+ 177:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 178:Generated_Source\PSoC5/Filter_Int.c **** *   Change the ISR vector for the Interrupt. Note calling Filter_Int_Start
+ 179:Generated_Source\PSoC5/Filter_Int.c **** *   will override any effect this method would have had. To set the vector 
+ 180:Generated_Source\PSoC5/Filter_Int.c **** *   before the component has been started use Filter_Int_StartEx instead.
+ 181:Generated_Source\PSoC5/Filter_Int.c **** * 
+ 182:Generated_Source\PSoC5/Filter_Int.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ 183:Generated_Source\PSoC5/Filter_Int.c **** *   used to provide consistent definition across compilers:
+ 184:Generated_Source\PSoC5/Filter_Int.c **** *
+ 185:Generated_Source\PSoC5/Filter_Int.c **** *   Function definition example:
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 5
 
 
-  56              	.LFB67:
- 174:Generated_Source\PSoC5/Filter_INT.c ****     /* `#END` */
- 175:Generated_Source\PSoC5/Filter_INT.c **** }
- 176:Generated_Source\PSoC5/Filter_INT.c **** 
- 177:Generated_Source\PSoC5/Filter_INT.c **** 
- 178:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 179:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_SetVector
- 180:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 181:Generated_Source\PSoC5/Filter_INT.c **** *
- 182:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 183:Generated_Source\PSoC5/Filter_INT.c **** *   Change the ISR vector for the Interrupt. Note calling Filter_INT_Start
- 184:Generated_Source\PSoC5/Filter_INT.c **** *   will override any effect this method would have had. To set the vector 
- 185:Generated_Source\PSoC5/Filter_INT.c **** *   before the component has been started use Filter_INT_StartEx instead.
- 186:Generated_Source\PSoC5/Filter_INT.c **** * 
- 187:Generated_Source\PSoC5/Filter_INT.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
- 188:Generated_Source\PSoC5/Filter_INT.c **** *   used to provide consistent definition across compilers:
- 189:Generated_Source\PSoC5/Filter_INT.c **** *
- 190:Generated_Source\PSoC5/Filter_INT.c **** *   Function definition example:
- 191:Generated_Source\PSoC5/Filter_INT.c **** *   CY_ISR(MyISR)
- 192:Generated_Source\PSoC5/Filter_INT.c **** *   {
- 193:Generated_Source\PSoC5/Filter_INT.c **** *   }
- 194:Generated_Source\PSoC5/Filter_INT.c **** *
- 195:Generated_Source\PSoC5/Filter_INT.c **** *   Function prototype example:
- 196:Generated_Source\PSoC5/Filter_INT.c **** *     CY_ISR_PROTO(MyISR);
- 197:Generated_Source\PSoC5/Filter_INT.c **** *
- 198:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
- 199:Generated_Source\PSoC5/Filter_INT.c **** *   address: Address of the ISR to set in the interrupt vector table.
- 200:Generated_Source\PSoC5/Filter_INT.c **** *
- 201:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 202:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 203:Generated_Source\PSoC5/Filter_INT.c **** *
- 204:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 205:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_SetVector(cyisraddress address)
- 206:Generated_Source\PSoC5/Filter_INT.c **** {
-  57              		.loc 1 206 0
-  58              		.cfi_startproc
-  59              		@ args = 0, pretend = 0, frame = 0
-  60              		@ frame_needed = 0, uses_anonymous_args = 0
-  61              		@ link register save eliminated.
-  62              	.LVL1:
- 207:Generated_Source\PSoC5/Filter_INT.c ****     cyisraddress * ramVectorTable;
- 208:Generated_Source\PSoC5/Filter_INT.c **** 
- 209:Generated_Source\PSoC5/Filter_INT.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
-  63              		.loc 1 209 0
-  64 0000 024B     		ldr	r3, .L6
-  65 0002 1B68     		ldr	r3, [r3]
-  66              	.LVL2:
- 210:Generated_Source\PSoC5/Filter_INT.c **** 
- 211:Generated_Source\PSoC5/Filter_INT.c ****     ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_INT__INTC_NUMBER] = address;
-  67              		.loc 1 211 0
-  68 0004 C3F8B000 		str	r0, [r3, #176]
-  69 0008 7047     		bx	lr
-  70              	.L7:
-  71 000a 00BF     		.align	2
-  72              	.L6:
-  73 000c 08ED00E0 		.word	-536810232
-  74              		.cfi_endproc
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 6
+ 186:Generated_Source\PSoC5/Filter_Int.c **** *   CY_ISR(MyISR)
+ 187:Generated_Source\PSoC5/Filter_Int.c **** *   {
+ 188:Generated_Source\PSoC5/Filter_Int.c **** *   }
+ 189:Generated_Source\PSoC5/Filter_Int.c **** *
+ 190:Generated_Source\PSoC5/Filter_Int.c **** *   Function prototype example:
+ 191:Generated_Source\PSoC5/Filter_Int.c **** *     CY_ISR_PROTO(MyISR);
+ 192:Generated_Source\PSoC5/Filter_Int.c **** *
+ 193:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 194:Generated_Source\PSoC5/Filter_Int.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 195:Generated_Source\PSoC5/Filter_Int.c **** *
+ 196:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 197:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 198:Generated_Source\PSoC5/Filter_Int.c **** *
+ 199:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 200:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_SetVector(cyisraddress address)
+ 201:Generated_Source\PSoC5/Filter_Int.c **** {
+  44              		.loc 1 201 0
+  45              		.cfi_startproc
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  49              	.LVL0:
+ 202:Generated_Source\PSoC5/Filter_Int.c ****     cyisraddress * ramVectorTable;
+ 203:Generated_Source\PSoC5/Filter_Int.c **** 
+ 204:Generated_Source\PSoC5/Filter_Int.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  50              		.loc 1 204 0
+  51 0000 024B     		ldr	r3, .L3
+  52 0002 1B68     		ldr	r3, [r3]
+  53              	.LVL1:
+ 205:Generated_Source\PSoC5/Filter_Int.c **** 
+ 206:Generated_Source\PSoC5/Filter_Int.c ****     ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_Int__INTC_NUMBER] = address;
+  54              		.loc 1 206 0
+  55 0004 C3F8B000 		str	r0, [r3, #176]
+  56 0008 7047     		bx	lr
+  57              	.L4:
+  58 000a 00BF     		.align	2
+  59              	.L3:
+  60 000c 08ED00E0 		.word	-536810232
+  61              		.cfi_endproc
+  62              	.LFE4:
+  63              		.size	Filter_Int_SetVector, .-Filter_Int_SetVector
+  64              		.section	.text.Filter_Int_GetVector,"ax",%progbits
+  65              		.align	2
+  66              		.global	Filter_Int_GetVector
+  67              		.thumb
+  68              		.thumb_func
+  69              		.type	Filter_Int_GetVector, %function
+  70              	Filter_Int_GetVector:
+  71              	.LFB5:
+ 207:Generated_Source\PSoC5/Filter_Int.c **** }
+ 208:Generated_Source\PSoC5/Filter_Int.c **** 
+ 209:Generated_Source\PSoC5/Filter_Int.c **** 
+ 210:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 211:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_GetVector
+ 212:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 213:Generated_Source\PSoC5/Filter_Int.c **** *
+ 214:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 6
 
 
-  75              	.LFE67:
-  76              		.size	Filter_INT_SetVector, .-Filter_INT_SetVector
-  77              		.section	.text.Filter_INT_GetVector,"ax",%progbits
-  78              		.align	2
-  79              		.global	Filter_INT_GetVector
-  80              		.thumb
-  81              		.thumb_func
-  82              		.type	Filter_INT_GetVector, %function
-  83              	Filter_INT_GetVector:
-  84              	.LFB68:
- 212:Generated_Source\PSoC5/Filter_INT.c **** }
- 213:Generated_Source\PSoC5/Filter_INT.c **** 
- 214:Generated_Source\PSoC5/Filter_INT.c **** 
- 215:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 216:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_GetVector
- 217:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 218:Generated_Source\PSoC5/Filter_INT.c **** *
- 219:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 220:Generated_Source\PSoC5/Filter_INT.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
- 221:Generated_Source\PSoC5/Filter_INT.c **** *
- 222:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
- 223:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 224:Generated_Source\PSoC5/Filter_INT.c **** *
- 225:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 226:Generated_Source\PSoC5/Filter_INT.c **** *   Address of the ISR in the interrupt vector table.
- 227:Generated_Source\PSoC5/Filter_INT.c **** *
- 228:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 229:Generated_Source\PSoC5/Filter_INT.c **** cyisraddress Filter_INT_GetVector(void)
- 230:Generated_Source\PSoC5/Filter_INT.c **** {
-  85              		.loc 1 230 0
-  86              		.cfi_startproc
-  87              		@ args = 0, pretend = 0, frame = 0
-  88              		@ frame_needed = 0, uses_anonymous_args = 0
-  89              		@ link register save eliminated.
- 231:Generated_Source\PSoC5/Filter_INT.c ****     cyisraddress * ramVectorTable;
- 232:Generated_Source\PSoC5/Filter_INT.c **** 
- 233:Generated_Source\PSoC5/Filter_INT.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
-  90              		.loc 1 233 0
-  91 0000 024B     		ldr	r3, .L9
-  92 0002 1B68     		ldr	r3, [r3]
-  93              	.LVL3:
- 234:Generated_Source\PSoC5/Filter_INT.c **** 
- 235:Generated_Source\PSoC5/Filter_INT.c ****     return ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_INT__INTC_NUMBER];
- 236:Generated_Source\PSoC5/Filter_INT.c **** }
-  94              		.loc 1 236 0
-  95 0004 D3F8B000 		ldr	r0, [r3, #176]
-  96 0008 7047     		bx	lr
-  97              	.L10:
-  98 000a 00BF     		.align	2
-  99              	.L9:
- 100 000c 08ED00E0 		.word	-536810232
- 101              		.cfi_endproc
- 102              	.LFE68:
- 103              		.size	Filter_INT_GetVector, .-Filter_INT_GetVector
- 104              		.section	.text.Filter_INT_SetPriority,"ax",%progbits
- 105              		.align	2
- 106              		.global	Filter_INT_SetPriority
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 7
+ 215:Generated_Source\PSoC5/Filter_Int.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 216:Generated_Source\PSoC5/Filter_Int.c **** *
+ 217:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 218:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 219:Generated_Source\PSoC5/Filter_Int.c **** *
+ 220:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 221:Generated_Source\PSoC5/Filter_Int.c **** *   Address of the ISR in the interrupt vector table.
+ 222:Generated_Source\PSoC5/Filter_Int.c **** *
+ 223:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 224:Generated_Source\PSoC5/Filter_Int.c **** cyisraddress Filter_Int_GetVector(void)
+ 225:Generated_Source\PSoC5/Filter_Int.c **** {
+  72              		.loc 1 225 0
+  73              		.cfi_startproc
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76              		@ link register save eliminated.
+ 226:Generated_Source\PSoC5/Filter_Int.c ****     cyisraddress * ramVectorTable;
+ 227:Generated_Source\PSoC5/Filter_Int.c **** 
+ 228:Generated_Source\PSoC5/Filter_Int.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  77              		.loc 1 228 0
+  78 0000 024B     		ldr	r3, .L6
+  79 0002 1B68     		ldr	r3, [r3]
+  80              	.LVL2:
+ 229:Generated_Source\PSoC5/Filter_Int.c **** 
+ 230:Generated_Source\PSoC5/Filter_Int.c ****     return ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_Int__INTC_NUMBER];
+ 231:Generated_Source\PSoC5/Filter_Int.c **** }
+  81              		.loc 1 231 0
+  82 0004 D3F8B000 		ldr	r0, [r3, #176]
+  83 0008 7047     		bx	lr
+  84              	.L7:
+  85 000a 00BF     		.align	2
+  86              	.L6:
+  87 000c 08ED00E0 		.word	-536810232
+  88              		.cfi_endproc
+  89              	.LFE5:
+  90              		.size	Filter_Int_GetVector, .-Filter_Int_GetVector
+  91              		.section	.text.Filter_Int_SetPriority,"ax",%progbits
+  92              		.align	2
+  93              		.global	Filter_Int_SetPriority
+  94              		.thumb
+  95              		.thumb_func
+  96              		.type	Filter_Int_SetPriority, %function
+  97              	Filter_Int_SetPriority:
+  98              	.LFB6:
+ 232:Generated_Source\PSoC5/Filter_Int.c **** 
+ 233:Generated_Source\PSoC5/Filter_Int.c **** 
+ 234:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 235:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_SetPriority
+ 236:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 237:Generated_Source\PSoC5/Filter_Int.c **** *
+ 238:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 239:Generated_Source\PSoC5/Filter_Int.c **** *   Sets the Priority of the Interrupt. 
+ 240:Generated_Source\PSoC5/Filter_Int.c **** *
+ 241:Generated_Source\PSoC5/Filter_Int.c **** *   Note calling Filter_Int_Start or Filter_Int_StartEx will 
+ 242:Generated_Source\PSoC5/Filter_Int.c **** *   override any effect this API would have had. This API should only be called
+ 243:Generated_Source\PSoC5/Filter_Int.c **** *   after Filter_Int_Start or Filter_Int_StartEx has been called. 
+ 244:Generated_Source\PSoC5/Filter_Int.c **** *   To set the initial priority for the component, use the Design-Wide Resources
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 7
 
 
- 107              		.thumb
- 108              		.thumb_func
- 109              		.type	Filter_INT_SetPriority, %function
- 110              	Filter_INT_SetPriority:
- 111              	.LFB69:
- 237:Generated_Source\PSoC5/Filter_INT.c **** 
- 238:Generated_Source\PSoC5/Filter_INT.c **** 
- 239:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 240:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_SetPriority
- 241:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 242:Generated_Source\PSoC5/Filter_INT.c **** *
- 243:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 244:Generated_Source\PSoC5/Filter_INT.c **** *   Sets the Priority of the Interrupt. 
- 245:Generated_Source\PSoC5/Filter_INT.c **** *
- 246:Generated_Source\PSoC5/Filter_INT.c **** *   Note calling Filter_INT_Start or Filter_INT_StartEx will 
- 247:Generated_Source\PSoC5/Filter_INT.c **** *   override any effect this API would have had. This API should only be called
- 248:Generated_Source\PSoC5/Filter_INT.c **** *   after Filter_INT_Start or Filter_INT_StartEx has been called. 
- 249:Generated_Source\PSoC5/Filter_INT.c **** *   To set the initial priority for the component, use the Design-Wide Resources
- 250:Generated_Source\PSoC5/Filter_INT.c **** *   Interrupt Editor.
- 251:Generated_Source\PSoC5/Filter_INT.c **** *
- 252:Generated_Source\PSoC5/Filter_INT.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
- 253:Generated_Source\PSoC5/Filter_INT.c **** *
- 254:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
- 255:Generated_Source\PSoC5/Filter_INT.c **** *   priority: Priority of the interrupt, 0 being the highest priority
- 256:Generated_Source\PSoC5/Filter_INT.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
- 257:Generated_Source\PSoC5/Filter_INT.c **** *             PSoC 4: Priority is from 0 to 3.
- 258:Generated_Source\PSoC5/Filter_INT.c **** *
- 259:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 260:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 261:Generated_Source\PSoC5/Filter_INT.c **** *
- 262:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 263:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_SetPriority(uint8 priority)
- 264:Generated_Source\PSoC5/Filter_INT.c **** {
- 112              		.loc 1 264 0
- 113              		.cfi_startproc
- 114              		@ args = 0, pretend = 0, frame = 0
- 115              		@ frame_needed = 0, uses_anonymous_args = 0
- 116              		@ link register save eliminated.
- 117              	.LVL4:
- 265:Generated_Source\PSoC5/Filter_INT.c ****     *Filter_INT_INTC_PRIOR = priority << 5;
- 118              		.loc 1 265 0
- 119 0000 4001     		lsls	r0, r0, #5
- 120              	.LVL5:
- 121 0002 C0B2     		uxtb	r0, r0
- 122 0004 014B     		ldr	r3, .L12
- 123 0006 1870     		strb	r0, [r3]
- 124 0008 7047     		bx	lr
- 125              	.L13:
- 126 000a 00BF     		.align	2
- 127              	.L12:
- 128 000c 1CE400E0 		.word	-536812516
- 129              		.cfi_endproc
- 130              	.LFE69:
- 131              		.size	Filter_INT_SetPriority, .-Filter_INT_SetPriority
- 132              		.section	.text.Filter_INT_GetPriority,"ax",%progbits
- 133              		.align	2
- 134              		.global	Filter_INT_GetPriority
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 8
+ 245:Generated_Source\PSoC5/Filter_Int.c **** *   Interrupt Editor.
+ 246:Generated_Source\PSoC5/Filter_Int.c **** *
+ 247:Generated_Source\PSoC5/Filter_Int.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
+ 248:Generated_Source\PSoC5/Filter_Int.c **** *
+ 249:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 250:Generated_Source\PSoC5/Filter_Int.c **** *   priority: Priority of the interrupt, 0 being the highest priority
+ 251:Generated_Source\PSoC5/Filter_Int.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 252:Generated_Source\PSoC5/Filter_Int.c **** *             PSoC 4: Priority is from 0 to 3.
+ 253:Generated_Source\PSoC5/Filter_Int.c **** *
+ 254:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 255:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 256:Generated_Source\PSoC5/Filter_Int.c **** *
+ 257:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 258:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_SetPriority(uint8 priority)
+ 259:Generated_Source\PSoC5/Filter_Int.c **** {
+  99              		.loc 1 259 0
+ 100              		.cfi_startproc
+ 101              		@ args = 0, pretend = 0, frame = 0
+ 102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103              		@ link register save eliminated.
+ 104              	.LVL3:
+ 260:Generated_Source\PSoC5/Filter_Int.c ****     *Filter_Int_INTC_PRIOR = priority << 5;
+ 105              		.loc 1 260 0
+ 106 0000 4001     		lsls	r0, r0, #5
+ 107              	.LVL4:
+ 108 0002 C0B2     		uxtb	r0, r0
+ 109 0004 014B     		ldr	r3, .L9
+ 110 0006 1870     		strb	r0, [r3]
+ 111 0008 7047     		bx	lr
+ 112              	.L10:
+ 113 000a 00BF     		.align	2
+ 114              	.L9:
+ 115 000c 1CE400E0 		.word	-536812516
+ 116              		.cfi_endproc
+ 117              	.LFE6:
+ 118              		.size	Filter_Int_SetPriority, .-Filter_Int_SetPriority
+ 119              		.section	.text.Filter_Int_GetPriority,"ax",%progbits
+ 120              		.align	2
+ 121              		.global	Filter_Int_GetPriority
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.type	Filter_Int_GetPriority, %function
+ 125              	Filter_Int_GetPriority:
+ 126              	.LFB7:
+ 261:Generated_Source\PSoC5/Filter_Int.c **** }
+ 262:Generated_Source\PSoC5/Filter_Int.c **** 
+ 263:Generated_Source\PSoC5/Filter_Int.c **** 
+ 264:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 265:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_GetPriority
+ 266:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 267:Generated_Source\PSoC5/Filter_Int.c **** *
+ 268:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 269:Generated_Source\PSoC5/Filter_Int.c **** *   Gets the Priority of the Interrupt.
+ 270:Generated_Source\PSoC5/Filter_Int.c **** *
+ 271:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 272:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 273:Generated_Source\PSoC5/Filter_Int.c **** *
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 8
 
 
- 135              		.thumb
- 136              		.thumb_func
- 137              		.type	Filter_INT_GetPriority, %function
- 138              	Filter_INT_GetPriority:
- 139              	.LFB70:
- 266:Generated_Source\PSoC5/Filter_INT.c **** }
- 267:Generated_Source\PSoC5/Filter_INT.c **** 
- 268:Generated_Source\PSoC5/Filter_INT.c **** 
- 269:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 270:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_GetPriority
- 271:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 272:Generated_Source\PSoC5/Filter_INT.c **** *
- 273:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 274:Generated_Source\PSoC5/Filter_INT.c **** *   Gets the Priority of the Interrupt.
- 275:Generated_Source\PSoC5/Filter_INT.c **** *
- 276:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
- 277:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 278:Generated_Source\PSoC5/Filter_INT.c **** *
- 279:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 280:Generated_Source\PSoC5/Filter_INT.c **** *   Priority of the interrupt, 0 being the highest priority
- 281:Generated_Source\PSoC5/Filter_INT.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
- 282:Generated_Source\PSoC5/Filter_INT.c **** *    PSoC 4: Priority is from 0 to 3.
- 283:Generated_Source\PSoC5/Filter_INT.c **** *
- 284:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 285:Generated_Source\PSoC5/Filter_INT.c **** uint8 Filter_INT_GetPriority(void)
- 286:Generated_Source\PSoC5/Filter_INT.c **** {
- 140              		.loc 1 286 0
- 141              		.cfi_startproc
- 142              		@ args = 0, pretend = 0, frame = 0
- 143              		@ frame_needed = 0, uses_anonymous_args = 0
- 144              		@ link register save eliminated.
- 287:Generated_Source\PSoC5/Filter_INT.c ****     uint8 priority;
- 288:Generated_Source\PSoC5/Filter_INT.c **** 
- 289:Generated_Source\PSoC5/Filter_INT.c **** 
- 290:Generated_Source\PSoC5/Filter_INT.c ****     priority = *Filter_INT_INTC_PRIOR >> 5;
- 145              		.loc 1 290 0
- 146 0000 014B     		ldr	r3, .L15
- 147 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 148              	.LVL6:
- 291:Generated_Source\PSoC5/Filter_INT.c **** 
- 292:Generated_Source\PSoC5/Filter_INT.c ****     return priority;
- 293:Generated_Source\PSoC5/Filter_INT.c **** }
- 149              		.loc 1 293 0
- 150 0004 4009     		lsrs	r0, r0, #5
- 151              	.LVL7:
- 152 0006 7047     		bx	lr
- 153              	.L16:
- 154              		.align	2
- 155              	.L15:
- 156 0008 1CE400E0 		.word	-536812516
- 157              		.cfi_endproc
- 158              	.LFE70:
- 159              		.size	Filter_INT_GetPriority, .-Filter_INT_GetPriority
- 160              		.section	.text.Filter_INT_Enable,"ax",%progbits
- 161              		.align	2
- 162              		.global	Filter_INT_Enable
- 163              		.thumb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 9
+ 274:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 275:Generated_Source\PSoC5/Filter_Int.c **** *   Priority of the interrupt, 0 being the highest priority
+ 276:Generated_Source\PSoC5/Filter_Int.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 277:Generated_Source\PSoC5/Filter_Int.c **** *    PSoC 4: Priority is from 0 to 3.
+ 278:Generated_Source\PSoC5/Filter_Int.c **** *
+ 279:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 280:Generated_Source\PSoC5/Filter_Int.c **** uint8 Filter_Int_GetPriority(void)
+ 281:Generated_Source\PSoC5/Filter_Int.c **** {
+ 127              		.loc 1 281 0
+ 128              		.cfi_startproc
+ 129              		@ args = 0, pretend = 0, frame = 0
+ 130              		@ frame_needed = 0, uses_anonymous_args = 0
+ 131              		@ link register save eliminated.
+ 282:Generated_Source\PSoC5/Filter_Int.c ****     uint8 priority;
+ 283:Generated_Source\PSoC5/Filter_Int.c **** 
+ 284:Generated_Source\PSoC5/Filter_Int.c **** 
+ 285:Generated_Source\PSoC5/Filter_Int.c ****     priority = *Filter_Int_INTC_PRIOR >> 5;
+ 132              		.loc 1 285 0
+ 133 0000 014B     		ldr	r3, .L12
+ 134 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 135              	.LVL5:
+ 286:Generated_Source\PSoC5/Filter_Int.c **** 
+ 287:Generated_Source\PSoC5/Filter_Int.c ****     return priority;
+ 288:Generated_Source\PSoC5/Filter_Int.c **** }
+ 136              		.loc 1 288 0
+ 137 0004 4009     		lsrs	r0, r0, #5
+ 138              	.LVL6:
+ 139 0006 7047     		bx	lr
+ 140              	.L13:
+ 141              		.align	2
+ 142              	.L12:
+ 143 0008 1CE400E0 		.word	-536812516
+ 144              		.cfi_endproc
+ 145              	.LFE7:
+ 146              		.size	Filter_Int_GetPriority, .-Filter_Int_GetPriority
+ 147              		.section	.text.Filter_Int_Enable,"ax",%progbits
+ 148              		.align	2
+ 149              		.global	Filter_Int_Enable
+ 150              		.thumb
+ 151              		.thumb_func
+ 152              		.type	Filter_Int_Enable, %function
+ 153              	Filter_Int_Enable:
+ 154              	.LFB8:
+ 289:Generated_Source\PSoC5/Filter_Int.c **** 
+ 290:Generated_Source\PSoC5/Filter_Int.c **** 
+ 291:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 292:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_Enable
+ 293:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 294:Generated_Source\PSoC5/Filter_Int.c **** *
+ 295:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 296:Generated_Source\PSoC5/Filter_Int.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
+ 297:Generated_Source\PSoC5/Filter_Int.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
+ 298:Generated_Source\PSoC5/Filter_Int.c **** *   function, which sets the vector and the priority, has been called.
+ 299:Generated_Source\PSoC5/Filter_Int.c **** *
+ 300:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 301:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 302:Generated_Source\PSoC5/Filter_Int.c **** *
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 9
 
 
- 164              		.thumb_func
- 165              		.type	Filter_INT_Enable, %function
- 166              	Filter_INT_Enable:
- 167              	.LFB71:
- 294:Generated_Source\PSoC5/Filter_INT.c **** 
- 295:Generated_Source\PSoC5/Filter_INT.c **** 
- 296:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 297:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_Enable
- 298:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 299:Generated_Source\PSoC5/Filter_INT.c **** *
- 300:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 301:Generated_Source\PSoC5/Filter_INT.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
- 302:Generated_Source\PSoC5/Filter_INT.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
- 303:Generated_Source\PSoC5/Filter_INT.c **** *   function, which sets the vector and the priority, has been called.
- 304:Generated_Source\PSoC5/Filter_INT.c **** *
- 305:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
- 306:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 307:Generated_Source\PSoC5/Filter_INT.c **** *
- 308:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 309:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 310:Generated_Source\PSoC5/Filter_INT.c **** *
- 311:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 312:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_Enable(void)
- 313:Generated_Source\PSoC5/Filter_INT.c **** {
- 168              		.loc 1 313 0
- 169              		.cfi_startproc
- 170              		@ args = 0, pretend = 0, frame = 0
- 171              		@ frame_needed = 0, uses_anonymous_args = 0
- 172              		@ link register save eliminated.
- 314:Generated_Source\PSoC5/Filter_INT.c ****     /* Enable the general interrupt. */
- 315:Generated_Source\PSoC5/Filter_INT.c ****     *Filter_INT_INTC_SET_EN = Filter_INT__INTC_MASK;
- 173              		.loc 1 315 0
- 174 0000 4FF08052 		mov	r2, #268435456
- 175 0004 014B     		ldr	r3, .L18
- 176 0006 1A60     		str	r2, [r3]
- 177 0008 7047     		bx	lr
- 178              	.L19:
- 179 000a 00BF     		.align	2
- 180              	.L18:
- 181 000c 00E100E0 		.word	-536813312
- 182              		.cfi_endproc
- 183              	.LFE71:
- 184              		.size	Filter_INT_Enable, .-Filter_INT_Enable
- 185              		.section	.text.Filter_INT_GetState,"ax",%progbits
- 186              		.align	2
- 187              		.global	Filter_INT_GetState
- 188              		.thumb
- 189              		.thumb_func
- 190              		.type	Filter_INT_GetState, %function
- 191              	Filter_INT_GetState:
- 192              	.LFB72:
- 316:Generated_Source\PSoC5/Filter_INT.c **** }
- 317:Generated_Source\PSoC5/Filter_INT.c **** 
- 318:Generated_Source\PSoC5/Filter_INT.c **** 
- 319:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 320:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_GetState
- 321:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 10
+ 303:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 304:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 305:Generated_Source\PSoC5/Filter_Int.c **** *
+ 306:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 307:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_Enable(void)
+ 308:Generated_Source\PSoC5/Filter_Int.c **** {
+ 155              		.loc 1 308 0
+ 156              		.cfi_startproc
+ 157              		@ args = 0, pretend = 0, frame = 0
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159              		@ link register save eliminated.
+ 309:Generated_Source\PSoC5/Filter_Int.c ****     /* Enable the general interrupt. */
+ 310:Generated_Source\PSoC5/Filter_Int.c ****     *Filter_Int_INTC_SET_EN = Filter_Int__INTC_MASK;
+ 160              		.loc 1 310 0
+ 161 0000 4FF08052 		mov	r2, #268435456
+ 162 0004 014B     		ldr	r3, .L15
+ 163 0006 1A60     		str	r2, [r3]
+ 164 0008 7047     		bx	lr
+ 165              	.L16:
+ 166 000a 00BF     		.align	2
+ 167              	.L15:
+ 168 000c 00E100E0 		.word	-536813312
+ 169              		.cfi_endproc
+ 170              	.LFE8:
+ 171              		.size	Filter_Int_Enable, .-Filter_Int_Enable
+ 172              		.section	.text.Filter_Int_GetState,"ax",%progbits
+ 173              		.align	2
+ 174              		.global	Filter_Int_GetState
+ 175              		.thumb
+ 176              		.thumb_func
+ 177              		.type	Filter_Int_GetState, %function
+ 178              	Filter_Int_GetState:
+ 179              	.LFB9:
+ 311:Generated_Source\PSoC5/Filter_Int.c **** }
+ 312:Generated_Source\PSoC5/Filter_Int.c **** 
+ 313:Generated_Source\PSoC5/Filter_Int.c **** 
+ 314:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 315:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_GetState
+ 316:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 317:Generated_Source\PSoC5/Filter_Int.c **** *
+ 318:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 319:Generated_Source\PSoC5/Filter_Int.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 320:Generated_Source\PSoC5/Filter_Int.c **** *
+ 321:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 322:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 323:Generated_Source\PSoC5/Filter_Int.c **** *
+ 324:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 325:Generated_Source\PSoC5/Filter_Int.c **** *   1 if enabled, 0 if disabled.
+ 326:Generated_Source\PSoC5/Filter_Int.c **** *
+ 327:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 328:Generated_Source\PSoC5/Filter_Int.c **** uint8 Filter_Int_GetState(void)
+ 329:Generated_Source\PSoC5/Filter_Int.c **** {
+ 180              		.loc 1 329 0
+ 181              		.cfi_startproc
+ 182              		@ args = 0, pretend = 0, frame = 0
+ 183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 184              		@ link register save eliminated.
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 10
 
 
- 322:Generated_Source\PSoC5/Filter_INT.c **** *
- 323:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 324:Generated_Source\PSoC5/Filter_INT.c **** *   Gets the state (enabled, disabled) of the Interrupt.
- 325:Generated_Source\PSoC5/Filter_INT.c **** *
- 326:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
- 327:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 328:Generated_Source\PSoC5/Filter_INT.c **** *
- 329:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 330:Generated_Source\PSoC5/Filter_INT.c **** *   1 if enabled, 0 if disabled.
- 331:Generated_Source\PSoC5/Filter_INT.c **** *
- 332:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 333:Generated_Source\PSoC5/Filter_INT.c **** uint8 Filter_INT_GetState(void)
- 334:Generated_Source\PSoC5/Filter_INT.c **** {
- 193              		.loc 1 334 0
- 194              		.cfi_startproc
- 195              		@ args = 0, pretend = 0, frame = 0
- 196              		@ frame_needed = 0, uses_anonymous_args = 0
- 197              		@ link register save eliminated.
- 335:Generated_Source\PSoC5/Filter_INT.c ****     /* Get the state of the general interrupt. */
- 336:Generated_Source\PSoC5/Filter_INT.c ****     return ((*Filter_INT_INTC_SET_EN & (uint32)Filter_INT__INTC_MASK) != 0u) ? 1u:0u;
- 198              		.loc 1 336 0
- 199 0000 044B     		ldr	r3, .L23
- 200 0002 1B68     		ldr	r3, [r3]
- 201 0004 13F0805F 		tst	r3, #268435456
- 202 0008 01D0     		beq	.L22
- 203 000a 0120     		movs	r0, #1
- 204 000c 7047     		bx	lr
- 205              	.L22:
- 206 000e 0020     		movs	r0, #0
- 337:Generated_Source\PSoC5/Filter_INT.c **** }
- 207              		.loc 1 337 0
- 208 0010 7047     		bx	lr
- 209              	.L24:
- 210 0012 00BF     		.align	2
- 211              	.L23:
- 212 0014 00E100E0 		.word	-536813312
- 213              		.cfi_endproc
- 214              	.LFE72:
- 215              		.size	Filter_INT_GetState, .-Filter_INT_GetState
- 216              		.section	.text.Filter_INT_Disable,"ax",%progbits
- 217              		.align	2
- 218              		.global	Filter_INT_Disable
- 219              		.thumb
- 220              		.thumb_func
- 221              		.type	Filter_INT_Disable, %function
- 222              	Filter_INT_Disable:
- 223              	.LFB73:
- 338:Generated_Source\PSoC5/Filter_INT.c **** 
- 339:Generated_Source\PSoC5/Filter_INT.c **** 
- 340:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 341:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_Disable
- 342:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 343:Generated_Source\PSoC5/Filter_INT.c **** *
- 344:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 345:Generated_Source\PSoC5/Filter_INT.c **** *   Disables the Interrupt in the interrupt controller.
- 346:Generated_Source\PSoC5/Filter_INT.c **** *
- 347:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 11
+ 330:Generated_Source\PSoC5/Filter_Int.c ****     /* Get the state of the general interrupt. */
+ 331:Generated_Source\PSoC5/Filter_Int.c ****     return ((*Filter_Int_INTC_SET_EN & (uint32)Filter_Int__INTC_MASK) != 0u) ? 1u:0u;
+ 185              		.loc 1 331 0
+ 186 0000 044B     		ldr	r3, .L20
+ 187 0002 1B68     		ldr	r3, [r3]
+ 188 0004 13F0805F 		tst	r3, #268435456
+ 189 0008 01D0     		beq	.L19
+ 190 000a 0120     		movs	r0, #1
+ 191 000c 7047     		bx	lr
+ 192              	.L19:
+ 193 000e 0020     		movs	r0, #0
+ 332:Generated_Source\PSoC5/Filter_Int.c **** }
+ 194              		.loc 1 332 0
+ 195 0010 7047     		bx	lr
+ 196              	.L21:
+ 197 0012 00BF     		.align	2
+ 198              	.L20:
+ 199 0014 00E100E0 		.word	-536813312
+ 200              		.cfi_endproc
+ 201              	.LFE9:
+ 202              		.size	Filter_Int_GetState, .-Filter_Int_GetState
+ 203              		.section	.text.Filter_Int_Disable,"ax",%progbits
+ 204              		.align	2
+ 205              		.global	Filter_Int_Disable
+ 206              		.thumb
+ 207              		.thumb_func
+ 208              		.type	Filter_Int_Disable, %function
+ 209              	Filter_Int_Disable:
+ 210              	.LFB10:
+ 333:Generated_Source\PSoC5/Filter_Int.c **** 
+ 334:Generated_Source\PSoC5/Filter_Int.c **** 
+ 335:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 336:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_Disable
+ 337:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 338:Generated_Source\PSoC5/Filter_Int.c **** *
+ 339:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 340:Generated_Source\PSoC5/Filter_Int.c **** *   Disables the Interrupt in the interrupt controller.
+ 341:Generated_Source\PSoC5/Filter_Int.c **** *
+ 342:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 343:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 344:Generated_Source\PSoC5/Filter_Int.c **** *
+ 345:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 346:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 347:Generated_Source\PSoC5/Filter_Int.c **** *
+ 348:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 349:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_Disable(void)
+ 350:Generated_Source\PSoC5/Filter_Int.c **** {
+ 211              		.loc 1 350 0
+ 212              		.cfi_startproc
+ 213              		@ args = 0, pretend = 0, frame = 0
+ 214              		@ frame_needed = 0, uses_anonymous_args = 0
+ 215              		@ link register save eliminated.
+ 351:Generated_Source\PSoC5/Filter_Int.c ****     /* Disable the general interrupt. */
+ 352:Generated_Source\PSoC5/Filter_Int.c ****     *Filter_Int_INTC_CLR_EN = Filter_Int__INTC_MASK;
+ 216              		.loc 1 352 0
+ 217 0000 4FF08052 		mov	r2, #268435456
+ 218 0004 014B     		ldr	r3, .L23
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 11
 
 
- 348:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 349:Generated_Source\PSoC5/Filter_INT.c **** *
- 350:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 351:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 352:Generated_Source\PSoC5/Filter_INT.c **** *
- 353:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 354:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_Disable(void)
- 355:Generated_Source\PSoC5/Filter_INT.c **** {
- 224              		.loc 1 355 0
- 225              		.cfi_startproc
- 226              		@ args = 0, pretend = 0, frame = 0
- 227              		@ frame_needed = 0, uses_anonymous_args = 0
- 228              		@ link register save eliminated.
- 356:Generated_Source\PSoC5/Filter_INT.c ****     /* Disable the general interrupt. */
- 357:Generated_Source\PSoC5/Filter_INT.c ****     *Filter_INT_INTC_CLR_EN = Filter_INT__INTC_MASK;
- 229              		.loc 1 357 0
- 230 0000 4FF08052 		mov	r2, #268435456
- 231 0004 014B     		ldr	r3, .L26
- 232 0006 1A60     		str	r2, [r3]
- 233 0008 7047     		bx	lr
- 234              	.L27:
- 235 000a 00BF     		.align	2
- 236              	.L26:
- 237 000c 80E100E0 		.word	-536813184
- 238              		.cfi_endproc
- 239              	.LFE73:
- 240              		.size	Filter_INT_Disable, .-Filter_INT_Disable
- 241              		.section	.text.Filter_INT_Start,"ax",%progbits
- 242              		.align	2
- 243              		.global	Filter_INT_Start
- 244              		.thumb
- 245              		.thumb_func
- 246              		.type	Filter_INT_Start, %function
- 247              	Filter_INT_Start:
- 248              	.LFB63:
-  67:Generated_Source\PSoC5/Filter_INT.c ****     /* For all we know the interrupt is active. */
- 249              		.loc 1 67 0
- 250              		.cfi_startproc
- 251              		@ args = 0, pretend = 0, frame = 0
- 252              		@ frame_needed = 0, uses_anonymous_args = 0
- 253 0000 08B5     		push	{r3, lr}
- 254              		.cfi_def_cfa_offset 8
- 255              		.cfi_offset 3, -8
- 256              		.cfi_offset 14, -4
-  69:Generated_Source\PSoC5/Filter_INT.c **** 
- 257              		.loc 1 69 0
- 258 0002 FFF7FEFF 		bl	Filter_INT_Disable
- 259              	.LVL8:
-  72:Generated_Source\PSoC5/Filter_INT.c **** 
- 260              		.loc 1 72 0
- 261 0006 0448     		ldr	r0, .L30
- 262 0008 FFF7FEFF 		bl	Filter_INT_SetVector
- 263              	.LVL9:
-  75:Generated_Source\PSoC5/Filter_INT.c **** 
- 264              		.loc 1 75 0
- 265 000c 0720     		movs	r0, #7
- 266 000e FFF7FEFF 		bl	Filter_INT_SetPriority
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 12
+ 219 0006 1A60     		str	r2, [r3]
+ 220 0008 7047     		bx	lr
+ 221              	.L24:
+ 222 000a 00BF     		.align	2
+ 223              	.L23:
+ 224 000c 80E100E0 		.word	-536813184
+ 225              		.cfi_endproc
+ 226              	.LFE10:
+ 227              		.size	Filter_Int_Disable, .-Filter_Int_Disable
+ 228              		.section	.text.Filter_Int_Start,"ax",%progbits
+ 229              		.align	2
+ 230              		.global	Filter_Int_Start
+ 231              		.thumb
+ 232              		.thumb_func
+ 233              		.type	Filter_Int_Start, %function
+ 234              	Filter_Int_Start:
+ 235              	.LFB0:
+  62:Generated_Source\PSoC5/Filter_Int.c ****     /* For all we know the interrupt is active. */
+ 236              		.loc 1 62 0
+ 237              		.cfi_startproc
+ 238              		@ args = 0, pretend = 0, frame = 0
+ 239              		@ frame_needed = 0, uses_anonymous_args = 0
+ 240 0000 08B5     		push	{r3, lr}
+ 241              		.cfi_def_cfa_offset 8
+ 242              		.cfi_offset 3, -8
+ 243              		.cfi_offset 14, -4
+  64:Generated_Source\PSoC5/Filter_Int.c **** 
+ 244              		.loc 1 64 0
+ 245 0002 FFF7FEFF 		bl	Filter_Int_Disable
+ 246              	.LVL7:
+  67:Generated_Source\PSoC5/Filter_Int.c **** 
+ 247              		.loc 1 67 0
+ 248 0006 0448     		ldr	r0, .L27
+ 249 0008 FFF7FEFF 		bl	Filter_Int_SetVector
+ 250              	.LVL8:
+  70:Generated_Source\PSoC5/Filter_Int.c **** 
+ 251              		.loc 1 70 0
+ 252 000c 0720     		movs	r0, #7
+ 253 000e FFF7FEFF 		bl	Filter_Int_SetPriority
+ 254              	.LVL9:
+  73:Generated_Source\PSoC5/Filter_Int.c **** }
+ 255              		.loc 1 73 0
+ 256 0012 FFF7FEFF 		bl	Filter_Int_Enable
+ 257              	.LVL10:
+ 258 0016 08BD     		pop	{r3, pc}
+ 259              	.L28:
+ 260              		.align	2
+ 261              	.L27:
+ 262 0018 00000000 		.word	Filter_Int_Interrupt
+ 263              		.cfi_endproc
+ 264              	.LFE0:
+ 265              		.size	Filter_Int_Start, .-Filter_Int_Start
+ 266              		.section	.text.Filter_Int_StartEx,"ax",%progbits
+ 267              		.align	2
+ 268              		.global	Filter_Int_StartEx
+ 269              		.thumb
+ 270              		.thumb_func
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 12
 
 
- 267              	.LVL10:
-  78:Generated_Source\PSoC5/Filter_INT.c **** }
- 268              		.loc 1 78 0
- 269 0012 FFF7FEFF 		bl	Filter_INT_Enable
- 270              	.LVL11:
- 271 0016 08BD     		pop	{r3, pc}
- 272              	.L31:
- 273              		.align	2
- 274              	.L30:
- 275 0018 00000000 		.word	Filter_INT_Interrupt
- 276              		.cfi_endproc
- 277              	.LFE63:
- 278              		.size	Filter_INT_Start, .-Filter_INT_Start
- 279              		.section	.text.Filter_INT_StartEx,"ax",%progbits
- 280              		.align	2
- 281              		.global	Filter_INT_StartEx
- 282              		.thumb
- 283              		.thumb_func
- 284              		.type	Filter_INT_StartEx, %function
- 285              	Filter_INT_StartEx:
- 286              	.LFB64:
- 110:Generated_Source\PSoC5/Filter_INT.c ****     /* For all we know the interrupt is active. */
+ 271              		.type	Filter_Int_StartEx, %function
+ 272              	Filter_Int_StartEx:
+ 273              	.LFB1:
+ 105:Generated_Source\PSoC5/Filter_Int.c ****     /* For all we know the interrupt is active. */
+ 274              		.loc 1 105 0
+ 275              		.cfi_startproc
+ 276              		@ args = 0, pretend = 0, frame = 0
+ 277              		@ frame_needed = 0, uses_anonymous_args = 0
+ 278              	.LVL11:
+ 279 0000 10B5     		push	{r4, lr}
+ 280              		.cfi_def_cfa_offset 8
+ 281              		.cfi_offset 4, -8
+ 282              		.cfi_offset 14, -4
+ 283 0002 0446     		mov	r4, r0
+ 107:Generated_Source\PSoC5/Filter_Int.c **** 
+ 284              		.loc 1 107 0
+ 285 0004 FFF7FEFF 		bl	Filter_Int_Disable
+ 286              	.LVL12:
+ 110:Generated_Source\PSoC5/Filter_Int.c **** 
  287              		.loc 1 110 0
- 288              		.cfi_startproc
- 289              		@ args = 0, pretend = 0, frame = 0
- 290              		@ frame_needed = 0, uses_anonymous_args = 0
- 291              	.LVL12:
- 292 0000 10B5     		push	{r4, lr}
- 293              		.cfi_def_cfa_offset 8
- 294              		.cfi_offset 4, -8
- 295              		.cfi_offset 14, -4
- 296 0002 0446     		mov	r4, r0
- 112:Generated_Source\PSoC5/Filter_INT.c **** 
- 297              		.loc 1 112 0
- 298 0004 FFF7FEFF 		bl	Filter_INT_Disable
- 299              	.LVL13:
- 115:Generated_Source\PSoC5/Filter_INT.c **** 
- 300              		.loc 1 115 0
- 301 0008 2046     		mov	r0, r4
- 302 000a FFF7FEFF 		bl	Filter_INT_SetVector
- 303              	.LVL14:
- 118:Generated_Source\PSoC5/Filter_INT.c **** 
- 304              		.loc 1 118 0
- 305 000e 0720     		movs	r0, #7
- 306 0010 FFF7FEFF 		bl	Filter_INT_SetPriority
- 307              	.LVL15:
- 121:Generated_Source\PSoC5/Filter_INT.c **** }
- 308              		.loc 1 121 0
- 309 0014 FFF7FEFF 		bl	Filter_INT_Enable
- 310              	.LVL16:
- 311 0018 10BD     		pop	{r4, pc}
- 312              		.cfi_endproc
- 313              	.LFE64:
- 314              		.size	Filter_INT_StartEx, .-Filter_INT_StartEx
- 315 001a 00BF     		.section	.text.Filter_INT_Stop,"ax",%progbits
- 316              		.align	2
- 317              		.global	Filter_INT_Stop
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 13
+ 288 0008 2046     		mov	r0, r4
+ 289 000a FFF7FEFF 		bl	Filter_Int_SetVector
+ 290              	.LVL13:
+ 113:Generated_Source\PSoC5/Filter_Int.c **** 
+ 291              		.loc 1 113 0
+ 292 000e 0720     		movs	r0, #7
+ 293 0010 FFF7FEFF 		bl	Filter_Int_SetPriority
+ 294              	.LVL14:
+ 116:Generated_Source\PSoC5/Filter_Int.c **** }
+ 295              		.loc 1 116 0
+ 296 0014 FFF7FEFF 		bl	Filter_Int_Enable
+ 297              	.LVL15:
+ 298 0018 10BD     		pop	{r4, pc}
+ 299              		.cfi_endproc
+ 300              	.LFE1:
+ 301              		.size	Filter_Int_StartEx, .-Filter_Int_StartEx
+ 302 001a 00BF     		.section	.text.Filter_Int_Stop,"ax",%progbits
+ 303              		.align	2
+ 304              		.global	Filter_Int_Stop
+ 305              		.thumb
+ 306              		.thumb_func
+ 307              		.type	Filter_Int_Stop, %function
+ 308              	Filter_Int_Stop:
+ 309              	.LFB2:
+ 135:Generated_Source\PSoC5/Filter_Int.c ****     /* Disable this interrupt. */
+ 310              		.loc 1 135 0
+ 311              		.cfi_startproc
+ 312              		@ args = 0, pretend = 0, frame = 0
+ 313              		@ frame_needed = 0, uses_anonymous_args = 0
+ 314 0000 08B5     		push	{r3, lr}
+ 315              		.cfi_def_cfa_offset 8
+ 316              		.cfi_offset 3, -8
+ 317              		.cfi_offset 14, -4
+ 137:Generated_Source\PSoC5/Filter_Int.c **** 
+ 318              		.loc 1 137 0
+ 319 0002 FFF7FEFF 		bl	Filter_Int_Disable
+ 320              	.LVL16:
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 13
 
 
- 318              		.thumb
- 319              		.thumb_func
- 320              		.type	Filter_INT_Stop, %function
- 321              	Filter_INT_Stop:
- 322              	.LFB65:
- 140:Generated_Source\PSoC5/Filter_INT.c ****     /* Disable this interrupt. */
- 323              		.loc 1 140 0
- 324              		.cfi_startproc
- 325              		@ args = 0, pretend = 0, frame = 0
- 326              		@ frame_needed = 0, uses_anonymous_args = 0
- 327 0000 08B5     		push	{r3, lr}
- 328              		.cfi_def_cfa_offset 8
- 329              		.cfi_offset 3, -8
- 330              		.cfi_offset 14, -4
- 142:Generated_Source\PSoC5/Filter_INT.c **** 
- 331              		.loc 1 142 0
- 332 0002 FFF7FEFF 		bl	Filter_INT_Disable
- 333              	.LVL17:
- 145:Generated_Source\PSoC5/Filter_INT.c **** }
- 334              		.loc 1 145 0
- 335 0006 0248     		ldr	r0, .L36
- 336 0008 FFF7FEFF 		bl	Filter_INT_SetVector
- 337              	.LVL18:
- 338 000c 08BD     		pop	{r3, pc}
- 339              	.L37:
- 340 000e 00BF     		.align	2
- 341              	.L36:
- 342 0010 00000000 		.word	IntDefaultHandler
- 343              		.cfi_endproc
- 344              	.LFE65:
- 345              		.size	Filter_INT_Stop, .-Filter_INT_Stop
- 346              		.section	.text.Filter_INT_SetPending,"ax",%progbits
- 347              		.align	2
- 348              		.global	Filter_INT_SetPending
- 349              		.thumb
- 350              		.thumb_func
- 351              		.type	Filter_INT_SetPending, %function
- 352              	Filter_INT_SetPending:
- 353              	.LFB74:
- 358:Generated_Source\PSoC5/Filter_INT.c **** }
- 359:Generated_Source\PSoC5/Filter_INT.c **** 
- 360:Generated_Source\PSoC5/Filter_INT.c **** 
- 361:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 362:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_SetPending
- 363:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 364:Generated_Source\PSoC5/Filter_INT.c **** *
- 365:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 366:Generated_Source\PSoC5/Filter_INT.c **** *   Causes the Interrupt to enter the pending state, a software method of
- 367:Generated_Source\PSoC5/Filter_INT.c **** *   generating the interrupt.
- 368:Generated_Source\PSoC5/Filter_INT.c **** *
- 369:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
- 370:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 371:Generated_Source\PSoC5/Filter_INT.c **** *
- 372:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 373:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 374:Generated_Source\PSoC5/Filter_INT.c **** *
- 375:Generated_Source\PSoC5/Filter_INT.c **** * Side Effects:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 14
+ 140:Generated_Source\PSoC5/Filter_Int.c **** }
+ 321              		.loc 1 140 0
+ 322 0006 0248     		ldr	r0, .L33
+ 323 0008 FFF7FEFF 		bl	Filter_Int_SetVector
+ 324              	.LVL17:
+ 325 000c 08BD     		pop	{r3, pc}
+ 326              	.L34:
+ 327 000e 00BF     		.align	2
+ 328              	.L33:
+ 329 0010 00000000 		.word	IntDefaultHandler
+ 330              		.cfi_endproc
+ 331              	.LFE2:
+ 332              		.size	Filter_Int_Stop, .-Filter_Int_Stop
+ 333              		.section	.text.Filter_Int_SetPending,"ax",%progbits
+ 334              		.align	2
+ 335              		.global	Filter_Int_SetPending
+ 336              		.thumb
+ 337              		.thumb_func
+ 338              		.type	Filter_Int_SetPending, %function
+ 339              	Filter_Int_SetPending:
+ 340              	.LFB11:
+ 353:Generated_Source\PSoC5/Filter_Int.c **** }
+ 354:Generated_Source\PSoC5/Filter_Int.c **** 
+ 355:Generated_Source\PSoC5/Filter_Int.c **** 
+ 356:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 357:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_SetPending
+ 358:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 359:Generated_Source\PSoC5/Filter_Int.c **** *
+ 360:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 361:Generated_Source\PSoC5/Filter_Int.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 362:Generated_Source\PSoC5/Filter_Int.c **** *   generating the interrupt.
+ 363:Generated_Source\PSoC5/Filter_Int.c **** *
+ 364:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 365:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 366:Generated_Source\PSoC5/Filter_Int.c **** *
+ 367:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 368:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 369:Generated_Source\PSoC5/Filter_Int.c **** *
+ 370:Generated_Source\PSoC5/Filter_Int.c **** * Side Effects:
+ 371:Generated_Source\PSoC5/Filter_Int.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
+ 372:Generated_Source\PSoC5/Filter_Int.c **** *   entered (depending on the priority of this interrupt and other pending 
+ 373:Generated_Source\PSoC5/Filter_Int.c **** *   interrupts).
+ 374:Generated_Source\PSoC5/Filter_Int.c **** *
+ 375:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 376:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_SetPending(void)
+ 377:Generated_Source\PSoC5/Filter_Int.c **** {
+ 341              		.loc 1 377 0
+ 342              		.cfi_startproc
+ 343              		@ args = 0, pretend = 0, frame = 0
+ 344              		@ frame_needed = 0, uses_anonymous_args = 0
+ 345              		@ link register save eliminated.
+ 378:Generated_Source\PSoC5/Filter_Int.c ****     *Filter_Int_INTC_SET_PD = Filter_Int__INTC_MASK;
+ 346              		.loc 1 378 0
+ 347 0000 4FF08052 		mov	r2, #268435456
+ 348 0004 014B     		ldr	r3, .L36
+ 349 0006 1A60     		str	r2, [r3]
+ 350 0008 7047     		bx	lr
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 14
 
 
- 376:Generated_Source\PSoC5/Filter_INT.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
- 377:Generated_Source\PSoC5/Filter_INT.c **** *   entered (depending on the priority of this interrupt and other pending 
- 378:Generated_Source\PSoC5/Filter_INT.c **** *   interrupts).
- 379:Generated_Source\PSoC5/Filter_INT.c **** *
- 380:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 381:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_SetPending(void)
- 382:Generated_Source\PSoC5/Filter_INT.c **** {
- 354              		.loc 1 382 0
- 355              		.cfi_startproc
- 356              		@ args = 0, pretend = 0, frame = 0
- 357              		@ frame_needed = 0, uses_anonymous_args = 0
- 358              		@ link register save eliminated.
- 383:Generated_Source\PSoC5/Filter_INT.c ****     *Filter_INT_INTC_SET_PD = Filter_INT__INTC_MASK;
- 359              		.loc 1 383 0
- 360 0000 4FF08052 		mov	r2, #268435456
- 361 0004 014B     		ldr	r3, .L39
- 362 0006 1A60     		str	r2, [r3]
- 363 0008 7047     		bx	lr
- 364              	.L40:
- 365 000a 00BF     		.align	2
- 366              	.L39:
- 367 000c 00E200E0 		.word	-536813056
- 368              		.cfi_endproc
- 369              	.LFE74:
- 370              		.size	Filter_INT_SetPending, .-Filter_INT_SetPending
- 371              		.section	.text.Filter_INT_ClearPending,"ax",%progbits
- 372              		.align	2
- 373              		.global	Filter_INT_ClearPending
- 374              		.thumb
- 375              		.thumb_func
- 376              		.type	Filter_INT_ClearPending, %function
- 377              	Filter_INT_ClearPending:
- 378              	.LFB75:
- 384:Generated_Source\PSoC5/Filter_INT.c **** }
- 385:Generated_Source\PSoC5/Filter_INT.c **** 
- 386:Generated_Source\PSoC5/Filter_INT.c **** 
- 387:Generated_Source\PSoC5/Filter_INT.c **** /*******************************************************************************
- 388:Generated_Source\PSoC5/Filter_INT.c **** * Function Name: Filter_INT_ClearPending
- 389:Generated_Source\PSoC5/Filter_INT.c **** ********************************************************************************
- 390:Generated_Source\PSoC5/Filter_INT.c **** *
- 391:Generated_Source\PSoC5/Filter_INT.c **** * Summary:
- 392:Generated_Source\PSoC5/Filter_INT.c **** *   Clears a pending interrupt in the interrupt controller.
- 393:Generated_Source\PSoC5/Filter_INT.c **** *
- 394:Generated_Source\PSoC5/Filter_INT.c **** *   Note Some interrupt sources are clear-on-read and require the block 
- 395:Generated_Source\PSoC5/Filter_INT.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
- 396:Generated_Source\PSoC5/Filter_INT.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
- 397:Generated_Source\PSoC5/Filter_INT.c **** *   pending state even though the interrupt itself is cleared using this API.
- 398:Generated_Source\PSoC5/Filter_INT.c **** *
- 399:Generated_Source\PSoC5/Filter_INT.c **** * Parameters:
- 400:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 401:Generated_Source\PSoC5/Filter_INT.c **** *
- 402:Generated_Source\PSoC5/Filter_INT.c **** * Return:
- 403:Generated_Source\PSoC5/Filter_INT.c **** *   None
- 404:Generated_Source\PSoC5/Filter_INT.c **** *
- 405:Generated_Source\PSoC5/Filter_INT.c **** *******************************************************************************/
- 406:Generated_Source\PSoC5/Filter_INT.c **** void Filter_INT_ClearPending(void)
- 407:Generated_Source\PSoC5/Filter_INT.c **** {
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 15
+ 351              	.L37:
+ 352 000a 00BF     		.align	2
+ 353              	.L36:
+ 354 000c 00E200E0 		.word	-536813056
+ 355              		.cfi_endproc
+ 356              	.LFE11:
+ 357              		.size	Filter_Int_SetPending, .-Filter_Int_SetPending
+ 358              		.section	.text.Filter_Int_ClearPending,"ax",%progbits
+ 359              		.align	2
+ 360              		.global	Filter_Int_ClearPending
+ 361              		.thumb
+ 362              		.thumb_func
+ 363              		.type	Filter_Int_ClearPending, %function
+ 364              	Filter_Int_ClearPending:
+ 365              	.LFB12:
+ 379:Generated_Source\PSoC5/Filter_Int.c **** }
+ 380:Generated_Source\PSoC5/Filter_Int.c **** 
+ 381:Generated_Source\PSoC5/Filter_Int.c **** 
+ 382:Generated_Source\PSoC5/Filter_Int.c **** /*******************************************************************************
+ 383:Generated_Source\PSoC5/Filter_Int.c **** * Function Name: Filter_Int_ClearPending
+ 384:Generated_Source\PSoC5/Filter_Int.c **** ********************************************************************************
+ 385:Generated_Source\PSoC5/Filter_Int.c **** *
+ 386:Generated_Source\PSoC5/Filter_Int.c **** * Summary:
+ 387:Generated_Source\PSoC5/Filter_Int.c **** *   Clears a pending interrupt in the interrupt controller.
+ 388:Generated_Source\PSoC5/Filter_Int.c **** *
+ 389:Generated_Source\PSoC5/Filter_Int.c **** *   Note Some interrupt sources are clear-on-read and require the block 
+ 390:Generated_Source\PSoC5/Filter_Int.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
+ 391:Generated_Source\PSoC5/Filter_Int.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
+ 392:Generated_Source\PSoC5/Filter_Int.c **** *   pending state even though the interrupt itself is cleared using this API.
+ 393:Generated_Source\PSoC5/Filter_Int.c **** *
+ 394:Generated_Source\PSoC5/Filter_Int.c **** * Parameters:
+ 395:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 396:Generated_Source\PSoC5/Filter_Int.c **** *
+ 397:Generated_Source\PSoC5/Filter_Int.c **** * Return:
+ 398:Generated_Source\PSoC5/Filter_Int.c **** *   None
+ 399:Generated_Source\PSoC5/Filter_Int.c **** *
+ 400:Generated_Source\PSoC5/Filter_Int.c **** *******************************************************************************/
+ 401:Generated_Source\PSoC5/Filter_Int.c **** void Filter_Int_ClearPending(void)
+ 402:Generated_Source\PSoC5/Filter_Int.c **** {
+ 366              		.loc 1 402 0
+ 367              		.cfi_startproc
+ 368              		@ args = 0, pretend = 0, frame = 0
+ 369              		@ frame_needed = 0, uses_anonymous_args = 0
+ 370              		@ link register save eliminated.
+ 403:Generated_Source\PSoC5/Filter_Int.c ****     *Filter_Int_INTC_CLR_PD = Filter_Int__INTC_MASK;
+ 371              		.loc 1 403 0
+ 372 0000 4FF08052 		mov	r2, #268435456
+ 373 0004 014B     		ldr	r3, .L39
+ 374 0006 1A60     		str	r2, [r3]
+ 375 0008 7047     		bx	lr
+ 376              	.L40:
+ 377 000a 00BF     		.align	2
+ 378              	.L39:
+ 379 000c 80E200E0 		.word	-536812928
+ 380              		.cfi_endproc
+ 381              	.LFE12:
+ 382              		.size	Filter_Int_ClearPending, .-Filter_Int_ClearPending
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 15
 
 
- 379              		.loc 1 407 0
- 380              		.cfi_startproc
- 381              		@ args = 0, pretend = 0, frame = 0
- 382              		@ frame_needed = 0, uses_anonymous_args = 0
- 383              		@ link register save eliminated.
- 408:Generated_Source\PSoC5/Filter_INT.c ****     *Filter_INT_INTC_CLR_PD = Filter_INT__INTC_MASK;
- 384              		.loc 1 408 0
- 385 0000 4FF08052 		mov	r2, #268435456
- 386 0004 014B     		ldr	r3, .L42
- 387 0006 1A60     		str	r2, [r3]
- 388 0008 7047     		bx	lr
- 389              	.L43:
- 390 000a 00BF     		.align	2
- 391              	.L42:
- 392 000c 80E200E0 		.word	-536812928
- 393              		.cfi_endproc
- 394              	.LFE75:
- 395              		.size	Filter_INT_ClearPending, .-Filter_INT_ClearPending
- 396              		.text
- 397              	.Letext0:
- 398              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
- 399              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
- 400              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 401              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
- 402              		.file 6 "Generated_Source\\PSoC5\\Filter.h"
- 403              		.section	.debug_info,"",%progbits
- 404              	.Ldebug_info0:
- 405 0000 1E030000 		.4byte	0x31e
- 406 0004 0400     		.2byte	0x4
- 407 0006 00000000 		.4byte	.Ldebug_abbrev0
- 408 000a 04       		.byte	0x4
- 409 000b 01       		.uleb128 0x1
- 410 000c 5A010000 		.4byte	.LASF37
- 411 0010 01       		.byte	0x1
- 412 0011 39000000 		.4byte	.LASF38
- 413 0015 95000000 		.4byte	.LASF39
- 414 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 415 001d 00000000 		.4byte	0
- 416 0021 00000000 		.4byte	.Ldebug_line0
- 417 0025 02       		.uleb128 0x2
- 418 0026 04       		.byte	0x4
- 419 0027 05       		.byte	0x5
- 420 0028 696E7400 		.ascii	"int\000"
- 421 002c 03       		.uleb128 0x3
- 422 002d 04       		.byte	0x4
- 423 002e 07       		.byte	0x7
- 424 002f F9010000 		.4byte	.LASF0
- 425 0033 03       		.uleb128 0x3
- 426 0034 01       		.byte	0x1
- 427 0035 06       		.byte	0x6
- 428 0036 C8020000 		.4byte	.LASF1
- 429 003a 03       		.uleb128 0x3
- 430 003b 01       		.byte	0x1
- 431 003c 08       		.byte	0x8
- 432 003d D5000000 		.4byte	.LASF2
- 433 0041 03       		.uleb128 0x3
- 434 0042 02       		.byte	0x2
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 16
+ 383              		.text
+ 384              	.Letext0:
+ 385              		.file 2 "Generated_Source\\PSoC5/cytypes.h"
+ 386              		.section	.debug_info,"",%progbits
+ 387              	.Ldebug_info0:
+ 388 0000 C7020000 		.4byte	0x2c7
+ 389 0004 0400     		.2byte	0x4
+ 390 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 391 000a 04       		.byte	0x4
+ 392 000b 01       		.uleb128 0x1
+ 393 000c 77010000 		.4byte	.LASF33
+ 394 0010 01       		.byte	0x1
+ 395 0011 2B000000 		.4byte	.LASF34
+ 396 0015 B9000000 		.4byte	.LASF35
+ 397 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 398 001d 00000000 		.4byte	0
+ 399 0021 00000000 		.4byte	.Ldebug_line0
+ 400 0025 02       		.uleb128 0x2
+ 401 0026 04       		.byte	0x4
+ 402 0027 05       		.byte	0x5
+ 403 0028 696E7400 		.ascii	"int\000"
+ 404 002c 03       		.uleb128 0x3
+ 405 002d 04       		.byte	0x4
+ 406 002e 07       		.byte	0x7
+ 407 002f 05020000 		.4byte	.LASF0
+ 408 0033 03       		.uleb128 0x3
+ 409 0034 01       		.byte	0x1
+ 410 0035 06       		.byte	0x6
+ 411 0036 AA020000 		.4byte	.LASF1
+ 412 003a 03       		.uleb128 0x3
+ 413 003b 01       		.byte	0x1
+ 414 003c 08       		.byte	0x8
+ 415 003d F9000000 		.4byte	.LASF2
+ 416 0041 03       		.uleb128 0x3
+ 417 0042 02       		.byte	0x2
+ 418 0043 05       		.byte	0x5
+ 419 0044 79020000 		.4byte	.LASF3
+ 420 0048 03       		.uleb128 0x3
+ 421 0049 02       		.byte	0x2
+ 422 004a 07       		.byte	0x7
+ 423 004b 65000000 		.4byte	.LASF4
+ 424 004f 03       		.uleb128 0x3
+ 425 0050 04       		.byte	0x4
+ 426 0051 05       		.byte	0x5
+ 427 0052 83020000 		.4byte	.LASF5
+ 428 0056 03       		.uleb128 0x3
+ 429 0057 04       		.byte	0x4
+ 430 0058 07       		.byte	0x7
+ 431 0059 0C010000 		.4byte	.LASF6
+ 432 005d 03       		.uleb128 0x3
+ 433 005e 08       		.byte	0x8
+ 434 005f 05       		.byte	0x5
+ 435 0060 57020000 		.4byte	.LASF7
+ 436 0064 03       		.uleb128 0x3
+ 437 0065 08       		.byte	0x8
+ 438 0066 07       		.byte	0x7
+ 439 0067 1A020000 		.4byte	.LASF8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 16
 
 
- 435 0043 05       		.byte	0x5
- 436 0044 A0020000 		.4byte	.LASF3
- 437 0048 03       		.uleb128 0x3
- 438 0049 02       		.byte	0x2
- 439 004a 07       		.byte	0x7
- 440 004b FA000000 		.4byte	.LASF4
- 441 004f 04       		.uleb128 0x4
- 442 0050 2F000000 		.4byte	.LASF11
- 443 0054 02       		.byte	0x2
- 444 0055 3F       		.byte	0x3f
- 445 0056 5A000000 		.4byte	0x5a
- 446 005a 03       		.uleb128 0x3
- 447 005b 04       		.byte	0x4
- 448 005c 05       		.byte	0x5
- 449 005d BF020000 		.4byte	.LASF5
- 450 0061 03       		.uleb128 0x3
- 451 0062 04       		.byte	0x4
- 452 0063 07       		.byte	0x7
- 453 0064 E8000000 		.4byte	.LASF6
- 454 0068 03       		.uleb128 0x3
- 455 0069 08       		.byte	0x8
- 456 006a 05       		.byte	0x5
- 457 006b 6F020000 		.4byte	.LASF7
- 458 006f 03       		.uleb128 0x3
- 459 0070 08       		.byte	0x8
- 460 0071 07       		.byte	0x7
- 461 0072 23020000 		.4byte	.LASF8
- 462 0076 03       		.uleb128 0x3
- 463 0077 04       		.byte	0x4
- 464 0078 07       		.byte	0x7
- 465 0079 66020000 		.4byte	.LASF9
- 466 007d 05       		.uleb128 0x5
- 467 007e 04       		.byte	0x4
- 468 007f 83000000 		.4byte	0x83
- 469 0083 06       		.uleb128 0x6
- 470 0084 03       		.uleb128 0x3
- 471 0085 01       		.byte	0x1
- 472 0086 08       		.byte	0x8
- 473 0087 7D020000 		.4byte	.LASF10
- 474 008b 04       		.uleb128 0x4
- 475 008c 5E020000 		.4byte	.LASF12
- 476 0090 03       		.byte	0x3
- 477 0091 2C       		.byte	0x2c
- 478 0092 4F000000 		.4byte	0x4f
- 479 0096 07       		.uleb128 0x7
- 480 0097 AA020000 		.4byte	.LASF13
- 481 009b 04       		.byte	0x4
- 482 009c 9201     		.2byte	0x192
- 483 009e 3A000000 		.4byte	0x3a
- 484 00a2 07       		.uleb128 0x7
- 485 00a3 53010000 		.4byte	.LASF14
- 486 00a7 04       		.byte	0x4
- 487 00a8 9401     		.2byte	0x194
- 488 00aa 61000000 		.4byte	0x61
- 489 00ae 03       		.uleb128 0x3
- 490 00af 04       		.byte	0x4
- 491 00b0 04       		.byte	0x4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 17
+ 440 006b 03       		.uleb128 0x3
+ 441 006c 04       		.byte	0x4
+ 442 006d 07       		.byte	0x7
+ 443 006e 4E020000 		.4byte	.LASF9
+ 444 0072 04       		.uleb128 0x4
+ 445 0073 04       		.byte	0x4
+ 446 0074 78000000 		.4byte	0x78
+ 447 0078 05       		.uleb128 0x5
+ 448 0079 03       		.uleb128 0x3
+ 449 007a 01       		.byte	0x1
+ 450 007b 08       		.byte	0x8
+ 451 007c 65020000 		.4byte	.LASF10
+ 452 0080 06       		.uleb128 0x6
+ 453 0081 33010000 		.4byte	.LASF11
+ 454 0085 02       		.byte	0x2
+ 455 0086 9201     		.2byte	0x192
+ 456 0088 3A000000 		.4byte	0x3a
+ 457 008c 06       		.uleb128 0x6
+ 458 008d 70010000 		.4byte	.LASF12
+ 459 0091 02       		.byte	0x2
+ 460 0092 9401     		.2byte	0x194
+ 461 0094 56000000 		.4byte	0x56
+ 462 0098 03       		.uleb128 0x3
+ 463 0099 04       		.byte	0x4
+ 464 009a 04       		.byte	0x4
+ 465 009b A2000000 		.4byte	.LASF13
+ 466 009f 03       		.uleb128 0x3
+ 467 00a0 08       		.byte	0x8
+ 468 00a1 04       		.byte	0x4
+ 469 00a2 57010000 		.4byte	.LASF14
+ 470 00a6 06       		.uleb128 0x6
+ 471 00a7 07010000 		.4byte	.LASF15
+ 472 00ab 02       		.byte	0x2
+ 473 00ac 3C02     		.2byte	0x23c
+ 474 00ae B2000000 		.4byte	0xb2
+ 475 00b2 07       		.uleb128 0x7
+ 476 00b3 80000000 		.4byte	0x80
+ 477 00b7 06       		.uleb128 0x6
+ 478 00b8 8C020000 		.4byte	.LASF16
+ 479 00bc 02       		.byte	0x2
+ 480 00bd 3E02     		.2byte	0x23e
+ 481 00bf C3000000 		.4byte	0xc3
+ 482 00c3 07       		.uleb128 0x7
+ 483 00c4 8C000000 		.4byte	0x8c
+ 484 00c8 06       		.uleb128 0x6
+ 485 00c9 41020000 		.4byte	.LASF17
+ 486 00cd 02       		.byte	0x2
+ 487 00ce 4E02     		.2byte	0x24e
+ 488 00d0 72000000 		.4byte	0x72
+ 489 00d4 08       		.uleb128 0x8
+ 490 00d5 39010000 		.4byte	.LASF25
+ 491 00d9 01       		.byte	0x1
+ 492 00da A0       		.byte	0xa0
+ 493 00db 00000000 		.4byte	.LFB3
+ 494 00df 02000000 		.4byte	.LFE3-.LFB3
+ 495 00e3 01       		.uleb128 0x1
+ 496 00e4 9C       		.byte	0x9c
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 17
 
 
- 492 00b1 7C000000 		.4byte	.LASF15
- 493 00b5 03       		.uleb128 0x3
- 494 00b6 08       		.byte	0x8
- 495 00b7 04       		.byte	0x4
- 496 00b8 43010000 		.4byte	.LASF16
- 497 00bc 07       		.uleb128 0x7
- 498 00bd E3000000 		.4byte	.LASF17
- 499 00c1 04       		.byte	0x4
- 500 00c2 3C02     		.2byte	0x23c
- 501 00c4 C8000000 		.4byte	0xc8
- 502 00c8 08       		.uleb128 0x8
- 503 00c9 96000000 		.4byte	0x96
- 504 00cd 07       		.uleb128 0x7
- 505 00ce 00000000 		.4byte	.LASF18
- 506 00d2 04       		.byte	0x4
- 507 00d3 3E02     		.2byte	0x23e
- 508 00d5 D9000000 		.4byte	0xd9
- 509 00d9 08       		.uleb128 0x8
- 510 00da A2000000 		.4byte	0xa2
- 511 00de 07       		.uleb128 0x7
- 512 00df 3A020000 		.4byte	.LASF19
- 513 00e3 04       		.byte	0x4
- 514 00e4 4E02     		.2byte	0x24e
- 515 00e6 7D000000 		.4byte	0x7d
- 516 00ea 09       		.uleb128 0x9
- 517 00eb E9020000 		.4byte	.LASF20
- 518 00ef 01       		.byte	0x1
- 519 00f0 A5       		.byte	0xa5
- 520 00f1 00000000 		.4byte	.LFB66
- 521 00f5 14000000 		.4byte	.LFE66-.LFB66
- 522 00f9 01       		.uleb128 0x1
- 523 00fa 9C       		.byte	0x9c
- 524 00fb 0F010000 		.4byte	0x10f
- 525 00ff 0A       		.uleb128 0xa
- 526 0100 08000000 		.4byte	.LVL0
- 527 0104 10030000 		.4byte	0x310
- 528 0108 0B       		.uleb128 0xb
- 529 0109 01       		.uleb128 0x1
- 530 010a 50       		.byte	0x50
- 531 010b 01       		.uleb128 0x1
- 532 010c 30       		.byte	0x30
- 533 010d 00       		.byte	0
- 534 010e 00       		.byte	0
- 535 010f 09       		.uleb128 0x9
- 536 0110 06020000 		.4byte	.LASF21
- 537 0114 01       		.byte	0x1
- 538 0115 CD       		.byte	0xcd
- 539 0116 00000000 		.4byte	.LFB67
- 540 011a 10000000 		.4byte	.LFE67-.LFB67
- 541 011e 01       		.uleb128 0x1
- 542 011f 9C       		.byte	0x9c
- 543 0120 3F010000 		.4byte	0x13f
- 544 0124 0C       		.uleb128 0xc
- 545 0125 1B020000 		.4byte	.LASF24
- 546 0129 01       		.byte	0x1
- 547 012a CD       		.byte	0xcd
- 548 012b DE000000 		.4byte	0xde
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 18
+ 497 00e5 09       		.uleb128 0x9
+ 498 00e6 C9020000 		.4byte	.LASF19
+ 499 00ea 01       		.byte	0x1
+ 500 00eb C8       		.byte	0xc8
+ 501 00ec 00000000 		.4byte	.LFB4
+ 502 00f0 10000000 		.4byte	.LFE4-.LFB4
+ 503 00f4 01       		.uleb128 0x1
+ 504 00f5 9C       		.byte	0x9c
+ 505 00f6 15010000 		.4byte	0x115
+ 506 00fa 0A       		.uleb128 0xa
+ 507 00fb 12020000 		.4byte	.LASF21
+ 508 00ff 01       		.byte	0x1
+ 509 0100 C8       		.byte	0xc8
+ 510 0101 C8000000 		.4byte	0xc8
+ 511 0105 01       		.uleb128 0x1
+ 512 0106 50       		.byte	0x50
+ 513 0107 0B       		.uleb128 0xb
+ 514 0108 6A020000 		.4byte	.LASF18
+ 515 010c 01       		.byte	0x1
+ 516 010d CA       		.byte	0xca
+ 517 010e 15010000 		.4byte	0x115
+ 518 0112 01       		.uleb128 0x1
+ 519 0113 53       		.byte	0x53
+ 520 0114 00       		.byte	0
+ 521 0115 04       		.uleb128 0x4
+ 522 0116 04       		.byte	0x4
+ 523 0117 C8000000 		.4byte	0xc8
+ 524 011b 0C       		.uleb128 0xc
+ 525 011c 1E010000 		.4byte	.LASF23
+ 526 0120 01       		.byte	0x1
+ 527 0121 E0       		.byte	0xe0
+ 528 0122 C8000000 		.4byte	0xc8
+ 529 0126 00000000 		.4byte	.LFB5
+ 530 012a 10000000 		.4byte	.LFE5-.LFB5
+ 531 012e 01       		.uleb128 0x1
+ 532 012f 9C       		.byte	0x9c
+ 533 0130 42010000 		.4byte	0x142
+ 534 0134 0B       		.uleb128 0xb
+ 535 0135 6A020000 		.4byte	.LASF18
+ 536 0139 01       		.byte	0x1
+ 537 013a E2       		.byte	0xe2
+ 538 013b 15010000 		.4byte	0x115
+ 539 013f 01       		.uleb128 0x1
+ 540 0140 53       		.byte	0x53
+ 541 0141 00       		.byte	0
+ 542 0142 0D       		.uleb128 0xd
+ 543 0143 78000000 		.4byte	.LASF20
+ 544 0147 01       		.byte	0x1
+ 545 0148 0201     		.2byte	0x102
+ 546 014a 00000000 		.4byte	.LFB6
+ 547 014e 10000000 		.4byte	.LFE6-.LFB6
+ 548 0152 01       		.uleb128 0x1
+ 549 0153 9C       		.byte	0x9c
+ 550 0154 69010000 		.4byte	0x169
+ 551 0158 0E       		.uleb128 0xe
+ 552 0159 4E010000 		.4byte	.LASF22
+ 553 015d 01       		.byte	0x1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 18
 
 
- 549 012f 01       		.uleb128 0x1
- 550 0130 50       		.byte	0x50
- 551 0131 0D       		.uleb128 0xd
- 552 0132 B0020000 		.4byte	.LASF22
- 553 0136 01       		.byte	0x1
- 554 0137 CF       		.byte	0xcf
- 555 0138 3F010000 		.4byte	0x13f
- 556 013c 01       		.uleb128 0x1
- 557 013d 53       		.byte	0x53
- 558 013e 00       		.byte	0
- 559 013f 05       		.uleb128 0x5
- 560 0140 04       		.byte	0x4
- 561 0141 DE000000 		.4byte	0xde
- 562 0145 0E       		.uleb128 0xe
- 563 0146 D4020000 		.4byte	.LASF26
- 564 014a 01       		.byte	0x1
- 565 014b E5       		.byte	0xe5
- 566 014c DE000000 		.4byte	0xde
- 567 0150 00000000 		.4byte	.LFB68
- 568 0154 10000000 		.4byte	.LFE68-.LFB68
- 569 0158 01       		.uleb128 0x1
- 570 0159 9C       		.byte	0x9c
- 571 015a 6C010000 		.4byte	0x16c
- 572 015e 0D       		.uleb128 0xd
- 573 015f B0020000 		.4byte	.LASF22
- 574 0163 01       		.byte	0x1
- 575 0164 E7       		.byte	0xe7
- 576 0165 3F010000 		.4byte	0x13f
- 577 0169 01       		.uleb128 0x1
- 578 016a 53       		.byte	0x53
- 579 016b 00       		.byte	0
- 580 016c 0F       		.uleb128 0xf
- 581 016d 47020000 		.4byte	.LASF23
- 582 0171 01       		.byte	0x1
- 583 0172 0701     		.2byte	0x107
- 584 0174 00000000 		.4byte	.LFB69
- 585 0178 10000000 		.4byte	.LFE69-.LFB69
- 586 017c 01       		.uleb128 0x1
- 587 017d 9C       		.byte	0x9c
- 588 017e 93010000 		.4byte	0x193
- 589 0182 10       		.uleb128 0x10
- 590 0183 4A010000 		.4byte	.LASF25
- 591 0187 01       		.byte	0x1
- 592 0188 0701     		.2byte	0x107
- 593 018a 96000000 		.4byte	0x96
- 594 018e 00000000 		.4byte	.LLST0
- 595 0192 00       		.byte	0
- 596 0193 11       		.uleb128 0x11
- 597 0194 06000000 		.4byte	.LASF27
- 598 0198 01       		.byte	0x1
- 599 0199 1D01     		.2byte	0x11d
- 600 019b 96000000 		.4byte	0x96
- 601 019f 00000000 		.4byte	.LFB70
- 602 01a3 0C000000 		.4byte	.LFE70-.LFB70
- 603 01a7 01       		.uleb128 0x1
- 604 01a8 9C       		.byte	0x9c
- 605 01a9 BE010000 		.4byte	0x1be
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 19
+ 554 015e 0201     		.2byte	0x102
+ 555 0160 80000000 		.4byte	0x80
+ 556 0164 00000000 		.4byte	.LLST0
+ 557 0168 00       		.byte	0
+ 558 0169 0F       		.uleb128 0xf
+ 559 016a 14000000 		.4byte	.LASF24
+ 560 016e 01       		.byte	0x1
+ 561 016f 1801     		.2byte	0x118
+ 562 0171 80000000 		.4byte	0x80
+ 563 0175 00000000 		.4byte	.LFB7
+ 564 0179 0C000000 		.4byte	.LFE7-.LFB7
+ 565 017d 01       		.uleb128 0x1
+ 566 017e 9C       		.byte	0x9c
+ 567 017f 94010000 		.4byte	0x194
+ 568 0183 10       		.uleb128 0x10
+ 569 0184 4E010000 		.4byte	.LASF22
+ 570 0188 01       		.byte	0x1
+ 571 0189 1A01     		.2byte	0x11a
+ 572 018b 80000000 		.4byte	0x80
+ 573 018f 21000000 		.4byte	.LLST1
+ 574 0193 00       		.byte	0
+ 575 0194 11       		.uleb128 0x11
+ 576 0195 5E010000 		.4byte	.LASF26
+ 577 0199 01       		.byte	0x1
+ 578 019a 3301     		.2byte	0x133
+ 579 019c 00000000 		.4byte	.LFB8
+ 580 01a0 10000000 		.4byte	.LFE8-.LFB8
+ 581 01a4 01       		.uleb128 0x1
+ 582 01a5 9C       		.byte	0x9c
+ 583 01a6 12       		.uleb128 0x12
+ 584 01a7 00000000 		.4byte	.LASF36
+ 585 01ab 01       		.byte	0x1
+ 586 01ac 4801     		.2byte	0x148
+ 587 01ae 80000000 		.4byte	0x80
+ 588 01b2 00000000 		.4byte	.LFB9
+ 589 01b6 18000000 		.4byte	.LFE9-.LFB9
+ 590 01ba 01       		.uleb128 0x1
+ 591 01bb 9C       		.byte	0x9c
+ 592 01bc 11       		.uleb128 0x11
+ 593 01bd B6020000 		.4byte	.LASF27
+ 594 01c1 01       		.byte	0x1
+ 595 01c2 5D01     		.2byte	0x15d
+ 596 01c4 00000000 		.4byte	.LFB10
+ 597 01c8 10000000 		.4byte	.LFE10-.LFB10
+ 598 01cc 01       		.uleb128 0x1
+ 599 01cd 9C       		.byte	0x9c
+ 600 01ce 09       		.uleb128 0x9
+ 601 01cf A8000000 		.4byte	.LASF28
+ 602 01d3 01       		.byte	0x1
+ 603 01d4 3D       		.byte	0x3d
+ 604 01d5 00000000 		.4byte	.LFB0
+ 605 01d9 1C000000 		.4byte	.LFE0-.LFB0
+ 606 01dd 01       		.uleb128 0x1
+ 607 01de 9C       		.byte	0x9c
+ 608 01df 20020000 		.4byte	0x220
+ 609 01e3 13       		.uleb128 0x13
+ 610 01e4 06000000 		.4byte	.LVL7
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 19
 
 
- 606 01ad 12       		.uleb128 0x12
- 607 01ae 4A010000 		.4byte	.LASF25
- 608 01b2 01       		.byte	0x1
- 609 01b3 1F01     		.2byte	0x11f
- 610 01b5 96000000 		.4byte	0x96
- 611 01b9 21000000 		.4byte	.LLST1
- 612 01bd 00       		.byte	0
- 613 01be 13       		.uleb128 0x13
- 614 01bf 1D000000 		.4byte	.LASF28
- 615 01c3 01       		.byte	0x1
- 616 01c4 3801     		.2byte	0x138
- 617 01c6 00000000 		.4byte	.LFB71
- 618 01ca 10000000 		.4byte	.LFE71-.LFB71
- 619 01ce 01       		.uleb128 0x1
- 620 01cf 9C       		.byte	0x9c
- 621 01d0 14       		.uleb128 0x14
- 622 01d1 68000000 		.4byte	.LASF40
- 623 01d5 01       		.byte	0x1
- 624 01d6 4D01     		.2byte	0x14d
- 625 01d8 96000000 		.4byte	0x96
- 626 01dc 00000000 		.4byte	.LFB72
- 627 01e0 18000000 		.4byte	.LFE72-.LFB72
- 628 01e4 01       		.uleb128 0x1
- 629 01e5 9C       		.byte	0x9c
- 630 01e6 13       		.uleb128 0x13
- 631 01e7 30010000 		.4byte	.LASF29
- 632 01eb 01       		.byte	0x1
- 633 01ec 6201     		.2byte	0x162
- 634 01ee 00000000 		.4byte	.LFB73
- 635 01f2 10000000 		.4byte	.LFE73-.LFB73
- 636 01f6 01       		.uleb128 0x1
- 637 01f7 9C       		.byte	0x9c
- 638 01f8 09       		.uleb128 0x9
- 639 01f9 E8010000 		.4byte	.LASF30
- 640 01fd 01       		.byte	0x1
- 641 01fe 42       		.byte	0x42
- 642 01ff 00000000 		.4byte	.LFB63
- 643 0203 1C000000 		.4byte	.LFE63-.LFB63
- 644 0207 01       		.uleb128 0x1
- 645 0208 9C       		.byte	0x9c
- 646 0209 4A020000 		.4byte	0x24a
- 647 020d 15       		.uleb128 0x15
- 648 020e 06000000 		.4byte	.LVL8
- 649 0212 E6010000 		.4byte	0x1e6
- 650 0216 16       		.uleb128 0x16
- 651 0217 0C000000 		.4byte	.LVL9
- 652 021b 0F010000 		.4byte	0x10f
- 653 021f 2D020000 		.4byte	0x22d
- 654 0223 0B       		.uleb128 0xb
- 655 0224 01       		.uleb128 0x1
- 656 0225 50       		.byte	0x50
- 657 0226 05       		.uleb128 0x5
- 658 0227 03       		.byte	0x3
- 659 0228 00000000 		.4byte	Filter_INT_Interrupt
- 660 022c 00       		.byte	0
- 661 022d 16       		.uleb128 0x16
- 662 022e 12000000 		.4byte	.LVL10
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 20
+ 611 01e8 BC010000 		.4byte	0x1bc
+ 612 01ec 14       		.uleb128 0x14
+ 613 01ed 0C000000 		.4byte	.LVL8
+ 614 01f1 E5000000 		.4byte	0xe5
+ 615 01f5 03020000 		.4byte	0x203
+ 616 01f9 15       		.uleb128 0x15
+ 617 01fa 01       		.uleb128 0x1
+ 618 01fb 50       		.byte	0x50
+ 619 01fc 05       		.uleb128 0x5
+ 620 01fd 03       		.byte	0x3
+ 621 01fe 00000000 		.4byte	Filter_Int_Interrupt
+ 622 0202 00       		.byte	0
+ 623 0203 14       		.uleb128 0x14
+ 624 0204 12000000 		.4byte	.LVL9
+ 625 0208 42010000 		.4byte	0x142
+ 626 020c 16020000 		.4byte	0x216
+ 627 0210 15       		.uleb128 0x15
+ 628 0211 01       		.uleb128 0x1
+ 629 0212 50       		.byte	0x50
+ 630 0213 01       		.uleb128 0x1
+ 631 0214 37       		.byte	0x37
+ 632 0215 00       		.byte	0
+ 633 0216 13       		.uleb128 0x13
+ 634 0217 16000000 		.4byte	.LVL10
+ 635 021b 94010000 		.4byte	0x194
+ 636 021f 00       		.byte	0
+ 637 0220 09       		.uleb128 0x9
+ 638 0221 8F000000 		.4byte	.LASF29
+ 639 0225 01       		.byte	0x1
+ 640 0226 68       		.byte	0x68
+ 641 0227 00000000 		.4byte	.LFB1
+ 642 022b 1A000000 		.4byte	.LFE1-.LFB1
+ 643 022f 01       		.uleb128 0x1
+ 644 0230 9C       		.byte	0x9c
+ 645 0231 7E020000 		.4byte	0x27e
+ 646 0235 16       		.uleb128 0x16
+ 647 0236 12020000 		.4byte	.LASF21
+ 648 023a 01       		.byte	0x1
+ 649 023b 68       		.byte	0x68
+ 650 023c C8000000 		.4byte	0xc8
+ 651 0240 38000000 		.4byte	.LLST2
+ 652 0244 13       		.uleb128 0x13
+ 653 0245 08000000 		.4byte	.LVL12
+ 654 0249 BC010000 		.4byte	0x1bc
+ 655 024d 14       		.uleb128 0x14
+ 656 024e 0E000000 		.4byte	.LVL13
+ 657 0252 E5000000 		.4byte	0xe5
+ 658 0256 61020000 		.4byte	0x261
+ 659 025a 15       		.uleb128 0x15
+ 660 025b 01       		.uleb128 0x1
+ 661 025c 50       		.byte	0x50
+ 662 025d 02       		.uleb128 0x2
+ 663 025e 74       		.byte	0x74
+ 664 025f 00       		.sleb128 0
+ 665 0260 00       		.byte	0
+ 666 0261 14       		.uleb128 0x14
+ 667 0262 14000000 		.4byte	.LVL14
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 20
 
 
- 663 0232 6C010000 		.4byte	0x16c
- 664 0236 40020000 		.4byte	0x240
- 665 023a 0B       		.uleb128 0xb
- 666 023b 01       		.uleb128 0x1
- 667 023c 50       		.byte	0x50
- 668 023d 01       		.uleb128 0x1
- 669 023e 37       		.byte	0x37
- 670 023f 00       		.byte	0
- 671 0240 15       		.uleb128 0x15
- 672 0241 16000000 		.4byte	.LVL11
- 673 0245 BE010000 		.4byte	0x1be
- 674 0249 00       		.byte	0
- 675 024a 09       		.uleb128 0x9
- 676 024b 82000000 		.4byte	.LASF31
- 677 024f 01       		.byte	0x1
- 678 0250 6D       		.byte	0x6d
- 679 0251 00000000 		.4byte	.LFB64
- 680 0255 1A000000 		.4byte	.LFE64-.LFB64
- 681 0259 01       		.uleb128 0x1
- 682 025a 9C       		.byte	0x9c
- 683 025b A8020000 		.4byte	0x2a8
- 684 025f 17       		.uleb128 0x17
- 685 0260 1B020000 		.4byte	.LASF24
- 686 0264 01       		.byte	0x1
- 687 0265 6D       		.byte	0x6d
- 688 0266 DE000000 		.4byte	0xde
- 689 026a 38000000 		.4byte	.LLST2
- 690 026e 15       		.uleb128 0x15
- 691 026f 08000000 		.4byte	.LVL13
- 692 0273 E6010000 		.4byte	0x1e6
- 693 0277 16       		.uleb128 0x16
- 694 0278 0E000000 		.4byte	.LVL14
- 695 027c 0F010000 		.4byte	0x10f
- 696 0280 8B020000 		.4byte	0x28b
- 697 0284 0B       		.uleb128 0xb
- 698 0285 01       		.uleb128 0x1
- 699 0286 50       		.byte	0x50
- 700 0287 02       		.uleb128 0x2
- 701 0288 74       		.byte	0x74
- 702 0289 00       		.sleb128 0
- 703 028a 00       		.byte	0
- 704 028b 16       		.uleb128 0x16
- 705 028c 14000000 		.4byte	.LVL15
- 706 0290 6C010000 		.4byte	0x16c
- 707 0294 9E020000 		.4byte	0x29e
- 708 0298 0B       		.uleb128 0xb
- 709 0299 01       		.uleb128 0x1
- 710 029a 50       		.byte	0x50
- 711 029b 01       		.uleb128 0x1
- 712 029c 37       		.byte	0x37
- 713 029d 00       		.byte	0
- 714 029e 15       		.uleb128 0x15
- 715 029f 18000000 		.4byte	.LVL16
- 716 02a3 BE010000 		.4byte	0x1be
- 717 02a7 00       		.byte	0
- 718 02a8 09       		.uleb128 0x9
- 719 02a9 82020000 		.4byte	.LASF32
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 21
+ 668 0266 42010000 		.4byte	0x142
+ 669 026a 74020000 		.4byte	0x274
+ 670 026e 15       		.uleb128 0x15
+ 671 026f 01       		.uleb128 0x1
+ 672 0270 50       		.byte	0x50
+ 673 0271 01       		.uleb128 0x1
+ 674 0272 37       		.byte	0x37
+ 675 0273 00       		.byte	0
+ 676 0274 13       		.uleb128 0x13
+ 677 0275 18000000 		.4byte	.LVL15
+ 678 0279 94010000 		.4byte	0x194
+ 679 027d 00       		.byte	0
+ 680 027e 09       		.uleb128 0x9
+ 681 027f 31020000 		.4byte	.LASF30
+ 682 0283 01       		.byte	0x1
+ 683 0284 86       		.byte	0x86
+ 684 0285 00000000 		.4byte	.LFB2
+ 685 0289 14000000 		.4byte	.LFE2-.LFB2
+ 686 028d 01       		.uleb128 0x1
+ 687 028e 9C       		.byte	0x9c
+ 688 028f A6020000 		.4byte	0x2a6
+ 689 0293 13       		.uleb128 0x13
+ 690 0294 06000000 		.4byte	.LVL16
+ 691 0298 BC010000 		.4byte	0x1bc
+ 692 029c 13       		.uleb128 0x13
+ 693 029d 0C000000 		.4byte	.LVL17
+ 694 02a1 E5000000 		.4byte	0xe5
+ 695 02a5 00       		.byte	0
+ 696 02a6 11       		.uleb128 0x11
+ 697 02a7 4F000000 		.4byte	.LASF31
+ 698 02ab 01       		.byte	0x1
+ 699 02ac 7801     		.2byte	0x178
+ 700 02ae 00000000 		.4byte	.LFB11
+ 701 02b2 10000000 		.4byte	.LFE11-.LFB11
+ 702 02b6 01       		.uleb128 0x1
+ 703 02b7 9C       		.byte	0x9c
+ 704 02b8 11       		.uleb128 0x11
+ 705 02b9 92020000 		.4byte	.LASF32
+ 706 02bd 01       		.byte	0x1
+ 707 02be 9101     		.2byte	0x191
+ 708 02c0 00000000 		.4byte	.LFB12
+ 709 02c4 10000000 		.4byte	.LFE12-.LFB12
+ 710 02c8 01       		.uleb128 0x1
+ 711 02c9 9C       		.byte	0x9c
+ 712 02ca 00       		.byte	0
+ 713              		.section	.debug_abbrev,"",%progbits
+ 714              	.Ldebug_abbrev0:
+ 715 0000 01       		.uleb128 0x1
+ 716 0001 11       		.uleb128 0x11
+ 717 0002 01       		.byte	0x1
+ 718 0003 25       		.uleb128 0x25
+ 719 0004 0E       		.uleb128 0xe
+ 720 0005 13       		.uleb128 0x13
+ 721 0006 0B       		.uleb128 0xb
+ 722 0007 03       		.uleb128 0x3
+ 723 0008 0E       		.uleb128 0xe
+ 724 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 21
 
 
- 720 02ad 01       		.byte	0x1
- 721 02ae 8B       		.byte	0x8b
- 722 02af 00000000 		.4byte	.LFB65
- 723 02b3 14000000 		.4byte	.LFE65-.LFB65
- 724 02b7 01       		.uleb128 0x1
- 725 02b8 9C       		.byte	0x9c
- 726 02b9 D0020000 		.4byte	0x2d0
- 727 02bd 15       		.uleb128 0x15
- 728 02be 06000000 		.4byte	.LVL17
- 729 02c2 E6010000 		.4byte	0x1e6
- 730 02c6 15       		.uleb128 0x15
- 731 02c7 0C000000 		.4byte	.LVL18
- 732 02cb 0F010000 		.4byte	0x10f
- 733 02cf 00       		.byte	0
- 734 02d0 13       		.uleb128 0x13
- 735 02d1 0D010000 		.4byte	.LASF33
- 736 02d5 01       		.byte	0x1
- 737 02d6 7D01     		.2byte	0x17d
- 738 02d8 00000000 		.4byte	.LFB74
- 739 02dc 10000000 		.4byte	.LFE74-.LFB74
- 740 02e0 01       		.uleb128 0x1
- 741 02e1 9C       		.byte	0x9c
- 742 02e2 13       		.uleb128 0x13
- 743 02e3 FE020000 		.4byte	.LASF34
- 744 02e7 01       		.byte	0x1
- 745 02e8 9601     		.2byte	0x196
- 746 02ea 00000000 		.4byte	.LFB75
- 747 02ee 10000000 		.4byte	.LFE75-.LFB75
- 748 02f2 01       		.uleb128 0x1
- 749 02f3 9C       		.byte	0x9c
- 750 02f4 18       		.uleb128 0x18
- 751 02f5 23010000 		.4byte	.LASF35
- 752 02f9 05       		.byte	0x5
- 753 02fa 9606     		.2byte	0x696
- 754 02fc 00030000 		.4byte	0x300
- 755 0300 08       		.uleb128 0x8
- 756 0301 8B000000 		.4byte	0x8b
- 757 0305 19       		.uleb128 0x19
- 758 0306 5D000000 		.4byte	.LASF36
- 759 030a 01       		.byte	0x1
- 760 030b 23       		.byte	0x23
- 761 030c A2000000 		.4byte	0xa2
- 762 0310 1A       		.uleb128 0x1a
- 763 0311 92020000 		.4byte	.LASF41
- 764 0315 06       		.byte	0x6
- 765 0316 40       		.byte	0x40
- 766 0317 A2000000 		.4byte	0xa2
- 767 031b 1B       		.uleb128 0x1b
- 768 031c 96000000 		.4byte	0x96
- 769 0320 00       		.byte	0
- 770 0321 00       		.byte	0
- 771              		.section	.debug_abbrev,"",%progbits
- 772              	.Ldebug_abbrev0:
- 773 0000 01       		.uleb128 0x1
- 774 0001 11       		.uleb128 0x11
- 775 0002 01       		.byte	0x1
- 776 0003 25       		.uleb128 0x25
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 22
+ 725 000a 0E       		.uleb128 0xe
+ 726 000b 55       		.uleb128 0x55
+ 727 000c 17       		.uleb128 0x17
+ 728 000d 11       		.uleb128 0x11
+ 729 000e 01       		.uleb128 0x1
+ 730 000f 10       		.uleb128 0x10
+ 731 0010 17       		.uleb128 0x17
+ 732 0011 00       		.byte	0
+ 733 0012 00       		.byte	0
+ 734 0013 02       		.uleb128 0x2
+ 735 0014 24       		.uleb128 0x24
+ 736 0015 00       		.byte	0
+ 737 0016 0B       		.uleb128 0xb
+ 738 0017 0B       		.uleb128 0xb
+ 739 0018 3E       		.uleb128 0x3e
+ 740 0019 0B       		.uleb128 0xb
+ 741 001a 03       		.uleb128 0x3
+ 742 001b 08       		.uleb128 0x8
+ 743 001c 00       		.byte	0
+ 744 001d 00       		.byte	0
+ 745 001e 03       		.uleb128 0x3
+ 746 001f 24       		.uleb128 0x24
+ 747 0020 00       		.byte	0
+ 748 0021 0B       		.uleb128 0xb
+ 749 0022 0B       		.uleb128 0xb
+ 750 0023 3E       		.uleb128 0x3e
+ 751 0024 0B       		.uleb128 0xb
+ 752 0025 03       		.uleb128 0x3
+ 753 0026 0E       		.uleb128 0xe
+ 754 0027 00       		.byte	0
+ 755 0028 00       		.byte	0
+ 756 0029 04       		.uleb128 0x4
+ 757 002a 0F       		.uleb128 0xf
+ 758 002b 00       		.byte	0
+ 759 002c 0B       		.uleb128 0xb
+ 760 002d 0B       		.uleb128 0xb
+ 761 002e 49       		.uleb128 0x49
+ 762 002f 13       		.uleb128 0x13
+ 763 0030 00       		.byte	0
+ 764 0031 00       		.byte	0
+ 765 0032 05       		.uleb128 0x5
+ 766 0033 15       		.uleb128 0x15
+ 767 0034 00       		.byte	0
+ 768 0035 27       		.uleb128 0x27
+ 769 0036 19       		.uleb128 0x19
+ 770 0037 00       		.byte	0
+ 771 0038 00       		.byte	0
+ 772 0039 06       		.uleb128 0x6
+ 773 003a 16       		.uleb128 0x16
+ 774 003b 00       		.byte	0
+ 775 003c 03       		.uleb128 0x3
+ 776 003d 0E       		.uleb128 0xe
+ 777 003e 3A       		.uleb128 0x3a
+ 778 003f 0B       		.uleb128 0xb
+ 779 0040 3B       		.uleb128 0x3b
+ 780 0041 05       		.uleb128 0x5
+ 781 0042 49       		.uleb128 0x49
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 22
 
 
- 777 0004 0E       		.uleb128 0xe
- 778 0005 13       		.uleb128 0x13
- 779 0006 0B       		.uleb128 0xb
- 780 0007 03       		.uleb128 0x3
- 781 0008 0E       		.uleb128 0xe
- 782 0009 1B       		.uleb128 0x1b
- 783 000a 0E       		.uleb128 0xe
- 784 000b 55       		.uleb128 0x55
- 785 000c 17       		.uleb128 0x17
- 786 000d 11       		.uleb128 0x11
- 787 000e 01       		.uleb128 0x1
- 788 000f 10       		.uleb128 0x10
- 789 0010 17       		.uleb128 0x17
- 790 0011 00       		.byte	0
- 791 0012 00       		.byte	0
- 792 0013 02       		.uleb128 0x2
- 793 0014 24       		.uleb128 0x24
- 794 0015 00       		.byte	0
- 795 0016 0B       		.uleb128 0xb
- 796 0017 0B       		.uleb128 0xb
- 797 0018 3E       		.uleb128 0x3e
- 798 0019 0B       		.uleb128 0xb
- 799 001a 03       		.uleb128 0x3
- 800 001b 08       		.uleb128 0x8
- 801 001c 00       		.byte	0
- 802 001d 00       		.byte	0
- 803 001e 03       		.uleb128 0x3
- 804 001f 24       		.uleb128 0x24
- 805 0020 00       		.byte	0
- 806 0021 0B       		.uleb128 0xb
- 807 0022 0B       		.uleb128 0xb
- 808 0023 3E       		.uleb128 0x3e
- 809 0024 0B       		.uleb128 0xb
- 810 0025 03       		.uleb128 0x3
- 811 0026 0E       		.uleb128 0xe
- 812 0027 00       		.byte	0
- 813 0028 00       		.byte	0
- 814 0029 04       		.uleb128 0x4
- 815 002a 16       		.uleb128 0x16
- 816 002b 00       		.byte	0
- 817 002c 03       		.uleb128 0x3
- 818 002d 0E       		.uleb128 0xe
- 819 002e 3A       		.uleb128 0x3a
- 820 002f 0B       		.uleb128 0xb
- 821 0030 3B       		.uleb128 0x3b
- 822 0031 0B       		.uleb128 0xb
- 823 0032 49       		.uleb128 0x49
- 824 0033 13       		.uleb128 0x13
- 825 0034 00       		.byte	0
- 826 0035 00       		.byte	0
- 827 0036 05       		.uleb128 0x5
- 828 0037 0F       		.uleb128 0xf
- 829 0038 00       		.byte	0
- 830 0039 0B       		.uleb128 0xb
- 831 003a 0B       		.uleb128 0xb
- 832 003b 49       		.uleb128 0x49
- 833 003c 13       		.uleb128 0x13
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 23
+ 782 0043 13       		.uleb128 0x13
+ 783 0044 00       		.byte	0
+ 784 0045 00       		.byte	0
+ 785 0046 07       		.uleb128 0x7
+ 786 0047 35       		.uleb128 0x35
+ 787 0048 00       		.byte	0
+ 788 0049 49       		.uleb128 0x49
+ 789 004a 13       		.uleb128 0x13
+ 790 004b 00       		.byte	0
+ 791 004c 00       		.byte	0
+ 792 004d 08       		.uleb128 0x8
+ 793 004e 2E       		.uleb128 0x2e
+ 794 004f 00       		.byte	0
+ 795 0050 3F       		.uleb128 0x3f
+ 796 0051 19       		.uleb128 0x19
+ 797 0052 03       		.uleb128 0x3
+ 798 0053 0E       		.uleb128 0xe
+ 799 0054 3A       		.uleb128 0x3a
+ 800 0055 0B       		.uleb128 0xb
+ 801 0056 3B       		.uleb128 0x3b
+ 802 0057 0B       		.uleb128 0xb
+ 803 0058 27       		.uleb128 0x27
+ 804 0059 19       		.uleb128 0x19
+ 805 005a 11       		.uleb128 0x11
+ 806 005b 01       		.uleb128 0x1
+ 807 005c 12       		.uleb128 0x12
+ 808 005d 06       		.uleb128 0x6
+ 809 005e 40       		.uleb128 0x40
+ 810 005f 18       		.uleb128 0x18
+ 811 0060 9742     		.uleb128 0x2117
+ 812 0062 19       		.uleb128 0x19
+ 813 0063 00       		.byte	0
+ 814 0064 00       		.byte	0
+ 815 0065 09       		.uleb128 0x9
+ 816 0066 2E       		.uleb128 0x2e
+ 817 0067 01       		.byte	0x1
+ 818 0068 3F       		.uleb128 0x3f
+ 819 0069 19       		.uleb128 0x19
+ 820 006a 03       		.uleb128 0x3
+ 821 006b 0E       		.uleb128 0xe
+ 822 006c 3A       		.uleb128 0x3a
+ 823 006d 0B       		.uleb128 0xb
+ 824 006e 3B       		.uleb128 0x3b
+ 825 006f 0B       		.uleb128 0xb
+ 826 0070 27       		.uleb128 0x27
+ 827 0071 19       		.uleb128 0x19
+ 828 0072 11       		.uleb128 0x11
+ 829 0073 01       		.uleb128 0x1
+ 830 0074 12       		.uleb128 0x12
+ 831 0075 06       		.uleb128 0x6
+ 832 0076 40       		.uleb128 0x40
+ 833 0077 18       		.uleb128 0x18
+ 834 0078 9742     		.uleb128 0x2117
+ 835 007a 19       		.uleb128 0x19
+ 836 007b 01       		.uleb128 0x1
+ 837 007c 13       		.uleb128 0x13
+ 838 007d 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 23
 
 
- 834 003d 00       		.byte	0
- 835 003e 00       		.byte	0
- 836 003f 06       		.uleb128 0x6
- 837 0040 15       		.uleb128 0x15
- 838 0041 00       		.byte	0
- 839 0042 27       		.uleb128 0x27
- 840 0043 19       		.uleb128 0x19
- 841 0044 00       		.byte	0
- 842 0045 00       		.byte	0
- 843 0046 07       		.uleb128 0x7
- 844 0047 16       		.uleb128 0x16
- 845 0048 00       		.byte	0
- 846 0049 03       		.uleb128 0x3
- 847 004a 0E       		.uleb128 0xe
- 848 004b 3A       		.uleb128 0x3a
- 849 004c 0B       		.uleb128 0xb
- 850 004d 3B       		.uleb128 0x3b
- 851 004e 05       		.uleb128 0x5
- 852 004f 49       		.uleb128 0x49
- 853 0050 13       		.uleb128 0x13
- 854 0051 00       		.byte	0
- 855 0052 00       		.byte	0
- 856 0053 08       		.uleb128 0x8
- 857 0054 35       		.uleb128 0x35
- 858 0055 00       		.byte	0
- 859 0056 49       		.uleb128 0x49
- 860 0057 13       		.uleb128 0x13
- 861 0058 00       		.byte	0
- 862 0059 00       		.byte	0
- 863 005a 09       		.uleb128 0x9
- 864 005b 2E       		.uleb128 0x2e
- 865 005c 01       		.byte	0x1
- 866 005d 3F       		.uleb128 0x3f
- 867 005e 19       		.uleb128 0x19
- 868 005f 03       		.uleb128 0x3
- 869 0060 0E       		.uleb128 0xe
- 870 0061 3A       		.uleb128 0x3a
- 871 0062 0B       		.uleb128 0xb
- 872 0063 3B       		.uleb128 0x3b
- 873 0064 0B       		.uleb128 0xb
- 874 0065 27       		.uleb128 0x27
- 875 0066 19       		.uleb128 0x19
- 876 0067 11       		.uleb128 0x11
- 877 0068 01       		.uleb128 0x1
- 878 0069 12       		.uleb128 0x12
- 879 006a 06       		.uleb128 0x6
- 880 006b 40       		.uleb128 0x40
- 881 006c 18       		.uleb128 0x18
- 882 006d 9742     		.uleb128 0x2117
- 883 006f 19       		.uleb128 0x19
- 884 0070 01       		.uleb128 0x1
- 885 0071 13       		.uleb128 0x13
- 886 0072 00       		.byte	0
- 887 0073 00       		.byte	0
- 888 0074 0A       		.uleb128 0xa
- 889 0075 898201   		.uleb128 0x4109
- 890 0078 01       		.byte	0x1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 24
+ 839 007e 00       		.byte	0
+ 840 007f 0A       		.uleb128 0xa
+ 841 0080 05       		.uleb128 0x5
+ 842 0081 00       		.byte	0
+ 843 0082 03       		.uleb128 0x3
+ 844 0083 0E       		.uleb128 0xe
+ 845 0084 3A       		.uleb128 0x3a
+ 846 0085 0B       		.uleb128 0xb
+ 847 0086 3B       		.uleb128 0x3b
+ 848 0087 0B       		.uleb128 0xb
+ 849 0088 49       		.uleb128 0x49
+ 850 0089 13       		.uleb128 0x13
+ 851 008a 02       		.uleb128 0x2
+ 852 008b 18       		.uleb128 0x18
+ 853 008c 00       		.byte	0
+ 854 008d 00       		.byte	0
+ 855 008e 0B       		.uleb128 0xb
+ 856 008f 34       		.uleb128 0x34
+ 857 0090 00       		.byte	0
+ 858 0091 03       		.uleb128 0x3
+ 859 0092 0E       		.uleb128 0xe
+ 860 0093 3A       		.uleb128 0x3a
+ 861 0094 0B       		.uleb128 0xb
+ 862 0095 3B       		.uleb128 0x3b
+ 863 0096 0B       		.uleb128 0xb
+ 864 0097 49       		.uleb128 0x49
+ 865 0098 13       		.uleb128 0x13
+ 866 0099 02       		.uleb128 0x2
+ 867 009a 18       		.uleb128 0x18
+ 868 009b 00       		.byte	0
+ 869 009c 00       		.byte	0
+ 870 009d 0C       		.uleb128 0xc
+ 871 009e 2E       		.uleb128 0x2e
+ 872 009f 01       		.byte	0x1
+ 873 00a0 3F       		.uleb128 0x3f
+ 874 00a1 19       		.uleb128 0x19
+ 875 00a2 03       		.uleb128 0x3
+ 876 00a3 0E       		.uleb128 0xe
+ 877 00a4 3A       		.uleb128 0x3a
+ 878 00a5 0B       		.uleb128 0xb
+ 879 00a6 3B       		.uleb128 0x3b
+ 880 00a7 0B       		.uleb128 0xb
+ 881 00a8 27       		.uleb128 0x27
+ 882 00a9 19       		.uleb128 0x19
+ 883 00aa 49       		.uleb128 0x49
+ 884 00ab 13       		.uleb128 0x13
+ 885 00ac 11       		.uleb128 0x11
+ 886 00ad 01       		.uleb128 0x1
+ 887 00ae 12       		.uleb128 0x12
+ 888 00af 06       		.uleb128 0x6
+ 889 00b0 40       		.uleb128 0x40
+ 890 00b1 18       		.uleb128 0x18
+ 891 00b2 9742     		.uleb128 0x2117
+ 892 00b4 19       		.uleb128 0x19
+ 893 00b5 01       		.uleb128 0x1
+ 894 00b6 13       		.uleb128 0x13
+ 895 00b7 00       		.byte	0
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 24
 
 
- 891 0079 11       		.uleb128 0x11
- 892 007a 01       		.uleb128 0x1
- 893 007b 31       		.uleb128 0x31
- 894 007c 13       		.uleb128 0x13
- 895 007d 00       		.byte	0
- 896 007e 00       		.byte	0
- 897 007f 0B       		.uleb128 0xb
- 898 0080 8A8201   		.uleb128 0x410a
- 899 0083 00       		.byte	0
- 900 0084 02       		.uleb128 0x2
- 901 0085 18       		.uleb128 0x18
- 902 0086 9142     		.uleb128 0x2111
- 903 0088 18       		.uleb128 0x18
- 904 0089 00       		.byte	0
- 905 008a 00       		.byte	0
- 906 008b 0C       		.uleb128 0xc
- 907 008c 05       		.uleb128 0x5
- 908 008d 00       		.byte	0
- 909 008e 03       		.uleb128 0x3
- 910 008f 0E       		.uleb128 0xe
- 911 0090 3A       		.uleb128 0x3a
- 912 0091 0B       		.uleb128 0xb
- 913 0092 3B       		.uleb128 0x3b
- 914 0093 0B       		.uleb128 0xb
- 915 0094 49       		.uleb128 0x49
- 916 0095 13       		.uleb128 0x13
- 917 0096 02       		.uleb128 0x2
- 918 0097 18       		.uleb128 0x18
- 919 0098 00       		.byte	0
- 920 0099 00       		.byte	0
- 921 009a 0D       		.uleb128 0xd
- 922 009b 34       		.uleb128 0x34
- 923 009c 00       		.byte	0
- 924 009d 03       		.uleb128 0x3
- 925 009e 0E       		.uleb128 0xe
- 926 009f 3A       		.uleb128 0x3a
- 927 00a0 0B       		.uleb128 0xb
- 928 00a1 3B       		.uleb128 0x3b
- 929 00a2 0B       		.uleb128 0xb
- 930 00a3 49       		.uleb128 0x49
- 931 00a4 13       		.uleb128 0x13
- 932 00a5 02       		.uleb128 0x2
- 933 00a6 18       		.uleb128 0x18
- 934 00a7 00       		.byte	0
- 935 00a8 00       		.byte	0
- 936 00a9 0E       		.uleb128 0xe
- 937 00aa 2E       		.uleb128 0x2e
- 938 00ab 01       		.byte	0x1
- 939 00ac 3F       		.uleb128 0x3f
- 940 00ad 19       		.uleb128 0x19
- 941 00ae 03       		.uleb128 0x3
- 942 00af 0E       		.uleb128 0xe
- 943 00b0 3A       		.uleb128 0x3a
- 944 00b1 0B       		.uleb128 0xb
- 945 00b2 3B       		.uleb128 0x3b
- 946 00b3 0B       		.uleb128 0xb
- 947 00b4 27       		.uleb128 0x27
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 25
+ 896 00b8 00       		.byte	0
+ 897 00b9 0D       		.uleb128 0xd
+ 898 00ba 2E       		.uleb128 0x2e
+ 899 00bb 01       		.byte	0x1
+ 900 00bc 3F       		.uleb128 0x3f
+ 901 00bd 19       		.uleb128 0x19
+ 902 00be 03       		.uleb128 0x3
+ 903 00bf 0E       		.uleb128 0xe
+ 904 00c0 3A       		.uleb128 0x3a
+ 905 00c1 0B       		.uleb128 0xb
+ 906 00c2 3B       		.uleb128 0x3b
+ 907 00c3 05       		.uleb128 0x5
+ 908 00c4 27       		.uleb128 0x27
+ 909 00c5 19       		.uleb128 0x19
+ 910 00c6 11       		.uleb128 0x11
+ 911 00c7 01       		.uleb128 0x1
+ 912 00c8 12       		.uleb128 0x12
+ 913 00c9 06       		.uleb128 0x6
+ 914 00ca 40       		.uleb128 0x40
+ 915 00cb 18       		.uleb128 0x18
+ 916 00cc 9742     		.uleb128 0x2117
+ 917 00ce 19       		.uleb128 0x19
+ 918 00cf 01       		.uleb128 0x1
+ 919 00d0 13       		.uleb128 0x13
+ 920 00d1 00       		.byte	0
+ 921 00d2 00       		.byte	0
+ 922 00d3 0E       		.uleb128 0xe
+ 923 00d4 05       		.uleb128 0x5
+ 924 00d5 00       		.byte	0
+ 925 00d6 03       		.uleb128 0x3
+ 926 00d7 0E       		.uleb128 0xe
+ 927 00d8 3A       		.uleb128 0x3a
+ 928 00d9 0B       		.uleb128 0xb
+ 929 00da 3B       		.uleb128 0x3b
+ 930 00db 05       		.uleb128 0x5
+ 931 00dc 49       		.uleb128 0x49
+ 932 00dd 13       		.uleb128 0x13
+ 933 00de 02       		.uleb128 0x2
+ 934 00df 17       		.uleb128 0x17
+ 935 00e0 00       		.byte	0
+ 936 00e1 00       		.byte	0
+ 937 00e2 0F       		.uleb128 0xf
+ 938 00e3 2E       		.uleb128 0x2e
+ 939 00e4 01       		.byte	0x1
+ 940 00e5 3F       		.uleb128 0x3f
+ 941 00e6 19       		.uleb128 0x19
+ 942 00e7 03       		.uleb128 0x3
+ 943 00e8 0E       		.uleb128 0xe
+ 944 00e9 3A       		.uleb128 0x3a
+ 945 00ea 0B       		.uleb128 0xb
+ 946 00eb 3B       		.uleb128 0x3b
+ 947 00ec 05       		.uleb128 0x5
+ 948 00ed 27       		.uleb128 0x27
+ 949 00ee 19       		.uleb128 0x19
+ 950 00ef 49       		.uleb128 0x49
+ 951 00f0 13       		.uleb128 0x13
+ 952 00f1 11       		.uleb128 0x11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 25
 
 
- 948 00b5 19       		.uleb128 0x19
- 949 00b6 49       		.uleb128 0x49
- 950 00b7 13       		.uleb128 0x13
- 951 00b8 11       		.uleb128 0x11
- 952 00b9 01       		.uleb128 0x1
- 953 00ba 12       		.uleb128 0x12
- 954 00bb 06       		.uleb128 0x6
- 955 00bc 40       		.uleb128 0x40
- 956 00bd 18       		.uleb128 0x18
- 957 00be 9742     		.uleb128 0x2117
- 958 00c0 19       		.uleb128 0x19
- 959 00c1 01       		.uleb128 0x1
- 960 00c2 13       		.uleb128 0x13
- 961 00c3 00       		.byte	0
- 962 00c4 00       		.byte	0
- 963 00c5 0F       		.uleb128 0xf
- 964 00c6 2E       		.uleb128 0x2e
- 965 00c7 01       		.byte	0x1
- 966 00c8 3F       		.uleb128 0x3f
- 967 00c9 19       		.uleb128 0x19
- 968 00ca 03       		.uleb128 0x3
- 969 00cb 0E       		.uleb128 0xe
- 970 00cc 3A       		.uleb128 0x3a
- 971 00cd 0B       		.uleb128 0xb
- 972 00ce 3B       		.uleb128 0x3b
- 973 00cf 05       		.uleb128 0x5
- 974 00d0 27       		.uleb128 0x27
- 975 00d1 19       		.uleb128 0x19
- 976 00d2 11       		.uleb128 0x11
- 977 00d3 01       		.uleb128 0x1
- 978 00d4 12       		.uleb128 0x12
- 979 00d5 06       		.uleb128 0x6
- 980 00d6 40       		.uleb128 0x40
- 981 00d7 18       		.uleb128 0x18
- 982 00d8 9742     		.uleb128 0x2117
- 983 00da 19       		.uleb128 0x19
- 984 00db 01       		.uleb128 0x1
- 985 00dc 13       		.uleb128 0x13
- 986 00dd 00       		.byte	0
- 987 00de 00       		.byte	0
- 988 00df 10       		.uleb128 0x10
- 989 00e0 05       		.uleb128 0x5
- 990 00e1 00       		.byte	0
- 991 00e2 03       		.uleb128 0x3
- 992 00e3 0E       		.uleb128 0xe
- 993 00e4 3A       		.uleb128 0x3a
- 994 00e5 0B       		.uleb128 0xb
- 995 00e6 3B       		.uleb128 0x3b
- 996 00e7 05       		.uleb128 0x5
- 997 00e8 49       		.uleb128 0x49
- 998 00e9 13       		.uleb128 0x13
- 999 00ea 02       		.uleb128 0x2
- 1000 00eb 17       		.uleb128 0x17
- 1001 00ec 00       		.byte	0
- 1002 00ed 00       		.byte	0
- 1003 00ee 11       		.uleb128 0x11
- 1004 00ef 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 26
+ 953 00f2 01       		.uleb128 0x1
+ 954 00f3 12       		.uleb128 0x12
+ 955 00f4 06       		.uleb128 0x6
+ 956 00f5 40       		.uleb128 0x40
+ 957 00f6 18       		.uleb128 0x18
+ 958 00f7 9742     		.uleb128 0x2117
+ 959 00f9 19       		.uleb128 0x19
+ 960 00fa 01       		.uleb128 0x1
+ 961 00fb 13       		.uleb128 0x13
+ 962 00fc 00       		.byte	0
+ 963 00fd 00       		.byte	0
+ 964 00fe 10       		.uleb128 0x10
+ 965 00ff 34       		.uleb128 0x34
+ 966 0100 00       		.byte	0
+ 967 0101 03       		.uleb128 0x3
+ 968 0102 0E       		.uleb128 0xe
+ 969 0103 3A       		.uleb128 0x3a
+ 970 0104 0B       		.uleb128 0xb
+ 971 0105 3B       		.uleb128 0x3b
+ 972 0106 05       		.uleb128 0x5
+ 973 0107 49       		.uleb128 0x49
+ 974 0108 13       		.uleb128 0x13
+ 975 0109 02       		.uleb128 0x2
+ 976 010a 17       		.uleb128 0x17
+ 977 010b 00       		.byte	0
+ 978 010c 00       		.byte	0
+ 979 010d 11       		.uleb128 0x11
+ 980 010e 2E       		.uleb128 0x2e
+ 981 010f 00       		.byte	0
+ 982 0110 3F       		.uleb128 0x3f
+ 983 0111 19       		.uleb128 0x19
+ 984 0112 03       		.uleb128 0x3
+ 985 0113 0E       		.uleb128 0xe
+ 986 0114 3A       		.uleb128 0x3a
+ 987 0115 0B       		.uleb128 0xb
+ 988 0116 3B       		.uleb128 0x3b
+ 989 0117 05       		.uleb128 0x5
+ 990 0118 27       		.uleb128 0x27
+ 991 0119 19       		.uleb128 0x19
+ 992 011a 11       		.uleb128 0x11
+ 993 011b 01       		.uleb128 0x1
+ 994 011c 12       		.uleb128 0x12
+ 995 011d 06       		.uleb128 0x6
+ 996 011e 40       		.uleb128 0x40
+ 997 011f 18       		.uleb128 0x18
+ 998 0120 9742     		.uleb128 0x2117
+ 999 0122 19       		.uleb128 0x19
+ 1000 0123 00       		.byte	0
+ 1001 0124 00       		.byte	0
+ 1002 0125 12       		.uleb128 0x12
+ 1003 0126 2E       		.uleb128 0x2e
+ 1004 0127 00       		.byte	0
+ 1005 0128 3F       		.uleb128 0x3f
+ 1006 0129 19       		.uleb128 0x19
+ 1007 012a 03       		.uleb128 0x3
+ 1008 012b 0E       		.uleb128 0xe
+ 1009 012c 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 26
 
 
- 1005 00f0 01       		.byte	0x1
- 1006 00f1 3F       		.uleb128 0x3f
- 1007 00f2 19       		.uleb128 0x19
- 1008 00f3 03       		.uleb128 0x3
- 1009 00f4 0E       		.uleb128 0xe
- 1010 00f5 3A       		.uleb128 0x3a
- 1011 00f6 0B       		.uleb128 0xb
- 1012 00f7 3B       		.uleb128 0x3b
- 1013 00f8 05       		.uleb128 0x5
- 1014 00f9 27       		.uleb128 0x27
- 1015 00fa 19       		.uleb128 0x19
- 1016 00fb 49       		.uleb128 0x49
- 1017 00fc 13       		.uleb128 0x13
- 1018 00fd 11       		.uleb128 0x11
- 1019 00fe 01       		.uleb128 0x1
- 1020 00ff 12       		.uleb128 0x12
- 1021 0100 06       		.uleb128 0x6
- 1022 0101 40       		.uleb128 0x40
- 1023 0102 18       		.uleb128 0x18
- 1024 0103 9742     		.uleb128 0x2117
- 1025 0105 19       		.uleb128 0x19
- 1026 0106 01       		.uleb128 0x1
- 1027 0107 13       		.uleb128 0x13
- 1028 0108 00       		.byte	0
- 1029 0109 00       		.byte	0
- 1030 010a 12       		.uleb128 0x12
- 1031 010b 34       		.uleb128 0x34
- 1032 010c 00       		.byte	0
- 1033 010d 03       		.uleb128 0x3
- 1034 010e 0E       		.uleb128 0xe
- 1035 010f 3A       		.uleb128 0x3a
- 1036 0110 0B       		.uleb128 0xb
- 1037 0111 3B       		.uleb128 0x3b
- 1038 0112 05       		.uleb128 0x5
- 1039 0113 49       		.uleb128 0x49
- 1040 0114 13       		.uleb128 0x13
- 1041 0115 02       		.uleb128 0x2
- 1042 0116 17       		.uleb128 0x17
- 1043 0117 00       		.byte	0
- 1044 0118 00       		.byte	0
- 1045 0119 13       		.uleb128 0x13
- 1046 011a 2E       		.uleb128 0x2e
- 1047 011b 00       		.byte	0
- 1048 011c 3F       		.uleb128 0x3f
- 1049 011d 19       		.uleb128 0x19
- 1050 011e 03       		.uleb128 0x3
- 1051 011f 0E       		.uleb128 0xe
- 1052 0120 3A       		.uleb128 0x3a
- 1053 0121 0B       		.uleb128 0xb
- 1054 0122 3B       		.uleb128 0x3b
- 1055 0123 05       		.uleb128 0x5
- 1056 0124 27       		.uleb128 0x27
- 1057 0125 19       		.uleb128 0x19
- 1058 0126 11       		.uleb128 0x11
- 1059 0127 01       		.uleb128 0x1
- 1060 0128 12       		.uleb128 0x12
- 1061 0129 06       		.uleb128 0x6
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 27
+ 1010 012d 0B       		.uleb128 0xb
+ 1011 012e 3B       		.uleb128 0x3b
+ 1012 012f 05       		.uleb128 0x5
+ 1013 0130 27       		.uleb128 0x27
+ 1014 0131 19       		.uleb128 0x19
+ 1015 0132 49       		.uleb128 0x49
+ 1016 0133 13       		.uleb128 0x13
+ 1017 0134 11       		.uleb128 0x11
+ 1018 0135 01       		.uleb128 0x1
+ 1019 0136 12       		.uleb128 0x12
+ 1020 0137 06       		.uleb128 0x6
+ 1021 0138 40       		.uleb128 0x40
+ 1022 0139 18       		.uleb128 0x18
+ 1023 013a 9742     		.uleb128 0x2117
+ 1024 013c 19       		.uleb128 0x19
+ 1025 013d 00       		.byte	0
+ 1026 013e 00       		.byte	0
+ 1027 013f 13       		.uleb128 0x13
+ 1028 0140 898201   		.uleb128 0x4109
+ 1029 0143 00       		.byte	0
+ 1030 0144 11       		.uleb128 0x11
+ 1031 0145 01       		.uleb128 0x1
+ 1032 0146 31       		.uleb128 0x31
+ 1033 0147 13       		.uleb128 0x13
+ 1034 0148 00       		.byte	0
+ 1035 0149 00       		.byte	0
+ 1036 014a 14       		.uleb128 0x14
+ 1037 014b 898201   		.uleb128 0x4109
+ 1038 014e 01       		.byte	0x1
+ 1039 014f 11       		.uleb128 0x11
+ 1040 0150 01       		.uleb128 0x1
+ 1041 0151 31       		.uleb128 0x31
+ 1042 0152 13       		.uleb128 0x13
+ 1043 0153 01       		.uleb128 0x1
+ 1044 0154 13       		.uleb128 0x13
+ 1045 0155 00       		.byte	0
+ 1046 0156 00       		.byte	0
+ 1047 0157 15       		.uleb128 0x15
+ 1048 0158 8A8201   		.uleb128 0x410a
+ 1049 015b 00       		.byte	0
+ 1050 015c 02       		.uleb128 0x2
+ 1051 015d 18       		.uleb128 0x18
+ 1052 015e 9142     		.uleb128 0x2111
+ 1053 0160 18       		.uleb128 0x18
+ 1054 0161 00       		.byte	0
+ 1055 0162 00       		.byte	0
+ 1056 0163 16       		.uleb128 0x16
+ 1057 0164 05       		.uleb128 0x5
+ 1058 0165 00       		.byte	0
+ 1059 0166 03       		.uleb128 0x3
+ 1060 0167 0E       		.uleb128 0xe
+ 1061 0168 3A       		.uleb128 0x3a
+ 1062 0169 0B       		.uleb128 0xb
+ 1063 016a 3B       		.uleb128 0x3b
+ 1064 016b 0B       		.uleb128 0xb
+ 1065 016c 49       		.uleb128 0x49
+ 1066 016d 13       		.uleb128 0x13
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 27
 
 
- 1062 012a 40       		.uleb128 0x40
- 1063 012b 18       		.uleb128 0x18
- 1064 012c 9742     		.uleb128 0x2117
- 1065 012e 19       		.uleb128 0x19
- 1066 012f 00       		.byte	0
- 1067 0130 00       		.byte	0
- 1068 0131 14       		.uleb128 0x14
- 1069 0132 2E       		.uleb128 0x2e
- 1070 0133 00       		.byte	0
- 1071 0134 3F       		.uleb128 0x3f
- 1072 0135 19       		.uleb128 0x19
- 1073 0136 03       		.uleb128 0x3
- 1074 0137 0E       		.uleb128 0xe
- 1075 0138 3A       		.uleb128 0x3a
- 1076 0139 0B       		.uleb128 0xb
- 1077 013a 3B       		.uleb128 0x3b
- 1078 013b 05       		.uleb128 0x5
- 1079 013c 27       		.uleb128 0x27
- 1080 013d 19       		.uleb128 0x19
- 1081 013e 49       		.uleb128 0x49
- 1082 013f 13       		.uleb128 0x13
- 1083 0140 11       		.uleb128 0x11
- 1084 0141 01       		.uleb128 0x1
- 1085 0142 12       		.uleb128 0x12
- 1086 0143 06       		.uleb128 0x6
- 1087 0144 40       		.uleb128 0x40
- 1088 0145 18       		.uleb128 0x18
- 1089 0146 9742     		.uleb128 0x2117
- 1090 0148 19       		.uleb128 0x19
- 1091 0149 00       		.byte	0
- 1092 014a 00       		.byte	0
- 1093 014b 15       		.uleb128 0x15
- 1094 014c 898201   		.uleb128 0x4109
- 1095 014f 00       		.byte	0
- 1096 0150 11       		.uleb128 0x11
- 1097 0151 01       		.uleb128 0x1
- 1098 0152 31       		.uleb128 0x31
- 1099 0153 13       		.uleb128 0x13
- 1100 0154 00       		.byte	0
- 1101 0155 00       		.byte	0
- 1102 0156 16       		.uleb128 0x16
- 1103 0157 898201   		.uleb128 0x4109
- 1104 015a 01       		.byte	0x1
- 1105 015b 11       		.uleb128 0x11
- 1106 015c 01       		.uleb128 0x1
- 1107 015d 31       		.uleb128 0x31
- 1108 015e 13       		.uleb128 0x13
- 1109 015f 01       		.uleb128 0x1
- 1110 0160 13       		.uleb128 0x13
- 1111 0161 00       		.byte	0
- 1112 0162 00       		.byte	0
- 1113 0163 17       		.uleb128 0x17
- 1114 0164 05       		.uleb128 0x5
- 1115 0165 00       		.byte	0
- 1116 0166 03       		.uleb128 0x3
- 1117 0167 0E       		.uleb128 0xe
- 1118 0168 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 28
+ 1067 016e 02       		.uleb128 0x2
+ 1068 016f 17       		.uleb128 0x17
+ 1069 0170 00       		.byte	0
+ 1070 0171 00       		.byte	0
+ 1071 0172 00       		.byte	0
+ 1072              		.section	.debug_loc,"",%progbits
+ 1073              	.Ldebug_loc0:
+ 1074              	.LLST0:
+ 1075 0000 00000000 		.4byte	.LVL3
+ 1076 0004 02000000 		.4byte	.LVL4
+ 1077 0008 0100     		.2byte	0x1
+ 1078 000a 50       		.byte	0x50
+ 1079 000b 02000000 		.4byte	.LVL4
+ 1080 000f 10000000 		.4byte	.LFE6
+ 1081 0013 0400     		.2byte	0x4
+ 1082 0015 F3       		.byte	0xf3
+ 1083 0016 01       		.uleb128 0x1
+ 1084 0017 50       		.byte	0x50
+ 1085 0018 9F       		.byte	0x9f
+ 1086 0019 00000000 		.4byte	0
+ 1087 001d 00000000 		.4byte	0
+ 1088              	.LLST1:
+ 1089 0021 04000000 		.4byte	.LVL5
+ 1090 0025 06000000 		.4byte	.LVL6
+ 1091 0029 0500     		.2byte	0x5
+ 1092 002b 70       		.byte	0x70
+ 1093 002c 00       		.sleb128 0
+ 1094 002d 35       		.byte	0x35
+ 1095 002e 25       		.byte	0x25
+ 1096 002f 9F       		.byte	0x9f
+ 1097 0030 00000000 		.4byte	0
+ 1098 0034 00000000 		.4byte	0
+ 1099              	.LLST2:
+ 1100 0038 00000000 		.4byte	.LVL11
+ 1101 003c 07000000 		.4byte	.LVL12-1
+ 1102 0040 0100     		.2byte	0x1
+ 1103 0042 50       		.byte	0x50
+ 1104 0043 07000000 		.4byte	.LVL12-1
+ 1105 0047 1A000000 		.4byte	.LFE1
+ 1106 004b 0100     		.2byte	0x1
+ 1107 004d 54       		.byte	0x54
+ 1108 004e 00000000 		.4byte	0
+ 1109 0052 00000000 		.4byte	0
+ 1110              		.section	.debug_aranges,"",%progbits
+ 1111 0000 7C000000 		.4byte	0x7c
+ 1112 0004 0200     		.2byte	0x2
+ 1113 0006 00000000 		.4byte	.Ldebug_info0
+ 1114 000a 04       		.byte	0x4
+ 1115 000b 00       		.byte	0
+ 1116 000c 0000     		.2byte	0
+ 1117 000e 0000     		.2byte	0
+ 1118 0010 00000000 		.4byte	.LFB3
+ 1119 0014 02000000 		.4byte	.LFE3-.LFB3
+ 1120 0018 00000000 		.4byte	.LFB4
+ 1121 001c 10000000 		.4byte	.LFE4-.LFB4
+ 1122 0020 00000000 		.4byte	.LFB5
+ 1123 0024 10000000 		.4byte	.LFE5-.LFB5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 28
 
 
- 1119 0169 0B       		.uleb128 0xb
- 1120 016a 3B       		.uleb128 0x3b
- 1121 016b 0B       		.uleb128 0xb
- 1122 016c 49       		.uleb128 0x49
- 1123 016d 13       		.uleb128 0x13
- 1124 016e 02       		.uleb128 0x2
- 1125 016f 17       		.uleb128 0x17
- 1126 0170 00       		.byte	0
- 1127 0171 00       		.byte	0
- 1128 0172 18       		.uleb128 0x18
- 1129 0173 34       		.uleb128 0x34
- 1130 0174 00       		.byte	0
- 1131 0175 03       		.uleb128 0x3
- 1132 0176 0E       		.uleb128 0xe
- 1133 0177 3A       		.uleb128 0x3a
- 1134 0178 0B       		.uleb128 0xb
- 1135 0179 3B       		.uleb128 0x3b
- 1136 017a 05       		.uleb128 0x5
- 1137 017b 49       		.uleb128 0x49
- 1138 017c 13       		.uleb128 0x13
- 1139 017d 3F       		.uleb128 0x3f
- 1140 017e 19       		.uleb128 0x19
- 1141 017f 3C       		.uleb128 0x3c
- 1142 0180 19       		.uleb128 0x19
- 1143 0181 00       		.byte	0
- 1144 0182 00       		.byte	0
- 1145 0183 19       		.uleb128 0x19
- 1146 0184 34       		.uleb128 0x34
- 1147 0185 00       		.byte	0
- 1148 0186 03       		.uleb128 0x3
- 1149 0187 0E       		.uleb128 0xe
- 1150 0188 3A       		.uleb128 0x3a
- 1151 0189 0B       		.uleb128 0xb
- 1152 018a 3B       		.uleb128 0x3b
- 1153 018b 0B       		.uleb128 0xb
- 1154 018c 49       		.uleb128 0x49
- 1155 018d 13       		.uleb128 0x13
- 1156 018e 3F       		.uleb128 0x3f
- 1157 018f 19       		.uleb128 0x19
- 1158 0190 3C       		.uleb128 0x3c
- 1159 0191 19       		.uleb128 0x19
- 1160 0192 00       		.byte	0
- 1161 0193 00       		.byte	0
- 1162 0194 1A       		.uleb128 0x1a
- 1163 0195 2E       		.uleb128 0x2e
- 1164 0196 01       		.byte	0x1
- 1165 0197 3F       		.uleb128 0x3f
- 1166 0198 19       		.uleb128 0x19
- 1167 0199 03       		.uleb128 0x3
- 1168 019a 0E       		.uleb128 0xe
- 1169 019b 3A       		.uleb128 0x3a
- 1170 019c 0B       		.uleb128 0xb
- 1171 019d 3B       		.uleb128 0x3b
- 1172 019e 0B       		.uleb128 0xb
- 1173 019f 27       		.uleb128 0x27
- 1174 01a0 19       		.uleb128 0x19
- 1175 01a1 49       		.uleb128 0x49
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 29
+ 1124 0028 00000000 		.4byte	.LFB6
+ 1125 002c 10000000 		.4byte	.LFE6-.LFB6
+ 1126 0030 00000000 		.4byte	.LFB7
+ 1127 0034 0C000000 		.4byte	.LFE7-.LFB7
+ 1128 0038 00000000 		.4byte	.LFB8
+ 1129 003c 10000000 		.4byte	.LFE8-.LFB8
+ 1130 0040 00000000 		.4byte	.LFB9
+ 1131 0044 18000000 		.4byte	.LFE9-.LFB9
+ 1132 0048 00000000 		.4byte	.LFB10
+ 1133 004c 10000000 		.4byte	.LFE10-.LFB10
+ 1134 0050 00000000 		.4byte	.LFB0
+ 1135 0054 1C000000 		.4byte	.LFE0-.LFB0
+ 1136 0058 00000000 		.4byte	.LFB1
+ 1137 005c 1A000000 		.4byte	.LFE1-.LFB1
+ 1138 0060 00000000 		.4byte	.LFB2
+ 1139 0064 14000000 		.4byte	.LFE2-.LFB2
+ 1140 0068 00000000 		.4byte	.LFB11
+ 1141 006c 10000000 		.4byte	.LFE11-.LFB11
+ 1142 0070 00000000 		.4byte	.LFB12
+ 1143 0074 10000000 		.4byte	.LFE12-.LFB12
+ 1144 0078 00000000 		.4byte	0
+ 1145 007c 00000000 		.4byte	0
+ 1146              		.section	.debug_ranges,"",%progbits
+ 1147              	.Ldebug_ranges0:
+ 1148 0000 00000000 		.4byte	.LFB3
+ 1149 0004 02000000 		.4byte	.LFE3
+ 1150 0008 00000000 		.4byte	.LFB4
+ 1151 000c 10000000 		.4byte	.LFE4
+ 1152 0010 00000000 		.4byte	.LFB5
+ 1153 0014 10000000 		.4byte	.LFE5
+ 1154 0018 00000000 		.4byte	.LFB6
+ 1155 001c 10000000 		.4byte	.LFE6
+ 1156 0020 00000000 		.4byte	.LFB7
+ 1157 0024 0C000000 		.4byte	.LFE7
+ 1158 0028 00000000 		.4byte	.LFB8
+ 1159 002c 10000000 		.4byte	.LFE8
+ 1160 0030 00000000 		.4byte	.LFB9
+ 1161 0034 18000000 		.4byte	.LFE9
+ 1162 0038 00000000 		.4byte	.LFB10
+ 1163 003c 10000000 		.4byte	.LFE10
+ 1164 0040 00000000 		.4byte	.LFB0
+ 1165 0044 1C000000 		.4byte	.LFE0
+ 1166 0048 00000000 		.4byte	.LFB1
+ 1167 004c 1A000000 		.4byte	.LFE1
+ 1168 0050 00000000 		.4byte	.LFB2
+ 1169 0054 14000000 		.4byte	.LFE2
+ 1170 0058 00000000 		.4byte	.LFB11
+ 1171 005c 10000000 		.4byte	.LFE11
+ 1172 0060 00000000 		.4byte	.LFB12
+ 1173 0064 10000000 		.4byte	.LFE12
+ 1174 0068 00000000 		.4byte	0
+ 1175 006c 00000000 		.4byte	0
+ 1176              		.section	.debug_line,"",%progbits
+ 1177              	.Ldebug_line0:
+ 1178 0000 33010000 		.section	.debug_str,"MS",%progbits,1
+ 1178      02004700 
+ 1178      00000201 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 29
 
 
- 1176 01a2 13       		.uleb128 0x13
- 1177 01a3 3C       		.uleb128 0x3c
- 1178 01a4 19       		.uleb128 0x19
- 1179 01a5 00       		.byte	0
- 1180 01a6 00       		.byte	0
- 1181 01a7 1B       		.uleb128 0x1b
- 1182 01a8 05       		.uleb128 0x5
- 1183 01a9 00       		.byte	0
- 1184 01aa 49       		.uleb128 0x49
- 1185 01ab 13       		.uleb128 0x13
- 1186 01ac 00       		.byte	0
- 1187 01ad 00       		.byte	0
- 1188 01ae 00       		.byte	0
- 1189              		.section	.debug_loc,"",%progbits
- 1190              	.Ldebug_loc0:
- 1191              	.LLST0:
- 1192 0000 00000000 		.4byte	.LVL4
- 1193 0004 02000000 		.4byte	.LVL5
- 1194 0008 0100     		.2byte	0x1
- 1195 000a 50       		.byte	0x50
- 1196 000b 02000000 		.4byte	.LVL5
- 1197 000f 10000000 		.4byte	.LFE69
- 1198 0013 0400     		.2byte	0x4
- 1199 0015 F3       		.byte	0xf3
- 1200 0016 01       		.uleb128 0x1
- 1201 0017 50       		.byte	0x50
- 1202 0018 9F       		.byte	0x9f
- 1203 0019 00000000 		.4byte	0
- 1204 001d 00000000 		.4byte	0
- 1205              	.LLST1:
- 1206 0021 04000000 		.4byte	.LVL6
- 1207 0025 06000000 		.4byte	.LVL7
- 1208 0029 0500     		.2byte	0x5
- 1209 002b 70       		.byte	0x70
- 1210 002c 00       		.sleb128 0
- 1211 002d 35       		.byte	0x35
- 1212 002e 25       		.byte	0x25
- 1213 002f 9F       		.byte	0x9f
- 1214 0030 00000000 		.4byte	0
- 1215 0034 00000000 		.4byte	0
- 1216              	.LLST2:
- 1217 0038 00000000 		.4byte	.LVL12
- 1218 003c 07000000 		.4byte	.LVL13-1
- 1219 0040 0100     		.2byte	0x1
- 1220 0042 50       		.byte	0x50
- 1221 0043 07000000 		.4byte	.LVL13-1
- 1222 0047 1A000000 		.4byte	.LFE64
- 1223 004b 0100     		.2byte	0x1
- 1224 004d 54       		.byte	0x54
- 1225 004e 00000000 		.4byte	0
- 1226 0052 00000000 		.4byte	0
- 1227              		.section	.debug_aranges,"",%progbits
- 1228 0000 7C000000 		.4byte	0x7c
- 1229 0004 0200     		.2byte	0x2
- 1230 0006 00000000 		.4byte	.Ldebug_info0
- 1231 000a 04       		.byte	0x4
- 1232 000b 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 30
+ 1178      FB0E0D00 
+ 1178      01010101 
+ 1179              	.LASF36:
+ 1180 0000 46696C74 		.ascii	"Filter_Int_GetState\000"
+ 1180      65725F49 
+ 1180      6E745F47 
+ 1180      65745374 
+ 1180      61746500 
+ 1181              	.LASF24:
+ 1182 0014 46696C74 		.ascii	"Filter_Int_GetPriority\000"
+ 1182      65725F49 
+ 1182      6E745F47 
+ 1182      65745072 
+ 1182      696F7269 
+ 1183              	.LASF34:
+ 1184 002b 47656E65 		.ascii	"Generated_Source\\PSoC5\\Filter_Int.c\000"
+ 1184      72617465 
+ 1184      645F536F 
+ 1184      75726365 
+ 1184      5C50536F 
+ 1185              	.LASF31:
+ 1186 004f 46696C74 		.ascii	"Filter_Int_SetPending\000"
+ 1186      65725F49 
+ 1186      6E745F53 
+ 1186      65745065 
+ 1186      6E64696E 
+ 1187              	.LASF4:
+ 1188 0065 73686F72 		.ascii	"short unsigned int\000"
+ 1188      7420756E 
+ 1188      7369676E 
+ 1188      65642069 
+ 1188      6E7400
+ 1189              	.LASF20:
+ 1190 0078 46696C74 		.ascii	"Filter_Int_SetPriority\000"
+ 1190      65725F49 
+ 1190      6E745F53 
+ 1190      65745072 
+ 1190      696F7269 
+ 1191              	.LASF29:
+ 1192 008f 46696C74 		.ascii	"Filter_Int_StartEx\000"
+ 1192      65725F49 
+ 1192      6E745F53 
+ 1192      74617274 
+ 1192      457800
+ 1193              	.LASF13:
+ 1194 00a2 666C6F61 		.ascii	"float\000"
+ 1194      7400
+ 1195              	.LASF28:
+ 1196 00a8 46696C74 		.ascii	"Filter_Int_Start\000"
+ 1196      65725F49 
+ 1196      6E745F53 
+ 1196      74617274 
+ 1196      00
+ 1197              	.LASF35:
+ 1198 00b9 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
+ 1198      73657273 
+ 1198      5C546F6D 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 30
 
 
- 1233 000c 0000     		.2byte	0
- 1234 000e 0000     		.2byte	0
- 1235 0010 00000000 		.4byte	.LFB66
- 1236 0014 14000000 		.4byte	.LFE66-.LFB66
- 1237 0018 00000000 		.4byte	.LFB67
- 1238 001c 10000000 		.4byte	.LFE67-.LFB67
- 1239 0020 00000000 		.4byte	.LFB68
- 1240 0024 10000000 		.4byte	.LFE68-.LFB68
- 1241 0028 00000000 		.4byte	.LFB69
- 1242 002c 10000000 		.4byte	.LFE69-.LFB69
- 1243 0030 00000000 		.4byte	.LFB70
- 1244 0034 0C000000 		.4byte	.LFE70-.LFB70
- 1245 0038 00000000 		.4byte	.LFB71
- 1246 003c 10000000 		.4byte	.LFE71-.LFB71
- 1247 0040 00000000 		.4byte	.LFB72
- 1248 0044 18000000 		.4byte	.LFE72-.LFB72
- 1249 0048 00000000 		.4byte	.LFB73
- 1250 004c 10000000 		.4byte	.LFE73-.LFB73
- 1251 0050 00000000 		.4byte	.LFB63
- 1252 0054 1C000000 		.4byte	.LFE63-.LFB63
- 1253 0058 00000000 		.4byte	.LFB64
- 1254 005c 1A000000 		.4byte	.LFE64-.LFB64
- 1255 0060 00000000 		.4byte	.LFB65
- 1256 0064 14000000 		.4byte	.LFE65-.LFB65
- 1257 0068 00000000 		.4byte	.LFB74
- 1258 006c 10000000 		.4byte	.LFE74-.LFB74
- 1259 0070 00000000 		.4byte	.LFB75
- 1260 0074 10000000 		.4byte	.LFE75-.LFB75
- 1261 0078 00000000 		.4byte	0
- 1262 007c 00000000 		.4byte	0
- 1263              		.section	.debug_ranges,"",%progbits
- 1264              	.Ldebug_ranges0:
- 1265 0000 00000000 		.4byte	.LFB66
- 1266 0004 14000000 		.4byte	.LFE66
- 1267 0008 00000000 		.4byte	.LFB67
- 1268 000c 10000000 		.4byte	.LFE67
- 1269 0010 00000000 		.4byte	.LFB68
- 1270 0014 10000000 		.4byte	.LFE68
- 1271 0018 00000000 		.4byte	.LFB69
- 1272 001c 10000000 		.4byte	.LFE69
- 1273 0020 00000000 		.4byte	.LFB70
- 1274 0024 0C000000 		.4byte	.LFE70
- 1275 0028 00000000 		.4byte	.LFB71
- 1276 002c 10000000 		.4byte	.LFE71
- 1277 0030 00000000 		.4byte	.LFB72
- 1278 0034 18000000 		.4byte	.LFE72
- 1279 0038 00000000 		.4byte	.LFB73
- 1280 003c 10000000 		.4byte	.LFE73
- 1281 0040 00000000 		.4byte	.LFB63
- 1282 0044 1C000000 		.4byte	.LFE63
- 1283 0048 00000000 		.4byte	.LFB64
- 1284 004c 1A000000 		.4byte	.LFE64
- 1285 0050 00000000 		.4byte	.LFB65
- 1286 0054 14000000 		.4byte	.LFE65
- 1287 0058 00000000 		.4byte	.LFB74
- 1288 005c 10000000 		.4byte	.LFE74
- 1289 0060 00000000 		.4byte	.LFB75
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 31
+ 1198      6D695C44 
+ 1198      6F63756D 
+ 1199 00e6 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
+ 1199      5F555342 
+ 1199      55415254 
+ 1199      2E637964 
+ 1199      736E00
+ 1200              	.LASF2:
+ 1201 00f9 756E7369 		.ascii	"unsigned char\000"
+ 1201      676E6564 
+ 1201      20636861 
+ 1201      7200
+ 1202              	.LASF15:
+ 1203 0107 72656738 		.ascii	"reg8\000"
+ 1203      00
+ 1204              	.LASF6:
+ 1205 010c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1205      20756E73 
+ 1205      69676E65 
+ 1205      6420696E 
+ 1205      7400
+ 1206              	.LASF23:
+ 1207 011e 46696C74 		.ascii	"Filter_Int_GetVector\000"
+ 1207      65725F49 
+ 1207      6E745F47 
+ 1207      65745665 
+ 1207      63746F72 
+ 1208              	.LASF11:
+ 1209 0133 75696E74 		.ascii	"uint8\000"
+ 1209      3800
+ 1210              	.LASF25:
+ 1211 0139 46696C74 		.ascii	"Filter_Int_Interrupt\000"
+ 1211      65725F49 
+ 1211      6E745F49 
+ 1211      6E746572 
+ 1211      72757074 
+ 1212              	.LASF22:
+ 1213 014e 7072696F 		.ascii	"priority\000"
+ 1213      72697479 
+ 1213      00
+ 1214              	.LASF14:
+ 1215 0157 646F7562 		.ascii	"double\000"
+ 1215      6C6500
+ 1216              	.LASF26:
+ 1217 015e 46696C74 		.ascii	"Filter_Int_Enable\000"
+ 1217      65725F49 
+ 1217      6E745F45 
+ 1217      6E61626C 
+ 1217      6500
+ 1218              	.LASF12:
+ 1219 0170 75696E74 		.ascii	"uint32\000"
+ 1219      333200
+ 1220              	.LASF33:
+ 1221 0177 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1221      4320342E 
+ 1221      392E3320 
+ 1221      32303135 
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 31
 
 
- 1290 0064 10000000 		.4byte	.LFE75
- 1291 0068 00000000 		.4byte	0
- 1292 006c 00000000 		.4byte	0
- 1293              		.section	.debug_line,"",%progbits
- 1294              	.Ldebug_line0:
- 1295 0000 47020000 		.section	.debug_str,"MS",%progbits,1
- 1295      02005901 
- 1295      00000201 
- 1295      FB0E0D00 
- 1295      01010101 
- 1296              	.LASF18:
- 1297 0000 72656733 		.ascii	"reg32\000"
- 1297      3200
- 1298              	.LASF27:
- 1299 0006 46696C74 		.ascii	"Filter_INT_GetPriority\000"
- 1299      65725F49 
- 1299      4E545F47 
- 1299      65745072 
- 1299      696F7269 
- 1300              	.LASF28:
- 1301 001d 46696C74 		.ascii	"Filter_INT_Enable\000"
- 1301      65725F49 
- 1301      4E545F45 
- 1301      6E61626C 
- 1301      6500
- 1302              	.LASF11:
- 1303 002f 5F5F696E 		.ascii	"__int32_t\000"
- 1303      7433325F 
- 1303      7400
- 1304              	.LASF38:
- 1305 0039 47656E65 		.ascii	"Generated_Source\\PSoC5\\Filter_INT.c\000"
- 1305      72617465 
- 1305      645F536F 
- 1305      75726365 
- 1305      5C50536F 
- 1306              	.LASF36:
- 1307 005d 7261775F 		.ascii	"raw_filter\000"
- 1307      66696C74 
- 1307      657200
- 1308              	.LASF40:
- 1309 0068 46696C74 		.ascii	"Filter_INT_GetState\000"
- 1309      65725F49 
- 1309      4E545F47 
- 1309      65745374 
- 1309      61746500 
- 1310              	.LASF15:
- 1311 007c 666C6F61 		.ascii	"float\000"
- 1311      7400
- 1312              	.LASF31:
- 1313 0082 46696C74 		.ascii	"Filter_INT_StartEx\000"
- 1313      65725F49 
- 1313      4E545F53 
- 1313      74617274 
- 1313      457800
- 1314              	.LASF39:
- 1315 0095 473A5C55 		.ascii	"G:\\Users\\Tommi\\Documents\\GitHub\\PSOC_USBUART\\"
- 1315      73657273 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 32
+ 1221      30333033 
+ 1222 01aa 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1222      20726576 
+ 1222      6973696F 
+ 1222      6E203232 
+ 1222      31323230 
+ 1223 01dd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1223      66756E63 
+ 1223      74696F6E 
+ 1223      2D736563 
+ 1223      74696F6E 
+ 1224              	.LASF0:
+ 1225 0205 756E7369 		.ascii	"unsigned int\000"
+ 1225      676E6564 
+ 1225      20696E74 
+ 1225      00
+ 1226              	.LASF21:
+ 1227 0212 61646472 		.ascii	"address\000"
+ 1227      65737300 
+ 1228              	.LASF8:
+ 1229 021a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1229      206C6F6E 
+ 1229      6720756E 
+ 1229      7369676E 
+ 1229      65642069 
+ 1230              	.LASF30:
+ 1231 0231 46696C74 		.ascii	"Filter_Int_Stop\000"
+ 1231      65725F49 
+ 1231      6E745F53 
+ 1231      746F7000 
+ 1232              	.LASF17:
+ 1233 0241 63796973 		.ascii	"cyisraddress\000"
+ 1233      72616464 
+ 1233      72657373 
+ 1233      00
+ 1234              	.LASF9:
+ 1235 024e 73697A65 		.ascii	"sizetype\000"
+ 1235      74797065 
+ 1235      00
+ 1236              	.LASF7:
+ 1237 0257 6C6F6E67 		.ascii	"long long int\000"
+ 1237      206C6F6E 
+ 1237      6720696E 
+ 1237      7400
+ 1238              	.LASF10:
+ 1239 0265 63686172 		.ascii	"char\000"
+ 1239      00
+ 1240              	.LASF18:
+ 1241 026a 72616D56 		.ascii	"ramVectorTable\000"
+ 1241      6563746F 
+ 1241      72546162 
+ 1241      6C6500
+ 1242              	.LASF3:
+ 1243 0279 73686F72 		.ascii	"short int\000"
+ 1243      7420696E 
+ 1243      7400
+ 1244              	.LASF5:
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccjohqjF.s 			page 32
 
 
- 1315      5C546F6D 
- 1315      6D695C44 
- 1315      6F63756D 
- 1316 00c2 50534F43 		.ascii	"PSOC_USBUART.cydsn\000"
- 1316      5F555342 
- 1316      55415254 
- 1316      2E637964 
- 1316      736E00
- 1317              	.LASF2:
- 1318 00d5 756E7369 		.ascii	"unsigned char\000"
- 1318      676E6564 
- 1318      20636861 
- 1318      7200
- 1319              	.LASF17:
- 1320 00e3 72656738 		.ascii	"reg8\000"
- 1320      00
- 1321              	.LASF6:
- 1322 00e8 6C6F6E67 		.ascii	"long unsigned int\000"
- 1322      20756E73 
- 1322      69676E65 
- 1322      6420696E 
- 1322      7400
- 1323              	.LASF4:
- 1324 00fa 73686F72 		.ascii	"short unsigned int\000"
- 1324      7420756E 
- 1324      7369676E 
- 1324      65642069 
- 1324      6E7400
- 1325              	.LASF33:
- 1326 010d 46696C74 		.ascii	"Filter_INT_SetPending\000"
- 1326      65725F49 
- 1326      4E545F53 
- 1326      65745065 
- 1326      6E64696E 
- 1327              	.LASF35:
- 1328 0123 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1328      52784275 
- 1328      66666572 
- 1328      00
- 1329              	.LASF29:
- 1330 0130 46696C74 		.ascii	"Filter_INT_Disable\000"
- 1330      65725F49 
- 1330      4E545F44 
- 1330      69736162 
- 1330      6C6500
- 1331              	.LASF16:
- 1332 0143 646F7562 		.ascii	"double\000"
- 1332      6C6500
- 1333              	.LASF25:
- 1334 014a 7072696F 		.ascii	"priority\000"
- 1334      72697479 
- 1334      00
- 1335              	.LASF14:
- 1336 0153 75696E74 		.ascii	"uint32\000"
- 1336      333200
- 1337              	.LASF37:
- 1338 015a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 33
-
-
- 1338      4320342E 
- 1338      392E3320 
- 1338      32303135 
- 1338      30333033 
- 1339 018d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1339      20726576 
- 1339      6973696F 
- 1339      6E203232 
- 1339      31323230 
- 1340 01c0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1340      66756E63 
- 1340      74696F6E 
- 1340      2D736563 
- 1340      74696F6E 
- 1341              	.LASF30:
- 1342 01e8 46696C74 		.ascii	"Filter_INT_Start\000"
- 1342      65725F49 
- 1342      4E545F53 
- 1342      74617274 
- 1342      00
- 1343              	.LASF0:
- 1344 01f9 756E7369 		.ascii	"unsigned int\000"
- 1344      676E6564 
- 1344      20696E74 
- 1344      00
- 1345              	.LASF21:
- 1346 0206 46696C74 		.ascii	"Filter_INT_SetVector\000"
- 1346      65725F49 
- 1346      4E545F53 
- 1346      65745665 
- 1346      63746F72 
- 1347              	.LASF24:
- 1348 021b 61646472 		.ascii	"address\000"
- 1348      65737300 
- 1349              	.LASF8:
- 1350 0223 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1350      206C6F6E 
- 1350      6720756E 
- 1350      7369676E 
- 1350      65642069 
- 1351              	.LASF19:
- 1352 023a 63796973 		.ascii	"cyisraddress\000"
- 1352      72616464 
- 1352      72657373 
- 1352      00
- 1353              	.LASF23:
- 1354 0247 46696C74 		.ascii	"Filter_INT_SetPriority\000"
- 1354      65725F49 
- 1354      4E545F53 
- 1354      65745072 
- 1354      696F7269 
- 1355              	.LASF12:
- 1356 025e 696E7433 		.ascii	"int32_t\000"
- 1356      325F7400 
- 1357              	.LASF9:
- 1358 0266 73697A65 		.ascii	"sizetype\000"
- 1358      74797065 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 34
-
-
- 1358      00
- 1359              	.LASF7:
- 1360 026f 6C6F6E67 		.ascii	"long long int\000"
- 1360      206C6F6E 
- 1360      6720696E 
- 1360      7400
- 1361              	.LASF10:
- 1362 027d 63686172 		.ascii	"char\000"
- 1362      00
- 1363              	.LASF32:
- 1364 0282 46696C74 		.ascii	"Filter_INT_Stop\000"
- 1364      65725F49 
- 1364      4E545F53 
- 1364      746F7000 
- 1365              	.LASF41:
- 1366 0292 46696C74 		.ascii	"Filter_Read24\000"
- 1366      65725F52 
- 1366      65616432 
- 1366      3400
- 1367              	.LASF3:
- 1368 02a0 73686F72 		.ascii	"short int\000"
- 1368      7420696E 
- 1368      7400
- 1369              	.LASF13:
- 1370 02aa 75696E74 		.ascii	"uint8\000"
- 1370      3800
- 1371              	.LASF22:
- 1372 02b0 72616D56 		.ascii	"ramVectorTable\000"
- 1372      6563746F 
- 1372      72546162 
- 1372      6C6500
- 1373              	.LASF5:
- 1374 02bf 6C6F6E67 		.ascii	"long int\000"
- 1374      20696E74 
- 1374      00
- 1375              	.LASF1:
- 1376 02c8 7369676E 		.ascii	"signed char\000"
- 1376      65642063 
- 1376      68617200 
- 1377              	.LASF26:
- 1378 02d4 46696C74 		.ascii	"Filter_INT_GetVector\000"
- 1378      65725F49 
- 1378      4E545F47 
- 1378      65745665 
- 1378      63746F72 
- 1379              	.LASF20:
- 1380 02e9 46696C74 		.ascii	"Filter_INT_Interrupt\000"
- 1380      65725F49 
- 1380      4E545F49 
- 1380      6E746572 
- 1380      72757074 
- 1381              	.LASF34:
- 1382 02fe 46696C74 		.ascii	"Filter_INT_ClearPending\000"
- 1382      65725F49 
- 1382      4E545F43 
- 1382      6C656172 
- 1382      50656E64 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccdJN79q.s 			page 35
-
-
- 1383              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1245 0283 6C6F6E67 		.ascii	"long int\000"
+ 1245      20696E74 
+ 1245      00
+ 1246              	.LASF16:
+ 1247 028c 72656733 		.ascii	"reg32\000"
+ 1247      3200
+ 1248              	.LASF32:
+ 1249 0292 46696C74 		.ascii	"Filter_Int_ClearPending\000"
+ 1249      65725F49 
+ 1249      6E745F43 
+ 1249      6C656172 
+ 1249      50656E64 
+ 1250              	.LASF1:
+ 1251 02aa 7369676E 		.ascii	"signed char\000"
+ 1251      65642063 
+ 1251      68617200 
+ 1252              	.LASF27:
+ 1253 02b6 46696C74 		.ascii	"Filter_Int_Disable\000"
+ 1253      65725F49 
+ 1253      6E745F44 
+ 1253      69736162 
+ 1253      6C6500
+ 1254              	.LASF19:
+ 1255 02c9 46696C74 		.ascii	"Filter_Int_SetVector\000"
+ 1255      65725F49 
+ 1255      6E745F53 
+ 1255      65745665 
+ 1255      63746F72 
+ 1256              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
