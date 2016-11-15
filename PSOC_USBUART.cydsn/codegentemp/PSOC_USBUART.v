@@ -1,6 +1,6 @@
 // ======================================================================
 // PSOC_USBUART.v generated from TopDesign.cysch
-// 11/14/2016 at 13:50
+// 11/15/2016 at 12:29
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 

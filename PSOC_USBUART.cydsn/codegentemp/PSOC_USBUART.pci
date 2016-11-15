@@ -1,5 +1,5 @@
 # PSOC_USBUART
-# 2016-11-14 12:50:24Z
+# 2016-11-15 11:29:34Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0

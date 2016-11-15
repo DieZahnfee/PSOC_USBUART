@@ -14,7 +14,7 @@
 
 /* Defines for DMA */
 #define REQUEST_PER_BURST        (1u)
-#define BYTES_PER_BURST          (3u)
+#define BYTES_PER_BURST          (4u)
 #define UPPER_SRC_ADDRESS        CYDEV_PERIPH_BASE
 #define UPPER_DEST_ADDRESS       CYDEV_PERIPH_BASE
 
@@ -56,6 +56,8 @@ int main(){
     
     DmaConfig();
     
+    //Set ADC Coherency to High Byte
+    ADC_DelSig_DEC_COHER_REG |= ADC_DelSig_DEC_SAMP_KEY_HIGH;
     //Set Filter Coherency to High Byte
     Filter_SetCoherency(Filter_CHANNEL_A, Filter_KEY_HIGH);
     
@@ -107,10 +109,7 @@ int main(){
 		    
             filter.new_data = 0u;
             
-            
-            
-            //for later use
-            //CyPmAltAct(PM_SLEEP_TIME_NONE,PM_SLEEP_SRC_PICU);
+            CyPmAltAct(PM_SLEEP_TIME_NONE,PM_SLEEP_SRC_PICU);
             
         }
     }
@@ -172,7 +171,7 @@ int DmaConfig(){
 
 	/* Source and Destination address increments are needed as we are using 3 byte transfers
 	but Spoke Width is 16 bit */
-    CyDmaTdSetConfiguration(tdChanA, 3u, tdChanA, TD_INC_SRC_ADR | TD_INC_DST_ADR);
+    CyDmaTdSetConfiguration(tdChanA, 4u, tdChanA, TD_INC_SRC_ADR | TD_INC_DST_ADR);
 
     /* Set the source address as ADC_DelSig and the destination as
      * Filter Channel A.*/
