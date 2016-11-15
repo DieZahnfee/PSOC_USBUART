@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
   30:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED 
   31:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
   32:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYALIGNED __attribute__ ((aligned))
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 2
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 2
 
 
   33:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CY_CFG_UNUSED __attribute__ ((unused))
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
   87:Generated_Source\PSoC5/cyfitter_cfg.c **** #define CYCLOCKSTART_XTAL_ERROR  1u
   88:Generated_Source\PSoC5/cyfitter_cfg.c **** #define CYCLOCKSTART_32KHZ_ERROR 2u
   89:Generated_Source\PSoC5/cyfitter_cfg.c **** #define CYCLOCKSTART_PLL_ERROR   3u
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 3
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 3
 
 
   90:Generated_Source\PSoC5/cyfitter_cfg.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
   35 0000 FEE7     		b	.L2
   36              		.cfi_endproc
   37              	.LFE3:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 4
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 4
 
 
   38              		.size	CyClockStartupError, .-CyClockStartupError
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
   48              		@ args = 0, pretend = 0, frame = 0
   49              		@ frame_needed = 0, uses_anonymous_args = 0
   50              		@ link register save eliminated.
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 5
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 5
 
 
   51              	.LVL1:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  186:Generated_Source\PSoC5/cyfitter_cfg.c **** 		{
   93              		.loc 1 186 0
   94 0026 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 6
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 6
 
 
   95 0028 F4D1     		bne	.L6
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  215:Generated_Source\PSoC5/cyfitter_cfg.c **** 	uint8 pllLock;
  216:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  217:Generated_Source\PSoC5/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 7
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 7
 
 
  218:Generated_Source\PSoC5/cyfitter_cfg.c **** 	/* Configure Digital Clocks based on settings from Clock DWR */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  272:Generated_Source\PSoC5/cyfitter_cfg.c **** *
  273:Generated_Source\PSoC5/cyfitter_cfg.c **** * Summary:
  274:Generated_Source\PSoC5/cyfitter_cfg.c **** *  Sets up the analog portions of the chip to default values based on chip
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 8
 
 
  275:Generated_Source\PSoC5/cyfitter_cfg.c **** *  configuration options from the project.
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  294:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG16((void CYFAR *)CYREG_OPAMP0_MX, 0x0404u);
  158              		.loc 1 294 0
  159 0030 40F20442 		movw	r2, #1028
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 9
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 9
 
 
  160 0034 3C33     		adds	r3, r3, #60
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  210              		.type	CYCONFIGCPY, %function
  211              	CYCONFIGCPY:
  212              	.LFB1:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 10
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 10
 
 
   71:Generated_Source\PSoC5/cyfitter_cfg.c **** 	(void)memcpy(dest, src, n);
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  260              		.loc 1 226 0
  261 0018 0622     		movs	r2, #6
  262 001a 2A4B     		ldr	r3, .L22+12
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 11
 
 
  263 001c 1A70     		strb	r2, [r3]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  307 0060 032C     		cmp	r4, #3
  308 0062 EFD1     		bne	.L19
  309              	.L18:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 12
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 12
 
 
  243:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  352 00a2 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  353 00a4 43F00103 		orr	r3, r3, #1
  354 00a8 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 13
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 13
 
 
  262:Generated_Source\PSoC5/cyfitter_cfg.c **** }
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  317:Generated_Source\PSoC5/cyfitter_cfg.c **** void SetAnalogRoutingPumps(uint8 enabled)
  318:Generated_Source\PSoC5/cyfitter_cfg.c **** {
  388              		.loc 1 318 0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 14
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 14
 
 
  389              		.cfi_startproc
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  333:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  334:Generated_Source\PSoC5/cyfitter_cfg.c **** /*******************************************************************************
  335:Generated_Source\PSoC5/cyfitter_cfg.c **** * Function Name: cyfitter_cfg
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 15
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 15
 
 
  336:Generated_Source\PSoC5/cyfitter_cfg.c **** ********************************************************************************
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  368:Generated_Source\PSoC5/cyfitter_cfg.c **** 		static const cfg_memset_t CYCODE cfg_memset_list [] = {
  369:Generated_Source\PSoC5/cyfitter_cfg.c **** 			/* address, size */
  370:Generated_Source\PSoC5/cyfitter_cfg.c **** 			{(void CYFAR *)(CYREG_PRT2_DR), 80u},
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 16
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 16
 
 
  371:Generated_Source\PSoC5/cyfitter_cfg.c **** 			{(void CYFAR *)(CYREG_PRT12_DR), 16u},
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  390:Generated_Source\PSoC5/cyfitter_cfg.c **** 		/* Perform normal device configuration. Order is not critical for these items. */
  391:Generated_Source\PSoC5/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void CYFAR *)(CYREG_DSM0_CR3), 0x0Au);
  484              		.loc 1 391 0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 17
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 17
 
 
  485 003a 0A25     		movs	r5, #10
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  524 0080 1849     		ldr	r1, .L33+40
  525 0082 2A46     		mov	r2, r5
  526 0084 FFF7FEFF 		bl	CYCONFIGCPY
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 18
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 18
 
 
  527              	.LVL41:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  565 00c8 83580040 		.word	1073764483
  566 00cc 50760040 		.word	1073772112
  567 00d0 03500140 		.word	1073827843
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 19
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 19
 
 
  568 00d4 A0430040 		.word	1073759136
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  622 0027 05       		.byte	0x5
  623 0028 696E7400 		.ascii	"int\000"
  624 002c 03       		.uleb128 0x3
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 20
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 20
 
 
  625 002d 14000000 		.4byte	.LASF11
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  679 008e 45000000 		.4byte	0x45
  680 0092 06       		.uleb128 0x6
  681 0093 58010000 		.4byte	.LASF13
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 21
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 21
 
 
  682 0097 03       		.byte	0x3
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  736 0107 6C000000 		.4byte	.LASF22
  737 010b 01       		.byte	0x1
  738 010c 6F       		.byte	0x6f
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 22
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 22
 
 
  739 010d 00000000 		.4byte	.LFB3
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  793 0181 B7       		.byte	0xb7
  794 0182 9E000000 		.4byte	0x9e
  795 0186 3E000000 		.4byte	.LLST2
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 23
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 23
 
 
  796 018a 0E       		.uleb128 0xe
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  850 0203 A3000000 		.4byte	.LLST6
  851 0207 14       		.uleb128 0x14
  852 0208 0A000000 		.4byte	.LVL16
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 24
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 24
 
 
  853 020c CD040000 		.4byte	0x4cd
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  907 0270 52       		.byte	0x52
  908 0271 03       		.uleb128 0x3
  909 0272 F3       		.byte	0xf3
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 25
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 25
 
 
  910 0273 01       		.uleb128 0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  964 02d3 51       		.byte	0x51
  965 02d4 05       		.uleb128 0x5
  966 02d5 0C       		.byte	0xc
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 26
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 26
 
 
  967 02d6 DC000048 		.4byte	0x480000dc
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1021 033d 40010000 		.4byte	.LASF40
  1022 0341 01       		.byte	0x1
  1023 0342 5F01     		.2byte	0x15f
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 27
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 27
 
 
  1024 0344 00000000 		.4byte	.LFB8
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1078 03c0 7B010000 		.4byte	.LLST12
  1079 03c4 1C       		.uleb128 0x1c
  1080 03c5 12000000 		.4byte	.LBB4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 28
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 28
 
 
  1081 03c9 16000000 		.4byte	.LBE4-.LBB4
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1135 0435 51040000 		.4byte	0x451
  1136 0439 15       		.uleb128 0x15
  1137 043a 01       		.uleb128 0x1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 29
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 29
 
 
  1138 043b 52       		.byte	0x52
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1192 0492 15       		.uleb128 0x15
  1193 0493 01       		.uleb128 0x1
  1194 0494 50       		.byte	0x50
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 30
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 30
 
 
  1195 0495 05       		.uleb128 0x5
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1249 0507 25       		.uleb128 0x25
  1250 0508 06000000 		.4byte	.LASF50
  1251 050c 04       		.byte	0x4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 31
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 31
 
 
  1252 050d 79       		.byte	0x79
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1306 002f 0B       		.uleb128 0xb
  1307 0030 3E       		.uleb128 0x3e
  1308 0031 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 32
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 32
 
 
  1309 0032 03       		.uleb128 0x3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1363 0068 13       		.uleb128 0x13
  1364 0069 38       		.uleb128 0x38
  1365 006a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 33
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 33
 
 
  1366 006b 00       		.byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1420 00a2 00       		.byte	0
  1421 00a3 0D       		.uleb128 0xd
  1422 00a4 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 34
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 34
 
 
  1423 00a5 01       		.byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1477 00db 18       		.uleb128 0x18
  1478 00dc 9742     		.uleb128 0x2117
  1479 00de 19       		.uleb128 0x19
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 35
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 35
 
 
  1480 00df 01       		.uleb128 0x1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1534 011a 00       		.byte	0
  1535 011b 03       		.uleb128 0x3
  1536 011c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 36
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 36
 
 
  1537 011d 3A       		.uleb128 0x3a
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1591 0156 03       		.uleb128 0x3
  1592 0157 0E       		.uleb128 0xe
  1593 0158 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 37
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 37
 
 
  1594 0159 0B       		.uleb128 0xb
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1648 018f 0B       		.uleb128 0xb
  1649 0190 3B       		.uleb128 0x3b
  1650 0191 05       		.uleb128 0x5
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 38
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 38
 
 
  1651 0192 49       		.uleb128 0x49
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1705 01ca 0E       		.uleb128 0xe
  1706 01cb 27       		.uleb128 0x27
  1707 01cc 19       		.uleb128 0x19
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 39
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 39
 
 
  1708 01cd 49       		.uleb128 0x49
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1762 002a 9F       		.byte	0x9f
  1763 002b 08000000 		.4byte	.LVL3
  1764 002f 34000000 		.4byte	.LFE4
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 40
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 40
 
 
  1765 0033 0100     		.2byte	0x1
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1819 00c1 0400     		.2byte	0x4
  1820 00c3 F3       		.byte	0xf3
  1821 00c4 01       		.uleb128 0x1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 41
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 41
 
 
  1822 00c5 51       		.byte	0x51
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1876 0146 0100     		.2byte	0x1
  1877 0148 55       		.byte	0x55
  1878 0149 00000000 		.4byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 42
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 42
 
 
  1879 014d 00000000 		.4byte	0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1933 01cd 22       		.byte	0x22
  1934 01ce 9F       		.byte	0x9f
  1935 01cf 00000000 		.4byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 43
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 43
 
 
  1936 01d3 00000000 		.4byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  1986              	.LASF18:
  1987 0000 72656731 		.ascii	"reg16\000"
  1987      3600
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 44
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 44
 
 
  1988              	.LASF50:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  2012      2E637964 
  2012      736E00
  2013              	.LASF44:
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 45
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 45
 
 
  2014 00c0 6366675F 		.ascii	"cfg_memset_list\000"
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  2038      6C6500
  2039              	.LASF13:
  2040 0158 75696E74 		.ascii	"uint16\000"
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 46
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 46
 
 
  2040      313600
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  2063              	.LASF9:
  2064 0250 73697A65 		.ascii	"sizetype\000"
  2064      74797065 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 47
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 47
 
 
  2064      00
@@ -2818,6 +2818,6 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 1
  2090      4E464947 
  2090      43505900 
  2091              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccPn0O6n.s 			page 48
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccynCcjb.s 			page 48
 
 

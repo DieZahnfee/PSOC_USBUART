@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="PSOC_USBUART" Path="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn" Version="5.40" Type="Normal">
+  <Project Name="PSOC_USBUART" Path="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn" Version="5.50" Type="Normal">
     <CMSIS_SVD_File>PSOC_USBUART.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -156,8 +156,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter_Coefficients.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DMA_dma.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DMA_dma.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter_done.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Filter_done.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\Export\ARM_GCC_Generic">

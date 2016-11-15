@@ -1,5 +1,5 @@
 -- Project:   G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\PSOC_USBUART.cyprj
--- Generated: 11/14/2016 13:50:26
+-- Generated: 11/15/2016 17:51:18
 -- PSoC Creator  4.0
 
 ENTITY PSOC_USBUART IS
@@ -127,7 +127,7 @@ ARCHITECTURE __DEFAULT__ OF PSOC_USBUART IS
     ATTRIBUTE lib_model OF DMA : LABEL IS "drqcell1";
     ATTRIBUTE Location OF DMA : LABEL IS "[DrqContainer=(0)][DrqId=(10)]";
     ATTRIBUTE Location OF \Filter:DFB\ : LABEL IS "F(DFB,0)";
-    ATTRIBUTE Location OF isr : LABEL IS "[IntrContainer=(0)][IntrId=(28)]";
+    ATTRIBUTE Location OF Filter_done : LABEL IS "[IntrContainer=(0)][IntrId=(28)]";
     COMPONENT abufcell
     END COMPONENT;
     COMPONENT clockblockcell
@@ -1123,7 +1123,7 @@ BEGIN
             dmareq_2 => Net_122,
             interrupt => Net_124);
 
-    isr:interrupt
+    Filter_done:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)

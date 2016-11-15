@@ -16,16 +16,6 @@
 #define DMA__TERMOUT1_SEL 0u
 #define DMA_CHANNELS_USED__MASK0 0x00000400u
 
-/* isr */
-#define isr__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
-#define isr__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
-#define isr__INTC_MASK 0x10000000u
-#define isr__INTC_NUMBER 28u
-#define isr__INTC_PRIOR_NUM 7u
-#define isr__INTC_PRIOR_REG CYREG_NVIC_PRI_28
-#define isr__INTC_SET_EN_REG CYREG_NVIC_SETENA0
-#define isr__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
-
 /* IDAC8_viDAC8 */
 #define IDAC8_viDAC8__CR0 CYREG_DAC0_CR0
 #define IDAC8_viDAC8__CR1 CYREG_DAC0_CR1
@@ -98,6 +88,16 @@
 #define Filter_DFB__STAGEB CYREG_DFB0_STAGEB
 #define Filter_DFB__STAGEBH CYREG_DFB0_STAGEBH
 #define Filter_DFB__STAGEBM CYREG_DFB0_STAGEBM
+
+/* Filter_done */
+#define Filter_done__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
+#define Filter_done__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
+#define Filter_done__INTC_MASK 0x10000000u
+#define Filter_done__INTC_NUMBER 28u
+#define Filter_done__INTC_PRIOR_NUM 7u
+#define Filter_done__INTC_PRIOR_REG CYREG_NVIC_PRI_28
+#define Filter_done__INTC_SET_EN_REG CYREG_NVIC_SETENA0
+#define Filter_done__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
 /* USBUART_arb_int */
 #define USBUART_arb_int__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0

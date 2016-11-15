@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: isr.c  
+* File Name: Filter_done.c  
 * Version 1.70
 *
 *  Description:
@@ -18,20 +18,17 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <isr.h>
+#include <Filter_done.h>
 #include "cyapicallbacks.h"
 
-#if !defined(isr__REMOVED) /* Check for removal by optimization */
+#if !defined(Filter_done__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START isr_intc` */
+/* `#START Filter_done_intc` */
 #include "Filter.h"
 #include "global.h"
-    
-extern struct data filter;
-    
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE
@@ -46,7 +43,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: isr_Start
+* Function Name: Filter_done_Start
 ********************************************************************************
 *
 * Summary:
@@ -62,24 +59,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void isr_Start(void)
+void Filter_done_Start(void)
 {
     /* For all we know the interrupt is active. */
-    isr_Disable();
+    Filter_done_Disable();
 
-    /* Set the ISR to point to the isr Interrupt. */
-    isr_SetVector(&isr_Interrupt);
+    /* Set the ISR to point to the Filter_done Interrupt. */
+    Filter_done_SetVector(&Filter_done_Interrupt);
 
     /* Set the priority. */
-    isr_SetPriority((uint8)isr_INTC_PRIOR_NUMBER);
+    Filter_done_SetPriority((uint8)Filter_done_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    isr_Enable();
+    Filter_done_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: isr_StartEx
+* Function Name: Filter_done_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -105,24 +102,24 @@ void isr_Start(void)
 *   None
 *
 *******************************************************************************/
-void isr_StartEx(cyisraddress address)
+void Filter_done_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    isr_Disable();
+    Filter_done_Disable();
 
-    /* Set the ISR to point to the isr Interrupt. */
-    isr_SetVector(address);
+    /* Set the ISR to point to the Filter_done Interrupt. */
+    Filter_done_SetVector(address);
 
     /* Set the priority. */
-    isr_SetPriority((uint8)isr_INTC_PRIOR_NUMBER);
+    Filter_done_SetPriority((uint8)Filter_done_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    isr_Enable();
+    Filter_done_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: isr_Stop
+* Function Name: Filter_done_Stop
 ********************************************************************************
 *
 * Summary:
@@ -135,22 +132,22 @@ void isr_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void isr_Stop(void)
+void Filter_done_Stop(void)
 {
     /* Disable this interrupt. */
-    isr_Disable();
+    Filter_done_Disable();
 
     /* Set the ISR to point to the passive one. */
-    isr_SetVector(&IntDefaultHandler);
+    Filter_done_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: isr_Interrupt
+* Function Name: Filter_done_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for isr.
+*   The default Interrupt Service Routine for Filter_done.
 *
 *   Add custom code between the coments to keep the next version of this file
 *   from over writting your code.
@@ -161,30 +158,28 @@ void isr_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(isr_Interrupt)
+CY_ISR(Filter_done_Interrupt)
 {
-    #ifdef isr_INTERRUPT_INTERRUPT_CALLBACK
-        isr_Interrupt_InterruptCallback();
-    #endif /* isr_INTERRUPT_INTERRUPT_CALLBACK */ 
+    #ifdef Filter_done_INTERRUPT_INTERRUPT_CALLBACK
+        Filter_done_Interrupt_InterruptCallback();
+    #endif /* Filter_done_INTERRUPT_INTERRUPT_CALLBACK */ 
 
     /*  Place your Interrupt code here. */
-    /* `#START isr_Interrupt` */
-    filter.new_data = 1u;
+    /* `#START Filter_done_Interrupt` */
     filter.data = Filter_Read24(Filter_CHANNEL_A);
-    
-    
+    filter.new_data = 1u;
     /* `#END` */
 }
 
 
 /*******************************************************************************
-* Function Name: isr_SetVector
+* Function Name: Filter_done_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling isr_Start
+*   Change the ISR vector for the Interrupt. Note calling Filter_done_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use isr_StartEx instead.
+*   before the component has been started use Filter_done_StartEx instead.
 * 
 *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
 *   used to provide consistent definition across compilers:
@@ -204,18 +199,18 @@ CY_ISR(isr_Interrupt)
 *   None
 *
 *******************************************************************************/
-void isr_SetVector(cyisraddress address)
+void Filter_done_SetVector(cyisraddress address)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    ramVectorTable[CYINT_IRQ_BASE + (uint32)isr__INTC_NUMBER] = address;
+    ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_done__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_GetVector
+* Function Name: Filter_done_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -228,26 +223,26 @@ void isr_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress isr_GetVector(void)
+cyisraddress Filter_done_GetVector(void)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    return ramVectorTable[CYINT_IRQ_BASE + (uint32)isr__INTC_NUMBER];
+    return ramVectorTable[CYINT_IRQ_BASE + (uint32)Filter_done__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: isr_SetPriority
+* Function Name: Filter_done_SetPriority
 ********************************************************************************
 *
 * Summary:
 *   Sets the Priority of the Interrupt. 
 *
-*   Note calling isr_Start or isr_StartEx will 
+*   Note calling Filter_done_Start or Filter_done_StartEx will 
 *   override any effect this API would have had. This API should only be called
-*   after isr_Start or isr_StartEx has been called. 
+*   after Filter_done_Start or Filter_done_StartEx has been called. 
 *   To set the initial priority for the component, use the Design-Wide Resources
 *   Interrupt Editor.
 *
@@ -262,14 +257,14 @@ cyisraddress isr_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void isr_SetPriority(uint8 priority)
+void Filter_done_SetPriority(uint8 priority)
 {
-    *isr_INTC_PRIOR = priority << 5;
+    *Filter_done_INTC_PRIOR = priority << 5;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_GetPriority
+* Function Name: Filter_done_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -284,19 +279,19 @@ void isr_SetPriority(uint8 priority)
 *    PSoC 4: Priority is from 0 to 3.
 *
 *******************************************************************************/
-uint8 isr_GetPriority(void)
+uint8 Filter_done_GetPriority(void)
 {
     uint8 priority;
 
 
-    priority = *isr_INTC_PRIOR >> 5;
+    priority = *Filter_done_INTC_PRIOR >> 5;
 
     return priority;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_Enable
+* Function Name: Filter_done_Enable
 ********************************************************************************
 *
 * Summary:
@@ -311,15 +306,15 @@ uint8 isr_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void isr_Enable(void)
+void Filter_done_Enable(void)
 {
     /* Enable the general interrupt. */
-    *isr_INTC_SET_EN = isr__INTC_MASK;
+    *Filter_done_INTC_SET_EN = Filter_done__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_GetState
+* Function Name: Filter_done_GetState
 ********************************************************************************
 *
 * Summary:
@@ -332,15 +327,15 @@ void isr_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 isr_GetState(void)
+uint8 Filter_done_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*isr_INTC_SET_EN & (uint32)isr__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*Filter_done_INTC_SET_EN & (uint32)Filter_done__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_Disable
+* Function Name: Filter_done_Disable
 ********************************************************************************
 *
 * Summary:
@@ -353,15 +348,15 @@ uint8 isr_GetState(void)
 *   None
 *
 *******************************************************************************/
-void isr_Disable(void)
+void Filter_done_Disable(void)
 {
     /* Disable the general interrupt. */
-    *isr_INTC_CLR_EN = isr__INTC_MASK;
+    *Filter_done_INTC_CLR_EN = Filter_done__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_SetPending
+* Function Name: Filter_done_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -380,14 +375,14 @@ void isr_Disable(void)
 *   interrupts).
 *
 *******************************************************************************/
-void isr_SetPending(void)
+void Filter_done_SetPending(void)
 {
-    *isr_INTC_SET_PD = isr__INTC_MASK;
+    *Filter_done_INTC_SET_PD = Filter_done__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_ClearPending
+* Function Name: Filter_done_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -405,9 +400,9 @@ void isr_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void isr_ClearPending(void)
+void Filter_done_ClearPending(void)
 {
-    *isr_INTC_CLR_PD = isr__INTC_MASK;
+    *Filter_done_INTC_CLR_PD = Filter_done__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */

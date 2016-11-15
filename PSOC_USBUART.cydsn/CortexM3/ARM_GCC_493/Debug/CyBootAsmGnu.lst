@@ -3,7 +3,7 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
 
    1              	/***************************************************************************//**
    2              	* \file CyBootAsmGnu.s
-   3              	* \version 5.40
+   3              	* \version 5.50
    4              	*
    5              	*  \brief
    6              	*   Assembly routines for GNU as.
@@ -11313,91 +11313,91 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
   16              	.set DMA__TERMOUT1_SEL, 0
   17              	.set DMA_CHANNELS_USED__MASK0, 0x00000400
   18              	
-  19              	/* isr */
-  20              	.set isr__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
-  21              	.set isr__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
-  22              	.set isr__INTC_MASK, 0x10000000
-  23              	.set isr__INTC_NUMBER, 28
-  24              	.set isr__INTC_PRIOR_NUM, 7
-  25              	.set isr__INTC_PRIOR_REG, CYREG_NVIC_PRI_28
-  26              	.set isr__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
-  27              	.set isr__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
-  28              	
-  29              	/* IDAC8_viDAC8 */
-  30              	.set IDAC8_viDAC8__CR0, CYREG_DAC0_CR0
-  31              	.set IDAC8_viDAC8__CR1, CYREG_DAC0_CR1
-  32              	.set IDAC8_viDAC8__D, CYREG_DAC0_D
-  33              	.set IDAC8_viDAC8__PM_ACT_CFG, CYREG_PM_ACT_CFG8
-  34              	.set IDAC8_viDAC8__PM_ACT_MSK, 0x01
-  35              	.set IDAC8_viDAC8__PM_STBY_CFG, CYREG_PM_STBY_CFG8
-  36              	.set IDAC8_viDAC8__PM_STBY_MSK, 0x01
-  37              	.set IDAC8_viDAC8__STROBE, CYREG_DAC0_STROBE
-  38              	.set IDAC8_viDAC8__SW0, CYREG_DAC0_SW0
-  39              	.set IDAC8_viDAC8__SW2, CYREG_DAC0_SW2
-  40              	.set IDAC8_viDAC8__SW3, CYREG_DAC0_SW3
-  41              	.set IDAC8_viDAC8__SW4, CYREG_DAC0_SW4
-  42              	.set IDAC8_viDAC8__TR, CYREG_DAC0_TR
-  43              	.set IDAC8_viDAC8__TRIM__M1, CYREG_FLSHID_CUST_TABLES_DAC0_M1
+  19              	/* IDAC8_viDAC8 */
+  20              	.set IDAC8_viDAC8__CR0, CYREG_DAC0_CR0
+  21              	.set IDAC8_viDAC8__CR1, CYREG_DAC0_CR1
+  22              	.set IDAC8_viDAC8__D, CYREG_DAC0_D
+  23              	.set IDAC8_viDAC8__PM_ACT_CFG, CYREG_PM_ACT_CFG8
+  24              	.set IDAC8_viDAC8__PM_ACT_MSK, 0x01
+  25              	.set IDAC8_viDAC8__PM_STBY_CFG, CYREG_PM_STBY_CFG8
+  26              	.set IDAC8_viDAC8__PM_STBY_MSK, 0x01
+  27              	.set IDAC8_viDAC8__STROBE, CYREG_DAC0_STROBE
+  28              	.set IDAC8_viDAC8__SW0, CYREG_DAC0_SW0
+  29              	.set IDAC8_viDAC8__SW2, CYREG_DAC0_SW2
+  30              	.set IDAC8_viDAC8__SW3, CYREG_DAC0_SW3
+  31              	.set IDAC8_viDAC8__SW4, CYREG_DAC0_SW4
+  32              	.set IDAC8_viDAC8__TR, CYREG_DAC0_TR
+  33              	.set IDAC8_viDAC8__TRIM__M1, CYREG_FLSHID_CUST_TABLES_DAC0_M1
+  34              	.set IDAC8_viDAC8__TRIM__M2, CYREG_FLSHID_CUST_TABLES_DAC0_M2
+  35              	.set IDAC8_viDAC8__TRIM__M3, CYREG_FLSHID_CUST_TABLES_DAC0_M3
+  36              	.set IDAC8_viDAC8__TRIM__M4, CYREG_FLSHID_CUST_TABLES_DAC0_M4
+  37              	.set IDAC8_viDAC8__TRIM__M5, CYREG_FLSHID_CUST_TABLES_DAC0_M5
+  38              	.set IDAC8_viDAC8__TRIM__M6, CYREG_FLSHID_CUST_TABLES_DAC0_M6
+  39              	.set IDAC8_viDAC8__TRIM__M7, CYREG_FLSHID_CUST_TABLES_DAC0_M7
+  40              	.set IDAC8_viDAC8__TRIM__M8, CYREG_FLSHID_CUST_TABLES_DAC0_M8
+  41              	.set IDAC8_viDAC8__TST, CYREG_DAC0_TST
+  42              	
+  43              	/* OPAMP_ABuf */
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 190
 
 
-  44              	.set IDAC8_viDAC8__TRIM__M2, CYREG_FLSHID_CUST_TABLES_DAC0_M2
-  45              	.set IDAC8_viDAC8__TRIM__M3, CYREG_FLSHID_CUST_TABLES_DAC0_M3
-  46              	.set IDAC8_viDAC8__TRIM__M4, CYREG_FLSHID_CUST_TABLES_DAC0_M4
-  47              	.set IDAC8_viDAC8__TRIM__M5, CYREG_FLSHID_CUST_TABLES_DAC0_M5
-  48              	.set IDAC8_viDAC8__TRIM__M6, CYREG_FLSHID_CUST_TABLES_DAC0_M6
-  49              	.set IDAC8_viDAC8__TRIM__M7, CYREG_FLSHID_CUST_TABLES_DAC0_M7
-  50              	.set IDAC8_viDAC8__TRIM__M8, CYREG_FLSHID_CUST_TABLES_DAC0_M8
-  51              	.set IDAC8_viDAC8__TST, CYREG_DAC0_TST
-  52              	
-  53              	/* OPAMP_ABuf */
-  54              	.set OPAMP_ABuf__CR, CYREG_OPAMP2_CR
-  55              	.set OPAMP_ABuf__MX, CYREG_OPAMP2_MX
-  56              	.set OPAMP_ABuf__NPUMP_OPAMP_TR0, CYREG_NPUMP_OPAMP_TR0
-  57              	.set OPAMP_ABuf__PM_ACT_CFG, CYREG_PM_ACT_CFG4
-  58              	.set OPAMP_ABuf__PM_ACT_MSK, 0x04
-  59              	.set OPAMP_ABuf__PM_STBY_CFG, CYREG_PM_STBY_CFG4
-  60              	.set OPAMP_ABuf__PM_STBY_MSK, 0x04
-  61              	.set OPAMP_ABuf__RSVD, CYREG_OPAMP2_RSVD
-  62              	.set OPAMP_ABuf__SW, CYREG_OPAMP2_SW
-  63              	.set OPAMP_ABuf__TR0, CYREG_OPAMP2_TR0
-  64              	.set OPAMP_ABuf__TR1, CYREG_OPAMP2_TR1
-  65              	
-  66              	/* Filter_DFB */
-  67              	.set Filter_DFB__ACU_SRAM_DATA, CYREG_DFB0_ACU_SRAM_DATA_MBASE
-  68              	.set Filter_DFB__COHER, CYREG_DFB0_COHER
-  69              	.set Filter_DFB__CR, CYREG_DFB0_CR
-  70              	.set Filter_DFB__CSA_SRAM_DATA, CYREG_DFB0_CSA_SRAM_DATA_MBASE
-  71              	.set Filter_DFB__CSB_SRAM_DATA, CYREG_DFB0_CSB_SRAM_DATA_MBASE
-  72              	.set Filter_DFB__DALIGN, CYREG_DFB0_DALIGN
-  73              	.set Filter_DFB__DMA_CTRL, CYREG_DFB0_DMA_CTRL
-  74              	.set Filter_DFB__DPA_SRAM_DATA, CYREG_DFB0_DPA_SRAM_DATA_MBASE
-  75              	.set Filter_DFB__DPB_SRAM_DATA, CYREG_DFB0_DPB_SRAM_DATA_MBASE
-  76              	.set Filter_DFB__DSI_CTRL, CYREG_DFB0_DSI_CTRL
-  77              	.set Filter_DFB__FSM_SRAM_DATA, CYREG_DFB0_FSM_SRAM_DATA_MBASE
-  78              	.set Filter_DFB__HOLDA, CYREG_DFB0_HOLDA
-  79              	.set Filter_DFB__HOLDAH, CYREG_DFB0_HOLDAH
-  80              	.set Filter_DFB__HOLDAM, CYREG_DFB0_HOLDAM
-  81              	.set Filter_DFB__HOLDAS, CYREG_DFB0_HOLDAS
-  82              	.set Filter_DFB__HOLDB, CYREG_DFB0_HOLDB
-  83              	.set Filter_DFB__HOLDBH, CYREG_DFB0_HOLDBH
-  84              	.set Filter_DFB__HOLDBM, CYREG_DFB0_HOLDBM
-  85              	.set Filter_DFB__HOLDBS, CYREG_DFB0_HOLDBS
-  86              	.set Filter_DFB__INT_CTRL, CYREG_DFB0_INT_CTRL
-  87              	.set Filter_DFB__PM_ACT_CFG, CYREG_PM_ACT_CFG6
-  88              	.set Filter_DFB__PM_ACT_MSK, 0x10
-  89              	.set Filter_DFB__PM_STBY_CFG, CYREG_PM_STBY_CFG6
-  90              	.set Filter_DFB__PM_STBY_MSK, 0x10
-  91              	.set Filter_DFB__RAM_DIR, CYREG_DFB0_RAM_DIR
-  92              	.set Filter_DFB__RAM_EN, CYREG_DFB0_RAM_EN
-  93              	.set Filter_DFB__SEMA, CYREG_DFB0_SEMA
-  94              	.set Filter_DFB__SR, CYREG_DFB0_SR
-  95              	.set Filter_DFB__STAGEA, CYREG_DFB0_STAGEA
-  96              	.set Filter_DFB__STAGEAH, CYREG_DFB0_STAGEAH
-  97              	.set Filter_DFB__STAGEAM, CYREG_DFB0_STAGEAM
-  98              	.set Filter_DFB__STAGEB, CYREG_DFB0_STAGEB
-  99              	.set Filter_DFB__STAGEBH, CYREG_DFB0_STAGEBH
- 100              	.set Filter_DFB__STAGEBM, CYREG_DFB0_STAGEBM
+  44              	.set OPAMP_ABuf__CR, CYREG_OPAMP2_CR
+  45              	.set OPAMP_ABuf__MX, CYREG_OPAMP2_MX
+  46              	.set OPAMP_ABuf__NPUMP_OPAMP_TR0, CYREG_NPUMP_OPAMP_TR0
+  47              	.set OPAMP_ABuf__PM_ACT_CFG, CYREG_PM_ACT_CFG4
+  48              	.set OPAMP_ABuf__PM_ACT_MSK, 0x04
+  49              	.set OPAMP_ABuf__PM_STBY_CFG, CYREG_PM_STBY_CFG4
+  50              	.set OPAMP_ABuf__PM_STBY_MSK, 0x04
+  51              	.set OPAMP_ABuf__RSVD, CYREG_OPAMP2_RSVD
+  52              	.set OPAMP_ABuf__SW, CYREG_OPAMP2_SW
+  53              	.set OPAMP_ABuf__TR0, CYREG_OPAMP2_TR0
+  54              	.set OPAMP_ABuf__TR1, CYREG_OPAMP2_TR1
+  55              	
+  56              	/* Filter_DFB */
+  57              	.set Filter_DFB__ACU_SRAM_DATA, CYREG_DFB0_ACU_SRAM_DATA_MBASE
+  58              	.set Filter_DFB__COHER, CYREG_DFB0_COHER
+  59              	.set Filter_DFB__CR, CYREG_DFB0_CR
+  60              	.set Filter_DFB__CSA_SRAM_DATA, CYREG_DFB0_CSA_SRAM_DATA_MBASE
+  61              	.set Filter_DFB__CSB_SRAM_DATA, CYREG_DFB0_CSB_SRAM_DATA_MBASE
+  62              	.set Filter_DFB__DALIGN, CYREG_DFB0_DALIGN
+  63              	.set Filter_DFB__DMA_CTRL, CYREG_DFB0_DMA_CTRL
+  64              	.set Filter_DFB__DPA_SRAM_DATA, CYREG_DFB0_DPA_SRAM_DATA_MBASE
+  65              	.set Filter_DFB__DPB_SRAM_DATA, CYREG_DFB0_DPB_SRAM_DATA_MBASE
+  66              	.set Filter_DFB__DSI_CTRL, CYREG_DFB0_DSI_CTRL
+  67              	.set Filter_DFB__FSM_SRAM_DATA, CYREG_DFB0_FSM_SRAM_DATA_MBASE
+  68              	.set Filter_DFB__HOLDA, CYREG_DFB0_HOLDA
+  69              	.set Filter_DFB__HOLDAH, CYREG_DFB0_HOLDAH
+  70              	.set Filter_DFB__HOLDAM, CYREG_DFB0_HOLDAM
+  71              	.set Filter_DFB__HOLDAS, CYREG_DFB0_HOLDAS
+  72              	.set Filter_DFB__HOLDB, CYREG_DFB0_HOLDB
+  73              	.set Filter_DFB__HOLDBH, CYREG_DFB0_HOLDBH
+  74              	.set Filter_DFB__HOLDBM, CYREG_DFB0_HOLDBM
+  75              	.set Filter_DFB__HOLDBS, CYREG_DFB0_HOLDBS
+  76              	.set Filter_DFB__INT_CTRL, CYREG_DFB0_INT_CTRL
+  77              	.set Filter_DFB__PM_ACT_CFG, CYREG_PM_ACT_CFG6
+  78              	.set Filter_DFB__PM_ACT_MSK, 0x10
+  79              	.set Filter_DFB__PM_STBY_CFG, CYREG_PM_STBY_CFG6
+  80              	.set Filter_DFB__PM_STBY_MSK, 0x10
+  81              	.set Filter_DFB__RAM_DIR, CYREG_DFB0_RAM_DIR
+  82              	.set Filter_DFB__RAM_EN, CYREG_DFB0_RAM_EN
+  83              	.set Filter_DFB__SEMA, CYREG_DFB0_SEMA
+  84              	.set Filter_DFB__SR, CYREG_DFB0_SR
+  85              	.set Filter_DFB__STAGEA, CYREG_DFB0_STAGEA
+  86              	.set Filter_DFB__STAGEAH, CYREG_DFB0_STAGEAH
+  87              	.set Filter_DFB__STAGEAM, CYREG_DFB0_STAGEAM
+  88              	.set Filter_DFB__STAGEB, CYREG_DFB0_STAGEB
+  89              	.set Filter_DFB__STAGEBH, CYREG_DFB0_STAGEBH
+  90              	.set Filter_DFB__STAGEBM, CYREG_DFB0_STAGEBM
+  91              	
+  92              	/* Filter_done */
+  93              	.set Filter_done__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
+  94              	.set Filter_done__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
+  95              	.set Filter_done__INTC_MASK, 0x10000000
+  96              	.set Filter_done__INTC_NUMBER, 28
+  97              	.set Filter_done__INTC_PRIOR_NUM, 7
+  98              	.set Filter_done__INTC_PRIOR_REG, CYREG_NVIC_PRI_28
+  99              	.set Filter_done__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
+ 100              	.set Filter_done__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 191
 
 

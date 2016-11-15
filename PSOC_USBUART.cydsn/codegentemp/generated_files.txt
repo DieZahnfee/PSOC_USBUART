@@ -74,8 +74,8 @@
   <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\Filter_PVT.h" value="HEADER;;;;;Filter" />
   <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\Filter_RAM_Data.c" value="SOURCE_C;CortexM3;;;;Filter" />
   <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\Filter_Coefficients.c" value="SOURCE_C;CortexM3;;;;Filter" />
-  <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\isr.c" value="SOURCE_C;CortexM3;;;;isr" />
-  <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\isr.h" value="HEADER;;;;;isr" />
+  <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\Filter_done.c" value="SOURCE_C;CortexM3;;;;Filter_done" />
+  <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\Filter_done.h" value="HEADER;;;;;Filter_done" />
   <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\ADC_DelSig_Ext_CP_Clk.c" value="SOURCE_C;CortexM3;;;;ADC_DelSig_Ext_CP_Clk" />
   <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\ADC_DelSig_Ext_CP_Clk.h" value="HEADER;;;;;ADC_DelSig_Ext_CP_Clk" />
   <file name="G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\codegentemp\ADC_DelSig_IRQ.c" value="SOURCE_C;CortexM3;;;;ADC_DelSig_IRQ" />
