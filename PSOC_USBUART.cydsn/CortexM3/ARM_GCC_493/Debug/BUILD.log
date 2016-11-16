@@ -1,4 +1,4 @@
---------------- Build Started: 11/15/2016 17:51:11 Project: PSOC_USBUART, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Build Started: 11/16/2016 09:45:49 Project: PSOC_USBUART, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 cydsfit.exe -.appdatapath "C:\Users\Tommi\AppData\Local\Cypress Semiconductor\PSoC Creator\4.0" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\PSOC_USBUART.cyprj -d CY8C5888LTI-LP097 -s G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 HDL Generation...
@@ -71,6 +71,6 @@ arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_493\Debug\PSOC_USBUART.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM3\ARM_GCC_493\Debug\PSOC_USBUART.elf .\CortexM3\ARM_GCC_493\Debug\main.o .\CortexM3\ARM_GCC_493\Debug\serial.o .\CortexM3\ARM_GCC_493\Debug\cymetadata.o .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o .\CortexM3\ARM_GCC_493\Debug\PSOC_USBUART.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -Og -ffat-lto-objects -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_493\Debug/PSOC_USBUART.map -T G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
 cyelftool.exe -C G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\CortexM3\ARM_GCC_493\Debug\PSOC_USBUART.elf --flash_row_size 256 --flash_size 262144
 cyelftool.exe -S G:\Users\Tommi\Documents\GitHub\PSOC_USBUART\PSOC_USBUART.cydsn\CortexM3\ARM_GCC_493\Debug\PSOC_USBUART.elf
-Flash used: 14648 of 262144 bytes (5,6 %).
+Flash used: 14672 of 262144 bytes (5,6 %).
 SRAM used: 2973 of 65536 bytes (4,5 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 11/15/2016 17:51:29 ---------------
+--------------- Build Succeeded: 11/16/2016 09:46:09 ---------------

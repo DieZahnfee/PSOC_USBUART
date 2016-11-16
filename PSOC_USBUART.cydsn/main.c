@@ -33,10 +33,12 @@ int main(){
     // defining & initializing variables
     int32       raw_average = 0, 
                 raw_cut = 0;
-    uint32      micros_average = 0, 
+    uint32      micros_raw = 0,
+                micros_average = 0, 
                 micros_cut = 0,
                 micros_filter = 0;
-    char        str_mv[10], 
+    char        str_raw[10],
+                str_mv[10], 
                 str_cut[10],
                 str_filter[10];
     int32       mv_filter[128] = {0};;
@@ -91,7 +93,10 @@ int main(){
         //PRINTING DATA
         if(filter.new_data == 1u){
             
-            // converting data to printable format          
+            // converting data to printable format
+            micros_raw = ADC_DelSig_CountsTo_uVolts(adc_del_sig.data);
+            sprintf(str_raw,"%ld ",micros_raw);
+            
             micros_average = ADC_DelSig_CountsTo_uVolts(raw_average);
             sprintf(str_mv,"%ld ",micros_average);
             
@@ -102,6 +107,7 @@ int main(){
             sprintf(str_filter,"%ld ",micros_filter);
             
             // Calling print routine
+            SerialPrint(str_raw);
             SerialPrint(str_mv);
             SerialPrint(str_cut);
             SerialPrint(str_filter);
