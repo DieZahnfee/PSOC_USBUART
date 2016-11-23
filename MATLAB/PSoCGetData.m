@@ -1,25 +1,27 @@
-function [data] = PSoCGetData( portname )
+function [data] = PSoCGetData( portname, time )
 
-NUM_OF_SAMPLES = 5580;
+  minutes = int32(time);
 
-psoc = serial(portname, 'BaudRate', 115200, 'InputBufferSize', 45);
-%psoc.BytesAvailableFcnCount = 45;
-%psoc.BytesAvailableFcnMode = 'byte';
-%psoc.BytesAvailableFcn = @instrcallback;
 
-data = zeros(4,1);
+  NUM_OF_SAMPLES = 5580*minutes;
 
-fopen(psoc);
+  psoc = serial(portname, 'BaudRate', 115200, 'InputBufferSize', 45);
+%  psoc.BytesAvailableFcnCount = 45;
+%  psoc.BytesAvailableFcnMode = 'byte';
+%  psoc.BytesAvailableFcn = @instrcallback;
 
-for i=1:NUM_OF_SAMPLES
+  data = zeros(4,1);
+
+  fopen(psoc);
+
+  for i=1:NUM_OF_SAMPLES
     data(:,i) = fscanf(psoc,'%e');
-    i = i + 1;
-end
+  end
 
-fclose(psoc);
-delete(psoc);
-clear psoc;
+  fclose(psoc);
+  delete(psoc);
+  clear psoc;
 
-data = transpose(data);
+  data = transpose(data);
 
 end

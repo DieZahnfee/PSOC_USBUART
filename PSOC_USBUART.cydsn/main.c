@@ -23,54 +23,39 @@
 struct data adc_del_sig;
 struct data filter;
 
-//function declaration
+// function declaration
 
-int HwModulesStart();
+int HwModulesStart(uint8 uart_voltage);
 int HwModulesStop();
 int DmaConfig();
+int SysInit(void);
 
 int main(){
     // defining & initializing variables
     int32       raw_average = 0, 
                 raw_cut = 0;
-    uint32      micros_raw = 0,
-                micros_average = 0, 
-                micros_cut = 0,
-                micros_filter = 0;
+    uint32      micros_raw = 0u,
+                micros_average = 0u, 
+                micros_cut = 0u,
+                micros_filter = 0u;
     char        str_raw[10],
                 str_mv[10], 
                 str_cut[10],
                 str_filter[10];
     int32       mv_filter[128] = {0};;
-    uint8       filter_index = 0;
+    uint8       filter_index = 0u;
+    uint8       sw_filter_new_data = 0u;
     
     
-    const int32 BIT_MASK = 0xFFFFFFF0;
+    const int32 BIT_MASK = 0xFFFFFA00; 
     
-    adc_del_sig.new_data = 0u;
-    adc_del_sig.data = 0;
-    
-    filter.new_data = 0u;
-    filter.data = 0;
-    
-    
-    HwModulesStart();
-    
-    DmaConfig();
-    
-    //Set ADC Coherency to High Byte
-    ADC_DelSig_DEC_COHER_REG |= ADC_DelSig_DEC_SAMP_KEY_HIGH;
-    //Set Filter Coherency to High Byte
-    Filter_SetCoherency(Filter_CHANNEL_A, Filter_KEY_HIGH);
-    
-    // Start ADC Conversion
-    ADC_DelSig_StartConvert();
+    SysInit();
     
     for(;;){
         
         SerialCheckConf();
         
-     
+        // Software Filters 
         if(adc_del_sig.new_data == 1u){
             
             // FIR-Filter for calculating moving average
@@ -85,13 +70,16 @@ int main(){
             // cutoff 4 Bits
             raw_cut = adc_del_sig.data & BIT_MASK;
             
+            
+            // set sw_filter_new_data flag
+            sw_filter_new_data = 1u;
             // reset new_data flag
             adc_del_sig.new_data = 0u; 
             
             
         }
-        //PRINTING DATA
-        if(filter.new_data == 1u){
+        // PRINTING DATA
+        if(filter.new_data == 1u && sw_filter_new_data == 1u){
             
             // converting data to printable format
             micros_raw = ADC_DelSig_CountsTo_uVolts(adc_del_sig.data);
@@ -106,14 +94,15 @@ int main(){
             micros_filter = ADC_DelSig_CountsTo_uVolts(filter.data);
             sprintf(str_filter,"%ld ",micros_filter);
             
-            // Calling print routine
+            // Print the data
             SerialPrint(str_raw);
             SerialPrint(str_mv);
             SerialPrint(str_cut);
             SerialPrint(str_filter);
             SerialPrint("\n");
 		    
-            filter.new_data = 0u;
+            filter.new_data = 0u; // reset Hardware Filter new data flag
+            sw_filter_new_data = 0u; // reset Software Filter new data flag
             
             CyPmAltAct(PM_SLEEP_TIME_NONE,PM_SLEEP_SRC_PICU);
             
@@ -122,15 +111,15 @@ int main(){
     return 0;
 }
 
-int HwModulesStart(){
-        
-    CyGlobalIntDisable; //Disable Global Interupts
+int HwModulesStart(uint8 uart_voltage){
     
-    //Start all components
+    CyGlobalIntDisable; // Disable Global Interupts
+    
+    // Start all components
     ADC_DelSig_Start();
     OPAMP_Start();
     IDAC8_Start();
-    USBUART_Start(0u, USBUART_5V_OPERATION);
+    USBUART_Start(0u, uart_voltage);
     Filter_Start();
     
     CyGlobalIntEnable; // Enable global interrupts. 
@@ -144,7 +133,7 @@ int HwModulesStop(){
         
     
     
-    //Stop all components
+    // Stop all components
     ADC_DelSig_Stop();
     OPAMP_Stop();
     IDAC8_Stop();
@@ -163,7 +152,7 @@ int DmaConfig(){
     uint8 channelHandle;
 
     // Declare DMA Transaction Descriptor for memory transfer into
-    //  Filter Channel.
+    // Filter Channel.
     uint8 tdChanA;
 
     // Configure the DMA to Transfer the data in 1 burst with individual trigger
@@ -188,6 +177,29 @@ int DmaConfig(){
     // Enable the DMA channel represented by channelHandle and preserve the TD
     CyDmaChEnable(channelHandle, 1u);
 
+    return 1;
+};
+
+int SysInit(void){
+    adc_del_sig.new_data = 0u;
+    adc_del_sig.data = 0;
+    
+    filter.new_data = 0u;
+    filter.data = 0;
+    
+    
+    HwModulesStart(USBUART_5V_OPERATION);
+    
+    DmaConfig();
+    
+    //Set ADC Coherency to High Byte
+    ADC_DelSig_DEC_COHER_REG |= ADC_DelSig_DEC_SAMP_KEY_HIGH;
+    //Set Filter Coherency to High Byte
+    Filter_SetCoherency(Filter_CHANNEL_A, Filter_KEY_HIGH);
+    
+    // Start ADC Conversion
+    ADC_DelSig_StartConvert();
+    
     return 1;
 };
 
