@@ -82,7 +82,7 @@ void IDAC8_Wakeup(void)                   ;
 #define IDAC8_DEFAULT_SPEED     ((uint8)(((0u != 0u) ? 1u : 0u) << 1u))   /* Default DAC speed */
 #define IDAC8_DEFAULT_CNTL      0x00u                                            /* Default Control */
 #define IDAC8_DEFAULT_STRB     0u                                   /* Default Strobe mode */
-#define IDAC8_DEFAULT_DATA     128u                                 /* Initial DAC value */
+#define IDAC8_DEFAULT_DATA     255u                                 /* Initial DAC value */
 #define IDAC8_DEFAULT_POLARITY 4u                                      /* Default Sink or Source */
 #define IDAC8_DEFAULT_DATA_SRC 0u                                   /* Default Data Source */   
 #define IDAC8_HARDWARE_ENABLE  0u                               /*Hardware Enable */

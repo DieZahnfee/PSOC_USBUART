@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 1
 
 
    1              		.syntax unified
@@ -24,544 +24,544 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 1
   21              		.type	Filter_ChannelAFirCoefficients, %object
   22              		.size	Filter_ChannelAFirCoefficients, 512
   23              	Filter_ChannelAFirCoefficients:
-  24 0000 DC       		.byte	-36
-  25 0001 F4       		.byte	-12
-  26 0002 FF       		.byte	-1
+  24 0000 70       		.byte	112
+  25 0001 09       		.byte	9
+  26 0002 00       		.byte	0
   27 0003 00       		.byte	0
-  28 0004 36       		.byte	54
-  29 0005 F3       		.byte	-13
-  30 0006 FF       		.byte	-1
+  28 0004 CE       		.byte	-50
+  29 0005 0A       		.byte	10
+  30 0006 00       		.byte	0
   31 0007 00       		.byte	0
-  32 0008 24       		.byte	36
-  33 0009 F7       		.byte	-9
-  34 000a FF       		.byte	-1
+  32 0008 36       		.byte	54
+  33 0009 0C       		.byte	12
+  34 000a 00       		.byte	0
   35 000b 00       		.byte	0
-  36 000c 84       		.byte	-124
-  37 000d FF       		.byte	-1
-  38 000e FF       		.byte	-1
+  36 000c AA       		.byte	-86
+  37 000d 0D       		.byte	13
+  38 000e 00       		.byte	0
   39 000f 00       		.byte	0
-  40 0010 3B       		.byte	59
-  41 0011 09       		.byte	9
+  40 0010 26       		.byte	38
+  41 0011 0F       		.byte	15
   42 0012 00       		.byte	0
   43 0013 00       		.byte	0
-  44 0014 21       		.byte	33
+  44 0014 A4       		.byte	-92
   45 0015 10       		.byte	16
   46 0016 00       		.byte	0
   47 0017 00       		.byte	0
-  48 0018 8D       		.byte	-115
-  49 0019 10       		.byte	16
+  48 0018 14       		.byte	20
+  49 0019 12       		.byte	18
   50 001a 00       		.byte	0
   51 001b 00       		.byte	0
-  52 001c 0D       		.byte	13
-  53 001d 09       		.byte	9
+  52 001c 66       		.byte	102
+  53 001d 13       		.byte	19
   54 001e 00       		.byte	0
   55 001f 00       		.byte	0
-  56 0020 99       		.byte	-103
-  57 0021 FB       		.byte	-5
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 2
+  56 0020 80       		.byte	-128
+  57 0021 14       		.byte	20
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 2
 
 
-  58 0022 FF       		.byte	-1
+  58 0022 00       		.byte	0
   59 0023 00       		.byte	0
-  60 0024 70       		.byte	112
-  61 0025 ED       		.byte	-19
-  62 0026 FF       		.byte	-1
+  60 0024 48       		.byte	72
+  61 0025 15       		.byte	21
+  62 0026 00       		.byte	0
   63 0027 00       		.byte	0
-  64 0028 5B       		.byte	91
-  65 0029 E5       		.byte	-27
-  66 002a FF       		.byte	-1
+  64 0028 9D       		.byte	-99
+  65 0029 15       		.byte	21
+  66 002a 00       		.byte	0
   67 002b 00       		.byte	0
-  68 002c B2       		.byte	-78
-  69 002d E8       		.byte	-24
-  70 002e FF       		.byte	-1
+  68 002c 5C       		.byte	92
+  69 002d 15       		.byte	21
+  70 002e 00       		.byte	0
   71 002f 00       		.byte	0
-  72 0030 5D       		.byte	93
-  73 0031 F8       		.byte	-8
-  74 0032 FF       		.byte	-1
+  72 0030 62       		.byte	98
+  73 0031 14       		.byte	20
+  74 0032 00       		.byte	0
   75 0033 00       		.byte	0
-  76 0034 51       		.byte	81
-  77 0035 0F       		.byte	15
+  76 0034 8A       		.byte	-118
+  77 0035 12       		.byte	18
   78 0036 00       		.byte	0
   79 0037 00       		.byte	0
-  80 0038 B8       		.byte	-72
-  81 0039 23       		.byte	35
+  80 0038 B0       		.byte	-80
+  81 0039 0F       		.byte	15
   82 003a 00       		.byte	0
   83 003b 00       		.byte	0
-  84 003c D3       		.byte	-45
-  85 003d 2A       		.byte	42
+  84 003c B7       		.byte	-73
+  85 003d 0B       		.byte	11
   86 003e 00       		.byte	0
   87 003f 00       		.byte	0
-  88 0040 38       		.byte	56
-  89 0041 1E       		.byte	30
+  88 0040 82       		.byte	-126
+  89 0041 06       		.byte	6
   90 0042 00       		.byte	0
   91 0043 00       		.byte	0
   92 0044 00       		.byte	0
   93 0045 00       		.byte	0
   94 0046 00       		.byte	0
   95 0047 00       		.byte	0
-  96 0048 89       		.byte	-119
-  97 0049 DB       		.byte	-37
+  96 0048 25       		.byte	37
+  97 0049 F8       		.byte	-8
   98 004a FF       		.byte	-1
   99 004b 00       		.byte	0
- 100 004c A7       		.byte	-89
- 101 004d C1       		.byte	-63
+ 100 004c F2       		.byte	-14
+ 101 004d EE       		.byte	-18
  102 004e FF       		.byte	-1
  103 004f 00       		.byte	0
- 104 0050 46       		.byte	70
- 105 0051 C1       		.byte	-63
+ 104 0050 73       		.byte	115
+ 105 0051 E4       		.byte	-28
  106 0052 FF       		.byte	-1
  107 0053 00       		.byte	0
- 108 0054 91       		.byte	-111
- 109 0055 DF       		.byte	-33
+ 108 0054 C0       		.byte	-64
+ 109 0055 D8       		.byte	-40
  110 0056 FF       		.byte	-1
  111 0057 00       		.byte	0
- 112 0058 7A       		.byte	122
- 113 0059 13       		.byte	19
- 114 005a 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 3
+ 112 0058 01       		.byte	1
+ 113 0059 CC       		.byte	-52
+ 114 005a FF       		.byte	-1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 3
 
 
  115 005b 00       		.byte	0
- 116 005c 8B       		.byte	-117
- 117 005d 47       		.byte	71
- 118 005e 00       		.byte	0
+ 116 005c 6E       		.byte	110
+ 117 005d BE       		.byte	-66
+ 118 005e FF       		.byte	-1
  119 005f 00       		.byte	0
- 120 0060 46       		.byte	70
- 121 0061 62       		.byte	98
- 122 0062 00       		.byte	0
+ 120 0060 4A       		.byte	74
+ 121 0061 B0       		.byte	-80
+ 122 0062 FF       		.byte	-1
  123 0063 00       		.byte	0
- 124 0064 10       		.byte	16
- 125 0065 52       		.byte	82
- 126 0066 00       		.byte	0
+ 124 0064 EA       		.byte	-22
+ 125 0065 A1       		.byte	-95
+ 126 0066 FF       		.byte	-1
  127 0067 00       		.byte	0
- 128 0068 40       		.byte	64
- 129 0069 17       		.byte	23
- 130 006a 00       		.byte	0
+ 128 0068 B2       		.byte	-78
+ 129 0069 93       		.byte	-109
+ 130 006a FF       		.byte	-1
  131 006b 00       		.byte	0
- 132 006c 17       		.byte	23
- 133 006d C7       		.byte	-57
+ 132 006c 0F       		.byte	15
+ 133 006d 86       		.byte	-122
  134 006e FF       		.byte	-1
  135 006f 00       		.byte	0
- 136 0070 DE       		.byte	-34
- 137 0071 84       		.byte	-124
+ 136 0070 7E       		.byte	126
+ 137 0071 79       		.byte	121
  138 0072 FF       		.byte	-1
  139 0073 00       		.byte	0
- 140 0074 F9       		.byte	-7
- 141 0075 72       		.byte	114
+ 140 0074 82       		.byte	-126
+ 141 0075 6E       		.byte	110
  142 0076 FF       		.byte	-1
  143 0077 00       		.byte	0
- 144 0078 FB       		.byte	-5
- 145 0079 A1       		.byte	-95
+ 144 0078 A8       		.byte	-88
+ 145 0079 65       		.byte	101
  146 007a FF       		.byte	-1
  147 007b 00       		.byte	0
- 148 007c B6       		.byte	-74
- 149 007d 05       		.byte	5
- 150 007e 00       		.byte	0
+ 148 007c 7E       		.byte	126
+ 149 007d 5F       		.byte	95
+ 150 007e FF       		.byte	-1
  151 007f 00       		.byte	0
- 152 0080 8F       		.byte	-113
- 153 0081 76       		.byte	118
- 154 0082 00       		.byte	0
+ 152 0080 96       		.byte	-106
+ 153 0081 5C       		.byte	92
+ 154 0082 FF       		.byte	-1
  155 0083 00       		.byte	0
- 156 0084 5B       		.byte	91
- 157 0085 C0       		.byte	-64
- 158 0086 00       		.byte	0
+ 156 0084 7E       		.byte	126
+ 157 0085 5D       		.byte	93
+ 158 0086 FF       		.byte	-1
  159 0087 00       		.byte	0
- 160 0088 99       		.byte	-103
- 161 0089 B9       		.byte	-71
- 162 008a 00       		.byte	0
+ 160 0088 BF       		.byte	-65
+ 161 0089 62       		.byte	98
+ 162 008a FF       		.byte	-1
  163 008b 00       		.byte	0
- 164 008c 17       		.byte	23
- 165 008d 59       		.byte	89
- 166 008e 00       		.byte	0
+ 164 008c D9       		.byte	-39
+ 165 008d 6C       		.byte	108
+ 166 008e FF       		.byte	-1
  167 008f 00       		.byte	0
- 168 0090 3F       		.byte	63
- 169 0091 BF       		.byte	-65
+ 168 0090 3D       		.byte	61
+ 169 0091 7C       		.byte	124
  170 0092 FF       		.byte	-1
  171 0093 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 4
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 4
 
 
- 172 0094 D9       		.byte	-39
- 173 0095 2C       		.byte	44
+ 172 0094 4E       		.byte	78
+ 173 0095 91       		.byte	-111
  174 0096 FF       		.byte	-1
  175 0097 00       		.byte	0
- 176 0098 EB       		.byte	-21
- 177 0099 E8       		.byte	-24
- 178 009a FE       		.byte	-2
+ 176 0098 59       		.byte	89
+ 177 0099 AC       		.byte	-84
+ 178 009a FF       		.byte	-1
  179 009b 00       		.byte	0
- 180 009c C2       		.byte	-62
- 181 009d 1F       		.byte	31
+ 180 009c 95       		.byte	-107
+ 181 009d CD       		.byte	-51
  182 009e FF       		.byte	-1
  183 009f 00       		.byte	0
- 184 00a0 E0       		.byte	-32
- 185 00a1 C9       		.byte	-55
+ 184 00a0 20       		.byte	32
+ 185 00a1 F5       		.byte	-11
  186 00a2 FF       		.byte	-1
  187 00a3 00       		.byte	0
- 188 00a4 D0       		.byte	-48
- 189 00a5 A7       		.byte	-89
+ 188 00a4 FC       		.byte	-4
+ 189 00a5 22       		.byte	34
  190 00a6 00       		.byte	0
  191 00a7 00       		.byte	0
- 192 00a8 E1       		.byte	-31
+ 192 00a8 0C       		.byte	12
  193 00a9 57       		.byte	87
- 194 00aa 01       		.byte	1
+ 194 00aa 00       		.byte	0
  195 00ab 00       		.byte	0
- 196 00ac 38       		.byte	56
- 197 00ad 7F       		.byte	127
- 198 00ae 01       		.byte	1
+ 196 00ac 16       		.byte	22
+ 197 00ad 91       		.byte	-111
+ 198 00ae 00       		.byte	0
  199 00af 00       		.byte	0
- 200 00b0 BB       		.byte	-69
- 201 00b1 F5       		.byte	-11
+ 200 00b0 C0       		.byte	-64
+ 201 00b1 D0       		.byte	-48
  202 00b2 00       		.byte	0
  203 00b3 00       		.byte	0
- 204 00b4 B3       		.byte	-77
- 205 00b5 E0       		.byte	-32
- 206 00b6 FF       		.byte	-1
+ 204 00b4 93       		.byte	-109
+ 205 00b5 15       		.byte	21
+ 206 00b6 01       		.byte	1
  207 00b7 00       		.byte	0
- 208 00b8 49       		.byte	73
- 209 00b9 AD       		.byte	-83
- 210 00ba FE       		.byte	-2
+ 208 00b8 F9       		.byte	-7
+ 209 00b9 5E       		.byte	94
+ 210 00ba 01       		.byte	1
  211 00bb 00       		.byte	0
- 212 00bc B3       		.byte	-77
- 213 00bd E8       		.byte	-24
- 214 00be FD       		.byte	-3
+ 212 00bc 3E       		.byte	62
+ 213 00bd AC       		.byte	-84
+ 214 00be 01       		.byte	1
  215 00bf 00       		.byte	0
- 216 00c0 6A       		.byte	106
- 217 00c1 03       		.byte	3
- 218 00c2 FE       		.byte	-2
+ 216 00c0 96       		.byte	-106
+ 217 00c1 FC       		.byte	-4
+ 218 00c2 01       		.byte	1
  219 00c3 00       		.byte	0
- 220 00c4 16       		.byte	22
- 221 00c5 18       		.byte	24
- 222 00c6 FF       		.byte	-1
+ 220 00c4 1F       		.byte	31
+ 221 00c5 4F       		.byte	79
+ 222 00c6 02       		.byte	2
  223 00c7 00       		.byte	0
- 224 00c8 B2       		.byte	-78
- 225 00c9 D0       		.byte	-48
- 226 00ca 00       		.byte	0
+ 224 00c8 E0       		.byte	-32
+ 225 00c9 A2       		.byte	-94
+ 226 00ca 02       		.byte	2
  227 00cb 00       		.byte	0
- 228 00cc 7B       		.byte	123
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 5
+ 228 00cc D4       		.byte	-44
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 5
 
 
- 229 00cd 7A       		.byte	122
+ 229 00cd F6       		.byte	-10
  230 00ce 02       		.byte	2
  231 00cf 00       		.byte	0
- 232 00d0 07       		.byte	7
- 233 00d1 47       		.byte	71
+ 232 00d0 E9       		.byte	-23
+ 233 00d1 49       		.byte	73
  234 00d2 03       		.byte	3
  235 00d3 00       		.byte	0
- 236 00d4 CF       		.byte	-49
- 237 00d5 A4       		.byte	-92
- 238 00d6 02       		.byte	2
+ 236 00d4 07       		.byte	7
+ 237 00d5 9B       		.byte	-101
+ 238 00d6 03       		.byte	3
  239 00d7 00       		.byte	0
- 240 00d8 9D       		.byte	-99
- 241 00d9 8C       		.byte	-116
- 242 00da 00       		.byte	0
+ 240 00d8 15       		.byte	21
+ 241 00d9 E9       		.byte	-23
+ 242 00da 03       		.byte	3
  243 00db 00       		.byte	0
- 244 00dc 98       		.byte	-104
- 245 00dd A1       		.byte	-95
- 246 00de FD       		.byte	-3
+ 244 00dc FE       		.byte	-2
+ 245 00dd 32       		.byte	50
+ 246 00de 04       		.byte	4
  247 00df 00       		.byte	0
- 248 00e0 32       		.byte	50
- 249 00e1 10       		.byte	16
- 250 00e2 FB       		.byte	-5
+ 248 00e0 B7       		.byte	-73
+ 249 00e1 77       		.byte	119
+ 250 00e2 04       		.byte	4
  251 00e3 00       		.byte	0
- 252 00e4 BB       		.byte	-69
- 253 00e5 30       		.byte	48
- 254 00e6 FA       		.byte	-6
+ 252 00e4 43       		.byte	67
+ 253 00e5 B6       		.byte	-74
+ 254 00e6 04       		.byte	4
  255 00e7 00       		.byte	0
- 256 00e8 0B       		.byte	11
- 257 00e9 0B       		.byte	11
- 258 00ea FC       		.byte	-4
+ 256 00e8 B8       		.byte	-72
+ 257 00e9 ED       		.byte	-19
+ 258 00ea 04       		.byte	4
  259 00eb 00       		.byte	0
- 260 00ec DD       		.byte	-35
- 261 00ed E7       		.byte	-25
- 262 00ee 00       		.byte	0
+ 260 00ec 45       		.byte	69
+ 261 00ed 1D       		.byte	29
+ 262 00ee 05       		.byte	5
  263 00ef 00       		.byte	0
- 264 00f0 2F       		.byte	47
- 265 00f1 1B       		.byte	27
- 266 00f2 08       		.byte	8
+ 264 00f0 33       		.byte	51
+ 265 00f1 44       		.byte	68
+ 266 00f2 05       		.byte	5
  267 00f3 00       		.byte	0
- 268 00f4 A4       		.byte	-92
- 269 00f5 20       		.byte	32
- 270 00f6 10       		.byte	16
+ 268 00f4 EC       		.byte	-20
+ 269 00f5 61       		.byte	97
+ 270 00f6 05       		.byte	5
  271 00f7 00       		.byte	0
- 272 00f8 BD       		.byte	-67
- 273 00f9 05       		.byte	5
- 274 00fa 17       		.byte	23
+ 272 00f8 FF       		.byte	-1
+ 273 00f9 75       		.byte	117
+ 274 00fa 05       		.byte	5
  275 00fb 00       		.byte	0
- 276 00fc A9       		.byte	-87
- 277 00fd 00       		.byte	0
- 278 00fe 1B       		.byte	27
+ 276 00fc 1C       		.byte	28
+ 277 00fd 80       		.byte	-128
+ 278 00fe 05       		.byte	5
  279 00ff 00       		.byte	0
- 280 0100 A9       		.byte	-87
- 281 0101 00       		.byte	0
- 282 0102 1B       		.byte	27
+ 280 0100 1C       		.byte	28
+ 281 0101 80       		.byte	-128
+ 282 0102 05       		.byte	5
  283 0103 00       		.byte	0
- 284 0104 BD       		.byte	-67
- 285 0105 05       		.byte	5
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 6
+ 284 0104 FF       		.byte	-1
+ 285 0105 75       		.byte	117
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 6
 
 
- 286 0106 17       		.byte	23
+ 286 0106 05       		.byte	5
  287 0107 00       		.byte	0
- 288 0108 A4       		.byte	-92
- 289 0109 20       		.byte	32
- 290 010a 10       		.byte	16
+ 288 0108 EC       		.byte	-20
+ 289 0109 61       		.byte	97
+ 290 010a 05       		.byte	5
  291 010b 00       		.byte	0
- 292 010c 2F       		.byte	47
- 293 010d 1B       		.byte	27
- 294 010e 08       		.byte	8
+ 292 010c 33       		.byte	51
+ 293 010d 44       		.byte	68
+ 294 010e 05       		.byte	5
  295 010f 00       		.byte	0
- 296 0110 DD       		.byte	-35
- 297 0111 E7       		.byte	-25
- 298 0112 00       		.byte	0
+ 296 0110 45       		.byte	69
+ 297 0111 1D       		.byte	29
+ 298 0112 05       		.byte	5
  299 0113 00       		.byte	0
- 300 0114 0B       		.byte	11
- 301 0115 0B       		.byte	11
- 302 0116 FC       		.byte	-4
+ 300 0114 B8       		.byte	-72
+ 301 0115 ED       		.byte	-19
+ 302 0116 04       		.byte	4
  303 0117 00       		.byte	0
- 304 0118 BB       		.byte	-69
- 305 0119 30       		.byte	48
- 306 011a FA       		.byte	-6
+ 304 0118 43       		.byte	67
+ 305 0119 B6       		.byte	-74
+ 306 011a 04       		.byte	4
  307 011b 00       		.byte	0
- 308 011c 32       		.byte	50
- 309 011d 10       		.byte	16
- 310 011e FB       		.byte	-5
+ 308 011c B7       		.byte	-73
+ 309 011d 77       		.byte	119
+ 310 011e 04       		.byte	4
  311 011f 00       		.byte	0
- 312 0120 98       		.byte	-104
- 313 0121 A1       		.byte	-95
- 314 0122 FD       		.byte	-3
+ 312 0120 FE       		.byte	-2
+ 313 0121 32       		.byte	50
+ 314 0122 04       		.byte	4
  315 0123 00       		.byte	0
- 316 0124 9D       		.byte	-99
- 317 0125 8C       		.byte	-116
- 318 0126 00       		.byte	0
+ 316 0124 15       		.byte	21
+ 317 0125 E9       		.byte	-23
+ 318 0126 03       		.byte	3
  319 0127 00       		.byte	0
- 320 0128 CF       		.byte	-49
- 321 0129 A4       		.byte	-92
- 322 012a 02       		.byte	2
+ 320 0128 07       		.byte	7
+ 321 0129 9B       		.byte	-101
+ 322 012a 03       		.byte	3
  323 012b 00       		.byte	0
- 324 012c 07       		.byte	7
- 325 012d 47       		.byte	71
+ 324 012c E9       		.byte	-23
+ 325 012d 49       		.byte	73
  326 012e 03       		.byte	3
  327 012f 00       		.byte	0
- 328 0130 7B       		.byte	123
- 329 0131 7A       		.byte	122
+ 328 0130 D4       		.byte	-44
+ 329 0131 F6       		.byte	-10
  330 0132 02       		.byte	2
  331 0133 00       		.byte	0
- 332 0134 B2       		.byte	-78
- 333 0135 D0       		.byte	-48
- 334 0136 00       		.byte	0
+ 332 0134 E0       		.byte	-32
+ 333 0135 A2       		.byte	-94
+ 334 0136 02       		.byte	2
  335 0137 00       		.byte	0
- 336 0138 16       		.byte	22
- 337 0139 18       		.byte	24
- 338 013a FF       		.byte	-1
+ 336 0138 1F       		.byte	31
+ 337 0139 4F       		.byte	79
+ 338 013a 02       		.byte	2
  339 013b 00       		.byte	0
- 340 013c 6A       		.byte	106
- 341 013d 03       		.byte	3
- 342 013e FE       		.byte	-2
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 7
+ 340 013c 96       		.byte	-106
+ 341 013d FC       		.byte	-4
+ 342 013e 01       		.byte	1
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 7
 
 
  343 013f 00       		.byte	0
- 344 0140 B3       		.byte	-77
- 345 0141 E8       		.byte	-24
- 346 0142 FD       		.byte	-3
+ 344 0140 3E       		.byte	62
+ 345 0141 AC       		.byte	-84
+ 346 0142 01       		.byte	1
  347 0143 00       		.byte	0
- 348 0144 49       		.byte	73
- 349 0145 AD       		.byte	-83
- 350 0146 FE       		.byte	-2
+ 348 0144 F9       		.byte	-7
+ 349 0145 5E       		.byte	94
+ 350 0146 01       		.byte	1
  351 0147 00       		.byte	0
- 352 0148 B3       		.byte	-77
- 353 0149 E0       		.byte	-32
- 354 014a FF       		.byte	-1
+ 352 0148 93       		.byte	-109
+ 353 0149 15       		.byte	21
+ 354 014a 01       		.byte	1
  355 014b 00       		.byte	0
- 356 014c BB       		.byte	-69
- 357 014d F5       		.byte	-11
+ 356 014c C0       		.byte	-64
+ 357 014d D0       		.byte	-48
  358 014e 00       		.byte	0
  359 014f 00       		.byte	0
- 360 0150 38       		.byte	56
- 361 0151 7F       		.byte	127
- 362 0152 01       		.byte	1
+ 360 0150 16       		.byte	22
+ 361 0151 91       		.byte	-111
+ 362 0152 00       		.byte	0
  363 0153 00       		.byte	0
- 364 0154 E1       		.byte	-31
+ 364 0154 0C       		.byte	12
  365 0155 57       		.byte	87
- 366 0156 01       		.byte	1
+ 366 0156 00       		.byte	0
  367 0157 00       		.byte	0
- 368 0158 D0       		.byte	-48
- 369 0159 A7       		.byte	-89
+ 368 0158 FC       		.byte	-4
+ 369 0159 22       		.byte	34
  370 015a 00       		.byte	0
  371 015b 00       		.byte	0
- 372 015c E0       		.byte	-32
- 373 015d C9       		.byte	-55
+ 372 015c 20       		.byte	32
+ 373 015d F5       		.byte	-11
  374 015e FF       		.byte	-1
  375 015f 00       		.byte	0
- 376 0160 C2       		.byte	-62
- 377 0161 1F       		.byte	31
+ 376 0160 95       		.byte	-107
+ 377 0161 CD       		.byte	-51
  378 0162 FF       		.byte	-1
  379 0163 00       		.byte	0
- 380 0164 EB       		.byte	-21
- 381 0165 E8       		.byte	-24
- 382 0166 FE       		.byte	-2
+ 380 0164 59       		.byte	89
+ 381 0165 AC       		.byte	-84
+ 382 0166 FF       		.byte	-1
  383 0167 00       		.byte	0
- 384 0168 D9       		.byte	-39
- 385 0169 2C       		.byte	44
+ 384 0168 4E       		.byte	78
+ 385 0169 91       		.byte	-111
  386 016a FF       		.byte	-1
  387 016b 00       		.byte	0
- 388 016c 3F       		.byte	63
- 389 016d BF       		.byte	-65
+ 388 016c 3D       		.byte	61
+ 389 016d 7C       		.byte	124
  390 016e FF       		.byte	-1
  391 016f 00       		.byte	0
- 392 0170 17       		.byte	23
- 393 0171 59       		.byte	89
- 394 0172 00       		.byte	0
+ 392 0170 D9       		.byte	-39
+ 393 0171 6C       		.byte	108
+ 394 0172 FF       		.byte	-1
  395 0173 00       		.byte	0
- 396 0174 99       		.byte	-103
- 397 0175 B9       		.byte	-71
- 398 0176 00       		.byte	0
+ 396 0174 BF       		.byte	-65
+ 397 0175 62       		.byte	98
+ 398 0176 FF       		.byte	-1
  399 0177 00       		.byte	0
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 8
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 8
 
 
- 400 0178 5B       		.byte	91
- 401 0179 C0       		.byte	-64
- 402 017a 00       		.byte	0
+ 400 0178 7E       		.byte	126
+ 401 0179 5D       		.byte	93
+ 402 017a FF       		.byte	-1
  403 017b 00       		.byte	0
- 404 017c 8F       		.byte	-113
- 405 017d 76       		.byte	118
- 406 017e 00       		.byte	0
+ 404 017c 96       		.byte	-106
+ 405 017d 5C       		.byte	92
+ 406 017e FF       		.byte	-1
  407 017f 00       		.byte	0
- 408 0180 B6       		.byte	-74
- 409 0181 05       		.byte	5
- 410 0182 00       		.byte	0
+ 408 0180 7E       		.byte	126
+ 409 0181 5F       		.byte	95
+ 410 0182 FF       		.byte	-1
  411 0183 00       		.byte	0
- 412 0184 FB       		.byte	-5
- 413 0185 A1       		.byte	-95
+ 412 0184 A8       		.byte	-88
+ 413 0185 65       		.byte	101
  414 0186 FF       		.byte	-1
  415 0187 00       		.byte	0
- 416 0188 F9       		.byte	-7
- 417 0189 72       		.byte	114
+ 416 0188 82       		.byte	-126
+ 417 0189 6E       		.byte	110
  418 018a FF       		.byte	-1
  419 018b 00       		.byte	0
- 420 018c DE       		.byte	-34
- 421 018d 84       		.byte	-124
+ 420 018c 7E       		.byte	126
+ 421 018d 79       		.byte	121
  422 018e FF       		.byte	-1
  423 018f 00       		.byte	0
- 424 0190 17       		.byte	23
- 425 0191 C7       		.byte	-57
+ 424 0190 0F       		.byte	15
+ 425 0191 86       		.byte	-122
  426 0192 FF       		.byte	-1
  427 0193 00       		.byte	0
- 428 0194 40       		.byte	64
- 429 0195 17       		.byte	23
- 430 0196 00       		.byte	0
+ 428 0194 B2       		.byte	-78
+ 429 0195 93       		.byte	-109
+ 430 0196 FF       		.byte	-1
  431 0197 00       		.byte	0
- 432 0198 10       		.byte	16
- 433 0199 52       		.byte	82
- 434 019a 00       		.byte	0
+ 432 0198 EA       		.byte	-22
+ 433 0199 A1       		.byte	-95
+ 434 019a FF       		.byte	-1
  435 019b 00       		.byte	0
- 436 019c 46       		.byte	70
- 437 019d 62       		.byte	98
- 438 019e 00       		.byte	0
+ 436 019c 4A       		.byte	74
+ 437 019d B0       		.byte	-80
+ 438 019e FF       		.byte	-1
  439 019f 00       		.byte	0
- 440 01a0 8B       		.byte	-117
- 441 01a1 47       		.byte	71
- 442 01a2 00       		.byte	0
+ 440 01a0 6E       		.byte	110
+ 441 01a1 BE       		.byte	-66
+ 442 01a2 FF       		.byte	-1
  443 01a3 00       		.byte	0
- 444 01a4 7A       		.byte	122
- 445 01a5 13       		.byte	19
- 446 01a6 00       		.byte	0
+ 444 01a4 01       		.byte	1
+ 445 01a5 CC       		.byte	-52
+ 446 01a6 FF       		.byte	-1
  447 01a7 00       		.byte	0
- 448 01a8 91       		.byte	-111
- 449 01a9 DF       		.byte	-33
+ 448 01a8 C0       		.byte	-64
+ 449 01a9 D8       		.byte	-40
  450 01aa FF       		.byte	-1
  451 01ab 00       		.byte	0
- 452 01ac 46       		.byte	70
- 453 01ad C1       		.byte	-63
+ 452 01ac 73       		.byte	115
+ 453 01ad E4       		.byte	-28
  454 01ae FF       		.byte	-1
  455 01af 00       		.byte	0
- 456 01b0 A7       		.byte	-89
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 9
+ 456 01b0 F2       		.byte	-14
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 9
 
 
- 457 01b1 C1       		.byte	-63
+ 457 01b1 EE       		.byte	-18
  458 01b2 FF       		.byte	-1
  459 01b3 00       		.byte	0
- 460 01b4 89       		.byte	-119
- 461 01b5 DB       		.byte	-37
+ 460 01b4 25       		.byte	37
+ 461 01b5 F8       		.byte	-8
  462 01b6 FF       		.byte	-1
  463 01b7 00       		.byte	0
  464 01b8 00       		.byte	0
  465 01b9 00       		.byte	0
  466 01ba 00       		.byte	0
  467 01bb 00       		.byte	0
- 468 01bc 38       		.byte	56
- 469 01bd 1E       		.byte	30
+ 468 01bc 82       		.byte	-126
+ 469 01bd 06       		.byte	6
  470 01be 00       		.byte	0
  471 01bf 00       		.byte	0
- 472 01c0 D3       		.byte	-45
- 473 01c1 2A       		.byte	42
+ 472 01c0 B7       		.byte	-73
+ 473 01c1 0B       		.byte	11
  474 01c2 00       		.byte	0
  475 01c3 00       		.byte	0
- 476 01c4 B8       		.byte	-72
- 477 01c5 23       		.byte	35
+ 476 01c4 B0       		.byte	-80
+ 477 01c5 0F       		.byte	15
  478 01c6 00       		.byte	0
  479 01c7 00       		.byte	0
- 480 01c8 51       		.byte	81
- 481 01c9 0F       		.byte	15
+ 480 01c8 8A       		.byte	-118
+ 481 01c9 12       		.byte	18
  482 01ca 00       		.byte	0
  483 01cb 00       		.byte	0
- 484 01cc 5D       		.byte	93
- 485 01cd F8       		.byte	-8
- 486 01ce FF       		.byte	-1
+ 484 01cc 62       		.byte	98
+ 485 01cd 14       		.byte	20
+ 486 01ce 00       		.byte	0
  487 01cf 00       		.byte	0
- 488 01d0 B2       		.byte	-78
- 489 01d1 E8       		.byte	-24
- 490 01d2 FF       		.byte	-1
+ 488 01d0 5C       		.byte	92
+ 489 01d1 15       		.byte	21
+ 490 01d2 00       		.byte	0
  491 01d3 00       		.byte	0
- 492 01d4 5B       		.byte	91
- 493 01d5 E5       		.byte	-27
- 494 01d6 FF       		.byte	-1
+ 492 01d4 9D       		.byte	-99
+ 493 01d5 15       		.byte	21
+ 494 01d6 00       		.byte	0
  495 01d7 00       		.byte	0
- 496 01d8 70       		.byte	112
- 497 01d9 ED       		.byte	-19
- 498 01da FF       		.byte	-1
+ 496 01d8 48       		.byte	72
+ 497 01d9 15       		.byte	21
+ 498 01da 00       		.byte	0
  499 01db 00       		.byte	0
- 500 01dc 99       		.byte	-103
- 501 01dd FB       		.byte	-5
- 502 01de FF       		.byte	-1
+ 500 01dc 80       		.byte	-128
+ 501 01dd 14       		.byte	20
+ 502 01de 00       		.byte	0
  503 01df 00       		.byte	0
- 504 01e0 0D       		.byte	13
- 505 01e1 09       		.byte	9
+ 504 01e0 66       		.byte	102
+ 505 01e1 13       		.byte	19
  506 01e2 00       		.byte	0
  507 01e3 00       		.byte	0
- 508 01e4 8D       		.byte	-115
- 509 01e5 10       		.byte	16
+ 508 01e4 14       		.byte	20
+ 509 01e5 12       		.byte	18
  510 01e6 00       		.byte	0
  511 01e7 00       		.byte	0
- 512 01e8 21       		.byte	33
+ 512 01e8 A4       		.byte	-92
  513 01e9 10       		.byte	16
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 10
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 10
 
 
  514 01ea 00       		.byte	0
  515 01eb 00       		.byte	0
- 516 01ec 3B       		.byte	59
- 517 01ed 09       		.byte	9
+ 516 01ec 26       		.byte	38
+ 517 01ed 0F       		.byte	15
  518 01ee 00       		.byte	0
  519 01ef 00       		.byte	0
- 520 01f0 84       		.byte	-124
- 521 01f1 FF       		.byte	-1
- 522 01f2 FF       		.byte	-1
+ 520 01f0 AA       		.byte	-86
+ 521 01f1 0D       		.byte	13
+ 522 01f2 00       		.byte	0
  523 01f3 00       		.byte	0
- 524 01f4 24       		.byte	36
- 525 01f5 F7       		.byte	-9
- 526 01f6 FF       		.byte	-1
+ 524 01f4 36       		.byte	54
+ 525 01f5 0C       		.byte	12
+ 526 01f6 00       		.byte	0
  527 01f7 00       		.byte	0
- 528 01f8 36       		.byte	54
- 529 01f9 F3       		.byte	-13
- 530 01fa FF       		.byte	-1
+ 528 01f8 CE       		.byte	-50
+ 529 01f9 0A       		.byte	10
+ 530 01fa 00       		.byte	0
  531 01fb 00       		.byte	0
- 532 01fc DC       		.byte	-36
- 533 01fd F4       		.byte	-12
- 534 01fe FF       		.byte	-1
+ 532 01fc 70       		.byte	112
+ 533 01fd 09       		.byte	9
+ 534 01fe 00       		.byte	0
  535 01ff 00       		.byte	0
  536              		.text
  537              	.Letext0:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 1
  568 0039 03       		.uleb128 0x3
  569 003a 02       		.byte	0x2
  570 003b 05       		.byte	0x5
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 11
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 11
 
 
  571 003c 60010000 		.4byte	.LASF3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 1
  625 00a7 05       		.uleb128 0x5
  626 00a8 03       		.byte	0x3
  627 00a9 00000000 		.4byte	Filter_ChannelAFirCoefficients
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 12
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 12
 
 
  628 00ad 08       		.uleb128 0x8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 1
  682 0031 00       		.byte	0
  683 0032 05       		.uleb128 0x5
  684 0033 01       		.uleb128 0x1
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 13
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 13
 
 
  685 0034 01       		.byte	0x1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 1
  738      02005000 
  738      00000201 
  738      FB0E0D00 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 14
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 14
 
 
  738      01010101 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 1
  757 0118 756E7369 		.ascii	"unsigned char\000"
  757      676E6564 
  757      20636861 
-ARM GAS  C:\Users\Tommi\AppData\Local\Temp\cciG7oft.s 			page 15
+ARM GAS  C:\Users\Tommi\AppData\Local\Temp\ccuToVUf.s 			page 15
 
 
  757      7200
